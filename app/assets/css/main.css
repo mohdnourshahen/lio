@@ -1,0 +1,191 @@
+/*
+ * Lōn Visuals v2 — design system.
+ * Grid, type scale and rhythm follow Exo Ape's system (values recovered from its CSS):
+ *   mobile  ≤600px: 10 columns, 8vw side margin, no gutter
+ *   desktop ≥601px: 12 columns, 8.333vw side margin, 2.222vw gutter
+ * Type sizes are viewport-relative so the composition scales as one piece.
+ * Palette, fonts and copy are Lōn's own.
+ */
+
+:root {
+  /* Lōn palette */
+  --c-ink: #18160e;
+  --c-ink-2: #2e2b20;
+  --c-paper: #f5f2ea;
+  --c-paper-2: #eeeadf;
+  --c-sand: #e7e2d5;
+  --c-muted: #7a7560;
+  --c-dim: #a09a80;
+  --c-gold: #b8922a;
+  --c-gold-2: #d4b96a;
+  --c-white: #faf8f2;
+
+  --f-display: 'Cormorant Garamond', 'Iowan Old Style', Georgia, serif;
+  --f-sans: 'Inter Tight Variable', 'Inter Tight', 'Helvetica Neue', Arial, sans-serif;
+
+  /* Exo Ape scale — mobile */
+  --fs-h0: 25.6vw;   --lh-h0: 25.6vw;   --ls-h0: -1.2vw;
+  --fs-h1: 16vw;     --lh-h1: 16vw;     --ls-h1: -0.4vw;
+  --fs-h2: 7.7333vw; --lh-h2: 9.0667vw; --ls-h2: -0.2667vw;
+  --fs-h3: 6.4vw;    --lh-h3: 8vw;      --ls-h3: -0.1333vw;
+  --fs-h4: 4.8vw;    --lh-h4: 6.4vw;
+  --fs-p: 3.7333vw;  --lh-p: 5.6vw;     --ls-p: 0.0267vw;
+  --fs-small: 3.7333vw; --lh-small: 5.6vw;
+  --fs-sub: 3.2vw;   --lh-sub: 4.2667vw;
+  --fs-cta: 4.2667vw;
+  --fs-label: 3.7333vw;
+
+  --cols: 10;
+  --margin: 8vw;
+  --gutter: 0px;
+  --col: calc((100vw - 2 * var(--margin) - (var(--cols) - 1) * var(--gutter)) / var(--cols));
+  --vh: 1vh;
+
+  --ease-in: cubic-bezier(0.198, 0, 1, 0.1);
+  --ease-out: cubic-bezier(0, 0.202, 0.204, 1);
+  --ease-in-out: cubic-bezier(0.496, 0.004, 0, 1);
+}
+
+@media (min-width: 601px) {
+  :root {
+    --fs-h0: 17.3611vw; --lh-h0: 15.6944vw; --ls-h0: -0.7986vw;
+    --fs-h1: 10vw;      --lh-h1: 10vw;      --ls-h1: -0.3472vw;
+    --fs-h2: 3.6111vw;  --lh-h2: 4.4444vw;  --ls-h2: -0.1042vw;
+    /* text sizes keep Exo Ape's vw ratios but never drop below a readable floor on tablets */
+    --fs-h3: max(2.2222vw, 22px); --lh-h3: max(2.7778vw, 28px); --ls-h3: -0.0069vw;
+    --fs-h4: max(1.6667vw, 17px); --lh-h4: max(2.2222vw, 24px);
+    --fs-p: max(1.1111vw, 14px);  --lh-p: max(1.6667vw, 21px);  --ls-p: 0.0069vw;
+    --fs-small: max(0.9722vw, 12.5px); --lh-small: max(1.4583vw, 19px);
+    --fs-sub: max(0.8333vw, 11px); --lh-sub: max(1.1111vw, 15px);
+    --fs-cta: max(1.1111vw, 14px);
+    --fs-label: max(0.9722vw, 12.5px);
+
+    --cols: 12;
+    --margin: 8.3333vw;
+    --gutter: 2.2222vw;
+  }
+}
+
+/* ---------- reset (mirrors Exo Ape's base) ---------- */
+*, *::before, *::after { box-sizing: border-box; }
+* { -webkit-tap-highlight-color: transparent; }
+ol, ul { list-style: none; padding: 0; }
+blockquote, body, dd, dl, figcaption, figure, h1, h2, h3, h4, input, li, ol, p, ul { margin: 0; }
+html { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+html, body { overflow-x: clip; }
+body {
+  margin: 0;
+  background: var(--c-ink);
+  color: var(--c-ink);
+  font-family: var(--f-sans);
+  font-size: var(--fs-p);
+  line-height: var(--lh-p);
+  letter-spacing: var(--ls-p);
+  text-rendering: optimizeLegibility;
+  text-size-adjust: 100%;
+  overscroll-behavior: none;
+}
+h1, h2, h3, h4 { font-weight: 400; }
+button { appearance: none; background: none; border: 0; font: inherit; color: inherit; padding: 0; margin: 0; cursor: pointer; }
+a { color: inherit; text-decoration: none; }
+img, svg { display: block; user-select: none; }
+img { max-width: 100%; }
+footer, section { position: relative; }
+em { font-style: italic; }
+
+/* ---------- accessibility ---------- */
+:focus { outline: none; }
+:focus-visible {
+  outline: 2px solid var(--c-gold);
+  outline-offset: 4px;
+  border-radius: 2px;
+}
+.theme-light :focus-visible, .theme-sand :focus-visible { outline-color: #7d6114; }
+.sr-only {
+  position: absolute !important; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+}
+.skip-link {
+  position: fixed; top: 12px; left: 12px; z-index: 100;
+  padding: 10px 16px; background: var(--c-gold); color: var(--c-ink);
+  font-size: 14px; transform: translateY(-200%);
+  transition: transform 0.3s var(--ease-out);
+}
+.skip-link:focus-visible { transform: none; }
+
+/* ---------- grid ---------- */
+.container {
+  display: grid;
+  grid-template-columns: repeat(var(--cols), 1fr);
+  column-gap: var(--gutter);
+  margin: 0 var(--margin);
+}
+
+/* ---------- type ---------- */
+.t-h0, .t-h1, .t-h2, .t-h3 { font-family: var(--f-display); font-weight: 300; }
+.t-h0 { font-size: var(--fs-h0); line-height: var(--lh-h0); letter-spacing: var(--ls-h0); }
+.t-h1 { font-size: var(--fs-h1); line-height: var(--lh-h1); letter-spacing: var(--ls-h1); }
+.t-h2 { font-size: var(--fs-h2); line-height: var(--lh-h2); letter-spacing: var(--ls-h2); }
+.t-h3 { font-size: var(--fs-h3); line-height: var(--lh-h3); letter-spacing: var(--ls-h3); font-weight: 400; }
+.t-h4 { font-size: var(--fs-h4); line-height: var(--lh-h4); font-family: var(--f-sans); font-weight: 350; letter-spacing: -0.01em; }
+.t-p { font-size: var(--fs-p); line-height: var(--lh-p); }
+.t-small { font-size: var(--fs-small); line-height: var(--lh-small); }
+.t-sub { font-size: var(--fs-sub); line-height: var(--lh-sub); }
+.t-label { font-size: var(--fs-label); line-height: 1; font-weight: 450; }
+.t-h0 em, .t-h1 em, .t-h2 em, .t-h3 em { font-style: italic; color: var(--accent); }
+
+/* Exo Ape's section label: "✦ Featured Projects" */
+.label {
+  display: inline-flex; align-items: center; gap: 0.7em;
+  font-size: var(--fs-label); line-height: 1.2; font-weight: 450;
+}
+.label::before {
+  content: ''; width: 0.75em; height: 0.75em; flex: none;
+  background: currentColor;
+  clip-path: polygon(50% 0, 61% 39%, 100% 50%, 61% 61%, 50% 100%, 39% 61%, 0 50%, 39% 39%);
+}
+
+/* ---------- themes (Exo Ape switches the chrome colour per section) ---------- */
+.theme-dark  { --bg: var(--c-ink);   --fg: var(--c-paper); --fg-2: rgba(245, 242, 234, 0.6); --rule: rgba(245, 242, 234, 0.16); --accent: var(--c-gold-2); }
+.theme-light { --bg: var(--c-paper); --fg: var(--c-ink);   --fg-2: rgba(24, 22, 14, 0.62);   --rule: rgba(24, 22, 14, 0.14);   --accent: #8a6a17; }
+.theme-sand  { --bg: var(--c-sand);  --fg: var(--c-ink);   --fg-2: rgba(24, 22, 14, 0.62);   --rule: rgba(24, 22, 14, 0.14);   --accent: #8a6a17; }
+.theme-dark, .theme-light, .theme-sand { background: var(--bg); color: var(--fg); }
+
+/* ---------- text reveal masks (SplitText mask: "lines") ---------- */
+.js [data-reveal] { visibility: hidden; }
+.js [data-reveal].is-split { visibility: visible; }
+.line-mask { padding-bottom: 0.08em; margin-bottom: -0.08em; }
+.t-h0 .line-mask, .t-h1 .line-mask, .t-h2 .line-mask { padding-bottom: 0.14em; margin-bottom: -0.14em; }
+
+/* underline link — Exo Ape's "Browse all work" hover: line wipes out right, back in from left */
+.u-link { position: relative; display: inline-block; }
+.u-link::after {
+  content: ''; position: absolute; left: 0; right: 0; bottom: -0.2em; height: 1px;
+  background: currentColor; transform-origin: right center;
+  transition: transform 0.6s var(--ease-in-out);
+}
+@media (hover: hover) {
+  .u-link:hover::after { transform: scaleX(0); }
+  .u-link--rev::after { transform: scaleX(0); transform-origin: right center; }
+  .u-link--rev:hover::after { transform: scaleX(1); transform-origin: left center; }
+}
+
+/* ---------- media ---------- */
+.media { position: relative; overflow: hidden; background: var(--ph, #2a271d); }
+.media picture, .media img { width: 100%; height: 100%; }
+.media img { object-fit: cover; }
+.media .media-inner { width: 100%; height: 100%; will-change: transform; }
+
+/* ---------- smooth scroll shell ---------- */
+html.has-smooth body { overflow-x: hidden; }
+html.has-smooth .page { position: fixed; inset: 0; overflow: hidden; }
+.page { width: 100%; background: var(--c-ink); }
+.page-overlay { position: absolute; inset: 0; background: #000; opacity: 0; visibility: hidden; pointer-events: none; z-index: 5; }
+.page-content > * { will-change: transform; }
+.scroll-spacer { width: 1px; pointer-events: none; }
+html:not(.has-smooth) .scroll-spacer { display: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
+  .js [data-reveal] { visibility: visible; }
+}

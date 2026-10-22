@@ -15,6 +15,18 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: superfly/flyctl-actions/setup-flyctl@master
+      - name: Create app on first deploy
+        run: flyctl status --app lio > /dev/null 2>&1 || flyctl apps create lio --org personal
+        env:
+          FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
+      - name: Allocate public IPs if missing
+        run: |
+          if [ "$(flyctl ips list --app lio --json | jq length)" = "0" ]; then
+            flyctl ips allocate-v4 --shared --app lio
+            flyctl ips allocate-v6 --app lio
+          fi
+        env:
+          FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
       - run: flyctl deploy --remote-only
         env:
           FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
