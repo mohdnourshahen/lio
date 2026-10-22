@@ -229,7 +229,7 @@ const ratio = (id: string) => (media[id] ? media[id].w / media[id].h : 1.5)
         </div>
         <div class="container c-next-inner">
           <p class="label">Next project</p>
-          <p class="c-next-title t-h1">{{ next.title }}</p>
+          <p class="c-next-title t-h1" :class="{ 'is-long': next.title.length > 18 }">{{ next.title }}</p>
           <p class="t-p dim">{{ next.category }}</p>
         </div>
       </a>
@@ -248,7 +248,7 @@ const ratio = (id: string) => (media[id] ? media[id].w / media[id].h : 1.5)
 .crumbs ol { display: flex; flex-wrap: wrap; gap: 0.6em; }
 .crumbs li + li::before { content: '/'; margin-right: 0.6em; opacity: 0.5; }
 .c-title { grid-column: 2 / -1; align-self: end; }
-.c-title.is-long { font-size: 7.4vw; line-height: 7.4vw; }
+.c-title.is-long, .c-next-title.is-long { font-size: 7.4vw; line-height: 7.4vw; }
 .c-cat { grid-column: 2 / -1; margin-top: 1.2vw; color: rgba(245, 242, 234, 0.75); }
 
 /* INTRO */
@@ -335,7 +335,7 @@ const ratio = (id: string) => (media[id] ? media[id].w / media[id].h : 1.5)
 
 @media (max-width: 600px) {
   .crumbs, .c-title, .c-cat { grid-column: 1 / -1; }
-  .c-title.is-long { font-size: 12vw; line-height: 12.4vw; }
+  .c-title.is-long, .c-next-title.is-long { font-size: 12vw; line-height: 12.4vw; }
   .c-hero-inner { padding: 22vw 0 8vw; }
   .c-cat { margin-top: 3vw; }
   .c-intro { padding: 18vw 0 20vw; }
