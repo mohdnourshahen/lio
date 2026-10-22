@@ -18,6 +18,7 @@ FONT_CSS = f"""
   src: url('file://{FONTS}/@fontsource/cormorant-garamond/files/cormorant-garamond-latin-300-normal.woff2'); }}
 @font-face {{ font-family: 'Cormorant Garamond'; font-weight: 300; font-style: italic;
   src: url('file://{FONTS}/@fontsource/cormorant-garamond/files/cormorant-garamond-latin-300-italic.woff2'); }}
+@font-face {{ font-family: 'Slack'; src: url('file://{ROOT}/public/fonts/slack-light.woff2'); }}
 @font-face {{ font-family: 'Inter Tight'; font-weight: 100 900;
   src: url('file://{FONTS}/@fontsource-variable/inter-tight/files/inter-tight-latin-wght-normal.woff2'); }}
 """
@@ -25,18 +26,21 @@ LOGO = (ROOT / 'app/components/LonLogo.vue').read_text().split('<template>')[1].
 
 
 def og_html(image, kicker, title, sub):
+    """Centred 'capabilities deck' card: treated image, gold Slack title, uppercase subtitle."""
     return f"""<!doctype html><html><head><meta charset="utf-8"><style>{FONT_CSS}
-    body {{ margin:0; width:1200px; height:630px; position:relative; overflow:hidden; background:#18160e; color:#f5f2ea; font-family:'Inter Tight'; }}
-    .bg {{ position:absolute; inset:0; background:url('file://{image}') center/cover; }}
-    .shade {{ position:absolute; inset:0; background:linear-gradient(180deg, rgba(24,22,14,.55) 0%, rgba(24,22,14,.15) 40%, rgba(24,22,14,.85) 100%); }}
-    .logo {{ position:absolute; left:64px; top:56px; width:220px; color:#f5f2ea; }}
+    body {{ margin:0; width:1200px; height:630px; position:relative; overflow:hidden; background:#12100a; color:#e6df8f; font-family:'Inter Tight'; }}
+    .bg {{ position:absolute; inset:0; background:url('file://{image}') center/cover; filter:saturate(.74) sepia(.2) brightness(.62) contrast(1.06); }}
+    .shade {{ position:absolute; inset:0; background:radial-gradient(ellipse 70% 70% at 50% 50%, rgba(18,16,10,.25), rgba(18,16,10,.8)); }}
+    .c {{ position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:0 80px; }}
+    .k, .s {{ font-family:'Slack'; text-transform:uppercase; letter-spacing:.09em; }}
+    .k {{ font-size:18px; color:rgba(245,242,234,.72); margin-bottom:34px; }}
+    h1 {{ margin:0; font:400 84px/1.04 'Slack'; letter-spacing:-.01em; }}
+    h1 em {{ font-family:'Cormorant Garamond'; font-style:italic; font-weight:300; font-size:1.12em; }}
+    .s {{ font-size:20px; margin-top:34px; }}
+    .logo {{ position:absolute; left:50%; bottom:44px; transform:translateX(-50%); width:150px; color:#e6df8f; opacity:.85; }}
     .logo svg {{ width:100%; height:auto; }}
-    .k {{ position:absolute; right:64px; top:60px; font-size:20px; letter-spacing:.02em; color:rgba(245,242,234,.8); }}
-    h1 {{ position:absolute; left:60px; right:60px; bottom:96px; margin:0; font:300 104px/0.95 'Cormorant Garamond'; letter-spacing:-.03em; }}
-    h1 em {{ color:#d4b96a; }}
-    p {{ position:absolute; left:64px; bottom:52px; margin:0; font-size:22px; color:rgba(245,242,234,.75); }}
     </style></head><body><div class="bg"></div><div class="shade"></div>
-    <div class="logo">{LOGO}</div><div class="k">{kicker}</div><h1>{title}</h1><p>{sub}</p></body></html>"""
+    <div class="c"><div class="k">{kicker}</div><h1>{title}</h1><div class="s">{sub}</div></div><div class="logo">{LOGO}</div></body></html>"""
 
 
 def best(iid):
@@ -57,8 +61,8 @@ def main():
         tile.save(PUB / 'favicon.ico', sizes=[(16, 16), (32, 32), (48, 48)])
 
         pg = b.new_page(viewport={'width': 1200, 'height': 630})
-        cards = [('home', 'b42e0ba664', 'Visual Strategy Studio · Amman', 'We translate brands<br>into <em>visual language</em>', 'Lōn Visuals — brand strategy, visual identity and design')]
-        cards += [(pr['slug'], pr['hero'], pr['category'], pr['title'], f"Case study · {pr['year'] + ' · ' if pr['year'] else ''}Lōn Visuals") for pr in projects]
+        cards = [('home', 'b42e0ba664', 'Visual Strategy Studio · Amman', 'We translate brands<br>into <em>visual language</em>', 'Strategic brand &amp; visual communication studio')]
+        cards += [(pr['slug'], pr['hero'], 'Case study' + (f" · {pr['year']}" if pr['year'] else ''), pr['title'], pr['category']) for pr in projects]
         for slug, iid, kicker, title, sub in cards:
             # loaded from a file URL so the page may read local fonts and images
             tmp = PUB / 'og' / '_card.html'

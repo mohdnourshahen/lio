@@ -112,7 +112,7 @@ defineExpose({ open, close, visible })
     v-show="visible"
     id="site-menu"
     ref="root"
-    class="site-menu theme-sand"
+    class="site-menu theme-light"
     role="dialog"
     aria-modal="true"
     aria-label="Site menu"
@@ -142,7 +142,7 @@ defineExpose({ open, close, visible })
             </div>
           </div>
           <div class="social">
-            <p class="t-sub muted">Follow</p>
+            <p class="caps muted">Follow</p>
             <ul>
               <li v-for="s in site.socials" :key="s.name" class="mask">
                 <a :href="s.href" target="_blank" rel="noopener" class="social-line u-link u-link--rev">{{ s.name }}</a>
@@ -162,18 +162,18 @@ defineExpose({ open, close, visible })
 .container { width: 100%; align-items: end; }
 .main { grid-column: 2 / 8; }
 .main-item { overflow: hidden; padding-bottom: 0.12em; margin-bottom: -0.12em; }
-.main-link { display: inline-block; font-weight: 300; }
+.main-link { display: inline-block; color: var(--c-title); }
 .main-line { display: inline-block; transition: transform 0.8s var(--ease-out), color 0.4s; }
 @media (hover: hover) {
-  .main-link:hover .main-line { transform: translateX(1.5vw); font-style: italic; color: var(--accent); }
+  .main-link:hover .main-line { transform: translateX(1.5vw); color: var(--c-paper); }
 }
 .main-link:focus-visible { outline: none; }
-.main-link:focus-visible .main-line { font-style: italic; color: var(--accent); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 0.12em; }
+.main-link:focus-visible .main-line { color: var(--c-paper); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 0.12em; }
 
 .side { grid-column: 9 / 12; display: flex; flex-direction: column; gap: 3vw; }
 .images { position: relative; aspect-ratio: 4 / 5; overflow: hidden; }
 .image { position: absolute; inset: 0; opacity: 0; visibility: hidden; }
-.image :deep(img) { width: 100%; height: 100%; object-fit: cover; }
+.image :deep(img) { width: 100%; height: 100%; object-fit: cover; filter: saturate(0.8) sepia(0.15) brightness(0.8); }
 .social ul { margin-top: 0.8vw; display: grid; gap: 0.4vw; }
 .mask { overflow: hidden; }
 .social-line { display: inline-block; font-size: var(--fs-cta); line-height: 1.5; }

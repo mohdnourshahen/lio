@@ -14,7 +14,7 @@ const isHome = computed(() => route.path === '/')
 <template>
   <header
     class="site-header"
-    :class="[`is-${appState.menuOpen ? 'sand' : appState.headerTheme}`, { 'is-scrolled': appState.scrolled || !isHome, 'menu-open': appState.menuOpen }]"
+    :class="[ { 'is-scrolled': appState.scrolled || !isHome, 'menu-open': appState.menuOpen }]"
   >
     <NuxtLink to="/" class="logo" aria-label="Lōn Visuals — home" data-cursor-none>
       <LonLogo aria-hidden="true" />
@@ -50,17 +50,16 @@ const isHome = computed(() => route.path === '/')
   color: var(--c-paper);
   transition: color 0.5s var(--ease-in-out);
 }
-.site-header.is-light, .site-header.is-sand { color: var(--c-ink); }
 .site-header > * { pointer-events: auto; }
-.logo { display: block; width: 13.5vw; }
+.logo { display: block; width: 13.5vw; color: var(--c-title); }
 .logo :deep(svg) { width: 100%; height: auto; }
 
 .inline-nav ul { display: flex; gap: 2.9167vw; }
-.inline-nav { font-size: var(--fs-cta); transition: opacity 0.6s var(--ease-in-out), transform 0.6s var(--ease-in-out); }
+.inline-nav { font-family: var(--f-title); text-transform: uppercase; letter-spacing: 0.09em; font-size: var(--fs-label); transition: opacity 0.6s var(--ease-in-out), transform 0.6s var(--ease-in-out); }
 .menu-button {
   position: absolute; right: 3.4722vw;
   display: flex; align-items: center; gap: 0.8333vw;
-  font-size: var(--fs-cta); line-height: 1; padding: 1vw 0;
+  font-family: var(--f-title); text-transform: uppercase; letter-spacing: 0.09em; font-size: var(--fs-label); line-height: 1; padding: 1vw 0;
   opacity: 0; visibility: hidden; transform: translateY(-30%);
   transition: opacity 0.6s var(--ease-in-out), transform 0.6s var(--ease-in-out), visibility 0.6s;
 }

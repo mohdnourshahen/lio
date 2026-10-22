@@ -67,9 +67,8 @@ defineExpose({ reset })
   position: absolute; left: -2.986vw; top: -2.986vw;
   width: 5.9722vw; height: 5.9722vw; border-radius: 50%;
   display: flex; align-items: center; justify-content: center;
-  background: rgba(24, 22, 14, 0.42);
-  backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
-  color: var(--c-paper);
-  font-size: var(--fs-small); letter-spacing: 0.01em;
+  background: rgba(230, 223, 143, 0.9);
+  color: var(--c-ink);
+  font-family: var(--f-title); text-transform: uppercase; letter-spacing: 0.09em; font-size: var(--fs-sub);
 }
 </style>

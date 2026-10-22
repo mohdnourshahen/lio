@@ -23,11 +23,12 @@ export default defineNuxtConfig({
       title: 'Lōn Visuals — Visual Strategy Studio',
       meta: [
         { name: 'description', content: 'At Lōn Visuals, creativity meets strategy to shape how organizations communicate, evolve, and grow through design.' },
-        { name: 'theme-color', content: '#18160e' },
+        { name: 'theme-color', content: '#12100a' },
         { property: 'og:site_name', content: 'Lōn Visuals' },
         { name: 'format-detection', content: 'telephone=no' },
       ],
       link: [
+        { rel: 'preload', href: '/fonts/slack-light.woff2', as: 'font', type: 'font/woff2', crossorigin: '' },
         { rel: 'icon', href: '/favicon.ico', sizes: '48x48' },
         { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
         { rel: 'apple-touch-icon', href: '/apple-touch-icon.png' },

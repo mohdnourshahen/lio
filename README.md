@@ -6,7 +6,8 @@ The design and motion system follows Exo Ape's (exoape.com), recovered from its 
 12-column / 8.333vw-margin grid (10 columns on mobile), viewport-relative type scale, the three custom
 eases, the clip-path + 7° page transition, the "next project" hand-off, the 0.1-lerp smooth scroll,
 line-by-line text reveals, masked image parallax, the cursor bubble and the tilting menu.
-Content, fonts (Cormorant Garamond + Inter Tight), colours and imagery are Lōn's.
+Content, colours and imagery are Lōn's. Type: Slack Light (Lōn's licensed face, `public/fonts`) for upright
+titles and uppercase subtitles, Cormorant Garamond italic for accents, Inter Tight for reading text.
 
 ## Develop
 
