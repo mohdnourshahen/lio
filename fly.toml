@@ -1,4 +1,4 @@
-app = "lon-visuals"
+app = "lio"
 primary_region = "fra"
 
 [build]
