@@ -119,7 +119,7 @@ const ratio = (id: string) => (media[id] ? media[id].w / media[id].h : 1.5)
       <!-- HERO -->
       <header ref="hero" class="c-hero theme-dark" data-theme="dark">
         <div ref="heroMedia" class="c-hero-media atmos-soft grain">
-          <MediaImage :id="p.hero" :alt="heroAlt" sizes="100vw" eager />
+          <MediaImage :id="p.hero" :alt="heroAlt" sizes="100vw" eager :mobile-id="p.heroMobile" :position="p.heroFocus" />
         </div>
         <div class="c-hero-shade" aria-hidden="true" />
         <div class="container c-hero-inner">
