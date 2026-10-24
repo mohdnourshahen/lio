@@ -191,7 +191,10 @@ onBeforeUnmount(() => {
             <MediaFrame
               :id="w.image"
               :alt="w.title"
-              :ratio="i % 2 ? 3 / 4 : 4 / 5"
+              :ratio="w.ratio === 'image' ? undefined : (i % 2 ? 3 / 4 : 4 / 5)"
+              :focus="w.focus"
+              :travel="w.ratio === 'image' ? 4 : 12"
+              :scale="w.ratio === 'image' ? [1.05, 1.05] : [1.15, 1.15]"
               :sizes="i % 2 ? '(max-width: 600px) 84vw, 32vw' : '(max-width: 600px) 84vw, 42vw'"
             />
             <div class="work-caption">

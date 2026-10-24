@@ -14,6 +14,7 @@ const props = withDefaults(defineProps<{
   eager?: boolean
   travel?: number
   scale?: [number, number]
+  focus?: string
 }>(), { travel: 12, scale: () => [1.15, 1.15] as [number, number] })
 
 const info = computed(() => media[props.id])
@@ -27,7 +28,7 @@ const aspect = computed(() => props.ratio ?? (info.value ? info.value.w / info.v
     :style="{ aspectRatio: String(aspect), '--ph': info?.color }"
   >
     <div class="media-inner">
-      <MediaImage :id="id" :alt="alt" :sizes="sizes" :eager="eager" />
+      <MediaImage :id="id" :alt="alt" :sizes="sizes" :eager="eager" :position="focus" />
     </div>
   </div>
 </template>

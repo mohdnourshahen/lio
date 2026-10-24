@@ -177,9 +177,21 @@ TONES = {'blue': '#1847F0', 'green': '#2DAA5E', 'teal': '#00B4C5', 'navy': '#1B2
          'crimson': '#9B1750', 'orange': '#E85D20', 'yellow': '#E8AE00', 'pink': '#E86090'}
 
 
+# Case-study covers chosen for a full-bleed hero with the title over it: atmospheric images without
+# a baked-in wordmark, at least ~1400px wide. heroMobile art-directs phones where the landscape
+# hero would crop to an unreadable slice.
+HEROES = {
+    'zeryab': {'hero': '92b5c6a3f8'},
+    'masar': {'hero': '7160f3fd32'},
+    'wakers17': {'hero': 'a16077e013', 'heroMobile': '28c1c11c00'},
+    'sana-interiors': {'heroMobile': '58d0e9b72f'},
+}
+
+
 def curate(P):
     k = P['key']
     P['hero'] = P['hero'][0]
+    P.update(HEROES.get(k, {}))
     P['next'] = NAMES.get(P['next'])
     if k == 'skyfalcons':
         P['meta'] = [['Client', 'SkyFalcons — Beyond Limits'], ['Industry', 'Aviation Brokerage'], ['Year', '2023']]

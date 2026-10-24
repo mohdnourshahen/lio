@@ -21,6 +21,8 @@ export interface Project {
   meta: [string, string][]
   info: [string, string][]
   hero: string
+  heroMobile?: string
+  heroFocus?: string
   next: string | null
   credits: { role: string, name: string, href: string | null }[]
   blocks: Block[]
@@ -70,17 +72,22 @@ export const services = [
   { num: '04', name: 'Experience', desc: 'Brand Experience & Events, Corporate & Employee Kits — bringing the brand to life in physical spaces.' },
 ]
 
-/** Homepage "Selected Projects", in the legacy order. Two have no case study yet. */
-export const selectedWork = [
-  { title: 'Zeryab Estates', category: 'Brand Identity · Real Estate', image: 'ab4f72775a', slug: 'zeryab-estates' },
-  { title: 'Masar Resort', category: 'Brand Identity · Hospitality', image: '76a786afab', slug: 'masar' },
-  { title: 'Lazure Hospitality', category: 'Brand Identity · Hospitality', image: '7e084baf44', slug: 'lazure' },
+/**
+ * Homepage "Selected Projects", in the legacy order. Two have no case study yet.
+ * Covers are chosen to sit inside the portrait frames without clipping a mark; `focus` is the
+ * object-position when the frame still crops, `ratio: 'image'` shows the image uncropped.
+ */
+export interface WorkCard { title: string, category: string, image: string, slug: string | null, focus?: string, ratio?: 'image' }
+export const selectedWork: WorkCard[] = [
+  { title: 'Zeryab Estates', category: 'Brand Identity · Real Estate', image: '618ce8170b', slug: 'zeryab-estates' },
+  { title: 'Masar Resort', category: 'Brand Identity · Hospitality', image: '0793b8d88b', slug: 'masar' },
+  { title: 'Lazure Hospitality', category: 'Brand Identity · Hospitality', image: '3b6d2e3e84', slug: 'lazure', focus: '52% 50%' },
   { title: 'Sky Falcons', category: 'Visual Identity · Aviation', image: '0f50a57577', slug: 'sky-falcons' },
-  { title: 'Rambourg Foundation', category: 'Brand Identity · Foundation', image: '5749a13a08', slug: 'rambourg' },
-  { title: 'National Cyber Security Center', category: 'Identity · Government', image: 'ee591a3a9d', slug: null },
-  { title: 'Zain Alsharaf Center', category: 'Brand Identity · Culture', image: 'f86a45667b', slug: null },
-  { title: 'Wakers17', category: 'Brand Identity · F&B', image: '98976587d0', slug: 'wakers17' },
-  { title: 'Sana Interiors', category: 'Brand Identity · Interior Design', image: 'bc30f624ae', slug: 'sana-interiors' },
+  { title: 'Rambourg Foundation', category: 'Brand Identity · Foundation', image: '5bcb72c2f7', slug: 'rambourg', focus: '60% 50%' },
+  { title: 'National Cyber Security Center', category: 'Identity · Government', image: 'ee591a3a9d', slug: null, ratio: 'image' },
+  { title: 'Zain Alsharaf Center', category: 'Brand Identity · Culture', image: 'f86a45667b', slug: null, ratio: 'image' },
+  { title: 'Wakers17', category: 'Brand Identity · F&B', image: '9b31bd7444', slug: 'wakers17', focus: '50% 60%' },
+  { title: 'Sana Interiors', category: 'Brand Identity · Interior Design', image: '66a3bbd3ad', slug: 'sana-interiors' },
 ]
 
 export const clients = [

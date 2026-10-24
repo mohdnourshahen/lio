@@ -19,7 +19,7 @@
     "2026"
    ]
   ],
-  "hero": "18eceee8d1",
+  "hero": "92b5c6a3f8",
   "info": [
    [
     "Project Type",
@@ -357,7 +357,7 @@
     "2024"
    ]
   ],
-  "hero": "69a3f939fb",
+  "hero": "7160f3fd32",
   "info": [
    [
     "Project Type",
@@ -1325,7 +1325,7 @@
     "2023"
    ]
   ],
-  "hero": "5b80186f7b",
+  "hero": "a16077e013",
   "info": [],
   "next": "sana-interiors",
   "credits": [],
@@ -1543,6 +1543,7 @@
     "layout": "pair"
    }
   ],
+  "heroMobile": "28c1c11c00",
   "year": "2023"
  },
  {
@@ -1797,6 +1798,7 @@
     "layout": "grid"
    }
   ],
+  "heroMobile": "58d0e9b72f",
   "year": "2025"
  }
 ]
