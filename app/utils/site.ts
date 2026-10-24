@@ -61,7 +61,7 @@ export const stats = [
   { value: '100', unit: '%', desc: ['Long-term client', 'partnerships'] },
 ]
 
-export const marquee = ['Brand Identity', 'Visual Strategy', 'Brand Systems', 'Motion Design', 'UI · UX Design', 'Print & Editorial', 'Creative Direction']
+export const marquee = ['Brand Identity', 'Visual Strategy', 'Brand Systems', 'Print & Editorial', 'Creative Direction']
 
 export const services = [
   { num: '01', name: 'Strategy', desc: 'Brand Strategy — defining direction, positioning, and the visual foundations that guide how brands communicate.' },
@@ -86,7 +86,7 @@ export const selectedWork = [
 export const clients = [
   'Joramco', 'Friedrich Naumann Foundation Jordan', 'Rababa', 'National Cyber Security Center', 'NEOM',
   'Norwegian Refugee Council', 'Globitel', 'Rambourg Foundation', 'DAI', 'UNFPA', 'Omantel', 'Aircraft Marketing',
-  'SkyFalcons', 'World Health Organization', 'Halcyon', 'Save the Children', 'Art Engine Media & Films', 'Brinc', 'Tabuk',
+  'SkyFalcons', 'World Health Organization', 'Halcyon', 'Save the Children', 'Art Engine Media & Films', 'Brinc', 'Tabuk', 'Roycelysian',
 ].map((name, i) => ({ name, src: `/clients/${String(i + 1).padStart(2, '0')}.svg` }))
 
 export const HERO_IMAGE = 'b42e0ba664'

@@ -30,7 +30,7 @@ export function organizationLd(base: string) {
     'slogan': 'We translate brands into visual language',
     'address': { '@type': 'PostalAddress', 'addressLocality': site.city, 'addressCountry': site.countryCode },
     'areaServed': ['Jordan', 'Saudi Arabia', 'Morocco', 'Middle East and North Africa'],
-    'knowsAbout': ['Brand strategy', 'Visual identity', 'Brand systems', 'Creative direction', 'Communication design', 'Motion design', 'UI/UX design', 'Print and editorial design', 'Brand experience'],
+    'knowsAbout': ['Brand strategy', 'Visual identity', 'Brand systems', 'Creative direction', 'Communication design', 'Print and editorial design', 'Brand experience'],
     'knowsLanguage': ['en', 'ar'],
     'sameAs': site.socials.map(s => s.href),
   }

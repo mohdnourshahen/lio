@@ -162,10 +162,13 @@ onBeforeUnmount(() => {
       <ul class="sr-only">
         <li v-for="m in marquee" :key="m">{{ m }}</li>
       </ul>
-      <div ref="track" class="marquee-track" aria-hidden="true">
-        <template v-for="n in 2" :key="n">
+      <div class="marquee-rail" aria-hidden="true">
+        <div ref="track" class="marquee-track">
+        <!-- four copies: each half of the track must be wider than the viewport for a seamless -50% loop -->
+        <template v-for="n in 4" :key="n">
           <span v-for="m in marquee" :key="`${n}-${m}`" class="marquee-item">{{ m }}<i class="dot" /></span>
         </template>
+        </div>
       </div>
     </section>
 
@@ -308,13 +311,14 @@ onBeforeUnmount(() => {
 .stat { display: flex; flex-direction: column; border-top: 1px solid var(--rule); padding-top: 1.6vw; }
 .stat + .stat { border-left: 1px solid var(--rule); padding-left: 2vw; }
 .stat-idx { color: var(--fg-2); font-size: var(--fs-sub); }
-.stat-num { margin-top: 2.6vw; white-space: nowrap; font-size: 6.2vw; line-height: 1; color: var(--c-title); }
+.stat-num { margin-top: 2.6vw; white-space: nowrap; font-size: 5.4vw; line-height: 1; color: var(--c-title); }
 .stat-num span { font-family: var(--f-display); font-style: italic; font-size: 0.8em; margin-left: 0.04em; }
 .stat-desc { margin-top: 1.6vw; color: var(--fg-2); max-width: 15em; }
 
 /* MARQUEE */
 .marquee { padding: 2.4vw 0 9vw; overflow: hidden; }
-.marquee-track { display: flex; width: max-content; padding: 2.6vw 0; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+.marquee-rail { padding: 2.6vw 0; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+.marquee-track { display: flex; width: max-content; }
 .marquee-item { display: inline-flex; align-items: center; white-space: nowrap; font-family: var(--f-title); font-size: 2.9vw; line-height: 1.1; color: var(--c-title); padding-right: 3vw; }
 .marquee-item:nth-child(even) { font-family: var(--f-display); font-style: italic; font-weight: 300; font-size: 3.2vw; }
 .dot { display: inline-block; width: 0.32vw; height: 0.32vw; min-width: 4px; min-height: 4px; margin-left: 3vw; border-radius: 50%; background: var(--c-title); opacity: 0.6; }
@@ -433,7 +437,7 @@ onBeforeUnmount(() => {
   .stat-desc { margin-top: 3vw; }
 
   .marquee { padding: 4vw 0 16vw; }
-  .marquee-track { padding: 6vw 0; }
+  .marquee-rail { padding: 6vw 0; }
   .marquee-item { font-size: 8vw; padding-right: 7vw; }
   .marquee-item:nth-child(even) { font-size: 8.8vw; }
   .dot { margin-left: 7vw; }
