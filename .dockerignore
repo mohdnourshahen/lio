@@ -6,3 +6,4 @@ node_modules
 legacy
 scripts
 *.log
+.output-offline

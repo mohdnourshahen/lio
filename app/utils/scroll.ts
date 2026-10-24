@@ -70,10 +70,11 @@ export function measure() {
   }
   // each child of <main> plus the footer moves on its own layer, like Exo Ape's scroll sections
   const children = Array.from(content.querySelectorAll<HTMLElement>(':scope > main > :not(article), :scope > main > article > *, :scope > :not(main)'))
-  for (const el of children) el.style.transform = 'translate3d(0, 0, 0)'
+  // layout offsets rather than rects, so a measurement taken mid-transition (page scaled and
+  // rotated) or mid-scroll (sections translated) still gives true document positions
   sections = children.map((el) => {
-    const r = el.getBoundingClientRect()
-    return { el, top: r.top, bottom: r.bottom, out: true }
+    const top = offsetOf(el)
+    return { el, top, bottom: top + el.offsetHeight, out: true }
   })
   const height = sections.length ? sections[sections.length - 1]!.bottom : scroll.vh
   if (spacer) spacer.style.height = `${Math.ceil(height)}px`
@@ -147,14 +148,23 @@ export function setScrollContent(el: HTMLElement | null, { reset = true } = {}) 
 }
 
 export function scrollToY(y: number, immediate = false) {
-  const top = clamp(y, 0, scroll.limit || y)
+  measure()
+  const top = scroll.smooth ? clamp(y, 0, scroll.limit || y) : Math.max(0, y)
   window.scrollTo({ top, behavior: !scroll.smooth && !immediate && !prefersReducedMotion() ? 'smooth' : 'auto' })
   if (immediate) scroll.current = top
 }
 
 /** Document offset of an element inside the current page, independent of the active transform. */
 export function offsetOf(el: HTMLElement) {
-  return el.getBoundingClientRect().top + scroll.current
+  // layout offsets, not getBoundingClientRect: during a page transition the incoming page is
+  // still scaled and rotated, which would throw a rect-based measurement off by hundreds of px
+  let y = 0
+  let node: HTMLElement | null = el
+  while (node) {
+    y += node.offsetTop
+    node = node.offsetParent as HTMLElement | null
+  }
+  return y
 }
 
 export function scrollToElement(el: HTMLElement | null, immediate = false) {

@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { embeddedMedia } from '~/utils/assets'
 import { media } from '~/utils/site'
 
 /** Responsive AVIF/WebP picture for an image extracted from the legacy pages. */
@@ -16,17 +17,22 @@ const props = withDefaults(defineProps<{
 const info = computed(() => media[props.id])
 const srcsetOf = (id: string, ext: string) => media[id]?.widths.map(w => `/media/${id}-${w}.${ext} ${w}w`).join(', ')
 const srcset = (ext: string) => srcsetOf(props.id, ext)
-const fallback = computed(() => `/media/${props.id}-${info.value?.widths[0]}.webp`)
+const embedded = computed(() => embeddedMedia(props.id))
+const embeddedMobile = computed(() => props.mobileId ? embeddedMedia(props.mobileId) : undefined)
+const fallback = computed(() => embedded.value ?? `/media/${props.id}-${info.value?.widths[0]}.webp`)
 </script>
 
 <template>
   <picture v-if="info">
-    <template v-if="mobileId && media[mobileId]">
+    <source v-if="embeddedMobile" media="(max-width: 600px)" :srcset="embeddedMobile">
+    <template v-if="!embedded && mobileId && media[mobileId]">
       <source media="(max-width: 600px)" type="image/avif" :srcset="srcsetOf(mobileId, 'avif')" sizes="100vw">
       <source media="(max-width: 600px)" type="image/webp" :srcset="srcsetOf(mobileId, 'webp')" sizes="100vw">
     </template>
-    <source type="image/avif" :srcset="srcset('avif')" :sizes="sizes">
-    <source type="image/webp" :srcset="srcset('webp')" :sizes="sizes">
+    <template v-if="!embedded">
+      <source type="image/avif" :srcset="srcset('avif')" :sizes="sizes">
+      <source type="image/webp" :srcset="srcset('webp')" :sizes="sizes">
+    </template>
     <img
       :src="fallback"
       :alt="alt"

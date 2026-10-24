@@ -8,7 +8,8 @@
     "generate": "nuxt generate",
     "preview": "npx serve .output/public",
     "typecheck": "nuxt typecheck",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "build:offline": "node scripts/build-offline.mjs"
   },
   "dependencies": {
     "@fontsource-variable/inter-tight": "5.3.0",
@@ -19,6 +20,7 @@
     "vue-router": "5.4.0"
   },
   "devDependencies": {
+    "@types/node": "22.20.5",
     "typescript": "5.9.3",
     "vue-tsc": "3.3.13"
   }

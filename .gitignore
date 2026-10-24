@@ -5,3 +5,6 @@ node_modules
 .env
 *.log
 dist
+.offline
+.output-offline
+offline
