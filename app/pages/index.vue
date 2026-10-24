@@ -2,7 +2,9 @@
 import { EASE, clamp, gsap, isMobileWidth, prefersReducedMotion } from '~/utils/motion'
 import { onFrame } from '~/utils/scroll'
 import { HERO_IMAGE, clients, marquee, projects, selectedWork, services, site, stats } from '~/utils/site'
-import { appState } from '~/utils/state'
+
+const workCount = String(selectedWork.length).padStart(2, '0')
+import { appState, introDelay } from '~/utils/state'
 
 const NuxtLink = resolveComponent('NuxtLink')
 const base = useSiteUrl()
@@ -71,19 +73,22 @@ onMounted(() => {
   if (mobile) heroTl.fromTo(heroMedia.value!, { scale: 1, opacity: 1 }, { scale: 1.4, opacity: 0.3, ease: 'none' })
   else heroTl.fromTo(heroMedia.value!, { y: 0, opacity: 1 }, { y: () => hero.value!.offsetHeight / 2, opacity: 0.5, ease: 'none' })
   const lines = heroTitle.value!.querySelectorAll('[data-line]')
+  // the image settles from 1.2 as the title rises — the capabilities-deck reveal
+  gsap.fromTo(heroMedia.value!.querySelector('picture'), { scale: 1.2 }, { scale: 1, duration: 2.8, ease: EASE.out, delay: Math.max(0, introDelay() - 0.9) })
 
   stopHero = onFrame((s) => {
     const r = hero.value!.getBoundingClientRect()
     if (r.bottom < 0) return
     heroTl.progress(clamp(-r.top / r.height, 0, 1))
     if (appState.loading || appState.firstLoad) return
-    const titleTop = heroTitle.value!.getBoundingClientRect().top
-    if (titleTop < s.vh * 0.35 && heroScrolled) {
+    // lines tip away once the hero is a fifth scrolled, and return when it's back
+    const away = -r.top > s.vh * 0.2
+    if (away && heroScrolled) {
       heroScrolled = false
       gsap.killTweensOf(lines)
       gsap.to(lines, { autoAlpha: 0, rotation: -7, yPercent: -100, stagger: 0.1, duration: 1, ease: EASE.out })
     }
-    else if (titleTop >= s.vh * 0.35 && !heroScrolled) {
+    else if (!away && !heroScrolled) {
       heroScrolled = true
       gsap.killTweensOf(lines)
       gsap.to(lines, { autoAlpha: 1, rotation: 0, yPercent: 0, stagger: -0.1, duration: 1, ease: EASE.out })
@@ -94,7 +99,7 @@ onMounted(() => {
     const r = reel.value!.getBoundingClientRect()
     if (r.bottom < 0 || r.top > s.vh) return
     const p = clamp((s.vh - r.top) / (s.vh + r.height * 0.35), 0, 1)
-    const spread = (1 - p) * (mobile ? 18 : 22)
+    const spread = (1 - p) * (mobile ? 14 : 20)
     reelLeft.value!.style.transform = `translate3d(${-spread}vw, 0, 0)`
     reelRight.value!.style.transform = `translate3d(${spread}vw, 0, 0)`
   })
@@ -110,25 +115,34 @@ onBeforeUnmount(() => {
 
 <template>
   <PageShell>
-    <!-- HERO -->
+    <!-- HERO — centred, ceremonial: the capabilities-deck cover -->
     <section ref="hero" class="hero theme-dark" data-theme="dark" aria-labelledby="hero-title" data-cursor="Scroll">
-      <div ref="heroMedia" class="hero-media">
+      <div ref="heroMedia" class="hero-media atmos grain">
         <MediaImage :id="HERO_IMAGE" alt="" sizes="100vw" eager />
       </div>
       <div class="hero-vignette" aria-hidden="true" />
-      <div class="hero-inner container">
-        <p v-reveal="{ intro: true, delay: 0.3 }" class="hero-sub t-h4">
-          At Lōn Visuals, creativity meets strategy to shape how organizations communicate, evolve, and grow through design.
-        </p>
-        <h1 id="hero-title" ref="heroTitle" v-reveal="{ intro: true }" class="hero-title">
+      <div class="hero-inner">
+        <p v-reveal="{ intro: true, delay: -0.2 }" class="hero-kicker caps">Visual Strategy Studio · Amman</p>
+        <h1 id="hero-title" ref="heroTitle" v-reveal="{ intro: true }" class="hero-title t-h1">
           <span class="line-mask"><span data-line>We translate</span></span>
           <span class="line-mask"><span data-line>brands into</span></span>
           <span class="line-mask"><span data-line><em>visual language</em></span></span>
         </h1>
-        <div class="hero-foot t-small">
-          <p v-reveal="{ intro: true, delay: 0.5 }">— Visual Strategy Studio, Amman</p>
-          <p v-reveal="{ intro: true, delay: 0.6 }" class="hero-loc">2025 — Amman, JO</p>
-        </div>
+        <p v-reveal="{ intro: true, delay: 0.4 }" class="hero-caps caps">Strategic brand &amp; visual communication studio</p>
+      </div>
+      <div class="hero-foot container">
+        <p v-reveal="{ intro: true, delay: 0.6 }" class="hero-est caps">Est. Amman 2015</p>
+        <p class="hero-scroll caps" aria-hidden="true"><i />Scroll</p>
+        <p v-reveal="{ intro: true, delay: 0.7 }" class="hero-loc caps">2025 — Amman, JO</p>
+      </div>
+    </section>
+
+    <!-- STATEMENT — the studio's one-line positioning, given its own moment after the cover -->
+    <section class="statement theme-light" data-theme="light" aria-label="About Lōn Visuals">
+      <div class="container">
+        <p v-reveal class="st-line">
+          At Lōn Visuals, creativity meets strategy to shape how organizations communicate, evolve, and grow through design.
+        </p>
       </div>
     </section>
 
@@ -136,8 +150,9 @@ onBeforeUnmount(() => {
     <section class="stats theme-light" data-theme="light" aria-label="Studio in numbers">
       <ul class="container">
         <li v-for="(s, i) in stats" :key="s.value" class="stat">
+          <span class="stat-idx caps">{{ String(i + 1).padStart(2, '0') }}</span>
           <p v-reveal="{ delay: i * 0.08 }" class="stat-num t-h1">{{ s.value }}<span>{{ s.unit }}</span></p>
-          <p v-reveal="{ delay: i * 0.08 + 0.1 }" class="stat-desc t-small">{{ s.desc[0] }}<br>{{ s.desc[1] }}</p>
+          <p v-reveal="{ delay: i * 0.08 + 0.1 }" class="stat-desc t-small">{{ s.desc[0] }} {{ s.desc[1] }}</p>
         </li>
       </ul>
     </section>
@@ -149,18 +164,18 @@ onBeforeUnmount(() => {
       </ul>
       <div ref="track" class="marquee-track" aria-hidden="true">
         <template v-for="n in 2" :key="n">
-          <span v-for="m in marquee" :key="`${n}-${m}`" class="marquee-item t-h2">{{ m }}<i class="star" /></span>
+          <span v-for="m in marquee" :key="`${n}-${m}`" class="marquee-item">{{ m }}<i class="dot" /></span>
         </template>
       </div>
     </section>
 
     <!-- WORK -->
-    <section id="work" class="work theme-light" data-theme="light" aria-labelledby="work-title">
+    <section id="work" class="work theme-dark" data-theme="dark" aria-labelledby="work-title">
       <div class="container work-head">
-        <h2 id="work-title" v-reveal class="work-title t-h0">
-          <span class="line-mask"><span data-line>Our <em>Work</em></span></span>
-        </h2>
         <p v-reveal class="label work-label">Selected Projects</p>
+        <h2 id="work-title" v-reveal class="work-title t-h0">
+          <span class="line-mask"><span data-line>Our <em>Work</em><sup class="work-count">({{ workCount }})</sup></span></span>
+        </h2>
       </div>
       <ol class="container work-grid">
         <li v-for="(w, i) in selectedWork" :key="w.title" class="work-item" :class="i % 2 ? 'is-right' : 'is-left'">
@@ -176,29 +191,29 @@ onBeforeUnmount(() => {
               :ratio="i % 2 ? 3 / 4 : 4 / 5"
               :sizes="i % 2 ? '(max-width: 600px) 84vw, 32vw' : '(max-width: 600px) 84vw, 42vw'"
             />
-            <p class="work-caption t-small">
+            <div class="work-caption">
+              <span class="work-num caps">{{ String(i + 1).padStart(2, '0') }}</span>
               <span class="work-name">{{ w.title }}</span>
-              <span class="work-cat">{{ w.category }}</span>
-              <span class="work-num" aria-hidden="true">{{ String(i + 1).padStart(2, '0') }}</span>
-            </p>
+              <span class="work-cat t-small">{{ w.category }}</span>
+            </div>
           </component>
         </li>
       </ol>
     </section>
 
-    <!-- PHILOSOPHY -->
-    <section ref="reel" class="reel theme-dark" data-theme="dark" aria-label="Creativity plus strategy">
-      <p class="reel-label label">The Lōn equation</p>
-      <p class="reel-words t-h1">
-        <span ref="reelLeft" class="w"><em>Creativity</em></span>
+    <!-- EQUATION — Exo Ape's "Play Reel": words travel in from the edges and meet -->
+    <section ref="reel" class="reel theme-sand" data-theme="sand" aria-label="Creativity plus strategy equals Lōn">
+      <p class="reel-label caps">The Lōn equation</p>
+      <p class="reel-words t-h1" aria-hidden="true">
+        <span ref="reelLeft" class="w">Creativity</span>
         <span class="op">+</span>
-        <span ref="reelRight" class="w"><em>Strategy</em></span>
+        <span ref="reelRight" class="w">Strategy</span>
       </p>
-      <p class="reel-result t-h1"><span class="op">=</span> <span class="o">Ō</span></p>
+      <p class="reel-result" aria-hidden="true"><span class="o">Ō<span class="eq">=</span></span></p>
     </section>
 
     <!-- SERVICES -->
-    <section id="services" class="services theme-light" data-theme="light" aria-labelledby="services-title">
+    <section id="services" class="services theme-dark" data-theme="dark" aria-labelledby="services-title">
       <div class="container">
         <p v-reveal class="label s-label">Services</p>
         <h2 id="services-title" v-reveal class="s-title t-h1">
@@ -210,7 +225,7 @@ onBeforeUnmount(() => {
         </div>
         <ul class="s-list">
           <li v-for="s in services" :key="s.num" class="s-item">
-            <span class="s-num t-small">{{ s.num }}</span>
+            <span class="s-num caps">{{ s.num }}</span>
             <h3 class="s-name t-h2">{{ s.name }}</h3>
             <p class="s-desc t-small">{{ s.desc }}</p>
             <span class="s-arrow" aria-hidden="true">↗</span>
@@ -220,9 +235,9 @@ onBeforeUnmount(() => {
     </section>
 
     <!-- CLIENTS -->
-    <section id="clients" class="clients theme-sand" data-theme="sand" aria-labelledby="clients-title">
+    <section id="clients" class="clients theme-light" data-theme="light" aria-labelledby="clients-title">
       <div class="container">
-        <p class="label c-label">Clients</p>
+        <p v-reveal class="label c-label">Clients</p>
         <h2 id="clients-title" v-reveal class="c-title t-h2">Trusted by leading organizations</h2>
         <ul class="c-grid">
           <li v-for="c in clients" :key="c.src" class="c-cell">
@@ -232,15 +247,16 @@ onBeforeUnmount(() => {
       </div>
     </section>
 
-    <!-- STUDIO -->
+    <!-- STUDIO — a craft collage from the work itself -->
     <section id="studio" class="studio theme-dark" data-theme="dark" aria-labelledby="studio-title">
       <div class="container">
-        <div class="st-visual">
-          <MediaFrame :id="HERO_IMAGE" alt="Creation is the craft of turning vision into reality" :ratio="4 / 5" sizes="(max-width: 600px) 84vw, 40vw" :travel="16" :scale="[1.25, 1.1]" />
-          <p class="st-tag t-sub">Est. Amman · 2015</p>
+        <div class="st-collage" aria-hidden="true">
+          <MediaFrame id="b53dd19ea4" alt="" class="st-a" :ratio="3 / 2" sizes="(max-width: 600px) 84vw, 36vw" :travel="10" />
+          <MediaFrame id="0793b8d88b" alt="" class="st-b" :ratio="4 / 5" sizes="(max-width: 600px) 50vw, 20vw" :travel="18" />
+          <MediaFrame id="66a3bbd3ad" alt="" class="st-c" :ratio="4 / 5" sizes="(max-width: 600px) 40vw, 14vw" :travel="22" />
         </div>
         <div class="st-content">
-          <p v-reveal class="label">Studio</p>
+          <p v-reveal class="label">Studio · Est. Amman 2015</p>
           <h2 id="studio-title" v-reveal class="st-title t-h1">
             <span class="line-mask"><span data-line>Creativity.</span></span>
             <span class="line-mask"><span data-line><em>Direction.</em></span></span>
@@ -254,166 +270,191 @@ onBeforeUnmount(() => {
 </template>
 
 <style scoped>
-/* HERO */
-.hero { height: calc(var(--vh) * 100); min-height: 560px; overflow: hidden; }
-.hero-media { position: absolute; inset: 0; will-change: transform, opacity; }
-.hero-media :deep(picture), .hero-media :deep(img) { width: 100%; height: 100%; object-fit: cover; object-position: center 25%; }
-.hero-vignette { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(24, 22, 14, 0.35) 0%, rgba(24, 22, 14, 0.05) 35%, rgba(24, 22, 14, 0.55) 100%); }
-.hero-inner { position: relative; height: 100%; align-content: end; padding-bottom: 3.4vw; }
-.hero-sub { grid-column: 2 / 7; max-width: 32em; margin-bottom: 4.4vw; color: var(--c-paper); }
-.hero-title {
-  grid-column: 2 / -1; display: flex; flex-direction: column;
-  font-family: var(--f-display); font-weight: 300;
-  font-size: 11.8vw; line-height: 0.9; letter-spacing: -0.035em;
-  color: var(--c-paper);
-}
-.hero-title em { color: var(--c-gold-2); }
-.hero-foot { grid-column: 2 / -1; display: flex; justify-content: space-between; margin-top: 2.6vw; color: rgba(245, 242, 234, 0.7); }
+.dim { color: var(--fg-2); }
 
-/* STATS */
-.stats { padding: 11vw 0 6vw; }
-.stats ul { row-gap: 8vw; }
-.stat { grid-column: span 2; }
-.stat:first-child { grid-column: 2 / span 2; }
-.stat:nth-child(2) { grid-column: 5 / span 2; }
-.stat:nth-child(3) { grid-column: 7 / span 2; }
-.stat:nth-child(4) { grid-column: 9 / span 3; }
-.stat-num { font-weight: 300; white-space: nowrap; font-size: 7.6vw; line-height: 1; letter-spacing: -0.02em; }
-.stat-num span { color: var(--accent); font-style: italic; }
-.stat-desc { margin-top: 1.2vw; color: var(--fg-2); }
+/* HERO */
+.hero { height: calc(var(--vh) * 100); min-height: 600px; overflow: hidden; display: flex; flex-direction: column; }
+.hero-media { position: absolute; inset: 0; will-change: transform, opacity; overflow: hidden; }
+.hero-media :deep(picture), .hero-media :deep(img) { width: 100%; height: 100%; object-fit: cover; object-position: center 30%; }
+.hero-media :deep(picture) { display: block; transform-origin: 50% 40%; }
+.hero-vignette {
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(ellipse 75% 65% at 50% 50%, rgba(18, 16, 10, 0.05) 0%, rgba(18, 16, 10, 0.4) 72%, rgba(18, 16, 10, 0.78) 100%),
+    linear-gradient(180deg, rgba(18, 16, 10, 0.35) 0%, rgba(18, 16, 10, 0) 28%, rgba(18, 16, 10, 0.7) 100%);
+}
+.hero-inner { position: relative; flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding-top: 6vw; }
+.hero-kicker { color: rgba(245, 242, 234, 0.72); margin-bottom: 3vw; }
+.hero-title { display: flex; flex-direction: column; align-items: center; font-size: 8.4vw; line-height: 1.02; color: var(--c-title); }
+.hero-title em { font-size: 1.12em; }
+.hero-caps { margin-top: 3.2vw; color: var(--c-title); opacity: 0.92; }
+.hero-foot { position: relative; align-items: end; padding-bottom: 3vw; }
+.hero-est { grid-column: 2 / 6; color: rgba(245, 242, 234, 0.72); }
+
+/* STATEMENT */
+.statement { padding: 13vw 0 4vw; text-align: center; }
+.st-line {
+  grid-column: 3 / 11; font-family: var(--f-sans); font-weight: 300;
+  font-size: max(2.9vw, 22px); line-height: 1.32; letter-spacing: -0.02em; color: var(--c-paper);
+}
+.hero-scroll { grid-column: 6 / 8; justify-self: center; display: flex; flex-direction: column; align-items: center; gap: 0.9vw; color: rgba(245, 242, 234, 0.6); }
+.hero-scroll i { display: block; width: 1px; height: 3.4vw; background: linear-gradient(var(--c-title), transparent); animation: drip 2.4s var(--ease-in-out) infinite; transform-origin: top; }
+@keyframes drip { 0% { transform: scaleY(0); } 50% { transform: scaleY(1); } 100% { transform: scaleY(1); opacity: 0; } }
+.hero-loc { grid-column: 9 / 12; justify-self: end; color: rgba(245, 242, 234, 0.72); }
+
+/* STATS — four equal columns on hairlines */
+.stats { padding: 6vw 0 9vw; }
+.stats ul { grid-template-columns: repeat(4, minmax(0, 1fr)); padding: 0 calc(var(--col) + var(--gutter)); }
+.stat { display: flex; flex-direction: column; border-top: 1px solid var(--rule); padding-top: 1.6vw; }
+.stat + .stat { border-left: 1px solid var(--rule); padding-left: 2vw; }
+.stat-idx { color: var(--fg-2); font-size: var(--fs-sub); }
+.stat-num { margin-top: 2.6vw; white-space: nowrap; font-size: 6.2vw; line-height: 1; color: var(--c-title); }
+.stat-num span { font-family: var(--f-display); font-style: italic; font-size: 0.8em; margin-left: 0.04em; }
+.stat-desc { margin-top: 1.6vw; color: var(--fg-2); max-width: 15em; }
 
 /* MARQUEE */
-.marquee { padding: 3vw 0 7vw; overflow: hidden; border-top: 1px solid var(--rule); }
-.marquee-track { display: flex; width: max-content; padding-top: 3vw; }
-.marquee-item { display: inline-flex; align-items: center; white-space: nowrap; font-family: var(--f-display); font-weight: 300; font-style: italic; padding-right: 2.8vw; }
-.star { display: inline-block; width: 0.4em; height: 0.4em; margin-left: 2.8vw; background: var(--accent); clip-path: polygon(50% 0, 61% 39%, 100% 50%, 61% 61%, 50% 100%, 39% 61%, 0 50%, 39% 39%); }
+.marquee { padding: 2.4vw 0 9vw; overflow: hidden; }
+.marquee-track { display: flex; width: max-content; padding: 2.6vw 0; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+.marquee-item { display: inline-flex; align-items: center; white-space: nowrap; font-family: var(--f-title); font-size: 2.9vw; line-height: 1.1; color: var(--c-title); padding-right: 3vw; }
+.marquee-item:nth-child(even) { font-family: var(--f-display); font-style: italic; font-weight: 300; font-size: 3.2vw; }
+.dot { display: inline-block; width: 0.32vw; height: 0.32vw; min-width: 4px; min-height: 4px; margin-left: 3vw; border-radius: 50%; background: var(--c-title); opacity: 0.6; }
 
 /* WORK */
-.work { padding: 8vw 0 14vw; }
+.work { padding: 12vw 0 14vw; }
 .work-head { align-items: end; }
-.work-title { grid-column: 1 / 10; font-weight: 300; margin-left: -0.5vw; }
-.work-label { grid-column: 10 / 12; justify-self: start; margin-bottom: 3.2vw; }
-.work-grid { margin-top: 6vw; align-items: start; }
+.work-label { grid-column: 2 / -1; }
+.work-title { grid-column: 2 / -1; margin-top: 2.4vw; }
+.work-count { font-family: var(--f-title); font-size: 0.16em; letter-spacing: 0.06em; vertical-align: top; position: relative; top: 0.9em; margin-left: 0.5em; color: var(--fg-2); }
+.work-grid { margin-top: 7vw; align-items: start; row-gap: 10vw; padding-bottom: 22vw; }
 /* Exo Ape's staggered rhythm: large left, smaller right dropped by a third — DOM order stays 01→09 */
-.work-grid { row-gap: 10vw; padding-bottom: 22vw; }
 .is-left { grid-column: 2 / 7; }
 .is-right { grid-column: 8 / 12; transform: translateY(22vw); }
 .work-link { display: block; }
-.work-link :deep(.media img) { transition: transform 1.2s var(--ease-out); }
-.work-caption { display: flex; gap: 0.4em; align-items: baseline; margin-top: 1.4vw; }
-.work-cat::before { content: '— '; }
-.work-name { color: var(--fg); font-weight: 500; }
+.work-link :deep(.media img) { transition: transform 1.4s var(--ease-out), filter 1s var(--ease-out); }
+.work-caption { display: grid; grid-template-columns: auto 1fr; column-gap: 1.2vw; row-gap: 0.3vw; align-items: baseline; margin-top: 1.4vw; }
+.work-num { grid-row: span 2; color: var(--c-title); font-size: var(--fs-sub); }
+.work-name { font-family: var(--f-title); font-size: max(1.5vw, 17px); line-height: 1.25; color: var(--c-paper); transition: color 0.6s; }
 .work-cat { color: var(--fg-2); }
-.work-num { margin-left: auto; color: var(--fg-2); font-variant-numeric: tabular-nums; }
 @media (hover: hover) {
-  .work-link[href]:hover :deep(.media img) { transform: scale(1.04); }
-  .work-link[href]:hover .work-name { font-style: italic; }
+  .work-link[href]:hover :deep(.media img) { transform: scale(1.05); }
+  .work-link[href]:hover .work-name { color: var(--c-title); }
 }
 
-/* PHILOSOPHY — "Play Reel" */
+/* EQUATION */
 .reel { min-height: calc(var(--vh) * 100); display: flex; flex-direction: column; align-items: center; justify-content: center; overflow: hidden; padding: 10vw 0; text-align: center; }
-.reel-label { position: absolute; top: 5vw; left: 50%; transform: translateX(-50%); color: var(--fg-2); }
-.reel-words { display: flex; align-items: baseline; justify-content: center; gap: 3vw; white-space: nowrap; font-weight: 300; }
+.reel-label { position: absolute; top: 6vw; left: 50%; transform: translateX(-50%); color: var(--fg-2); }
+.reel-words { display: flex; align-items: center; justify-content: center; gap: 2.6vw; white-space: nowrap; font-size: 7vw; color: var(--c-title); }
 .reel-words .w { display: inline-block; will-change: transform; }
-.reel-words em, .reel-result .o { color: var(--c-paper); }
-.op { color: var(--accent); font-style: italic; }
-.reel-result { margin-top: 2vw; font-weight: 300; }
-.reel-result .o { font-style: italic; color: var(--c-gold-2); }
+.reel-words .w:last-child { font-family: var(--f-display); font-style: italic; font-weight: 300; font-size: 1.12em; }
+.op { font-family: var(--f-display); font-weight: 300; font-size: 0.8em; color: var(--fg-2); }
+.reel-result { margin-top: 1vw; color: var(--c-title); }
+.reel-result .eq { position: absolute; right: 100%; top: 50%; transform: translate(-0.4em, -42%); font-family: var(--f-display); font-weight: 300; font-size: 0.34em; color: var(--fg-2); }
+.reel-result .o { position: relative; display: inline-block; font-family: var(--f-title); font-size: 15vw; line-height: 1; }
 
 /* SERVICES */
 .services { padding: 14vw 0 12vw; }
 .s-label { grid-column: 2 / 6; }
-.s-title { grid-column: 2 / 12; margin-top: 2vw; }
+.s-title { grid-column: 2 / 12; margin-top: 2.4vw; }
 .s-intro { grid-column: 7 / 12; margin-top: 4vw; display: grid; gap: 1.6vw; }
-.s-intro strong { font-weight: 450; }
-.dim { color: var(--fg-2); }
+.s-intro strong { font-weight: 450; color: var(--c-paper); }
+.s-intro .t-h4 { color: rgba(245, 242, 234, 0.82); }
 .s-list { grid-column: 2 / 12; margin-top: 8vw; border-top: 1px solid var(--rule); }
 .s-item {
   position: relative; display: grid; grid-template-columns: 1fr 4fr 4fr 1fr; align-items: baseline;
-  column-gap: var(--gutter); padding: 2.6vw 0 2.8vw; border-bottom: 1px solid var(--rule);
+  column-gap: var(--gutter); padding: 2.8vw 0 3vw; border-bottom: 1px solid var(--rule);
 }
-.s-item::before { content: ''; position: absolute; left: 0; right: 0; bottom: -1px; height: 1px; background: var(--fg); transform: scaleX(0); transform-origin: right; transition: transform 0.9s var(--ease-in-out); }
-.s-num { color: var(--fg-2); }
-.s-name { font-family: var(--f-display); font-weight: 300; transition: transform 0.9s var(--ease-out); }
+.s-item::before { content: ''; position: absolute; left: 0; right: 0; bottom: -1px; height: 1px; background: var(--c-title); transform: scaleX(0); transform-origin: right; transition: transform 0.9s var(--ease-in-out); }
+.s-num { color: var(--fg-2); font-size: var(--fs-sub); }
+.s-name { transition: transform 0.9s var(--ease-out); }
 .s-desc { color: var(--fg-2); max-width: 30em; }
-.s-arrow { justify-self: end; font-size: var(--fs-h4); transition: transform 0.9s var(--ease-out); }
+.s-arrow { justify-self: end; font-size: var(--fs-h4); color: var(--c-title); transition: transform 0.9s var(--ease-out); }
 @media (hover: hover) {
   .s-item:hover::before { transform: scaleX(1); transform-origin: left; }
-  .s-item:hover .s-name { transform: translateX(1.4vw); font-style: italic; }
+  .s-item:hover .s-name { transform: translateX(1.4vw); }
   .s-item:hover .s-arrow { transform: rotate(45deg); }
 }
 
-/* CLIENTS */
+/* CLIENTS — borderless field of marks, no empty cells */
 .clients { padding: 12vw 0; }
-.c-label { grid-column: 2 / 5; }
-.c-title { grid-column: 5 / 11; font-family: var(--f-display); font-weight: 300; }
-.c-grid { grid-column: 2 / 12; margin-top: 7vw; display: grid; grid-template-columns: repeat(5, 1fr); border-top: 1px solid var(--rule); border-left: 1px solid var(--rule); }
-.c-cell { aspect-ratio: 16 / 9; display: flex; align-items: center; justify-content: center; border-right: 1px solid var(--rule); border-bottom: 1px solid var(--rule); padding: 1.6vw; }
-.c-cell img { max-width: 78%; max-height: 52%; width: auto; height: auto; filter: brightness(0); opacity: 0.72; transition: opacity 0.5s var(--ease-out); }
+.c-label { grid-column: 2 / 6; }
+.c-title { grid-column: 2 / 9; margin-top: 2.4vw; }
+.c-grid { grid-column: 2 / 12; margin-top: 6vw; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); border-top: 1px solid var(--rule); }
+.c-cell { height: 9vw; min-height: 84px; display: flex; align-items: center; justify-content: center; padding: 1.4vw; border-bottom: 1px solid var(--rule); }
+.c-cell img { max-width: 76%; max-height: 50%; width: auto; height: auto; opacity: 0.62; transition: opacity 0.6s var(--ease-out); }
 @media (hover: hover) { .c-cell:hover img { opacity: 1; } }
 
 /* STUDIO */
 .studio { padding: 14vw 0; }
-.st-visual { grid-column: 2 / 6; position: relative; }
-.st-tag { margin-top: 1.2vw; color: var(--fg-2); }
-.st-content { grid-column: 7 / 12; align-self: center; }
-.st-title { margin-top: 2vw; display: flex; flex-direction: column; }
+.st-collage { grid-column: 1 / 7; position: relative; height: 40vw; }
+.st-collage :deep(.media) { position: absolute; }
+.st-a { left: 8.5vw; top: 0; width: 34vw; }
+.st-b { left: 2vw; top: 17vw; width: 16vw; }
+.st-c { left: 33vw; top: 25vw; width: 12vw; }
+.st-content { grid-column: 8 / 12; align-self: center; }
+.st-title { margin-top: 2.4vw; display: flex; flex-direction: column; }
 .st-body { margin-top: 3vw; color: var(--fg-2); }
 
 /* tablet portrait & small laptops */
 @media (min-width: 601px) and (max-width: 1024px) {
-  .hero-sub { grid-column: 2 / 9; }
-  .hero-title { font-size: 12.5vw; }
-  .work-label { grid-column: 9 / 13; }
+  .hero-title { font-size: 9.4vw; }
+  .hero-est { grid-column: 1 / 6; }
+  .st-line { grid-column: 2 / 12; }
+  .hero-loc { grid-column: 9 / 13; }
+  .stats ul { padding: 0; }
   .is-left { grid-column: 1 / 7; }
   .is-right { grid-column: 7 / 13; }
-  .work-caption { flex-wrap: wrap; }
-  .work-cat { order: 3; flex-basis: 100%; }
-  .work-cat::before { content: none; }
   .s-intro { grid-column: 5 / 13; }
   .s-list { grid-column: 1 / 13; }
   .s-item { grid-template-columns: 1fr 3fr 5fr 1fr; padding: 3.6vw 0; }
-  .c-grid { grid-column: 1 / 13; grid-template-columns: repeat(4, 1fr); }
-  .c-title { grid-column: 4 / 13; }
-  .st-visual { grid-column: 1 / 6; }
+  .c-grid { grid-column: 1 / 13; grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .st-collage { grid-column: 1 / 7; }
   .st-content { grid-column: 7 / 13; }
-  .stat-desc { margin-top: 2vw; }
 }
 
 @media (max-width: 600px) {
   .hero { min-height: 0; }
-  .hero-inner { padding-bottom: 8vw; }
-  .hero-sub { grid-column: 1 / 10; margin-bottom: 10vw; }
-  .hero-title { grid-column: 1 / -1; font-size: 13.4vw; margin-left: -0.5vw; }
-  .hero-foot { grid-column: 1 / -1; margin-top: 6vw; }
+  .hero-inner { padding: 22vw 0 0; }
+  .hero-kicker { margin-bottom: 8vw; }
+  .hero-title { font-size: 11.6vw; }
+  .hero-caps { margin-top: 8vw; max-width: 70vw; }
+  .hero-foot { padding-bottom: 8vw; row-gap: 6vw; }
+  .hero-est { grid-column: 1 / -1; justify-self: center; }
+  .statement { padding: 24vw 0 6vw; }
+  .st-line { grid-column: 1 / -1; font-size: 6.4vw; }
+  .hero-scroll { display: none; }
+  .hero-loc { grid-column: 1 / -1; justify-self: center; }
 
-  .stats { padding: 20vw 0 12vw; }
-  .stat, .stat:nth-child(n) { grid-column: span 5; }
-  .stat-num { font-size: 16vw; }
-  .stat-desc { margin-top: 2vw; }
+  .stats { padding: 10vw 0 12vw; }
+  .stats ul { grid-template-columns: repeat(2, minmax(0, 1fr)); padding: 0; row-gap: 10vw; }
+  .stat { padding-top: 4vw; }
+  .stat + .stat { border-left: 0; padding-left: 0; }
+  .stat:nth-child(even) { border-left: 1px solid var(--rule); padding-left: 5vw; }
+  .stat-num { font-size: 13vw; margin-top: 5vw; }
+  .stat-desc { margin-top: 3vw; }
 
-  .marquee { padding: 6vw 0 14vw; }
-  .marquee-item { font-size: 10vw; line-height: 1.2; padding-right: 6vw; }
-  .star { margin-left: 6vw; }
+  .marquee { padding: 4vw 0 16vw; }
+  .marquee-track { padding: 6vw 0; }
+  .marquee-item { font-size: 8vw; padding-right: 7vw; }
+  .marquee-item:nth-child(even) { font-size: 8.8vw; }
+  .dot { margin-left: 7vw; }
 
-  .work { padding: 16vw 0 24vw; }
-  .work-title { grid-column: 1 / -1; }
-  .work-label { grid-column: 1 / -1; margin: 4vw 0 0; }
-  .work-grid { margin-top: 12vw; }
-  .work-grid { row-gap: 14vw; padding-bottom: 0; }
+  .work { padding: 22vw 0 24vw; }
+  .work-label, .work-title { grid-column: 1 / -1; }
+  .work-title { margin-top: 5vw; }
+  .work-grid { margin-top: 12vw; row-gap: 14vw; padding-bottom: 0; }
   .is-left { grid-column: 1 / 10; }
   .is-right { grid-column: 3 / -1; transform: none; }
-  .work-caption { margin-top: 3vw; flex-wrap: wrap; }
-  .work-cat { flex-basis: 100%; order: 3; }
-  .work-cat::before { content: none; }
+  .work-caption { margin-top: 3.4vw; column-gap: 3vw; row-gap: 1vw; }
+  .work-name { font-size: 4.8vw; }
 
-  .reel { min-height: calc(var(--vh) * 80); }
-  .reel-label { top: 14vw; }
-  .reel-words { flex-direction: column; align-items: center; gap: 0; font-size: 18vw; line-height: 1.05; }
+  .reel { min-height: calc(var(--vh) * 85); }
+  .reel-label { top: 16vw; }
+  .reel-words { flex-direction: column; gap: 1vw; font-size: 12vw; }
+  .reel-result .o { font-size: 34vw; }
 
   .services { padding: 24vw 0; }
   .s-label, .s-title, .s-intro, .s-list { grid-column: 1 / -1; }
-  .s-title { margin-top: 4vw; }
+  .s-title { margin-top: 5vw; }
   .s-intro { margin-top: 8vw; gap: 4vw; }
   .s-list { margin-top: 14vw; }
   .s-item { grid-template-columns: 2fr 8fr; row-gap: 2vw; padding: 6vw 0; }
@@ -422,15 +463,17 @@ onBeforeUnmount(() => {
 
   .clients { padding: 24vw 0; }
   .c-label, .c-title, .c-grid { grid-column: 1 / -1; }
-  .c-title { margin-top: 4vw; }
-  .c-grid { grid-template-columns: repeat(2, 1fr); margin-top: 10vw; }
-  .c-cell { padding: 4vw; }
+  .c-title { margin-top: 5vw; }
+  .c-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 10vw; }
+  .c-cell { height: 22vw; padding: 4vw; }
 
   .studio { padding: 24vw 0; }
-  .st-visual { grid-column: 1 / 9; }
-  .st-tag { margin-top: 3vw; }
-  .st-content { grid-column: 1 / -1; margin-top: 14vw; }
-  .st-title { margin-top: 4vw; }
+  .st-collage { grid-column: 1 / -1; height: 96vw; }
+  .st-a { left: 10vw; width: 74vw; }
+  .st-b { left: 0; top: 40vw; width: 36vw; }
+  .st-c { left: 54vw; top: 58vw; width: 28vw; }
+  .st-content { grid-column: 1 / -1; margin-top: 12vw; }
+  .st-title { margin-top: 5vw; }
   .st-body { margin-top: 6vw; }
 }
 </style>

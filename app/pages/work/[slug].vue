@@ -118,12 +118,12 @@ const ratio = (id: string) => (media[id] ? media[id].w / media[id].h : 1.5)
     <article class="case" :aria-labelledby="'case-title'">
       <!-- HERO -->
       <header ref="hero" class="c-hero theme-dark" data-theme="dark">
-        <div ref="heroMedia" class="c-hero-media">
+        <div ref="heroMedia" class="c-hero-media atmos-soft grain">
           <MediaImage :id="p.hero" :alt="heroAlt" sizes="100vw" eager />
         </div>
         <div class="c-hero-shade" aria-hidden="true" />
         <div class="container c-hero-inner">
-          <nav class="crumbs t-sub" aria-label="Breadcrumb">
+          <nav class="crumbs caps" aria-label="Breadcrumb">
             <ol>
               <li><NuxtLink to="/" class="u-link u-link--rev">Lōn Visuals</NuxtLink></li>
               <li><NuxtLink to="/#work" class="u-link u-link--rev">Work</NuxtLink></li>
@@ -133,7 +133,7 @@ const ratio = (id: string) => (media[id] ? media[id].w / media[id].h : 1.5)
           <h1 id="case-title" v-reveal="{ intro: true }" class="c-title t-h1" :class="{ 'is-long': p.title.length > 18 }">
             <span class="line-mask"><span data-line>{{ p.title }}</span></span>
           </h1>
-          <p v-reveal="{ intro: true, delay: 0.2 }" class="c-cat t-p">{{ p.category }}</p>
+          <p v-reveal="{ intro: true, delay: 0.2 }" class="c-cat caps">{{ p.category }}</p>
         </div>
       </header>
 
@@ -143,7 +143,7 @@ const ratio = (id: string) => (media[id] ? media[id].w / media[id].h : 1.5)
           <p v-reveal class="c-lede t-h3">{{ p.lede }}</p>
           <dl class="c-facts">
             <div v-for="[k, v] in facts" :key="k" class="c-fact">
-              <dt class="t-small">{{ k }}</dt>
+              <dt class="caps">{{ k }}</dt>
               <dd class="t-small">{{ v }}</dd>
             </div>
           </dl>
@@ -187,7 +187,7 @@ const ratio = (id: string) => (media[id] ? media[id].w / media[id].h : 1.5)
             <h2 v-if="b.title" v-reveal class="b-title t-h2">{{ b.title }}</h2>
             <ol class="b-items" :class="{ 'is-chips': b.items.some(it => it.color), 'is-words': b.items.every(it => !it.desc && !it.color) }">
               <li v-for="it in b.items" :key="it.name" class="b-item" :style="it.color ? { '--chip': it.color } : undefined">
-                <span v-if="it.num" class="b-num t-small">{{ it.num }}</span>
+                <span v-if="it.num" class="b-num caps">{{ it.num }}</span>
                 <span v-if="it.ar" class="b-ar" lang="ar" dir="rtl">{{ it.ar }}</span>
                 <h3 class="b-name t-h3">{{ it.name }}</h3>
                 <p v-if="it.desc" class="b-desc t-small">{{ it.desc }}</p>
@@ -201,7 +201,7 @@ const ratio = (id: string) => (media[id] ? media[id].w / media[id].h : 1.5)
             <li v-for="sw in b.swatches" :key="sw.hex" class="sw">
               <span class="sw-chip" :style="{ background: sw.hex }" />
               <span v-if="sw.name" class="t-small">{{ sw.name }}</span>
-              <span class="t-sub dim">{{ sw.hex.toUpperCase() }}</span>
+              <span class="caps dim">{{ sw.hex.toUpperCase() }}</span>
             </li>
           </ul>
         </section>
@@ -210,7 +210,7 @@ const ratio = (id: string) => (media[id] ? media[id].w / media[id].h : 1.5)
       <section v-if="p.credits.length" class="b-credits theme-light" data-theme="light" aria-label="Credits">
         <dl class="container">
           <div v-for="c in p.credits" :key="c.role" class="credit">
-            <dt class="t-sub dim">{{ c.role }}</dt>
+            <dt class="caps dim">{{ c.role }}</dt>
             <dd class="t-small">
               <a v-if="c.href" :href="c.href" target="_blank" rel="noopener" class="u-link">{{ c.name }}</a>
               <template v-else>{{ c.name }}</template>
@@ -228,9 +228,9 @@ const ratio = (id: string) => (media[id] ? media[id].w / media[id].h : 1.5)
           <MediaFrame :id="next.hero" alt="" sizes="100vw" :ratio="16 / 9" :travel="10" />
         </div>
         <div class="container c-next-inner">
-          <p class="label">Next project</p>
+          <p class="caps c-next-kicker">Next project</p>
           <p class="c-next-title t-h1" :class="{ 'is-long': next.title.length > 18 }">{{ next.title }}</p>
-          <p class="t-p dim">{{ next.category }}</p>
+          <p class="caps dim">{{ next.category }}</p>
         </div>
       </a>
     </section>
@@ -242,20 +242,21 @@ const ratio = (id: string) => (media[id] ? media[id].w / media[id].h : 1.5)
 .c-hero { position: relative; height: calc(var(--vh) * 100); min-height: 520px; overflow: hidden; }
 .c-hero-media { position: absolute; inset: 0; will-change: transform, opacity; }
 .c-hero-media :deep(picture), .c-hero-media :deep(img) { width: 100%; height: 100%; object-fit: cover; }
-.c-hero-shade { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(24, 22, 14, 0.45) 0%, rgba(24, 22, 14, 0) 30%, rgba(24, 22, 14, 0.6) 100%); }
+.c-hero-media :deep(img) { filter: saturate(0.85) sepia(0.1) brightness(0.78); }
+.c-hero-shade { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(18, 16, 10, 0.55) 0%, rgba(18, 16, 10, 0.05) 32%, rgba(18, 16, 10, 0.8) 100%); }
 .c-hero-inner { position: relative; height: 100%; grid-template-rows: auto 1fr auto; padding: 2vw 0 3.4vw; }
-.crumbs { grid-column: 2 / -1; padding-top: 0.2vw; color: rgba(245, 242, 234, 0.75); }
+.crumbs { grid-column: 2 / -1; padding-top: 0.2vw; color: rgba(245, 242, 234, 0.72); font-size: var(--fs-sub); }
 .crumbs ol { display: flex; flex-wrap: wrap; gap: 0.6em; }
 .crumbs li + li::before { content: '/'; margin-right: 0.6em; opacity: 0.5; }
 .c-title { grid-column: 2 / -1; align-self: end; }
 .c-title.is-long, .c-next-title.is-long { font-size: 7.4vw; line-height: 7.4vw; }
-.c-cat { grid-column: 2 / -1; margin-top: 1.2vw; color: rgba(245, 242, 234, 0.75); }
+.c-cat { grid-column: 2 / -1; margin-top: 1.6vw; color: var(--c-title); }
 
 /* INTRO */
 .c-intro { padding: 10vw 0 11vw; }
-.c-lede { grid-column: 2 / 8; }
-.c-facts { grid-column: 2 / 12; margin-top: 7vw; display: grid; grid-template-columns: repeat(4, 1fr); gap: 2.5vw var(--gutter); }
-.c-fact dt { font-weight: 500; }
+.c-lede { grid-column: 2 / 9; color: var(--c-paper); font-family: var(--f-sans); font-weight: 300; font-size: max(2vw, 20px); line-height: 1.4; letter-spacing: -0.01em; }
+.c-facts { grid-column: 2 / 12; margin-top: 7vw; padding-top: 2.4vw; border-top: 1px solid var(--rule); display: grid; grid-template-columns: repeat(4, 1fr); gap: 2.5vw var(--gutter); }
+.c-fact dt { color: var(--c-title); font-size: var(--fs-sub); }
 .c-fact dd { margin: 0.6vw 0 0; color: var(--fg-2); }
 
 /* TEXT */
@@ -263,8 +264,9 @@ const ratio = (id: string) => (media[id] ? media[id].w / media[id].h : 1.5)
 .b-label { grid-column: 2 / 5; align-self: start; margin-top: 0.8vw; }
 .b-title { grid-column: 5 / 12; }
 .b-body { grid-column: 5 / 10; margin-top: 2.6vw; display: grid; gap: 1.2em; color: var(--fg-2); }
+.b-body p:first-child { color: rgba(245, 242, 234, 0.86); font-size: max(1.35vw, 16px); line-height: 1.55; }
 .b-tags { grid-column: 5 / 12; margin-top: 2.6vw; display: flex; flex-wrap: wrap; gap: 0.5vw; }
-.b-tags li { border: 1px solid var(--rule); border-radius: 99px; padding: 0.45em 1em; }
+.b-tags li { border: 1px solid var(--rule); border-radius: 99px; padding: 0.5em 1.1em; font-family: var(--f-title); text-transform: uppercase; letter-spacing: 0.08em; color: var(--c-title); }
 
 /* MEDIA */
 .b-media { margin: 0; padding: 2.2vw 0; }
@@ -279,14 +281,15 @@ const ratio = (id: string) => (media[id] ? media[id].w / media[id].h : 1.5)
 .is-grid .b-media-item { grid-column: span 5; margin-bottom: var(--gutter); }
 .is-grid .b-media-item:nth-child(odd) { grid-column: 2 / span 5; }
 .is-grid .b-media-item:nth-child(even) { grid-column: 7 / span 5; }
-.b-caption { grid-column: 2 / 9; margin-top: 1.2vw; color: var(--fg-2); }
+.b-caption { grid-column: 2 / 9; margin-top: 1.2vw; color: var(--fg-2); padding-left: 1.2em; position: relative; }
+.b-caption::before { content: ''; position: absolute; left: 0; top: 0.75em; width: 0.6em; height: 1px; background: var(--c-title); }
 
 /* LIST */
 .b-list { padding: 12vw 0; margin: 6vw 0; }
 .b-items { grid-column: 2 / 12; margin-top: 5vw; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0 var(--gutter); }
 .b-item { padding: 2vw 0 2.8vw; border-top: 1px solid var(--rule); display: flex; flex-direction: column; gap: 0.8vw; }
-.b-num { color: var(--accent); }
-.b-name { font-family: var(--f-display); font-weight: 300; }
+.b-num { color: var(--c-title); font-size: var(--fs-sub); }
+.b-name { color: var(--c-paper); }
 .b-desc { color: var(--fg-2); max-width: 26em; }
 .b-items.is-words { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 .b-name { overflow-wrap: break-word; hyphens: auto; }
@@ -297,8 +300,8 @@ const ratio = (id: string) => (media[id] ? media[id].w / media[id].h : 1.5)
 /* PALETTE */
 .b-palette { padding: 4vw 0 6vw; }
 .b-palette ul { grid-template-columns: repeat(auto-fit, minmax(0, 1fr)); margin: 0 var(--margin); padding-left: calc(var(--col) + var(--gutter)); padding-right: calc(var(--col) + var(--gutter)); }
-.sw { display: flex; flex-direction: column; gap: 0.4vw; }
-.sw-chip { display: block; aspect-ratio: 1 / 2.2; border-radius: 2px; margin-bottom: 0.6vw; box-shadow: inset 0 0 0 1px rgba(24, 22, 14, 0.08); }
+.sw { display: flex; flex-direction: column; gap: 0.4vw; min-width: 0; }
+.sw-chip { display: block; aspect-ratio: 1 / 2.2; border-radius: 2px; margin-bottom: 0.6vw; box-shadow: inset 0 0 0 1px rgba(245, 242, 234, 0.08); }
 .dim { color: var(--fg-2); }
 
 /* CREDITS */
@@ -311,14 +314,15 @@ const ratio = (id: string) => (media[id] ? media[id].w / media[id].h : 1.5)
 /* NEXT */
 .c-next { overflow: hidden; }
 .c-next-link { display: block; position: relative; }
-.c-next-media { position: relative; opacity: 0.4; transition: opacity 1s var(--ease-out); }
+.c-next-media { position: relative; opacity: 0.38; transition: opacity 1s var(--ease-out); }
 .c-next-media :deep(.media) { aspect-ratio: auto !important; height: calc(var(--vh) * 100); }
 .c-next-inner { position: absolute; inset: 0; align-content: center; }
 .c-next-inner > * { grid-column: 2 / -1; }
-.c-next-title { margin: 1.6vw 0 1vw; transition: transform 1s var(--ease-out); }
+.c-next-kicker { color: var(--fg-2); }
+.c-next-title { margin: 1.6vw 0 1.4vw; color: var(--c-title); transition: transform 1s var(--ease-out); }
 @media (hover: hover) {
   .c-next-link:hover .c-next-media { opacity: 0.6; }
-  .c-next-link:hover .c-next-title { transform: translateX(1.5vw); font-style: italic; }
+  .c-next-link:hover .c-next-title { transform: translateX(1.5vw); }
 }
 
 @media (min-width: 601px) and (max-width: 1024px) {
@@ -366,7 +370,8 @@ const ratio = (id: string) => (media[id] ? media[id].w / media[id].h : 1.5)
   .is-chips .b-item { padding: 4vw; }
 
   .b-palette { padding: 8vw 0 12vw; }
-  .b-palette ul { padding: 0; grid-template-columns: repeat(4, 1fr); gap: 4vw 3vw; }
+  .b-palette ul { padding: 0; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6vw 4vw; }
+  .sw .caps { letter-spacing: 0.04em; }
   .sw { gap: 1vw; }
 
   .b-credits dl { row-gap: 6vw; }

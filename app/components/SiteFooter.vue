@@ -8,13 +8,13 @@ const year = 2025
 <template>
   <footer id="contact" class="site-footer theme-dark" data-theme="dark">
     <div class="container">
-      <p v-reveal class="label kicker">Let’s Talk</p>
+      <p v-reveal class="caps kicker">Let’s Talk</p>
       <h2 v-reveal class="title t-h1">
         <span class="line-mask"><span data-line>Have a project</span></span>
         <span class="line-mask"><span data-line><em>in mind?</em></span></span>
       </h2>
       <p v-reveal class="sub t-h4">We’d love to hear about it — let’s build something extraordinary together.</p>
-      <a :href="`mailto:${site.email}`" class="email t-h2 u-link" data-cursor="Write">{{ site.email }}</a>
+      <a :href="`mailto:${site.email}`" class="email u-link" data-cursor="Write">{{ site.email }}</a>
 
       <div class="rule" />
 
@@ -44,11 +44,11 @@ const year = 2025
 
 <style scoped>
 .site-footer { padding: 16vw 0 4.5vw; min-height: calc(var(--vh) * 100); display: flex; flex-direction: column; justify-content: flex-end; }
-.kicker { grid-column: 2 / -1; color: var(--fg-2); }
-.title { grid-column: 2 / 12; margin-top: 2.2vw; color: var(--c-gold-2); display: flex; flex-direction: column; }
-.title em { color: var(--c-paper); }
-.sub { grid-column: 2 / 7; margin-top: 2.8vw; color: var(--fg-2); }
-.email { grid-column: 2 / 12; justify-self: start; margin-top: 4vw; font-family: var(--f-display); }
+.kicker { grid-column: 1 / -1; justify-self: center; color: var(--fg-2); }
+.title { grid-column: 1 / -1; margin-top: 2.6vw; color: var(--c-title); display: flex; flex-direction: column; align-items: center; text-align: center; }
+.title em { color: var(--c-title); }
+.sub { grid-column: 4 / 10; margin-top: 2.8vw; color: var(--fg-2); text-align: center; }
+.email { grid-column: 1 / -1; justify-self: center; margin-top: 4vw; font-family: var(--f-title); font-size: 2.6vw; line-height: 1.3; color: var(--c-paper); }
 .rule { grid-column: 2 / 12; height: 1px; background: var(--rule); margin: 6vw 0 2.8vw; }
 .col { grid-column: span 2; font-style: normal; display: flex; flex-direction: column; gap: 0.35vw; }
 .col-1 { grid-column: 2 / 5; }
@@ -56,11 +56,12 @@ const year = 2025
 .col-3 { grid-column: 7 / 9; }
 .col ul { display: flex; flex-direction: column; gap: 0.35vw; }
 .col a { align-self: flex-start; }
-.dim { color: var(--fg-2); margin-bottom: 0.6vw; }
+.dim { color: var(--c-title); opacity: 0.8; margin-bottom: 0.6vw; font-family: var(--f-title); text-transform: uppercase; letter-spacing: 0.09em; font-size: var(--fs-sub); }
 .copy { grid-column: 9 / 12; align-self: end; justify-self: end; margin: 0; }
 
 @media (min-width: 601px) and (max-width: 1024px) {
-  .sub { grid-column: 2 / 10; }
+  .sub { grid-column: 2 / 12; }
+  .email { font-size: 3.4vw; }
   .col-1 { grid-column: 2 / 6; }
   .col-2 { grid-column: 6 / 9; }
   .col-3 { grid-column: 9 / 12; }
@@ -70,9 +71,10 @@ const year = 2025
 @media (max-width: 600px) {
   .site-footer { padding: 32vw 0 10vw; }
   .kicker, .title, .sub, .email, .rule { grid-column: 1 / -1; }
+  .title { font-size: 12vw; }
   .title { margin-top: 5vw; }
   .sub { margin-top: 6vw; }
-  .email { margin-top: 8vw; font-size: 8.5vw; line-height: 1.2; }
+  .email { margin-top: 8vw; font-size: 6.2vw; line-height: 1.2; }
   .rule { margin: 14vw 0 8vw; }
   .col-1 { grid-column: 1 / -1; margin-bottom: 8vw; }
   .col-2 { grid-column: 1 / 6; }
