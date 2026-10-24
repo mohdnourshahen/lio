@@ -165,16 +165,16 @@ const ratio = (id: string) => (media[id] ? media[id].w / media[id].h : 1.5)
           </div>
         </section>
 
-        <figure v-else-if="b.type === 'media'" class="b-media theme-light" data-theme="light" :class="`is-${b.layout}`">
+        <!-- gallery images keep their own proportions (no frame crop) with a light drift -->
+        <figure v-else-if="b.type === 'media'" class="b-media theme-light" data-theme="light" :class="[`is-${b.layout}`, { 'is-portrait': b.layout === 'full' && ratio(b.images[0]!.id) < 1 }]">
           <div class="container b-media-grid">
             <div v-for="(img, j) in b.images" :key="img.id" class="b-media-item" :class="`n-${j}`">
               <MediaFrame
                 :id="img.id"
                 :alt="img.alt"
-                :ratio="b.layout === 'full' ? undefined : (b.layout === 'grid' ? 4 / 3 : ratio(b.images[0]!.id) > 1.2 ? 4 / 3 : 4 / 5)"
                 :sizes="b.layout === 'full' ? '(max-width: 600px) 100vw, 84vw' : '(max-width: 600px) 100vw, 42vw'"
-                :travel="b.layout === 'full' ? 8 : 12"
-                :scale="b.layout === 'full' ? [1.1, 1.1] : [1.15, 1.15]"
+                :travel="4"
+                :scale="[1.045, 1.045]"
               />
             </div>
             <figcaption v-if="b.caption" class="b-caption t-small">{{ b.caption }}</figcaption>
@@ -272,6 +272,7 @@ const ratio = (id: string) => (media[id] ? media[id].w / media[id].h : 1.5)
 .b-media { margin: 0; padding: 2.2vw 0; }
 .b-media-grid { align-items: start; }
 .is-full .n-0 { grid-column: 2 / 12; }
+.is-full.is-portrait .n-0, .is-portrait .b-caption { grid-column: 4 / 10; }
 .is-pair .n-0 { grid-column: 2 / 7; margin-top: 8vw; }
 .is-pair .n-1 { grid-column: 7 / 12; }
 .is-trio .b-media-item { grid-column: span 3; }
@@ -337,7 +338,12 @@ const ratio = (id: string) => (media[id] ? media[id].w / media[id].h : 1.5)
   .is-chips .b-item { padding: 2.6vw; }
 }
 
+@media (min-width: 601px) and (max-width: 1024px) {
+  .is-full.is-portrait .n-0, .is-portrait .b-caption { grid-column: 3 / 11; }
+}
+
 @media (max-width: 600px) {
+  .is-portrait .b-caption { grid-column: 1 / -1; }
   .crumbs, .c-title, .c-cat { grid-column: 1 / -1; }
   .c-title.is-long, .c-next-title.is-long { font-size: 12vw; line-height: 12.4vw; }
   .c-hero-inner { padding: 22vw 0 8vw; }

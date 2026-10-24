@@ -188,6 +188,98 @@ HEROES = {
 }
 
 
+# The legacy pages pair several images with the wrong alt text and caption (checked image by image).
+# GALLERY rebuilds a media block, keyed by its first legacy image: (images, caption), with KEEP for
+# the legacy caption and None to drop the block. ALTS describes what each image actually shows.
+KEEP = object()
+GALLERY = {
+    'zeryab': {
+        'e84764bbf5': (['e84764bbf5'], 'Marrakech · Moorish Heritage — Zeryab Estates'),
+        '1ce61faf73': (['ec41545efd', '0dcfaf4ade'], KEEP),
+        'ec41545efd': (['3ef0efd4f3', '609fce689b'], KEEP),
+        '92b5c6a3f8': (['1ce61faf73'], KEEP),
+        '609fce689b': None,
+    },
+    'lazure': {
+        'e0cdd98515': (['e0cdd98515'], "Brand visual · The wordmark over the coastline — L'Azure Hospitality"),
+        'f04c0008a2': (['f04c0008a2'], "Brand in environment · Lobby atmosphere — L'Azure Hospitality"),
+    },
+    'skyfalcons': {
+        '30d27bd500': (['30d27bd500'], 'Symbol · The falcon mark in relief'),
+        'fff41ff7c0': (['fff41ff7c0', '6f010493c4'], 'Color system · Sand Gold Pantone 7407C with cool greys — Wordmark on Sand Gold'),
+    },
+    'rambourg': {
+        '0413343d6f': (['0413343d6f'], 'Logo system · Light and dark background versions — Fondation Rambourg identity'),
+        '724a21d7b5': (['724a21d7b5'], None),
+        '63b724f698': (['63b724f698', '5bcb72c2f7'], 'Print collateral · Branded posters by pillar and bilingual letterhead — Brand experience kit'),
+        '4366bfe7e3': (['4366bfe7e3'], 'Merchandise · Tote bags, mugs and passport covers in pillar colours — Brand experience kit'),
+    },
+    'wakers17': {
+        '13c4c30fe5': (['13c4c30fe5', '9b31bd7444'], 'Packaging & takeaway — cake box / branded coffee cup'),
+    },
+    'sana-interiors': {
+        'ed54adafa8': (['ed54adafa8'], KEEP),
+        'cef6bcb6b1': (['cef6bcb6b1', '307af80484'], KEEP),
+        '4a1980355c': (['924930f33c'], None),
+        'c04711e04a': (['4a1980355c', 'c04711e04a'], None),
+    },
+}
+ALTS = {
+    'e84764bbf5': 'Zeryab Estates logo over a Moroccan heritage painting',
+    '1ce61faf73': 'Zeryab palette: six tones set in arch shapes',
+    '3ef0efd4f3': 'Zeryab wordmark embossed on dark metallic',
+    'ec41545efd': 'Zellige pattern inspiration',
+    '0dcfaf4ade': 'Moroccan arch inspiration',
+    '92b5c6a3f8': 'Terracotta courtyard gate in Marrakech',
+    '609fce689b': 'Terracotta 3D raised letters on cream',
+    '020b9e7113': 'Logo on aged ochre texture',
+    '618ce8170b': 'Logo on aged dark teal texture',
+    'c98b3b0688': 'Logo on aged rust texture',
+    'e0cdd98515': "L'Azure wordmark over an aerial coastline",
+    'f04c0008a2': "L'Azure hotel lobby with arches and palms",
+    'ef54a63039': "L'Azure wordmark detail on tan",
+    '22cc8dfc12': "L'Azure amenities and welcome kit",
+    '30d27bd500': 'Sky Falcons falcon symbol in relief',
+    '6f010493c4': 'SkyFalcons wordmark on Sand Gold',
+    '0413343d6f': 'Fondation Rambourg logo on light and on blue',
+    '724a21d7b5': 'Fondation Rambourg wordmark on blue paper',
+    '426fe886a7': 'Fondation Rambourg wordmark debossed on paper',
+    '5bcb72c2f7': 'Fondation Rambourg bilingual letterhead',
+    '4366bfe7e3': 'Fondation Rambourg tote bag, mug and passport cover',
+    'ca2738edc8': 'Wakers17 orange juice cup',
+    '13c4c30fe5': 'Wakers17 cake box packaging',
+    '9b31bd7444': 'Wakers17 takeaway coffee cup in hand',
+    '307af80484': 'Sana Interiors wordmark in silver foil on navy',
+    '924930f33c': 'Sana Interiors brand atmosphere board: leather, marble, wood and concrete',
+    '4a1980355c': 'Inspired by nature. Defined by design. — set on walnut',
+    'c04711e04a': 'Sana Interiors business card on marble',
+    '0d4a07bf20': 'Sana Interiors material palette',
+    '7809d7b35e': 'Sana Interiors stationery set',
+    'eb0c0b7f31': 'Sana Interiors signage and silver print',
+}
+
+
+def fix_gallery(k, blocks):
+    alt = {i['id']: i['alt'] for b in blocks if b['type'] == 'media' for i in b['images']}
+    alt.update(ALTS)
+    out = []
+    for b in blocks:
+        if b['type'] == 'media':
+            spec = GALLERY.get(k, {}).get(b['images'][0]['id'], KEEP)
+            if spec is None:
+                continue
+            if spec is not KEEP:
+                ids, caption = spec
+                b['images'] = [{'id': i} for i in ids]
+                if caption is not KEEP:
+                    b['caption'] = caption
+                b['layout'] = {1: 'full', 2: 'pair', 3: 'trio'}.get(len(ids), 'grid')
+            for im in b['images']:
+                im['alt'] = alt[im['id']]
+        out.append(b)
+    return out
+
+
 def curate(P):
     k = P['key']
     P['hero'] = P['hero'][0]
@@ -237,7 +329,7 @@ def curate(P):
                     it.update({'ar': v[0], 'name': v[1]})
                 else:
                     it.update({'num': v[0], 'name': v[1] if len(v) > 1 else '', 'desc': ' '.join(v[2:]) or None})
-    P['blocks'] = out
+    P['blocks'] = fix_gallery(k, out)
     return P
 
 
