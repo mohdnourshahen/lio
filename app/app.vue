@@ -60,6 +60,13 @@ const pageTransition: TransitionProps = {
       appState.transitioning = false
       document.body.classList.remove('is-loading')
       done()
+      // arriving on a section link (e.g. /#services from a case study): land on it once the page
+      // has settled — positions taken mid-transition are skewed by the enter animation
+      const hash = router.currentRoute.value.hash
+      if (hash) {
+        if (!appState.menuOpen) pauseScroll(false)
+        scrollToElement(document.getElementById(hash.slice(1)), true)
+      }
     }
     if (prefersReducedMotion()) return finish()
     if (appState.transition === 'loadProject') {

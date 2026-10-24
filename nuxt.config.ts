@@ -1,10 +1,26 @@
+import { resolve } from 'node:path'
+import process from 'node:process'
 import projects from './content/projects.json'
 
-// Static output (`nuxt generate` → .output/public) served by nginx on Fly.io.
+/**
+ * LON_OFFLINE=1 builds the downloadable single-file edition (scripts/build-offline.mjs):
+ * client-rendered with a hash router so every page works from file://, one JS chunk and
+ * every asset inlined. The default build is the static site served by nginx on Fly.io.
+ */
+const offline = process.env.LON_OFFLINE === '1'
+
 export default defineNuxtConfig({
   compatibilityDate: '2026-10-01',
   devtools: { enabled: false },
-  ssr: true,
+  ssr: !offline,
+
+  alias: {
+    '#offline-assets': offline ? resolve('.offline/assets.json') : resolve('app/utils/offline-empty.json'),
+  },
+
+  router: offline ? { options: { hashMode: true } } : {},
+
+  experimental: offline ? { appManifest: false, payloadExtraction: false } : {},
 
   css: [
     '@fontsource/cormorant-garamond/300.css',
@@ -27,7 +43,8 @@ export default defineNuxtConfig({
         { property: 'og:site_name', content: 'Lōn Visuals' },
         { name: 'format-detection', content: 'telephone=no' },
       ],
-      link: [
+      // the single-file edition embeds its own favicon and font; these would point at files that don't exist there
+      link: offline ? [] : [
         { rel: 'preload', href: '/fonts/slack-light.woff2', as: 'font', type: 'font/woff2', crossorigin: '' },
         { rel: 'icon', href: '/favicon.ico', sizes: '48x48' },
         { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
@@ -49,6 +66,7 @@ export default defineNuxtConfig({
   },
 
   nitro: {
+    ...(offline ? { output: { dir: '.output-offline' } } : {}),
     prerender: {
       crawlLinks: true,
       routes: ['/', ...projects.map(p => `/work/${p.slug}`), '/sitemap.xml', '/robots.txt', '/llms.txt', '/llms-full.txt'],
@@ -56,6 +74,8 @@ export default defineNuxtConfig({
   },
 
   vite: {
-    build: { assetsInlineLimit: 0 },
+    build: offline
+      ? { assetsInlineLimit: 100_000_000, cssCodeSplit: false, rollupOptions: { output: { inlineDynamicImports: true } } }
+      : { assetsInlineLimit: 0 },
   },
 })

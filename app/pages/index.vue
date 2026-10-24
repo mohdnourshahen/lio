@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { EASE, clamp, gsap, isMobileWidth, prefersReducedMotion } from '~/utils/motion'
+import { assetUrl } from '~/utils/assets'
 import { onFrame } from '~/utils/scroll'
 import { HERO_IMAGE, clients, marquee, projects, selectedWork, services, site, stats } from '~/utils/site'
 
@@ -247,7 +248,7 @@ onBeforeUnmount(() => {
         <h2 id="clients-title" v-reveal class="c-title t-h2">Trusted by leading organizations</h2>
         <ul class="c-grid">
           <li v-for="c in clients" :key="c.src" class="c-cell">
-            <img :src="c.src" :alt="c.name" loading="lazy" decoding="async" width="200" height="60">
+            <img :src="assetUrl(c.src)" :alt="c.name" loading="lazy" decoding="async" width="200" height="60">
           </li>
         </ul>
       </div>

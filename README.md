@@ -16,6 +16,7 @@ npm install
 npm run dev        # http://localhost:3000
 npm run build      # static output in .output/public
 npm run typecheck
+npm run build:offline   # single-file edition: offline/lon-visuals.html (opens from disk)
 ```
 
 `NUXT_PUBLIC_SITE_URL` sets the canonical origin used in canonical links, Open Graph, JSON-LD,
