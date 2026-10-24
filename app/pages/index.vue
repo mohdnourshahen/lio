@@ -131,11 +131,18 @@ onBeforeUnmount(() => {
         <p v-reveal="{ intro: true, delay: 0.4 }" class="hero-caps caps">Strategic brand &amp; visual communication studio</p>
       </div>
       <div class="hero-foot container">
-        <p v-reveal="{ intro: true, delay: 0.6 }" class="hero-sub t-small">
-          At Lōn Visuals, creativity meets strategy to shape how organizations communicate, evolve, and grow through design.
-        </p>
+        <p v-reveal="{ intro: true, delay: 0.6 }" class="hero-est caps">Est. Amman 2015</p>
         <p class="hero-scroll caps" aria-hidden="true"><i />Scroll</p>
         <p v-reveal="{ intro: true, delay: 0.7 }" class="hero-loc caps">2025 — Amman, JO</p>
+      </div>
+    </section>
+
+    <!-- STATEMENT — the studio's one-line positioning, given its own moment after the cover -->
+    <section class="statement theme-light" data-theme="light" aria-label="About Lōn Visuals">
+      <div class="container">
+        <p v-reveal class="st-line">
+          At Lōn Visuals, creativity meets strategy to shape how organizations communicate, evolve, and grow through design.
+        </p>
       </div>
     </section>
 
@@ -282,14 +289,21 @@ onBeforeUnmount(() => {
 .hero-title em { font-size: 1.12em; }
 .hero-caps { margin-top: 3.2vw; color: var(--c-title); opacity: 0.92; }
 .hero-foot { position: relative; align-items: end; padding-bottom: 3vw; }
-.hero-sub { grid-column: 2 / 6; color: rgba(245, 242, 234, 0.72); }
+.hero-est { grid-column: 2 / 6; color: rgba(245, 242, 234, 0.72); }
+
+/* STATEMENT */
+.statement { padding: 13vw 0 4vw; text-align: center; }
+.st-line {
+  grid-column: 3 / 11; font-family: var(--f-sans); font-weight: 300;
+  font-size: max(2.9vw, 22px); line-height: 1.32; letter-spacing: -0.02em; color: var(--c-paper);
+}
 .hero-scroll { grid-column: 6 / 8; justify-self: center; display: flex; flex-direction: column; align-items: center; gap: 0.9vw; color: rgba(245, 242, 234, 0.6); }
 .hero-scroll i { display: block; width: 1px; height: 3.4vw; background: linear-gradient(var(--c-title), transparent); animation: drip 2.4s var(--ease-in-out) infinite; transform-origin: top; }
 @keyframes drip { 0% { transform: scaleY(0); } 50% { transform: scaleY(1); } 100% { transform: scaleY(1); opacity: 0; } }
 .hero-loc { grid-column: 9 / 12; justify-self: end; color: rgba(245, 242, 234, 0.72); }
 
 /* STATS — four equal columns on hairlines */
-.stats { padding: 10vw 0 9vw; }
+.stats { padding: 6vw 0 9vw; }
 .stats ul { grid-template-columns: repeat(4, minmax(0, 1fr)); padding: 0 calc(var(--col) + var(--gutter)); }
 .stat { display: flex; flex-direction: column; border-top: 1px solid var(--rule); padding-top: 1.6vw; }
 .stat + .stat { border-left: 1px solid var(--rule); padding-left: 2vw; }
@@ -383,7 +397,8 @@ onBeforeUnmount(() => {
 /* tablet portrait & small laptops */
 @media (min-width: 601px) and (max-width: 1024px) {
   .hero-title { font-size: 9.4vw; }
-  .hero-sub { grid-column: 1 / 6; }
+  .hero-est { grid-column: 1 / 6; }
+  .st-line { grid-column: 2 / 12; }
   .hero-loc { grid-column: 9 / 13; }
   .stats ul { padding: 0; }
   .is-left { grid-column: 1 / 7; }
@@ -403,11 +418,13 @@ onBeforeUnmount(() => {
   .hero-title { font-size: 11.6vw; }
   .hero-caps { margin-top: 8vw; max-width: 70vw; }
   .hero-foot { padding-bottom: 8vw; row-gap: 6vw; }
-  .hero-sub { grid-column: 1 / -1; text-align: center; }
+  .hero-est { grid-column: 1 / -1; justify-self: center; }
+  .statement { padding: 24vw 0 6vw; }
+  .st-line { grid-column: 1 / -1; font-size: 6.4vw; }
   .hero-scroll { display: none; }
   .hero-loc { grid-column: 1 / -1; justify-self: center; }
 
-  .stats { padding: 18vw 0 12vw; }
+  .stats { padding: 10vw 0 12vw; }
   .stats ul { grid-template-columns: repeat(2, minmax(0, 1fr)); padding: 0; row-gap: 10vw; }
   .stat { padding-top: 4vw; }
   .stat + .stat { border-left: 0; padding-left: 0; }
