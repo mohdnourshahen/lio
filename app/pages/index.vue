@@ -254,9 +254,10 @@ onBeforeUnmount(() => {
     <section id="studio" class="studio theme-dark" data-theme="dark" aria-labelledby="studio-title">
       <div class="container">
         <div class="st-collage" aria-hidden="true">
-          <MediaFrame id="b53dd19ea4" alt="" class="st-a" :ratio="3 / 2" sizes="(max-width: 600px) 84vw, 36vw" :travel="10" />
-          <MediaFrame id="0793b8d88b" alt="" class="st-b" :ratio="4 / 5" sizes="(max-width: 600px) 50vw, 20vw" :travel="18" />
-          <MediaFrame id="66a3bbd3ad" alt="" class="st-c" :ratio="4 / 5" sizes="(max-width: 600px) 40vw, 14vw" :travel="22" />
+          <!-- Zeryab Estates, Masar Resort, Sky Falcons — shown at their own proportions -->
+          <MediaFrame id="d3f1b2428a" alt="" class="st-a" sizes="(max-width: 600px) 48vw, 20vw" :travel="8" :scale="[1.08, 1.08]" />
+          <MediaFrame id="bf6d84ba73" alt="" class="st-b" sizes="(max-width: 600px) 32vw, 16vw" :travel="12" :scale="[1.1, 1.1]" />
+          <MediaFrame id="4160c1b692" alt="" class="st-c" sizes="(max-width: 600px) 32vw, 16vw" :travel="16" :scale="[1.12, 1.12]" />
         </div>
         <div class="st-content">
           <p v-reveal class="label">Studio · Est. Amman 2015</p>
@@ -389,11 +390,11 @@ onBeforeUnmount(() => {
 
 /* STUDIO */
 .studio { padding: 14vw 0; }
-.st-collage { grid-column: 1 / 7; position: relative; height: 40vw; }
+.st-collage { grid-column: 2 / 7; position: relative; height: 33vw; }
 .st-collage :deep(.media) { position: absolute; }
-.st-a { left: 8.5vw; top: 0; width: 34vw; }
-.st-b { left: 2vw; top: 17vw; width: 16vw; }
-.st-c { left: 33vw; top: 25vw; width: 12vw; }
+.st-a { left: 0; top: 0; width: 20vw; }
+.st-b { left: 22vw; top: 4vw; width: 16vw; }
+.st-c { left: 22vw; top: 18.6vw; width: 16vw; }
 .st-content { grid-column: 8 / 12; align-self: center; }
 .st-title { margin-top: 2.4vw; display: flex; flex-direction: column; }
 .st-body { margin-top: 3vw; color: var(--fg-2); }
@@ -472,10 +473,10 @@ onBeforeUnmount(() => {
   .c-cell { height: 22vw; padding: 4vw; }
 
   .studio { padding: 24vw 0; }
-  .st-collage { grid-column: 1 / -1; height: 96vw; }
-  .st-a { left: 10vw; width: 74vw; }
-  .st-b { left: 0; top: 40vw; width: 36vw; }
-  .st-c { left: 54vw; top: 58vw; width: 28vw; }
+  .st-collage { grid-column: 1 / -1; height: 61vw; }
+  .st-a { left: 0; width: 48vw; }
+  .st-b { left: 52vw; top: 4vw; width: 32vw; }
+  .st-c { left: 52vw; top: 32vw; width: 32vw; }
   .st-content { grid-column: 1 / -1; margin-top: 12vw; }
   .st-title { margin-top: 5vw; }
   .st-body { margin-top: 6vw; }
