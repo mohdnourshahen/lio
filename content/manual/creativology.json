@@ -1,0 +1,411 @@
+{
+ "key": "creativology",
+ "slug": "creativology",
+ "title": "Creativology",
+ "seoTitle": "Creativology — A Decade Rebrand | Lōn Visuals",
+ "category": "Rebranding · Digital Agency",
+ "lede": "A rebrand for a decade of innovation: ten years of creativity, design and technology distilled into a logotype that carries the number 10 and the code of the work inside its own letters.",
+ "meta": [
+  [
+   "Client",
+   "Creativology"
+  ],
+  [
+   "Location",
+   "Amman, Jordan"
+  ],
+  [
+   "Year",
+   "2024"
+  ]
+ ],
+ "hero": "ae238758ee",
+ "info": [
+  [
+   "Project Type",
+   "Rebranding & Visual Identity"
+  ],
+  [
+   "Sector",
+   "Digital Agency · Technology"
+  ],
+  [
+   "Scope",
+   "Research, Strategy, Logo, Identity system"
+  ]
+ ],
+ "next": null,
+ "credits": [
+  {
+   "role": "Design & Art Direction",
+   "name": "Moh'd Nour Shahen",
+   "href": null
+  },
+  {
+   "role": "Client",
+   "name": "Creativology",
+   "href": null
+  }
+ ],
+ "year": "2024",
+ "blocks": [
+  {
+   "type": "text",
+   "label": "Overview",
+   "title": "A decade of crafting digital excellence",
+   "paras": [
+    "Founded in 2014 as a web development and graphic design company, Creativology has grown into a full-service digital agency: web, mobile and desktop applications, UI/UX, branding, print and media consulting.",
+    "Ten years on, the numbers tell the story: more than 174 projects, 112 clients and work delivered across 23 countries, from Jordan and the Gulf to the UK, the US, Germany and Australia. The anniversary called for a brand that could carry that decade forward."
+   ],
+   "tags": [
+    "Rebranding",
+    "Visual Identity",
+    "Digital Agency",
+    "10th Anniversary"
+   ]
+  },
+  {
+   "type": "text",
+   "label": "The Concept",
+   "title": "Ten, hidden in plain sight",
+   "paras": [
+    "The logotype carries the anniversary inside the name itself. In the letters “olo”, the l and the o form the number 10, and the same letters read as the binary 010: a decade of craft and the code behind the work, held in a single word.",
+    "Three ideas shape the system. Creativity as design, drawn as a field of dynamic waves. Development through advancement, written in binary. And a decade of legacy, carried by the number 10."
+   ],
+   "tags": []
+  },
+  {
+   "type": "media",
+   "images": [
+    {
+     "id": "89bb91c85b",
+     "alt": "The Creativology logotype with “olo” highlighted to reveal the 10 and the binary 010"
+    }
+   ],
+   "caption": "The hidden 10 · “olo” reads as 10, and as the binary 010",
+   "layout": "full"
+  },
+  {
+   "type": "media",
+   "images": [
+    {
+     "id": "46387357e0",
+     "alt": "Lines: Creativity /Design/ at the centre of a wave orb, surrounded by its values"
+    }
+   ],
+   "caption": "Creativity as design · Transformation, evolution, excellence, innovation, imagination, inspiration",
+   "layout": "full"
+  },
+  {
+   "type": "media",
+   "images": [
+    {
+     "id": "ebbd382e50",
+     "alt": "Binary code field with Advancement /Development/ at its centre"
+    }
+   ],
+   "caption": "Development through advancement · The binary layer",
+   "layout": "full"
+  },
+  {
+   "type": "media",
+   "images": [
+    {
+     "id": "f91b968956",
+     "alt": "The 10 drawn in fine lines around A Decade of Innovation"
+    }
+   ],
+   "caption": "A decade of legacy · The 10, drawn in lines",
+   "layout": "full"
+  },
+  {
+   "type": "text",
+   "label": "Le Logo",
+   "title": "A logotype and its descriptor",
+   "paras": [
+    "The wordmark is set in Slack Light by Due Studio, refined so the l and o lock together. Its descriptor, Dev.Design., folds the agency’s two divisions, development and design, into one short line that says what the studio does.",
+    "Three lockups cover every format: the wordmark alone, with the descriptor beside it, and with the descriptor stacked beneath."
+   ],
+   "tags": []
+  },
+  {
+   "type": "media",
+   "images": [
+    {
+     "id": "333a8b1c80",
+     "alt": "Logotype construction: bézier outlines of “ology” on a grid"
+    }
+   ],
+   "caption": "Logotype · Construction on the grid",
+   "layout": "full"
+  },
+  {
+   "type": "media",
+   "images": [
+    {
+     "id": "39c4d749c3",
+     "alt": "Creativology wordmark in dark jungle green on alabaster"
+    },
+    {
+     "id": "4d06dce420",
+     "alt": "Creativology wordmark in chartreuse on dark jungle green"
+    }
+   ],
+   "caption": "Wordmark · On alabaster and on dark jungle green",
+   "layout": "pair"
+  },
+  {
+   "type": "media",
+   "images": [
+    {
+     "id": "a5cd89141a",
+     "alt": "Three lockups on alabaster"
+    },
+    {
+     "id": "00120d3e94",
+     "alt": "Three lockups on dark jungle green"
+    },
+    {
+     "id": "f10b714c35",
+     "alt": "Three lockups on chartreuse"
+    }
+   ],
+   "caption": "Lockups · Wordmark, with descriptor beside, with descriptor beneath",
+   "layout": "trio"
+  },
+  {
+   "type": "media",
+   "images": [
+    {
+     "id": "9ba29468b9",
+     "alt": "Creativology with Dev.Design. on dark jungle green"
+    }
+   ],
+   "caption": "Logo with descriptor · Dev.Design.",
+   "layout": "full"
+  },
+  {
+   "type": "text",
+   "label": "Colour",
+   "title": "Chartreuse, jungle green, alabaster",
+   "paras": [
+    "A phosphorescent chartreuse gives the brand its charge, set against a deep green-blue-grey and an off-white that keeps it calm."
+   ],
+   "tags": []
+  },
+  {
+   "type": "palette",
+   "swatches": [
+    {
+     "hex": "#E6FF32",
+     "name": "Chartreuse"
+    },
+    {
+     "hex": "#06262D",
+     "name": "Dark Jungle Green"
+    },
+    {
+     "hex": "#F5F5EB",
+     "name": "Alabaster"
+    }
+   ]
+  },
+  {
+   "type": "text",
+   "label": "Typography",
+   "title": "Slack Light, by Due Studio",
+   "paras": [
+    "One expressive serif carries the voice, from the logotype to headlines, with its italics for the words that matter."
+   ],
+   "tags": []
+  },
+  {
+   "type": "media",
+   "images": [
+    {
+     "id": "494499fca8",
+     "alt": "Slack Light specimen with the Creativology wordmark and descriptor"
+    }
+   ],
+   "caption": "Typography · Slack Light",
+   "layout": "full"
+  },
+  {
+   "type": "text",
+   "label": "Dynamic Waves",
+   "title": "A system in motion",
+   "paras": [
+    "The Dynamic Waves System is the brand’s signature motif: fields of fine lines that bend and flow, symbolising the meeting of creativity and technology. It frames the logotype, carries the anniversary and gives every surface movement."
+   ],
+   "tags": []
+  },
+  {
+   "type": "media",
+   "images": [
+    {
+     "id": "504cf04312",
+     "alt": "Dev.Design. on chartreuse waves"
+    },
+    {
+     "id": "7cb9133ccb",
+     "alt": "Experiences in chartreuse italic inside the wave field"
+    }
+   ],
+   "caption": "Dynamic Waves · Dev.Design. and Experiences",
+   "layout": "pair"
+  },
+  {
+   "type": "media",
+   "images": [
+    {
+     "id": "764e02926d",
+     "alt": "Creativology wordmark in perspective on chartreuse waves"
+    }
+   ],
+   "caption": "The wordmark in the wave field",
+   "layout": "full"
+  },
+  {
+   "type": "media",
+   "images": [
+    {
+     "id": "ad240dd3c5",
+     "alt": "10 YEARS in chartreuse within the wave field on dark jungle green"
+    }
+   ],
+   "caption": "10 Years · The anniversary mark",
+   "layout": "full"
+  },
+  {
+   "type": "text",
+   "label": "Applications",
+   "title": "From screen to street",
+   "paras": [
+    "The identity rolls out across the new website and devices, stationery, merchandise and environmental graphics, each one carrying the waves, the colour and the hidden 10."
+   ],
+   "tags": []
+  },
+  {
+   "type": "media",
+   "images": [
+    {
+     "id": "56fa86e34b",
+     "alt": "Creativology website on a phone"
+    },
+    {
+     "id": "2e8e0ca0aa",
+     "alt": "Creativology website in chartreuse on a laptop"
+    }
+   ],
+   "caption": "Digital · The new website on phone and laptop",
+   "layout": "pair"
+  },
+  {
+   "type": "media",
+   "images": [
+    {
+     "id": "31965e779d",
+     "alt": "Creativology website on a tablet held up"
+    }
+   ],
+   "caption": "Digital · Welcome to Creativology",
+   "layout": "full"
+  },
+  {
+   "type": "media",
+   "images": [
+    {
+     "id": "288293dead",
+     "alt": "Chartreuse and dark green business cards"
+    },
+    {
+     "id": "77376c3732",
+     "alt": "Creativology folder in a chartreuse sleeve"
+    }
+   ],
+   "caption": "Stationery · Business cards and folder",
+   "layout": "pair"
+  },
+  {
+   "type": "media",
+   "images": [
+    {
+     "id": "cc7cab8295",
+     "alt": "Chartreuse tote bag with the 10 and A Decade of Innovation"
+    }
+   ],
+   "caption": "Merchandise · The anniversary tote",
+   "layout": "full"
+  },
+  {
+   "type": "media",
+   "images": [
+    {
+     "id": "b0cab47322",
+     "alt": "Three 10 Years posters on a concrete wall"
+    }
+   ],
+   "caption": "Posters · A Decade of Innovation",
+   "layout": "full"
+  },
+  {
+   "type": "media",
+   "images": [
+    {
+     "id": "c1bd37ec5a",
+     "alt": "Creativology Dev.Design. billboard"
+    }
+   ],
+   "caption": "Outdoor · Billboard",
+   "layout": "full"
+  },
+  {
+   "type": "media",
+   "images": [
+    {
+     "id": "8c6c72023f",
+     "alt": "Three stacked cubes in chartreuse, dark green and alabaster"
+    }
+   ],
+   "caption": "Environment · Brand cubes",
+   "layout": "full"
+  },
+  {
+   "type": "list",
+   "label": "Deliverables",
+   "title": "What we delivered",
+   "items": [
+    {
+     "num": "01",
+     "name": "Research & Strategy",
+     "desc": "Analysis of ten years of the brand and a direction for the next decade."
+    },
+    {
+     "num": "02",
+     "name": "Logotype & Descriptor",
+     "desc": "The Creativology wordmark with the hidden 10, and Dev.Design."
+    },
+    {
+     "num": "03",
+     "name": "Visual Identity System",
+     "desc": "Colour, typography, the Dynamic Waves System and the 10 Years mark."
+    },
+    {
+     "num": "04",
+     "name": "Digital",
+     "desc": "Website design across phone, tablet and desktop."
+    },
+    {
+     "num": "05",
+     "name": "Print & Merchandise",
+     "desc": "Business cards, folders, posters, tote bags and ID badges."
+    },
+    {
+     "num": "06",
+     "name": "Environment",
+     "desc": "Billboards and branded installations."
+    }
+   ]
+  }
+ ]
+}

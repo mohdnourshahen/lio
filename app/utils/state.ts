@@ -10,7 +10,7 @@ export const appState = reactive({
   transitioning: false,
   /** Exo Ape's $root.transition: 'default' wipe, or 'loadProject' (next-project hand-off). */
   transition: 'default' as 'default' | 'loadProject',
-  headerTheme: 'dark' as 'dark' | 'light' | 'sand',
+  headerTheme: 'dark' as 'dark' | 'light' | 'sand' | 'paper',
   scrolled: false,
 })
 

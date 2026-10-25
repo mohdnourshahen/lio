@@ -38,7 +38,7 @@
     "Marrakech, Morocco"
    ]
   ],
-  "next": "wakers17",
+  "next": "masar",
   "credits": [
    {
     "role": "Art Direction & Design",
@@ -365,7 +365,7 @@
     "NEOM Sports Village"
    ]
   ],
-  "next": "lazure",
+  "next": "fnf-jordan-40-years",
   "credits": [],
   "blocks": [
    {
@@ -514,115 +514,199 @@
   "year": "2024"
  },
  {
-  "key": "lazure",
-  "slug": "lazure",
-  "title": "L'Azure Hospitality",
-  "category": "Brand Identity · Hospitality",
-  "lede": "L'Azure Hospitality is a premium hotel group operating luxury properties along the Saudi Red Sea coast, including Royal L'Azure Resort and Sharma Resort. The brand required a cohesive visual identity that evokes the calm of water, the warmth of sand, and the depth of the sea.",
+  "key": "fnf",
+  "slug": "fnf-jordan-40-years",
+  "title": "FNF 40 Years in Jordan",
+  "seoTitle": "FNF 40 Years in Jordan — Branding & Design | Lōn Visuals",
+  "category": "Anniversary Branding · Foundation",
+  "lede": "Forty years of the Friedrich Naumann Foundation for Freedom in Jordan, marked by an anniversary identity that honours the foundation's legacy, sits seamlessly within its modern brand, and sets a bold tone for what comes next.",
   "meta": [
    [
     "Client",
-    "L'Azure Hospitality Group"
+    "Friedrich Naumann Foundation for Freedom (FNF)"
    ],
    [
     "Location",
-    "Tabuk, Saudi Arabia"
+    "Amman, Jordan"
    ],
    [
     "Year",
     "2024"
    ]
   ],
-  "hero": "3b6d2e3e84",
+  "hero": "d654ff251e",
   "info": [
    [
     "Project Type",
-    "Full Brand Identity"
+    "Anniversary Branding & Visual Identity"
    ],
    [
-    "Industry",
-    "Luxury Hospitality"
+    "Sector",
+    "Foundation · Civil Society"
    ],
    [
     "Scope",
-    "Identity, Digital, Collateral"
-   ],
-   [
-    "Properties",
-    "Royal L'Azure · Sharma Resort"
+    "Logo, Identity system, Print, Digital, Event"
    ]
   ],
   "next": "sky-falcons",
-  "credits": [],
+  "credits": [
+   {
+    "role": "Design & Art Direction",
+    "name": "Moh'd Nour Shahen",
+    "href": null
+   },
+   {
+    "role": "Project Coordinator",
+    "name": "Haytham Al-Tawalbeh",
+    "href": null
+   },
+   {
+    "role": "Project Assistant",
+    "name": "Malak Saleem",
+    "href": null
+   },
+   {
+    "role": "Client",
+    "name": "Friedrich Naumann Foundation for Freedom",
+    "href": "https://www.freiheit.org"
+   }
+  ],
+  "year": "2024",
   "blocks": [
    {
     "type": "text",
     "label": "Overview",
-    "title": "Where the sea meets luxury",
-    "paras": [
-     "We built the identity around a fluid wave symbol — organic, elegant, and instantly recognizable. The mark is rooted in movement and tranquility simultaneously, working beautifully across all touchpoints from embossed stationery to digital interfaces.",
-     "The color system pairs Dark Blue (#506580) with Tan Gold (#D8BA9E) — evoking deep water against warm sandy shores — creating an atmosphere that feels both grounded and aspirational."
-    ],
+    "title": "Four decades of liberal values",
     "tags": [
-     "Brand Identity",
-     "Visual System",
-     "Web Design",
-     "Print Collateral",
-     "Welcome Kit",
-     "Hotel Assets"
+     "Anniversary Identity",
+     "Foundation",
+     "Civil Society",
+     "Logo Toolkit"
+    ],
+    "paras": [
+     "Since 1984, the Friedrich Naumann Foundation for Freedom has advanced liberal values in Jordan, promoting democracy, human rights, civic education and a free-market economy. Working with ministries, civil society organisations and partners across the country, it has built initiatives that drive change and empower communities.",
+     "The 40th anniversary called for an identity that honours that legacy while sitting seamlessly within FNF's modern brand: one that captures the spirit of partnership and progress, and carries the foundation's vision for a freer, more prosperous Jordan into its next chapter."
+    ]
+   },
+   {
+    "type": "text",
+    "label": "The Idea",
+    "title": "Drawn from the F",
+    "tags": [],
+    "paras": [
+     "The 40 is built on the grid of FNF's own symbol. The slanted F is extended into the two numerals, keeping its angle, its rounded corners and its forward lean, so the anniversary mark reads as part of the foundation rather than an addition to it.",
+     "Blue carries the history; magenta marks the celebration. A bilingual line completes the lockup: Years of Collaboration, FNF – Jordan, أربعين عاماً من التعاون.",
+     "From concept to execution, the work spans the logo, a complete visual identity system and branding elements built to travel across digital and physical platforms."
     ]
    },
    {
     "type": "media",
     "images": [
      {
-      "id": "b9912a1eee",
-      "alt": "L'Azure lobby and key card"
+      "id": "ccf29ee9cd",
+      "alt": "Construction of the 40 from the FNF symbol grid, in four steps"
      }
     ],
-    "caption": "Brand in environment · Lobby visual + room key card system — L'Azure Hospitality",
+    "caption": "Construction · From the FNF symbol to the number 40",
     "layout": "full"
    },
    {
     "type": "media",
     "images": [
      {
-      "id": "e0cdd98515",
-      "alt": "L'Azure wordmark over an aerial coastline"
+      "id": "2e74716d64",
+      "alt": "FNF Jordan 40 Years prime logo with the bilingual line"
      }
     ],
-    "caption": "Brand visual · The wordmark over the coastline — L'Azure Hospitality",
+    "caption": "Prime logo · The 40 with its bilingual line",
+    "layout": "full"
+   },
+   {
+    "type": "media",
+    "images": [
+     {
+      "id": "42c70a06e2",
+      "alt": "Logo system: prime logo with text right and left, and a centred secondary logo"
+     }
+    ],
+    "caption": "Logo system · Text right, text left, and a centred secondary version",
+    "layout": "full"
+   },
+   {
+    "type": "media",
+    "images": [
+     {
+      "id": "db31461686",
+      "alt": "The anniversary mark beside the Friedrich Naumann Foundation logo"
+     }
+    ],
+    "caption": "Co-branding · The anniversary mark beside the foundation's logo",
     "layout": "full"
    },
    {
     "type": "text",
-    "label": "Color System",
-    "title": "Inspired by sea & shore",
-    "paras": [],
-    "tags": []
+    "label": "Colour",
+    "title": "Blue, magenta and teal",
+    "tags": [],
+    "paras": [
+     "FNF blue anchors the palette, magenta brings the celebration, and teal lifts the pattern and illustration."
+    ]
    },
    {
     "type": "palette",
     "swatches": [
      {
-      "hex": "#506580",
-      "name": "Dark Blue"
+      "hex": "#004A7F",
+      "name": "FNF Blue"
      },
      {
-      "hex": "#D8BA9E",
-      "name": "Tan Gold"
+      "hex": "#E6007E",
+      "name": "Celebration Magenta"
      },
      {
-      "hex": "#3D506A",
-      "name": "Independence"
+      "hex": "#41EAD4",
+      "name": "Teal"
+     }
+    ]
+   },
+   {
+    "type": "text",
+    "label": "Pattern",
+    "title": "A pattern of forty",
+    "tags": [],
+    "paras": [
+     "Fragments of the numerals, outlined in the three colours, become a celebration pattern for print, stage and screen."
+    ]
+   },
+   {
+    "type": "media",
+    "images": [
+     {
+      "id": "1b9611e329",
+      "alt": "Celebration pattern built from fragments of the 40, in blue, magenta and teal outlines"
+     }
+    ],
+    "caption": "Celebration pattern · Fragments of the 40",
+    "layout": "full"
+   },
+   {
+    "type": "text",
+    "label": "The Celebration",
+    "title": "A milestone, celebrated widely",
+    "tags": [],
+    "paras": [
+     "The anniversary was marked with an event that drew guests from government, civil society and the private sector. The 40th-anniversary logo stood at the centre of the celebration, carried across print, stage, signage and screen, online and off.",
+     "More than a record of FNF's achievements, it is a testament to what collaboration, innovation and shared values continue to build in Jordan and across the region."
+    ],
+    "links": [
+     {
+      "label": "Read more about the celebration",
+      "href": "https://www.freiheit.org/jordan/fnf-celebrates-landmark-anniversary-jordan"
      },
      {
-      "hex": "#111",
-      "name": "Black"
-     },
-     {
-      "hex": "#f8f8f8",
-      "name": "White"
+      "label": "More about FNF",
+      "href": "https://www.freiheit.org/jordan"
      }
     ]
    },
@@ -630,74 +714,27 @@
     "type": "media",
     "images": [
      {
-      "id": "f04c0008a2",
-      "alt": "L'Azure hotel lobby with arches and palms"
+      "id": "a62419d16c",
+      "alt": "The FNF 40 stage: Welcome to the House of Freedom on the screen, flags of Germany and Jordan either side"
      }
     ],
-    "caption": "Brand in environment · Lobby atmosphere — L'Azure Hospitality",
+    "caption": "The evening · Welcome to the House of Freedom",
     "layout": "full"
    },
    {
     "type": "media",
     "images": [
      {
-      "id": "ef54a63039",
-      "alt": "L'Azure wordmark detail on tan"
-     }
-    ],
-    "caption": "Typography system · L'Azure wordmark detail — refined serif with custom characters — Brand typeface",
-    "layout": "full"
-   },
-   {
-    "type": "text",
-    "label": "Brand Applications",
-    "title": "Every touchpoint",
-    "paras": [],
-    "tags": []
-   },
-   {
-    "type": "media",
-    "images": [
-     {
-      "id": "22cc8dfc12",
-      "alt": "L'Azure amenities and welcome kit"
+      "id": "ef7b976ff9",
+      "alt": "Speaker at the branded podium in front of the 40 Years of Collaboration screen"
      },
      {
-      "id": "34e712ce6e",
-      "alt": "L'Azure business cards"
+      "id": "4a2f8062ee",
+      "alt": "Illustrated thank-you card on a guest's plate"
      }
     ],
-    "caption": null,
+    "caption": "On stage and at the table · Podium, screen and the illustrated thank-you card",
     "layout": "pair"
-   },
-   {
-    "type": "media",
-    "images": [
-     {
-      "id": "d56d02672b",
-      "alt": "L'Azure envelope stationery"
-     }
-    ],
-    "caption": "Stationery · DL envelopes with blue interior lining and wave pattern — Print collateral",
-    "layout": "full"
-   },
-   {
-    "type": "text",
-    "label": "Digital Experience",
-    "title": "The brand online",
-    "paras": [],
-    "tags": []
-   },
-   {
-    "type": "media",
-    "images": [
-     {
-      "id": "064f977e1f",
-      "alt": "L'Azure website"
-     }
-    ],
-    "caption": "lazurehospitality.com — full website design & development brief",
-    "layout": "full"
    },
    {
     "type": "list",
@@ -706,38 +743,39 @@
     "items": [
      {
       "num": "01",
-      "name": "Brand Identity",
-      "desc": "Primary logo, wave symbol, sub-brand marks for Royal L'Azure and Sharma Resort, plus full usage guidelines."
+      "name": "Anniversary Logo",
+      "desc": "Prime and secondary lockups, in Arabic and English, with co-branding rules."
      },
      {
       "num": "02",
-      "name": "Color & Type",
-      "desc": "5-color palette, typography hierarchy, wave pattern library, and brand texture system."
+      "name": "Logo Toolkit",
+      "desc": "Construction, colour palette and usage standards for the year of celebration."
      },
      {
       "num": "03",
-      "name": "Print Collateral",
-      "desc": "Business cards, DL envelopes, letterheads, room key cards, door hangers, and branded packaging."
+      "name": "Celebration Pattern",
+      "desc": "A system of fragments drawn from the numerals."
      },
      {
       "num": "04",
-      "name": "Welcome Kit",
-      "desc": "Guest welcome experience: branded water bottles, envelopes, boxes, and hospitality touchpoints."
+      "name": "Print",
+      "desc": "Letterhead, folder, notebook and invitation."
      },
      {
       "num": "05",
-      "name": "Digital Design",
-      "desc": "Website UI design for lazurehospitality.com with booking engine integration and full responsive system."
+      "name": "Event",
+      "desc": "X-stand, roll-up, backdrop and directional signage."
      },
      {
       "num": "06",
-      "name": "Brand Guidelines",
-      "desc": "Comprehensive brand manual covering all properties, color systems, typography, and application rules."
+      "name": "Illustration",
+      "desc": "A thank-you card linking Jordan and Germany through their landmarks."
      }
     ]
    }
   ],
-  "year": "2024"
+  "heroDense": true,
+  "theme": "paper"
  },
  {
   "key": "skyfalcons",
@@ -778,7 +816,7 @@
     "Beyond Limits"
    ]
   ],
-  "next": "rambourg",
+  "next": "lazure",
   "credits": [],
   "blocks": [
    {
@@ -1021,6 +1059,1376 @@
    }
   ],
   "year": "2023"
+ },
+ {
+  "key": "lazure",
+  "slug": "lazure",
+  "title": "L'Azure Hospitality",
+  "category": "Brand Identity · Hospitality",
+  "lede": "L'Azure Hospitality is a premium hotel group operating luxury properties along the Saudi Red Sea coast, including Royal L'Azure Resort and Sharma Resort. The brand required a cohesive visual identity that evokes the calm of water, the warmth of sand, and the depth of the sea.",
+  "meta": [
+   [
+    "Client",
+    "L'Azure Hospitality Group"
+   ],
+   [
+    "Location",
+    "Tabuk, Saudi Arabia"
+   ],
+   [
+    "Year",
+    "2024"
+   ]
+  ],
+  "hero": "3b6d2e3e84",
+  "info": [
+   [
+    "Project Type",
+    "Full Brand Identity"
+   ],
+   [
+    "Industry",
+    "Luxury Hospitality"
+   ],
+   [
+    "Scope",
+    "Identity, Digital, Collateral"
+   ],
+   [
+    "Properties",
+    "Royal L'Azure · Sharma Resort"
+   ]
+  ],
+  "next": "creativology",
+  "credits": [],
+  "blocks": [
+   {
+    "type": "text",
+    "label": "Overview",
+    "title": "Where the sea meets luxury",
+    "paras": [
+     "We built the identity around a fluid wave symbol — organic, elegant, and instantly recognizable. The mark is rooted in movement and tranquility simultaneously, working beautifully across all touchpoints from embossed stationery to digital interfaces.",
+     "The color system pairs Dark Blue (#506580) with Tan Gold (#D8BA9E) — evoking deep water against warm sandy shores — creating an atmosphere that feels both grounded and aspirational."
+    ],
+    "tags": [
+     "Brand Identity",
+     "Visual System",
+     "Web Design",
+     "Print Collateral",
+     "Welcome Kit",
+     "Hotel Assets"
+    ]
+   },
+   {
+    "type": "media",
+    "images": [
+     {
+      "id": "b9912a1eee",
+      "alt": "L'Azure lobby and key card"
+     }
+    ],
+    "caption": "Brand in environment · Lobby visual + room key card system — L'Azure Hospitality",
+    "layout": "full"
+   },
+   {
+    "type": "media",
+    "images": [
+     {
+      "id": "e0cdd98515",
+      "alt": "L'Azure wordmark over an aerial coastline"
+     }
+    ],
+    "caption": "Brand visual · The wordmark over the coastline — L'Azure Hospitality",
+    "layout": "full"
+   },
+   {
+    "type": "text",
+    "label": "Color System",
+    "title": "Inspired by sea & shore",
+    "paras": [],
+    "tags": []
+   },
+   {
+    "type": "palette",
+    "swatches": [
+     {
+      "hex": "#506580",
+      "name": "Dark Blue"
+     },
+     {
+      "hex": "#D8BA9E",
+      "name": "Tan Gold"
+     },
+     {
+      "hex": "#3D506A",
+      "name": "Independence"
+     },
+     {
+      "hex": "#111",
+      "name": "Black"
+     },
+     {
+      "hex": "#f8f8f8",
+      "name": "White"
+     }
+    ]
+   },
+   {
+    "type": "media",
+    "images": [
+     {
+      "id": "f04c0008a2",
+      "alt": "L'Azure hotel lobby with arches and palms"
+     }
+    ],
+    "caption": "Brand in environment · Lobby atmosphere — L'Azure Hospitality",
+    "layout": "full"
+   },
+   {
+    "type": "media",
+    "images": [
+     {
+      "id": "ef54a63039",
+      "alt": "L'Azure wordmark detail on tan"
+     }
+    ],
+    "caption": "Typography system · L'Azure wordmark detail — refined serif with custom characters — Brand typeface",
+    "layout": "full"
+   },
+   {
+    "type": "text",
+    "label": "Brand Applications",
+    "title": "Every touchpoint",
+    "paras": [],
+    "tags": []
+   },
+   {
+    "type": "media",
+    "images": [
+     {
+      "id": "22cc8dfc12",
+      "alt": "L'Azure amenities and welcome kit"
+     },
+     {
+      "id": "34e712ce6e",
+      "alt": "L'Azure business cards"
+     }
+    ],
+    "caption": null,
+    "layout": "pair"
+   },
+   {
+    "type": "media",
+    "images": [
+     {
+      "id": "d56d02672b",
+      "alt": "L'Azure envelope stationery"
+     }
+    ],
+    "caption": "Stationery · DL envelopes with blue interior lining and wave pattern — Print collateral",
+    "layout": "full"
+   },
+   {
+    "type": "text",
+    "label": "Digital Experience",
+    "title": "The brand online",
+    "paras": [],
+    "tags": []
+   },
+   {
+    "type": "media",
+    "images": [
+     {
+      "id": "064f977e1f",
+      "alt": "L'Azure website"
+     }
+    ],
+    "caption": "lazurehospitality.com — full website design & development brief",
+    "layout": "full"
+   },
+   {
+    "type": "list",
+    "label": "Deliverables",
+    "title": "What we delivered",
+    "items": [
+     {
+      "num": "01",
+      "name": "Brand Identity",
+      "desc": "Primary logo, wave symbol, sub-brand marks for Royal L'Azure and Sharma Resort, plus full usage guidelines."
+     },
+     {
+      "num": "02",
+      "name": "Color & Type",
+      "desc": "5-color palette, typography hierarchy, wave pattern library, and brand texture system."
+     },
+     {
+      "num": "03",
+      "name": "Print Collateral",
+      "desc": "Business cards, DL envelopes, letterheads, room key cards, door hangers, and branded packaging."
+     },
+     {
+      "num": "04",
+      "name": "Welcome Kit",
+      "desc": "Guest welcome experience: branded water bottles, envelopes, boxes, and hospitality touchpoints."
+     },
+     {
+      "num": "05",
+      "name": "Digital Design",
+      "desc": "Website UI design for lazurehospitality.com with booking engine integration and full responsive system."
+     },
+     {
+      "num": "06",
+      "name": "Brand Guidelines",
+      "desc": "Comprehensive brand manual covering all properties, color systems, typography, and application rules."
+     }
+    ]
+   }
+  ],
+  "year": "2024"
+ },
+ {
+  "key": "creativology",
+  "slug": "creativology",
+  "title": "Creativology",
+  "seoTitle": "Creativology — A Decade Rebrand | Lōn Visuals",
+  "category": "Rebranding · Digital Agency",
+  "lede": "A rebrand for a decade of innovation: ten years of creativity, design and technology distilled into a logotype that carries the number 10 and the code of the work inside its own letters.",
+  "meta": [
+   [
+    "Client",
+    "Creativology"
+   ],
+   [
+    "Location",
+    "Amman, Jordan"
+   ],
+   [
+    "Year",
+    "2024"
+   ]
+  ],
+  "hero": "ae238758ee",
+  "info": [
+   [
+    "Project Type",
+    "Rebranding & Visual Identity"
+   ],
+   [
+    "Sector",
+    "Digital Agency · Technology"
+   ],
+   [
+    "Scope",
+    "Research, Strategy, Logo, Identity system"
+   ]
+  ],
+  "next": "ministry-of-foreign-affairs-jordan",
+  "credits": [
+   {
+    "role": "Design & Art Direction",
+    "name": "Moh'd Nour Shahen",
+    "href": null
+   },
+   {
+    "role": "Client",
+    "name": "Creativology",
+    "href": null
+   }
+  ],
+  "year": "2024",
+  "blocks": [
+   {
+    "type": "text",
+    "label": "Overview",
+    "title": "A decade of crafting digital excellence",
+    "paras": [
+     "Founded in 2014 as a web development and graphic design company, Creativology has grown into a full-service digital agency: web, mobile and desktop applications, UI/UX, branding, print and media consulting.",
+     "Ten years on, the numbers tell the story: more than 174 projects, 112 clients and work delivered across 23 countries, from Jordan and the Gulf to the UK, the US, Germany and Australia. The anniversary called for a brand that could carry that decade forward."
+    ],
+    "tags": [
+     "Rebranding",
+     "Visual Identity",
+     "Digital Agency",
+     "10th Anniversary"
+    ]
+   },
+   {
+    "type": "text",
+    "label": "The Concept",
+    "title": "Ten, hidden in plain sight",
+    "paras": [
+     "The logotype carries the anniversary inside the name itself. In the letters “olo”, the l and the o form the number 10, and the same letters read as the binary 010: a decade of craft and the code behind the work, held in a single word.",
+     "Three ideas shape the system. Creativity as design, drawn as a field of dynamic waves. Development through advancement, written in binary. And a decade of legacy, carried by the number 10."
+    ],
+    "tags": []
+   },
+   {
+    "type": "media",
+    "images": [
+     {
+      "id": "89bb91c85b",
+      "alt": "The Creativology logotype with “olo” highlighted to reveal the 10 and the binary 010"
+     }
+    ],
+    "caption": "The hidden 10 · “olo” reads as 10, and as the binary 010",
+    "layout": "full"
+   },
+   {
+    "type": "media",
+    "images": [
+     {
+      "id": "46387357e0",
+      "alt": "Lines: Creativity /Design/ at the centre of a wave orb, surrounded by its values"
+     }
+    ],
+    "caption": "Creativity as design · Transformation, evolution, excellence, innovation, imagination, inspiration",
+    "layout": "full"
+   },
+   {
+    "type": "media",
+    "images": [
+     {
+      "id": "ebbd382e50",
+      "alt": "Binary code field with Advancement /Development/ at its centre"
+     }
+    ],
+    "caption": "Development through advancement · The binary layer",
+    "layout": "full"
+   },
+   {
+    "type": "media",
+    "images": [
+     {
+      "id": "f91b968956",
+      "alt": "The 10 drawn in fine lines around A Decade of Innovation"
+     }
+    ],
+    "caption": "A decade of legacy · The 10, drawn in lines",
+    "layout": "full"
+   },
+   {
+    "type": "text",
+    "label": "Le Logo",
+    "title": "A logotype and its descriptor",
+    "paras": [
+     "The wordmark is set in Slack Light by Due Studio, refined so the l and o lock together. Its descriptor, Dev.Design., folds the agency’s two divisions, development and design, into one short line that says what the studio does.",
+     "Three lockups cover every format: the wordmark alone, with the descriptor beside it, and with the descriptor stacked beneath."
+    ],
+    "tags": []
+   },
+   {
+    "type": "media",
+    "images": [
+     {
+      "id": "333a8b1c80",
+      "alt": "Logotype construction: bézier outlines of “ology” on a grid"
+     }
+    ],
+    "caption": "Logotype · Construction on the grid",
+    "layout": "full"
+   },
+   {
+    "type": "media",
+    "images": [
+     {
+      "id": "39c4d749c3",
+      "alt": "Creativology wordmark in dark jungle green on alabaster"
+     },
+     {
+      "id": "4d06dce420",
+      "alt": "Creativology wordmark in chartreuse on dark jungle green"
+     }
+    ],
+    "caption": "Wordmark · On alabaster and on dark jungle green",
+    "layout": "pair"
+   },
+   {
+    "type": "media",
+    "images": [
+     {
+      "id": "a5cd89141a",
+      "alt": "Three lockups on alabaster"
+     },
+     {
+      "id": "00120d3e94",
+      "alt": "Three lockups on dark jungle green"
+     },
+     {
+      "id": "f10b714c35",
+      "alt": "Three lockups on chartreuse"
+     }
+    ],
+    "caption": "Lockups · Wordmark, with descriptor beside, with descriptor beneath",
+    "layout": "trio"
+   },
+   {
+    "type": "media",
+    "images": [
+     {
+      "id": "9ba29468b9",
+      "alt": "Creativology with Dev.Design. on dark jungle green"
+     }
+    ],
+    "caption": "Logo with descriptor · Dev.Design.",
+    "layout": "full"
+   },
+   {
+    "type": "text",
+    "label": "Colour",
+    "title": "Chartreuse, jungle green, alabaster",
+    "paras": [
+     "A phosphorescent chartreuse gives the brand its charge, set against a deep green-blue-grey and an off-white that keeps it calm."
+    ],
+    "tags": []
+   },
+   {
+    "type": "palette",
+    "swatches": [
+     {
+      "hex": "#E6FF32",
+      "name": "Chartreuse"
+     },
+     {
+      "hex": "#06262D",
+      "name": "Dark Jungle Green"
+     },
+     {
+      "hex": "#F5F5EB",
+      "name": "Alabaster"
+     }
+    ]
+   },
+   {
+    "type": "text",
+    "label": "Typography",
+    "title": "Slack Light, by Due Studio",
+    "paras": [
+     "One expressive serif carries the voice, from the logotype to headlines, with its italics for the words that matter."
+    ],
+    "tags": []
+   },
+   {
+    "type": "media",
+    "images": [
+     {
+      "id": "494499fca8",
+      "alt": "Slack Light specimen with the Creativology wordmark and descriptor"
+     }
+    ],
+    "caption": "Typography · Slack Light",
+    "layout": "full"
+   },
+   {
+    "type": "text",
+    "label": "Dynamic Waves",
+    "title": "A system in motion",
+    "paras": [
+     "The Dynamic Waves System is the brand’s signature motif: fields of fine lines that bend and flow, symbolising the meeting of creativity and technology. It frames the logotype, carries the anniversary and gives every surface movement."
+    ],
+    "tags": []
+   },
+   {
+    "type": "media",
+    "images": [
+     {
+      "id": "504cf04312",
+      "alt": "Dev.Design. on chartreuse waves"
+     },
+     {
+      "id": "7cb9133ccb",
+      "alt": "Experiences in chartreuse italic inside the wave field"
+     }
+    ],
+    "caption": "Dynamic Waves · Dev.Design. and Experiences",
+    "layout": "pair"
+   },
+   {
+    "type": "media",
+    "images": [
+     {
+      "id": "764e02926d",
+      "alt": "Creativology wordmark in perspective on chartreuse waves"
+     }
+    ],
+    "caption": "The wordmark in the wave field",
+    "layout": "full"
+   },
+   {
+    "type": "media",
+    "images": [
+     {
+      "id": "ad240dd3c5",
+      "alt": "10 YEARS in chartreuse within the wave field on dark jungle green"
+     }
+    ],
+    "caption": "10 Years · The anniversary mark",
+    "layout": "full"
+   },
+   {
+    "type": "text",
+    "label": "Applications",
+    "title": "From screen to street",
+    "paras": [
+     "The identity rolls out across the new website and devices, stationery, merchandise and environmental graphics, each one carrying the waves, the colour and the hidden 10."
+    ],
+    "tags": []
+   },
+   {
+    "type": "media",
+    "images": [
+     {
+      "id": "56fa86e34b",
+      "alt": "Creativology website on a phone"
+     },
+     {
+      "id": "2e8e0ca0aa",
+      "alt": "Creativology website in chartreuse on a laptop"
+     }
+    ],
+    "caption": "Digital · The new website on phone and laptop",
+    "layout": "pair"
+   },
+   {
+    "type": "media",
+    "images": [
+     {
+      "id": "31965e779d",
+      "alt": "Creativology website on a tablet held up"
+     }
+    ],
+    "caption": "Digital · Welcome to Creativology",
+    "layout": "full"
+   },
+   {
+    "type": "media",
+    "images": [
+     {
+      "id": "288293dead",
+      "alt": "Chartreuse and dark green business cards"
+     },
+     {
+      "id": "77376c3732",
+      "alt": "Creativology folder in a chartreuse sleeve"
+     }
+    ],
+    "caption": "Stationery · Business cards and folder",
+    "layout": "pair"
+   },
+   {
+    "type": "media",
+    "images": [
+     {
+      "id": "cc7cab8295",
+      "alt": "Chartreuse tote bag with the 10 and A Decade of Innovation"
+     }
+    ],
+    "caption": "Merchandise · The anniversary tote",
+    "layout": "full"
+   },
+   {
+    "type": "media",
+    "images": [
+     {
+      "id": "b0cab47322",
+      "alt": "Three 10 Years posters on a concrete wall"
+     }
+    ],
+    "caption": "Posters · A Decade of Innovation",
+    "layout": "full"
+   },
+   {
+    "type": "media",
+    "images": [
+     {
+      "id": "c1bd37ec5a",
+      "alt": "Creativology Dev.Design. billboard"
+     }
+    ],
+    "caption": "Outdoor · Billboard",
+    "layout": "full"
+   },
+   {
+    "type": "media",
+    "images": [
+     {
+      "id": "8c6c72023f",
+      "alt": "Three stacked cubes in chartreuse, dark green and alabaster"
+     }
+    ],
+    "caption": "Environment · Brand cubes",
+    "layout": "full"
+   },
+   {
+    "type": "list",
+    "label": "Deliverables",
+    "title": "What we delivered",
+    "items": [
+     {
+      "num": "01",
+      "name": "Research & Strategy",
+      "desc": "Analysis of ten years of the brand and a direction for the next decade."
+     },
+     {
+      "num": "02",
+      "name": "Logotype & Descriptor",
+      "desc": "The Creativology wordmark with the hidden 10, and Dev.Design."
+     },
+     {
+      "num": "03",
+      "name": "Visual Identity System",
+      "desc": "Colour, typography, the Dynamic Waves System and the 10 Years mark."
+     },
+     {
+      "num": "04",
+      "name": "Digital",
+      "desc": "Website design across phone, tablet and desktop."
+     },
+     {
+      "num": "05",
+      "name": "Print & Merchandise",
+      "desc": "Business cards, folders, posters, tote bags and ID badges."
+     },
+     {
+      "num": "06",
+      "name": "Environment",
+      "desc": "Billboards and branded installations."
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "key": "mofa",
+  "slug": "ministry-of-foreign-affairs-jordan",
+  "title": "Ministry of Foreign Affairs and Expatriates",
+  "category": "Visual Identity · Government",
+  "lede": "One visual language for Jordan's voice abroad: the branding and visual identity guidelines that bring the Ministry, its 59 diplomatic missions and its reach into 87 more countries under a single, consistent standard.",
+  "meta": [
+   [
+    "Client",
+    "Ministry of Foreign Affairs and Expatriates"
+   ],
+   [
+    "Department",
+    "Communication and Media"
+   ],
+   [
+    "Year",
+    "2018 — 2020"
+   ]
+  ],
+  "hero": "db0e23ca6f",
+  "info": [
+   [
+    "Project Type",
+    "Branding & Visual Identity Guidelines"
+   ],
+   [
+    "Sector",
+    "Government · Diplomacy"
+   ],
+   [
+    "Scope",
+    "Identity system, Guidelines, Print, Digital, Events"
+   ],
+   [
+    "Location",
+    "Amman, Jordan"
+   ]
+  ],
+  "next": "wakers17",
+  "credits": [
+   {
+    "role": "Design Director",
+    "name": "Moh'd Nour Shahen",
+    "href": null
+   },
+   {
+    "role": "Client",
+    "name": "Department of Communication and Media",
+    "href": null
+   }
+  ],
+  "year": "2018 — 2020",
+  "blocks": [
+   {
+    "type": "text",
+    "label": "Overview",
+    "title": "The voice of a kingdom, abroad",
+    "tags": [
+     "Government",
+     "Diplomacy",
+     "Visual Identity",
+     "Brand Guidelines"
+    ],
+    "paras": [
+     "Established in 1939, the Ministry of Foreign Affairs of the Hashemite Kingdom of Jordan represents the country through 59 diplomatic missions worldwide, with non-resident representation in a further 87 countries.",
+     "In 2013 it became the Ministry of Foreign Affairs and Expatriates. The new name signalled a new duty: closer care for Jordanians living abroad, stronger channels of communication with them, and deeper ties to home. A dedicated department followed, and with it the need for an identity that could speak for both."
+    ]
+   },
+   {
+    "type": "text",
+    "label": "The Brief",
+    "title": "Consistency is credibility",
+    "tags": [],
+    "paras": [
+     "For a ministry, visual presentation is never just design. It is a statement of what the state stands for, and every inconsistency across an embassy, a department or a feed reads as a crack in that statement.",
+     "The Branding and Visual Identity Guidelines give a decentralised institution one language: clear standards for the logo, colour, typography, photography and video that any unit, in any country, can apply with confidence, and that are never to be diluted, substituted or redrawn."
+    ]
+   },
+   {
+    "type": "text",
+    "label": "The Mark",
+    "title": "One crest, two scripts",
+    "tags": [],
+    "paras": [
+     "The identity is anchored by the emblem of the Royal Hashemite Court, set above the Ministry's name in Thuluth, the classical script of the Kingdom's state institutions, and in Trajan, whose Roman capitals give the English line the same ceremonial weight.",
+     "Primary, landscape, Arabic-only and English-only versions cover every composition, each with defined clear space and approved use on white, dark and maroon grounds."
+    ]
+   },
+   {
+    "type": "media",
+    "images": [
+     {
+      "id": "8fd006b13a",
+      "alt": "Primary stacked and landscape versions of the Ministry of Foreign Affairs and Expatriates logo"
+     }
+    ],
+    "caption": "Lockup system · Primary stacked and landscape versions",
+    "layout": "full"
+   },
+   {
+    "type": "media",
+    "images": [
+     {
+      "id": "fd67e406e5",
+      "alt": "The Ministry lockup in Korean, Russian, French, Hindi, Greek and Japanese"
+     }
+    ],
+    "caption": "For the missions · The lockup in Korean, Russian, French, Hindi, Greek and Japanese",
+    "layout": "full"
+   },
+   {
+    "type": "text",
+    "label": "Colour",
+    "title": "Maroon, white and black",
+    "tags": [],
+    "paras": [
+     "The Ministry's signature maroon carries the identity, with white and black as its only companions. A deep maroon gradient serves as the official ground for digital and broadcast use."
+    ]
+   },
+   {
+    "type": "palette",
+    "swatches": [
+     {
+      "hex": "#8E1A16",
+      "name": "MFA Maroon"
+     },
+     {
+      "hex": "#FFFFFF",
+      "name": "White"
+     },
+     {
+      "hex": "#000000",
+      "name": "Black"
+     }
+    ]
+   },
+   {
+    "type": "list",
+    "label": "Typography",
+    "title": "A type system in two languages",
+    "items": [
+     {
+      "num": "01",
+      "name": "Al-Thuluth",
+      "desc": "Primary Arabic. The classical calligraphic line of the Kingdom's governmental institutions."
+     },
+     {
+      "num": "02",
+      "name": "Trajan Pro",
+      "desc": "Primary English. Roman capitals, regular and bold, for the Ministry's name and formal titles."
+     },
+     {
+      "num": "03",
+      "name": "Bahij TheSansArabic",
+      "desc": "Arabic text face in three weights for all functional communication."
+     },
+     {
+      "num": "04",
+      "name": "Dubai",
+      "desc": "English text face in four weights for all functional communication."
+     }
+    ]
+   },
+   {
+    "type": "text",
+    "label": "Applications",
+    "title": "Every touchpoint, one voice",
+    "tags": [],
+    "paras": [
+     "The system was rolled out across official stationery, events and the Ministry's digital channels, with templates for every social format so that each post, wherever it is published, leaves looking like the Ministry."
+    ]
+   },
+   {
+    "type": "media",
+    "images": [
+     {
+      "id": "03d1e69e5a",
+      "alt": "English and landscape versions of the logo printed on textured paper"
+     }
+    ],
+    "caption": "Print · English and landscape lockups on textured stock",
+    "layout": "full"
+   },
+   {
+    "type": "media",
+    "images": [
+     {
+      "id": "be3f2c3aa7",
+      "alt": "Official maroon social media cover with the Ministry crest and calligraphy"
+     }
+    ],
+    "caption": "Digital · The official cover for Facebook, Twitter, LinkedIn and YouTube",
+    "layout": "full"
+   },
+   {
+    "type": "list",
+    "label": "Deliverables",
+    "title": "What we delivered",
+    "items": [
+     {
+      "num": "01",
+      "name": "Visual Identity System",
+      "desc": "Primary, landscape, Arabic and English lockups, with clear space and misuse rules."
+     },
+     {
+      "num": "02",
+      "name": "Brand Guidelines",
+      "desc": "Standards for logo, colour, typography, photography and video."
+     },
+     {
+      "num": "03",
+      "name": "Print & Stationery",
+      "desc": "Letterhead, folders, envelopes and business cards."
+     },
+     {
+      "num": "04",
+      "name": "Digital & Social",
+      "desc": "Profile and cover artwork, post templates and infographic visuals."
+     },
+     {
+      "num": "05",
+      "name": "Events & Environment",
+      "desc": "Press backdrops, street banners and signage."
+     },
+     {
+      "num": "06",
+      "name": "Video",
+      "desc": "Intro, outro and lower-third title bars."
+     }
+    ]
+   }
+  ],
+  "heroDense": true,
+  "heroFocus": "50% 18%",
+  "seoTitle": "Ministry of Foreign Affairs Jordan — Visual Identity | Lōn Visuals"
+ },
+ {
+  "key": "wakers17",
+  "slug": "wakers17",
+  "title": "Wakers 17 Coffee & Juice",
+  "category": "Brand Identity · F&B",
+  "lede": "A vibrant, character-led café brand built around the spirit of the confident adventurer — bold enough to be recognised on any street in Amman.",
+  "meta": [
+   [
+    "Client",
+    "Wakers 17 Coffee & Juice"
+   ],
+   [
+    "Location",
+    "Amman, Jordan"
+   ],
+   [
+    "Year",
+    "2023"
+   ]
+  ],
+  "hero": "a16077e013",
+  "info": [],
+  "next": "sana-interiors",
+  "credits": [],
+  "blocks": [
+   {
+    "type": "text",
+    "label": "Project Overview",
+    "title": "The Confident Adventurer — a café that wears its personality out loud.",
+    "paras": [
+     "Wakers17 is more than a coffee shop. It's a haven for people who navigate life with self-assurance and an unquenchable thirst for exploration. The brand needed an identity as bold and expressive as its clientele — one that communicates energy, creativity, and belonging from the first glance.",
+     "The identity system spans logo design, colour architecture, packaging, signage, and brand applications — all anchored by the custom typeface Blue Cashews and a multi-colour palette mapped to the menu categories."
+    ],
+    "tags": []
+   },
+   {
+    "type": "text",
+    "label": "Identity System",
+    "title": null,
+    "paras": [],
+    "tags": []
+   },
+   {
+    "type": "media",
+    "images": [
+     {
+      "id": "f01e224bf2",
+      "alt": "Wakers17 logo dark green"
+     },
+     {
+      "id": "7e845d5a09",
+      "alt": "Wakers17 logo bright green"
+     }
+    ],
+    "caption": null,
+    "layout": "pair"
+   },
+   {
+    "type": "media",
+    "images": [
+     {
+      "id": "270673d184",
+      "alt": "Wakers17 logo gold texture"
+     },
+     {
+      "id": "89bb13e565",
+      "alt": "Wakers17 logo 3D wall"
+     }
+    ],
+    "caption": "Logo system — dark green / bright green / gold emboss / dimensional applications",
+    "layout": "pair"
+   },
+   {
+    "type": "list",
+    "label": "Brand Character",
+    "title": null,
+    "items": [
+     {
+      "num": "01",
+      "name": "Assured",
+      "desc": "Radiates confidence. A space where hesitation is replaced with conviction — and patrons are invited to be unabashedly themselves."
+     },
+     {
+      "num": "02",
+      "name": "Vibrant",
+      "desc": "The colour system is alive. Each menu category owns a distinct hue — from the deep green of hot coffee to the sunlit orange of fresh juice."
+     },
+     {
+      "num": "03",
+      "name": "Fearless",
+      "desc": "Encourages visitors to confront the unfamiliar, embrace the bold, and dive into uncharted waters. A brand built for those who pursue their passions."
+     }
+    ]
+   },
+   {
+    "type": "text",
+    "label": "Colour Architecture",
+    "title": null,
+    "paras": [
+     "Each colour maps to a product category — not just a visual system, but a navigational one. The full palette covers coffee, juices, sweets, and food."
+    ],
+    "tags": []
+   },
+   {
+    "type": "palette",
+    "swatches": [
+     {
+      "hex": "#48756b",
+      "name": "Hot Coffee"
+     },
+     {
+      "hex": "#009768",
+      "name": "Fresh Juice"
+     },
+     {
+      "hex": "#ff9d00",
+      "name": "Iced Coffee"
+     },
+     {
+      "hex": "#ffb853",
+      "name": "Cocktails"
+     },
+     {
+      "hex": "#f6542b",
+      "name": "Fresh Juices"
+     },
+     {
+      "hex": "#ef8062",
+      "name": "Cookies"
+     },
+     {
+      "hex": "#967dbb",
+      "name": "Cakes"
+     },
+     {
+      "hex": "#bfacd4",
+      "name": "Sweets"
+     }
+    ]
+   },
+   {
+    "type": "text",
+    "label": "Packaging",
+    "title": null,
+    "paras": [],
+    "tags": []
+   },
+   {
+    "type": "media",
+    "images": [
+     {
+      "id": "8b66e321e7",
+      "alt": "Wakers17 iced coffee cup"
+     },
+     {
+      "id": "ca2738edc8",
+      "alt": "Wakers17 orange juice cup"
+     },
+     {
+      "id": "507c2b5ae0",
+      "alt": "Wakers17 strawberry cup"
+     }
+    ],
+    "caption": "Cup series — each colourway maps to a product category in the Colours Map system",
+    "layout": "trio"
+   },
+   {
+    "type": "media",
+    "images": [
+     {
+      "id": "09a546817d",
+      "alt": "Wakers17 glass with juice"
+     },
+     {
+      "id": "aaf4e9f31a",
+      "alt": "Wakers17 street signage"
+     }
+    ],
+    "caption": "Glass · Juice Series — Exterior Signage",
+    "layout": "pair"
+   },
+   {
+    "type": "text",
+    "label": "Brand Applications",
+    "title": null,
+    "paras": [],
+    "tags": []
+   },
+   {
+    "type": "media",
+    "images": [
+     {
+      "id": "8056e282c1",
+      "alt": "Wakers17 sandwich packaging"
+     },
+     {
+      "id": "b3d93181b6",
+      "alt": "Wakers17 pillow box packaging purple"
+     }
+    ],
+    "caption": "Packaging system — sandwich box / pillow box gift packaging",
+    "layout": "pair"
+   },
+   {
+    "type": "media",
+    "images": [
+     {
+      "id": "28c1c11c00",
+      "alt": "Wakers17 signage through branches"
+     },
+     {
+      "id": "34da50d446",
+      "alt": "Wakers17 storefront Amman"
+     },
+     {
+      "id": "a16077e013",
+      "alt": "Wakers17 logo on rainy glass"
+     }
+    ],
+    "caption": "In-situ — signage, storefront, and environmental applications",
+    "layout": "trio"
+   },
+   {
+    "type": "media",
+    "images": [
+     {
+      "id": "13c4c30fe5",
+      "alt": "Wakers17 cake box packaging"
+     },
+     {
+      "id": "9b31bd7444",
+      "alt": "Wakers17 takeaway coffee cup in hand"
+     }
+    ],
+    "caption": "Packaging & takeaway — cake box / branded coffee cup",
+    "layout": "pair"
+   }
+  ],
+  "heroMobile": "28c1c11c00",
+  "year": "2023"
+ },
+ {
+  "key": "sana-interiors",
+  "slug": "sana-interiors",
+  "title": "Sana Interiors",
+  "category": "Interior Design · Brand Identity",
+  "lede": "A complete identity reconstruction for a growing interior design studio — from a minimal Arabic wordmark to a refined, contemporary monogram with architectural depth.",
+  "meta": [
+   [
+    "Client",
+    "Sana Interiors"
+   ],
+   [
+    "Location",
+    "Amman, Jordan"
+   ],
+   [
+    "Year",
+    "2025"
+   ]
+  ],
+  "hero": "8147017f1c",
+  "info": [],
+  "next": "rambourg",
+  "credits": [],
+  "blocks": [
+   {
+    "type": "text",
+    "label": "Project Overview",
+    "title": "From a personal signature to a complete visual identity built for scale.",
+    "paras": [
+     "Sana Interiors began with a simple Arabic logo that served the early stage of the brand. As the studio grew into a recognised name in residential and commercial interior design, the need for a stronger, more premium presence became clear.",
+     "The new identity was developed from the ground up — introducing a distinctive SI monogram, a refined custom logotype, and a full visual system grounded in the textures and materials of architectural space."
+    ],
+    "tags": [
+     "Semi-Luxury",
+     "Neo-Classic",
+     "Minimal",
+     "Architectural",
+     "Elegant",
+     "Contemporary"
+    ]
+   },
+   {
+    "type": "media",
+    "images": [
+     {
+      "id": "853fa38f74",
+      "alt": "Sana Interiors mockup applications"
+     }
+    ],
+    "caption": null,
+    "layout": "full"
+   },
+   {
+    "type": "text",
+    "label": "The Icon",
+    "title": "S meets I — a fluid architectural fusion.",
+    "paras": [
+     "The visual icon was developed by abstractly merging the initials S and I. Rather than a literal typographic mark, the letters were transformed into a fluid architectural form where curves and vertical structure interact to create a balanced symbol.",
+     "The vertical element represents structure and stability, while the flowing S-curve introduces movement and spatial harmony — reflecting the relationship between architecture and the interior space it contains."
+    ],
+    "tags": []
+   },
+   {
+    "type": "list",
+    "label": null,
+    "title": null,
+    "items": [
+     {
+      "num": "S",
+      "name": "Movement",
+      "desc": "The flowing curve — spatial harmony and organic flow."
+     },
+     {
+      "num": "I",
+      "name": "Structure",
+      "desc": "The vertical axis — precision, stability, architecture."
+     },
+     {
+      "num": "∞",
+      "name": "Balance",
+      "desc": "The unified mark — minimal yet unmistakably distinct."
+     }
+    ]
+   },
+   {
+    "type": "media",
+    "images": [
+     {
+      "id": "e8ac94b109",
+      "alt": "SI monogram construction grid"
+     }
+    ],
+    "caption": null,
+    "layout": "full"
+   },
+   {
+    "type": "media",
+    "images": [
+     {
+      "id": "ed54adafa8",
+      "alt": "Logo sketch explorations"
+     }
+    ],
+    "caption": "Exploration sketches — 9 concepts developed before arriving at the final mark",
+    "layout": "full"
+   },
+   {
+    "type": "text",
+    "label": "Logo System",
+    "title": null,
+    "paras": [],
+    "tags": []
+   },
+   {
+    "type": "media",
+    "images": [
+     {
+      "id": "47d7c4e076",
+      "alt": "Sana Interiors on wood"
+     },
+     {
+      "id": "58d0e9b72f",
+      "alt": "Sana Interiors in interior space"
+     }
+    ],
+    "caption": "Wood · Natural — Brand in Context",
+    "layout": "pair"
+   },
+   {
+    "type": "media",
+    "images": [
+     {
+      "id": "cef6bcb6b1",
+      "alt": "Sana Interiors signage and stationery"
+     },
+     {
+      "id": "307af80484",
+      "alt": "Sana Interiors wordmark in silver foil on navy"
+     }
+    ],
+    "caption": "Signage · Stationery — Silver · Navy",
+    "layout": "pair"
+   },
+   {
+    "type": "text",
+    "label": "Brand Atmosphere",
+    "title": "Inspired by material.",
+    "paras": [
+     "The visual atmosphere of Sana Interiors is drawn from the natural architectural materials at the heart of interior design — leather, marble, wood, and concrete. These textures express warmth, depth, and authenticity while reinforcing the brand's semi-luxury, architectural character."
+    ],
+    "tags": []
+   },
+   {
+    "type": "media",
+    "images": [
+     {
+      "id": "924930f33c",
+      "alt": "Sana Interiors brand atmosphere board: leather, marble, wood and concrete"
+     }
+    ],
+    "caption": null,
+    "layout": "full"
+   },
+   {
+    "type": "media",
+    "images": [
+     {
+      "id": "4a1980355c",
+      "alt": "Inspired by nature. Defined by design. — set on walnut"
+     },
+     {
+      "id": "c04711e04a",
+      "alt": "Sana Interiors business card on marble"
+     }
+    ],
+    "caption": null,
+    "layout": "pair"
+   },
+   {
+    "type": "text",
+    "label": "Colour Palette",
+    "title": null,
+    "paras": [
+     "Warm neutrals drawn from the brand's material world — from Oxblood leather to alabaster marble, from raw concrete to walnut wood."
+    ],
+    "tags": []
+   },
+   {
+    "type": "palette",
+    "swatches": [
+     {
+      "hex": "#4a3b35",
+      "name": "Oxblood"
+     },
+     {
+      "hex": "#7a6a5a",
+      "name": "Warm Taupe"
+     },
+     {
+      "hex": "#b5a99a",
+      "name": "Sand"
+     },
+     {
+      "hex": "#ddd8d0",
+      "name": "Alabaster"
+     },
+     {
+      "hex": "#1a1a1a",
+      "name": "Charcoal"
+     }
+    ]
+   },
+   {
+    "type": "text",
+    "label": "Stationery & Print",
+    "title": null,
+    "paras": [],
+    "tags": []
+   },
+   {
+    "type": "media",
+    "images": [
+     {
+      "id": "354d190bb9",
+      "alt": "Sana Interiors letterhead beige"
+     },
+     {
+      "id": "597c5362c7",
+      "alt": "Sana Interiors letterhead dark"
+     },
+     {
+      "id": "0d4a07bf20",
+      "alt": "Sana Interiors material palette"
+     },
+     {
+      "id": "66a3bbd3ad",
+      "alt": "Sana Interiors leather emboss"
+     },
+     {
+      "id": "7809d7b35e",
+      "alt": "Sana Interiors stationery set"
+     },
+     {
+      "id": "eb0c0b7f31",
+      "alt": "Sana Interiors signage and silver print"
+     }
+    ],
+    "caption": "Stationery system — letterhead / business cards in taupe, navy, and oxblood colourways",
+    "layout": "grid"
+   }
+  ],
+  "heroMobile": "58d0e9b72f",
+  "year": "2025"
  },
  {
   "key": "rambourg",
@@ -1293,501 +2701,5 @@
    }
   ],
   "year": "2023"
- },
- {
-  "key": "wakers17",
-  "slug": "wakers17",
-  "title": "Wakers 17 Coffee & Juice",
-  "category": "Brand Identity · F&B",
-  "lede": "A vibrant, character-led café brand built around the spirit of the confident adventurer — bold enough to be recognised on any street in Amman.",
-  "meta": [
-   [
-    "Client",
-    "Wakers 17 Coffee & Juice"
-   ],
-   [
-    "Location",
-    "Amman, Jordan"
-   ],
-   [
-    "Year",
-    "2023"
-   ]
-  ],
-  "hero": "a16077e013",
-  "info": [],
-  "next": "sana-interiors",
-  "credits": [],
-  "blocks": [
-   {
-    "type": "text",
-    "label": "Project Overview",
-    "title": "The Confident Adventurer — a café that wears its personality out loud.",
-    "paras": [
-     "Wakers17 is more than a coffee shop. It's a haven for people who navigate life with self-assurance and an unquenchable thirst for exploration. The brand needed an identity as bold and expressive as its clientele — one that communicates energy, creativity, and belonging from the first glance.",
-     "The identity system spans logo design, colour architecture, packaging, signage, and brand applications — all anchored by the custom typeface Blue Cashews and a multi-colour palette mapped to the menu categories."
-    ],
-    "tags": []
-   },
-   {
-    "type": "text",
-    "label": "Identity System",
-    "title": null,
-    "paras": [],
-    "tags": []
-   },
-   {
-    "type": "media",
-    "images": [
-     {
-      "id": "f01e224bf2",
-      "alt": "Wakers17 logo dark green"
-     },
-     {
-      "id": "7e845d5a09",
-      "alt": "Wakers17 logo bright green"
-     }
-    ],
-    "caption": null,
-    "layout": "pair"
-   },
-   {
-    "type": "media",
-    "images": [
-     {
-      "id": "270673d184",
-      "alt": "Wakers17 logo gold texture"
-     },
-     {
-      "id": "89bb13e565",
-      "alt": "Wakers17 logo 3D wall"
-     }
-    ],
-    "caption": "Logo system — dark green / bright green / gold emboss / dimensional applications",
-    "layout": "pair"
-   },
-   {
-    "type": "list",
-    "label": "Brand Character",
-    "title": null,
-    "items": [
-     {
-      "num": "01",
-      "name": "Assured",
-      "desc": "Radiates confidence. A space where hesitation is replaced with conviction — and patrons are invited to be unabashedly themselves."
-     },
-     {
-      "num": "02",
-      "name": "Vibrant",
-      "desc": "The colour system is alive. Each menu category owns a distinct hue — from the deep green of hot coffee to the sunlit orange of fresh juice."
-     },
-     {
-      "num": "03",
-      "name": "Fearless",
-      "desc": "Encourages visitors to confront the unfamiliar, embrace the bold, and dive into uncharted waters. A brand built for those who pursue their passions."
-     }
-    ]
-   },
-   {
-    "type": "text",
-    "label": "Colour Architecture",
-    "title": null,
-    "paras": [
-     "Each colour maps to a product category — not just a visual system, but a navigational one. The full palette covers coffee, juices, sweets, and food."
-    ],
-    "tags": []
-   },
-   {
-    "type": "palette",
-    "swatches": [
-     {
-      "hex": "#48756b",
-      "name": "Hot Coffee"
-     },
-     {
-      "hex": "#009768",
-      "name": "Fresh Juice"
-     },
-     {
-      "hex": "#ff9d00",
-      "name": "Iced Coffee"
-     },
-     {
-      "hex": "#ffb853",
-      "name": "Cocktails"
-     },
-     {
-      "hex": "#f6542b",
-      "name": "Fresh Juices"
-     },
-     {
-      "hex": "#ef8062",
-      "name": "Cookies"
-     },
-     {
-      "hex": "#967dbb",
-      "name": "Cakes"
-     },
-     {
-      "hex": "#bfacd4",
-      "name": "Sweets"
-     }
-    ]
-   },
-   {
-    "type": "text",
-    "label": "Packaging",
-    "title": null,
-    "paras": [],
-    "tags": []
-   },
-   {
-    "type": "media",
-    "images": [
-     {
-      "id": "8b66e321e7",
-      "alt": "Wakers17 iced coffee cup"
-     },
-     {
-      "id": "ca2738edc8",
-      "alt": "Wakers17 orange juice cup"
-     },
-     {
-      "id": "507c2b5ae0",
-      "alt": "Wakers17 strawberry cup"
-     }
-    ],
-    "caption": "Cup series — each colourway maps to a product category in the Colours Map system",
-    "layout": "trio"
-   },
-   {
-    "type": "media",
-    "images": [
-     {
-      "id": "09a546817d",
-      "alt": "Wakers17 glass with juice"
-     },
-     {
-      "id": "aaf4e9f31a",
-      "alt": "Wakers17 street signage"
-     }
-    ],
-    "caption": "Glass · Juice Series — Exterior Signage",
-    "layout": "pair"
-   },
-   {
-    "type": "text",
-    "label": "Brand Applications",
-    "title": null,
-    "paras": [],
-    "tags": []
-   },
-   {
-    "type": "media",
-    "images": [
-     {
-      "id": "8056e282c1",
-      "alt": "Wakers17 sandwich packaging"
-     },
-     {
-      "id": "b3d93181b6",
-      "alt": "Wakers17 pillow box packaging purple"
-     }
-    ],
-    "caption": "Packaging system — sandwich box / pillow box gift packaging",
-    "layout": "pair"
-   },
-   {
-    "type": "media",
-    "images": [
-     {
-      "id": "28c1c11c00",
-      "alt": "Wakers17 signage through branches"
-     },
-     {
-      "id": "34da50d446",
-      "alt": "Wakers17 storefront Amman"
-     },
-     {
-      "id": "a16077e013",
-      "alt": "Wakers17 logo on rainy glass"
-     }
-    ],
-    "caption": "In-situ — signage, storefront, and environmental applications",
-    "layout": "trio"
-   },
-   {
-    "type": "media",
-    "images": [
-     {
-      "id": "13c4c30fe5",
-      "alt": "Wakers17 cake box packaging"
-     },
-     {
-      "id": "9b31bd7444",
-      "alt": "Wakers17 takeaway coffee cup in hand"
-     }
-    ],
-    "caption": "Packaging & takeaway — cake box / branded coffee cup",
-    "layout": "pair"
-   }
-  ],
-  "heroMobile": "28c1c11c00",
-  "year": "2023"
- },
- {
-  "key": "sana-interiors",
-  "slug": "sana-interiors",
-  "title": "Sana Interiors",
-  "category": "Interior Design · Brand Identity",
-  "lede": "A complete identity reconstruction for a growing interior design studio — from a minimal Arabic wordmark to a refined, contemporary monogram with architectural depth.",
-  "meta": [
-   [
-    "Client",
-    "Sana Interiors"
-   ],
-   [
-    "Location",
-    "Amman, Jordan"
-   ],
-   [
-    "Year",
-    "2025"
-   ]
-  ],
-  "hero": "8147017f1c",
-  "info": [],
-  "next": "masar",
-  "credits": [],
-  "blocks": [
-   {
-    "type": "text",
-    "label": "Project Overview",
-    "title": "From a personal signature to a complete visual identity built for scale.",
-    "paras": [
-     "Sana Interiors began with a simple Arabic logo that served the early stage of the brand. As the studio grew into a recognised name in residential and commercial interior design, the need for a stronger, more premium presence became clear.",
-     "The new identity was developed from the ground up — introducing a distinctive SI monogram, a refined custom logotype, and a full visual system grounded in the textures and materials of architectural space."
-    ],
-    "tags": [
-     "Semi-Luxury",
-     "Neo-Classic",
-     "Minimal",
-     "Architectural",
-     "Elegant",
-     "Contemporary"
-    ]
-   },
-   {
-    "type": "media",
-    "images": [
-     {
-      "id": "853fa38f74",
-      "alt": "Sana Interiors mockup applications"
-     }
-    ],
-    "caption": null,
-    "layout": "full"
-   },
-   {
-    "type": "text",
-    "label": "The Icon",
-    "title": "S meets I — a fluid architectural fusion.",
-    "paras": [
-     "The visual icon was developed by abstractly merging the initials S and I. Rather than a literal typographic mark, the letters were transformed into a fluid architectural form where curves and vertical structure interact to create a balanced symbol.",
-     "The vertical element represents structure and stability, while the flowing S-curve introduces movement and spatial harmony — reflecting the relationship between architecture and the interior space it contains."
-    ],
-    "tags": []
-   },
-   {
-    "type": "list",
-    "label": null,
-    "title": null,
-    "items": [
-     {
-      "num": "S",
-      "name": "Movement",
-      "desc": "The flowing curve — spatial harmony and organic flow."
-     },
-     {
-      "num": "I",
-      "name": "Structure",
-      "desc": "The vertical axis — precision, stability, architecture."
-     },
-     {
-      "num": "∞",
-      "name": "Balance",
-      "desc": "The unified mark — minimal yet unmistakably distinct."
-     }
-    ]
-   },
-   {
-    "type": "media",
-    "images": [
-     {
-      "id": "e8ac94b109",
-      "alt": "SI monogram construction grid"
-     }
-    ],
-    "caption": null,
-    "layout": "full"
-   },
-   {
-    "type": "media",
-    "images": [
-     {
-      "id": "ed54adafa8",
-      "alt": "Logo sketch explorations"
-     }
-    ],
-    "caption": "Exploration sketches — 9 concepts developed before arriving at the final mark",
-    "layout": "full"
-   },
-   {
-    "type": "text",
-    "label": "Logo System",
-    "title": null,
-    "paras": [],
-    "tags": []
-   },
-   {
-    "type": "media",
-    "images": [
-     {
-      "id": "47d7c4e076",
-      "alt": "Sana Interiors on wood"
-     },
-     {
-      "id": "58d0e9b72f",
-      "alt": "Sana Interiors in interior space"
-     }
-    ],
-    "caption": "Wood · Natural — Brand in Context",
-    "layout": "pair"
-   },
-   {
-    "type": "media",
-    "images": [
-     {
-      "id": "cef6bcb6b1",
-      "alt": "Sana Interiors signage and stationery"
-     },
-     {
-      "id": "307af80484",
-      "alt": "Sana Interiors wordmark in silver foil on navy"
-     }
-    ],
-    "caption": "Signage · Stationery — Silver · Navy",
-    "layout": "pair"
-   },
-   {
-    "type": "text",
-    "label": "Brand Atmosphere",
-    "title": "Inspired by material.",
-    "paras": [
-     "The visual atmosphere of Sana Interiors is drawn from the natural architectural materials at the heart of interior design — leather, marble, wood, and concrete. These textures express warmth, depth, and authenticity while reinforcing the brand's semi-luxury, architectural character."
-    ],
-    "tags": []
-   },
-   {
-    "type": "media",
-    "images": [
-     {
-      "id": "924930f33c",
-      "alt": "Sana Interiors brand atmosphere board: leather, marble, wood and concrete"
-     }
-    ],
-    "caption": null,
-    "layout": "full"
-   },
-   {
-    "type": "media",
-    "images": [
-     {
-      "id": "4a1980355c",
-      "alt": "Inspired by nature. Defined by design. — set on walnut"
-     },
-     {
-      "id": "c04711e04a",
-      "alt": "Sana Interiors business card on marble"
-     }
-    ],
-    "caption": null,
-    "layout": "pair"
-   },
-   {
-    "type": "text",
-    "label": "Colour Palette",
-    "title": null,
-    "paras": [
-     "Warm neutrals drawn from the brand's material world — from Oxblood leather to alabaster marble, from raw concrete to walnut wood."
-    ],
-    "tags": []
-   },
-   {
-    "type": "palette",
-    "swatches": [
-     {
-      "hex": "#4a3b35",
-      "name": "Oxblood"
-     },
-     {
-      "hex": "#7a6a5a",
-      "name": "Warm Taupe"
-     },
-     {
-      "hex": "#b5a99a",
-      "name": "Sand"
-     },
-     {
-      "hex": "#ddd8d0",
-      "name": "Alabaster"
-     },
-     {
-      "hex": "#1a1a1a",
-      "name": "Charcoal"
-     }
-    ]
-   },
-   {
-    "type": "text",
-    "label": "Stationery & Print",
-    "title": null,
-    "paras": [],
-    "tags": []
-   },
-   {
-    "type": "media",
-    "images": [
-     {
-      "id": "354d190bb9",
-      "alt": "Sana Interiors letterhead beige"
-     },
-     {
-      "id": "597c5362c7",
-      "alt": "Sana Interiors letterhead dark"
-     },
-     {
-      "id": "0d4a07bf20",
-      "alt": "Sana Interiors material palette"
-     },
-     {
-      "id": "66a3bbd3ad",
-      "alt": "Sana Interiors leather emboss"
-     },
-     {
-      "id": "7809d7b35e",
-      "alt": "Sana Interiors stationery set"
-     },
-     {
-      "id": "eb0c0b7f31",
-      "alt": "Sana Interiors signage and silver print"
-     }
-    ],
-    "caption": "Stationery system — letterhead / business cards in taupe, navy, and oxblood colourways",
-    "layout": "grid"
-   }
-  ],
-  "heroMobile": "58d0e9b72f",
-  "year": "2025"
  }
 ]

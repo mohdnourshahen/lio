@@ -169,6 +169,12 @@ em { font-style: italic; }
 .theme-dark  { --bg: var(--c-ink); }
 .theme-light { --bg: var(--c-ink-2); }
 .theme-sand  { --bg: var(--c-ink-3); }
+/* paper: the light reading surface a case study can opt into (project `theme: 'paper'`) */
+.theme-paper {
+  --bg: var(--c-white); --fg: var(--c-ink); --fg-2: rgba(18, 16, 10, 0.62); --rule: rgba(18, 16, 10, 0.14);
+  --title: var(--c-ink); --accent: #8a6d1c;
+  background: var(--bg); color: var(--fg);
+}
 
 /* atmosphere imagery: darkened, warm, slightly desaturated, with film grain (capabilities-deck look) */
 .atmos { position: relative; }

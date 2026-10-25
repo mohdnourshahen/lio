@@ -22,6 +22,9 @@ const facts = computed(() => {
   }
   return rows
 })
+/* body sections follow the project's surface: the house dark tones, or paper (white) when `theme: 'paper'` */
+const toneName = (dark: 'dark' | 'light') => (p.theme === 'paper' ? 'paper' : dark)
+const tone = (dark: 'dark' | 'light') => `theme-${toneName(dark)}`
 const discipline = computed(() => p.category.split('·')[0]!.trim())
 const plainLede = p.lede.length > 158 ? `${p.lede.slice(0, p.lede.lastIndexOf(' ', 155))}…` : p.lede
 
@@ -29,7 +32,7 @@ const base = useSiteUrl()
 const url = `${base}/work/${p.slug}`
 const heroAlt = `${p.title} — ${p.category}`
 useSeo({
-  title: `${p.title} — ${p.category} | Lōn Visuals`,
+  title: p.seoTitle ?? `${p.title} — ${p.category} | Lōn Visuals`,
   description: plainLede,
   path: `/work/${p.slug}`,
   ogImage: `${p.slug}.jpg`,
@@ -115,13 +118,13 @@ const ratio = (id: string) => (media[id] ? media[id].w / media[id].h : 1.5)
 
 <template>
   <PageShell>
-    <article class="case" :aria-labelledby="'case-title'">
+    <article class="case" :class="{ 'is-paper': p.theme === 'paper' }" :aria-labelledby="'case-title'">
       <!-- HERO -->
       <header ref="hero" class="c-hero theme-dark" data-theme="dark">
         <div ref="heroMedia" class="c-hero-media atmos-soft grain">
           <MediaImage :id="p.hero" :alt="heroAlt" sizes="100vw" eager :mobile-id="p.heroMobile" :position="p.heroFocus" />
         </div>
-        <div class="c-hero-shade" aria-hidden="true" />
+        <div class="c-hero-shade" :class="{ 'is-dense': p.heroDense }" aria-hidden="true" />
         <div class="container c-hero-inner">
           <nav class="crumbs caps" aria-label="Breadcrumb">
             <ol>
@@ -138,7 +141,7 @@ const ratio = (id: string) => (media[id] ? media[id].w / media[id].h : 1.5)
       </header>
 
       <!-- INTRO -->
-      <section class="c-intro theme-dark" data-theme="dark" aria-label="Project overview">
+      <section class="c-intro" :class="tone('dark')" :data-theme="toneName('dark')" aria-label="Project overview">
         <div class="container">
           <p v-reveal class="c-lede t-h3">{{ p.lede }}</p>
           <dl class="c-facts">
@@ -152,13 +155,16 @@ const ratio = (id: string) => (media[id] ? media[id].w / media[id].h : 1.5)
 
       <!-- BLOCKS -->
       <template v-for="(b, i) in p.blocks" :key="i">
-        <section v-if="b.type === 'text'" class="b-text theme-light" data-theme="light" :aria-label="b.title || b.label || undefined">
+        <section v-if="b.type === 'text'" class="b-text" :class="tone('light')" :data-theme="toneName('light')" :aria-label="b.title || b.label || undefined">
           <div class="container">
             <p v-if="b.label" v-reveal class="label b-label">{{ b.label }}</p>
             <h2 v-if="b.title" v-reveal class="b-title t-h2">{{ b.title }}</h2>
             <div v-if="b.paras.length" class="b-body">
               <p v-for="(para, j) in b.paras" :key="j" v-reveal class="t-p">{{ para }}</p>
             </div>
+            <p v-if="b.links?.length" class="b-links">
+              <a v-for="l in b.links" :key="l.href" v-reveal :href="l.href" target="_blank" rel="noopener" class="u-link t-small">{{ l.label }} ↗</a>
+            </p>
             <ul v-if="b.tags.length" class="b-tags" aria-label="Disciplines">
               <li v-for="t in b.tags" :key="t" class="t-sub">{{ t }}</li>
             </ul>
@@ -166,7 +172,7 @@ const ratio = (id: string) => (media[id] ? media[id].w / media[id].h : 1.5)
         </section>
 
         <!-- gallery images keep their own proportions (no frame crop) with a light drift -->
-        <figure v-else-if="b.type === 'media'" class="b-media theme-light" data-theme="light" :class="[`is-${b.layout}`, { 'is-portrait': b.layout === 'full' && ratio(b.images[0]!.id) < 1 }]">
+        <figure v-else-if="b.type === 'media'" class="b-media" :data-theme="toneName('light')" :class="[tone('light'), `is-${b.layout}`, { 'is-portrait': b.layout === 'full' && ratio(b.images[0]!.id) < 1 }]">
           <div class="container b-media-grid">
             <div v-for="(img, j) in b.images" :key="img.id" class="b-media-item" :class="`n-${j}`">
               <MediaFrame
@@ -181,7 +187,7 @@ const ratio = (id: string) => (media[id] ? media[id].w / media[id].h : 1.5)
           </div>
         </figure>
 
-        <section v-else-if="b.type === 'list'" class="b-list theme-dark" data-theme="dark" :aria-label="b.title || b.label || 'Details'">
+        <section v-else-if="b.type === 'list'" class="b-list" :class="tone('dark')" :data-theme="toneName('dark')" :aria-label="b.title || b.label || 'Details'">
           <div class="container">
             <p v-if="b.label" v-reveal class="label b-label">{{ b.label }}</p>
             <h2 v-if="b.title" v-reveal class="b-title t-h2">{{ b.title }}</h2>
@@ -196,7 +202,7 @@ const ratio = (id: string) => (media[id] ? media[id].w / media[id].h : 1.5)
           </div>
         </section>
 
-        <section v-else-if="b.type === 'palette'" class="b-palette theme-light" data-theme="light" aria-label="Colour palette">
+        <section v-else-if="b.type === 'palette'" class="b-palette" :class="tone('light')" :data-theme="toneName('light')" aria-label="Colour palette">
           <ul class="container">
             <li v-for="sw in b.swatches" :key="sw.hex" class="sw">
               <span class="sw-chip" :style="{ background: sw.hex }" />
@@ -207,7 +213,7 @@ const ratio = (id: string) => (media[id] ? media[id].w / media[id].h : 1.5)
         </section>
       </template>
 
-      <section v-if="p.credits.length" class="b-credits theme-light" data-theme="light" aria-label="Credits">
+      <section v-if="p.credits.length" class="b-credits" :class="tone('light')" :data-theme="toneName('light')" aria-label="Credits">
         <dl class="container">
           <div v-for="c in p.credits" :key="c.role" class="credit">
             <dt class="caps dim">{{ c.role }}</dt>
@@ -244,6 +250,8 @@ const ratio = (id: string) => (media[id] ? media[id].w / media[id].h : 1.5)
 .c-hero-media :deep(picture), .c-hero-media :deep(img) { width: 100%; height: 100%; object-fit: cover; }
 .c-hero-media :deep(img) { filter: saturate(0.85) sepia(0.1) brightness(0.78); }
 .c-hero-shade { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(18, 16, 10, 0.55) 0%, rgba(18, 16, 10, 0.05) 32%, rgba(18, 16, 10, 0.8) 100%); }
+/* heroes that carry their own lettering (a logo on paper) need the title to sit on near-solid ink */
+.c-hero-shade.is-dense { background: linear-gradient(180deg, rgba(18, 16, 10, 0.6) 0%, rgba(18, 16, 10, 0.25) 30%, rgba(18, 16, 10, 0.9) 72%, rgba(18, 16, 10, 0.96) 100%); }
 .c-hero-inner { position: relative; height: 100%; grid-template-rows: auto 1fr auto; padding: 2vw 0 3.4vw; }
 .crumbs { grid-column: 2 / -1; padding-top: 0.2vw; color: rgba(245, 242, 234, 0.72); font-size: var(--fs-sub); }
 .crumbs ol { display: flex; flex-wrap: wrap; gap: 0.6em; }
@@ -306,7 +314,18 @@ const ratio = (id: string) => (media[id] ? media[id].w / media[id].h : 1.5)
 .dim { color: var(--fg-2); }
 
 /* CREDITS */
+.b-links { grid-column: 5 / 11; display: flex; flex-wrap: wrap; gap: 0.6vw 2.4vw; margin-top: 2.2vw; color: var(--c-title); }
 .b-credits { padding: 6vw 0 10vw; }
+/* the gaps between paper sections must not show the ink page underneath */
+.case.is-paper { background: var(--c-white); }
+/* paper surface: swap the gold-on-ink accents for ink and a deep gold that hold up on white */
+.theme-paper .c-lede, .theme-paper .b-name { color: var(--c-ink); }
+.theme-paper .b-body p:first-child { color: rgba(18, 16, 10, 0.86); }
+.theme-paper .c-fact dt, .theme-paper .b-num, .theme-paper .b-tags li, .theme-paper .b-links,
+.theme-paper .b-label, .theme-paper .b-title { color: var(--accent); }
+.theme-paper .b-title { color: var(--c-ink); }
+.theme-paper .b-caption::before { background: var(--accent); }
+.theme-paper .sw-chip { box-shadow: inset 0 0 0 1px rgba(18, 16, 10, 0.12); }
 .b-credits dl { row-gap: 2vw; }
 .credit { grid-column: span 2; }
 .credit:first-child { grid-column: 2 / span 3; }
@@ -381,6 +400,7 @@ const ratio = (id: string) => (media[id] ? media[id].w / media[id].h : 1.5)
   .sw { gap: 1vw; }
 
   .b-credits dl { row-gap: 6vw; }
+  .b-links { grid-column: 1 / -1; gap: 3vw 6vw; margin-top: 6vw; }
   .credit, .credit:first-child { grid-column: span 5; }
   .c-next-inner > * { grid-column: 1 / -1; }
 }

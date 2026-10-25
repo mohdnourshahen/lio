@@ -1,0 +1,237 @@
+{
+ "key": "mofa",
+ "slug": "ministry-of-foreign-affairs-jordan",
+ "title": "Ministry of Foreign Affairs and Expatriates",
+ "category": "Visual Identity · Government",
+ "lede": "One visual language for Jordan's voice abroad: the branding and visual identity guidelines that bring the Ministry, its 59 diplomatic missions and its reach into 87 more countries under a single, consistent standard.",
+ "meta": [
+  [
+   "Client",
+   "Ministry of Foreign Affairs and Expatriates"
+  ],
+  [
+   "Department",
+   "Communication and Media"
+  ],
+  [
+   "Year",
+   "2018 — 2020"
+  ]
+ ],
+ "hero": "db0e23ca6f",
+ "info": [
+  [
+   "Project Type",
+   "Branding & Visual Identity Guidelines"
+  ],
+  [
+   "Sector",
+   "Government · Diplomacy"
+  ],
+  [
+   "Scope",
+   "Identity system, Guidelines, Print, Digital, Events"
+  ],
+  [
+   "Location",
+   "Amman, Jordan"
+  ]
+ ],
+ "next": "zeryab-estates",
+ "credits": [
+  {
+   "role": "Design Director",
+   "name": "Moh'd Nour Shahen",
+   "href": null
+  },
+  {
+   "role": "Client",
+   "name": "Department of Communication and Media",
+   "href": null
+  }
+ ],
+ "year": "2018 — 2020",
+ "blocks": [
+  {
+   "type": "text",
+   "label": "Overview",
+   "title": "The voice of a kingdom, abroad",
+   "tags": [
+    "Government",
+    "Diplomacy",
+    "Visual Identity",
+    "Brand Guidelines"
+   ],
+   "paras": [
+    "Established in 1939, the Ministry of Foreign Affairs of the Hashemite Kingdom of Jordan represents the country through 59 diplomatic missions worldwide, with non-resident representation in a further 87 countries.",
+    "In 2013 it became the Ministry of Foreign Affairs and Expatriates. The new name signalled a new duty: closer care for Jordanians living abroad, stronger channels of communication with them, and deeper ties to home. A dedicated department followed, and with it the need for an identity that could speak for both."
+   ]
+  },
+  {
+   "type": "text",
+   "label": "The Brief",
+   "title": "Consistency is credibility",
+   "tags": [],
+   "paras": [
+    "For a ministry, visual presentation is never just design. It is a statement of what the state stands for, and every inconsistency across an embassy, a department or a feed reads as a crack in that statement.",
+    "The Branding and Visual Identity Guidelines give a decentralised institution one language: clear standards for the logo, colour, typography, photography and video that any unit, in any country, can apply with confidence, and that are never to be diluted, substituted or redrawn."
+   ]
+  },
+  {
+   "type": "text",
+   "label": "The Mark",
+   "title": "One crest, two scripts",
+   "tags": [],
+   "paras": [
+    "The identity is anchored by the emblem of the Royal Hashemite Court, set above the Ministry's name in Thuluth, the classical script of the Kingdom's state institutions, and in Trajan, whose Roman capitals give the English line the same ceremonial weight.",
+    "Primary, landscape, Arabic-only and English-only versions cover every composition, each with defined clear space and approved use on white, dark and maroon grounds."
+   ]
+  },
+  {
+   "type": "media",
+   "images": [
+    {
+     "id": "8fd006b13a",
+     "alt": "Primary stacked and landscape versions of the Ministry of Foreign Affairs and Expatriates logo"
+    }
+   ],
+   "caption": "Lockup system · Primary stacked and landscape versions",
+   "layout": "full"
+  },
+  {
+   "type": "media",
+   "images": [
+    {
+     "id": "fd67e406e5",
+     "alt": "The Ministry lockup in Korean, Russian, French, Hindi, Greek and Japanese"
+    }
+   ],
+   "caption": "For the missions · The lockup in Korean, Russian, French, Hindi, Greek and Japanese",
+   "layout": "full"
+  },
+  {
+   "type": "text",
+   "label": "Colour",
+   "title": "Maroon, white and black",
+   "tags": [],
+   "paras": [
+    "The Ministry's signature maroon carries the identity, with white and black as its only companions. A deep maroon gradient serves as the official ground for digital and broadcast use."
+   ]
+  },
+  {
+   "type": "palette",
+   "swatches": [
+    {
+     "hex": "#8E1A16",
+     "name": "MFA Maroon"
+    },
+    {
+     "hex": "#FFFFFF",
+     "name": "White"
+    },
+    {
+     "hex": "#000000",
+     "name": "Black"
+    }
+   ]
+  },
+  {
+   "type": "list",
+   "label": "Typography",
+   "title": "A type system in two languages",
+   "items": [
+    {
+     "num": "01",
+     "name": "Al-Thuluth",
+     "desc": "Primary Arabic. The classical calligraphic line of the Kingdom's governmental institutions."
+    },
+    {
+     "num": "02",
+     "name": "Trajan Pro",
+     "desc": "Primary English. Roman capitals, regular and bold, for the Ministry's name and formal titles."
+    },
+    {
+     "num": "03",
+     "name": "Bahij TheSansArabic",
+     "desc": "Arabic text face in three weights for all functional communication."
+    },
+    {
+     "num": "04",
+     "name": "Dubai",
+     "desc": "English text face in four weights for all functional communication."
+    }
+   ]
+  },
+  {
+   "type": "text",
+   "label": "Applications",
+   "title": "Every touchpoint, one voice",
+   "tags": [],
+   "paras": [
+    "The system was rolled out across official stationery, events and the Ministry's digital channels, with templates for every social format so that each post, wherever it is published, leaves looking like the Ministry."
+   ]
+  },
+  {
+   "type": "media",
+   "images": [
+    {
+     "id": "03d1e69e5a",
+     "alt": "English and landscape versions of the logo printed on textured paper"
+    }
+   ],
+   "caption": "Print · English and landscape lockups on textured stock",
+   "layout": "full"
+  },
+  {
+   "type": "media",
+   "images": [
+    {
+     "id": "be3f2c3aa7",
+     "alt": "Official maroon social media cover with the Ministry crest and calligraphy"
+    }
+   ],
+   "caption": "Digital · The official cover for Facebook, Twitter, LinkedIn and YouTube",
+   "layout": "full"
+  },
+  {
+   "type": "list",
+   "label": "Deliverables",
+   "title": "What we delivered",
+   "items": [
+    {
+     "num": "01",
+     "name": "Visual Identity System",
+     "desc": "Primary, landscape, Arabic and English lockups, with clear space and misuse rules."
+    },
+    {
+     "num": "02",
+     "name": "Brand Guidelines",
+     "desc": "Standards for logo, colour, typography, photography and video."
+    },
+    {
+     "num": "03",
+     "name": "Print & Stationery",
+     "desc": "Letterhead, folders, envelopes and business cards."
+    },
+    {
+     "num": "04",
+     "name": "Digital & Social",
+     "desc": "Profile and cover artwork, post templates and infographic visuals."
+    },
+    {
+     "num": "05",
+     "name": "Events & Environment",
+     "desc": "Press backdrops, street banners and signage."
+    },
+    {
+     "num": "06",
+     "name": "Video",
+     "desc": "Intro, outro and lower-third title bars."
+    }
+   ]
+  }
+ ],
+ "heroDense": true,
+ "heroFocus": "50% 18%",
+ "seoTitle": "Ministry of Foreign Affairs Jordan — Visual Identity | Lōn Visuals"
+}
