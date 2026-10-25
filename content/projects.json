@@ -1,242 +1,5 @@
 [
  {
-  "key": "mofa",
-  "slug": "ministry-of-foreign-affairs-jordan",
-  "title": "Ministry of Foreign Affairs and Expatriates",
-  "category": "Visual Identity · Government",
-  "lede": "One visual language for Jordan's voice abroad: the branding and visual identity guidelines that bring the Ministry, its 59 diplomatic missions and its reach into 87 more countries under a single, consistent standard.",
-  "meta": [
-   [
-    "Client",
-    "Ministry of Foreign Affairs and Expatriates"
-   ],
-   [
-    "Department",
-    "Communication and Media"
-   ],
-   [
-    "Year",
-    "2018 — 2020"
-   ]
-  ],
-  "hero": "db0e23ca6f",
-  "info": [
-   [
-    "Project Type",
-    "Branding & Visual Identity Guidelines"
-   ],
-   [
-    "Sector",
-    "Government · Diplomacy"
-   ],
-   [
-    "Scope",
-    "Identity system, Guidelines, Print, Digital, Events"
-   ],
-   [
-    "Location",
-    "Amman, Jordan"
-   ]
-  ],
-  "next": "zeryab-estates",
-  "credits": [
-   {
-    "role": "Design Director",
-    "name": "Moh'd Nour Shahen",
-    "href": null
-   },
-   {
-    "role": "Client",
-    "name": "Department of Communication and Media",
-    "href": null
-   }
-  ],
-  "year": "2018 — 2020",
-  "blocks": [
-   {
-    "type": "text",
-    "label": "Overview",
-    "title": "The voice of a kingdom, abroad",
-    "tags": [
-     "Government",
-     "Diplomacy",
-     "Visual Identity",
-     "Brand Guidelines"
-    ],
-    "paras": [
-     "Established in 1939, the Ministry of Foreign Affairs of the Hashemite Kingdom of Jordan represents the country through 59 diplomatic missions worldwide, with non-resident representation in a further 87 countries.",
-     "In 2013 it became the Ministry of Foreign Affairs and Expatriates. The new name signalled a new duty: closer care for Jordanians living abroad, stronger channels of communication with them, and deeper ties to home. A dedicated department followed, and with it the need for an identity that could speak for both."
-    ]
-   },
-   {
-    "type": "text",
-    "label": "The Brief",
-    "title": "Consistency is credibility",
-    "tags": [],
-    "paras": [
-     "For a ministry, visual presentation is never just design. It is a statement of what the state stands for, and every inconsistency across an embassy, a department or a feed reads as a crack in that statement.",
-     "The Branding and Visual Identity Guidelines give a decentralised institution one language: clear standards for the logo, colour, typography, photography and video that any unit, in any country, can apply with confidence, and that are never to be diluted, substituted or redrawn."
-    ]
-   },
-   {
-    "type": "text",
-    "label": "The Mark",
-    "title": "One crest, two scripts",
-    "tags": [],
-    "paras": [
-     "The identity is anchored by the emblem of the Royal Hashemite Court, set above the Ministry's name in Thuluth, the classical script of the Kingdom's state institutions, and in Trajan, whose Roman capitals give the English line the same ceremonial weight.",
-     "Primary, landscape, Arabic-only and English-only versions cover every composition, each with defined clear space and approved use on white, dark and maroon grounds."
-    ]
-   },
-   {
-    "type": "media",
-    "images": [
-     {
-      "id": "8fd006b13a",
-      "alt": "Primary stacked and landscape versions of the Ministry of Foreign Affairs and Expatriates logo"
-     }
-    ],
-    "caption": "Lockup system · Primary stacked and landscape versions",
-    "layout": "full"
-   },
-   {
-    "type": "media",
-    "images": [
-     {
-      "id": "fd67e406e5",
-      "alt": "The Ministry lockup in Korean, Russian, French, Hindi, Greek and Japanese"
-     }
-    ],
-    "caption": "For the missions · The lockup in Korean, Russian, French, Hindi, Greek and Japanese",
-    "layout": "full"
-   },
-   {
-    "type": "text",
-    "label": "Colour",
-    "title": "Maroon, white and black",
-    "tags": [],
-    "paras": [
-     "The Ministry's signature maroon carries the identity, with white and black as its only companions. A deep maroon gradient serves as the official ground for digital and broadcast use."
-    ]
-   },
-   {
-    "type": "palette",
-    "swatches": [
-     {
-      "hex": "#8E1A16",
-      "name": "MFA Maroon"
-     },
-     {
-      "hex": "#FFFFFF",
-      "name": "White"
-     },
-     {
-      "hex": "#000000",
-      "name": "Black"
-     }
-    ]
-   },
-   {
-    "type": "list",
-    "label": "Typography",
-    "title": "A type system in two languages",
-    "items": [
-     {
-      "num": "01",
-      "name": "Al-Thuluth",
-      "desc": "Primary Arabic. The classical calligraphic line of the Kingdom's governmental institutions."
-     },
-     {
-      "num": "02",
-      "name": "Trajan Pro",
-      "desc": "Primary English. Roman capitals, regular and bold, for the Ministry's name and formal titles."
-     },
-     {
-      "num": "03",
-      "name": "Bahij TheSansArabic",
-      "desc": "Arabic text face in three weights for all functional communication."
-     },
-     {
-      "num": "04",
-      "name": "Dubai",
-      "desc": "English text face in four weights for all functional communication."
-     }
-    ]
-   },
-   {
-    "type": "text",
-    "label": "Applications",
-    "title": "Every touchpoint, one voice",
-    "tags": [],
-    "paras": [
-     "The system was rolled out across official stationery, events and the Ministry's digital channels, with templates for every social format so that each post, wherever it is published, leaves looking like the Ministry."
-    ]
-   },
-   {
-    "type": "media",
-    "images": [
-     {
-      "id": "03d1e69e5a",
-      "alt": "English and landscape versions of the logo printed on textured paper"
-     }
-    ],
-    "caption": "Print · English and landscape lockups on textured stock",
-    "layout": "full"
-   },
-   {
-    "type": "media",
-    "images": [
-     {
-      "id": "be3f2c3aa7",
-      "alt": "Official maroon social media cover with the Ministry crest and calligraphy"
-     }
-    ],
-    "caption": "Digital · The official cover for Facebook, Twitter, LinkedIn and YouTube",
-    "layout": "full"
-   },
-   {
-    "type": "list",
-    "label": "Deliverables",
-    "title": "What we delivered",
-    "items": [
-     {
-      "num": "01",
-      "name": "Visual Identity System",
-      "desc": "Primary, landscape, Arabic and English lockups, with clear space and misuse rules."
-     },
-     {
-      "num": "02",
-      "name": "Brand Guidelines",
-      "desc": "Standards for logo, colour, typography, photography and video."
-     },
-     {
-      "num": "03",
-      "name": "Print & Stationery",
-      "desc": "Letterhead, folders, envelopes and business cards."
-     },
-     {
-      "num": "04",
-      "name": "Digital & Social",
-      "desc": "Profile and cover artwork, post templates and infographic visuals."
-     },
-     {
-      "num": "05",
-      "name": "Events & Environment",
-      "desc": "Press backdrops, street banners and signage."
-     },
-     {
-      "num": "06",
-      "name": "Video",
-      "desc": "Intro, outro and lower-third title bars."
-     }
-    ]
-   }
-  ],
-  "heroDense": true,
-  "heroFocus": "50% 18%",
-  "seoTitle": "Ministry of Foreign Affairs Jordan — Visual Identity | Lōn Visuals"
- },
- {
   "key": "zeryab",
   "slug": "zeryab-estates",
   "title": "Zeryab Estates",
@@ -275,7 +38,7 @@
     "Marrakech, Morocco"
    ]
   ],
-  "next": "wakers17",
+  "next": "masar",
   "credits": [
    {
     "role": "Art Direction & Design",
@@ -602,7 +365,7 @@
     "NEOM Sports Village"
    ]
   ],
-  "next": "lazure",
+  "next": "sky-falcons",
   "credits": [],
   "blocks": [
    {
@@ -751,232 +514,6 @@
   "year": "2024"
  },
  {
-  "key": "lazure",
-  "slug": "lazure",
-  "title": "L'Azure Hospitality",
-  "category": "Brand Identity · Hospitality",
-  "lede": "L'Azure Hospitality is a premium hotel group operating luxury properties along the Saudi Red Sea coast, including Royal L'Azure Resort and Sharma Resort. The brand required a cohesive visual identity that evokes the calm of water, the warmth of sand, and the depth of the sea.",
-  "meta": [
-   [
-    "Client",
-    "L'Azure Hospitality Group"
-   ],
-   [
-    "Location",
-    "Tabuk, Saudi Arabia"
-   ],
-   [
-    "Year",
-    "2024"
-   ]
-  ],
-  "hero": "3b6d2e3e84",
-  "info": [
-   [
-    "Project Type",
-    "Full Brand Identity"
-   ],
-   [
-    "Industry",
-    "Luxury Hospitality"
-   ],
-   [
-    "Scope",
-    "Identity, Digital, Collateral"
-   ],
-   [
-    "Properties",
-    "Royal L'Azure · Sharma Resort"
-   ]
-  ],
-  "next": "sky-falcons",
-  "credits": [],
-  "blocks": [
-   {
-    "type": "text",
-    "label": "Overview",
-    "title": "Where the sea meets luxury",
-    "paras": [
-     "We built the identity around a fluid wave symbol — organic, elegant, and instantly recognizable. The mark is rooted in movement and tranquility simultaneously, working beautifully across all touchpoints from embossed stationery to digital interfaces.",
-     "The color system pairs Dark Blue (#506580) with Tan Gold (#D8BA9E) — evoking deep water against warm sandy shores — creating an atmosphere that feels both grounded and aspirational."
-    ],
-    "tags": [
-     "Brand Identity",
-     "Visual System",
-     "Web Design",
-     "Print Collateral",
-     "Welcome Kit",
-     "Hotel Assets"
-    ]
-   },
-   {
-    "type": "media",
-    "images": [
-     {
-      "id": "b9912a1eee",
-      "alt": "L'Azure lobby and key card"
-     }
-    ],
-    "caption": "Brand in environment · Lobby visual + room key card system — L'Azure Hospitality",
-    "layout": "full"
-   },
-   {
-    "type": "media",
-    "images": [
-     {
-      "id": "e0cdd98515",
-      "alt": "L'Azure wordmark over an aerial coastline"
-     }
-    ],
-    "caption": "Brand visual · The wordmark over the coastline — L'Azure Hospitality",
-    "layout": "full"
-   },
-   {
-    "type": "text",
-    "label": "Color System",
-    "title": "Inspired by sea & shore",
-    "paras": [],
-    "tags": []
-   },
-   {
-    "type": "palette",
-    "swatches": [
-     {
-      "hex": "#506580",
-      "name": "Dark Blue"
-     },
-     {
-      "hex": "#D8BA9E",
-      "name": "Tan Gold"
-     },
-     {
-      "hex": "#3D506A",
-      "name": "Independence"
-     },
-     {
-      "hex": "#111",
-      "name": "Black"
-     },
-     {
-      "hex": "#f8f8f8",
-      "name": "White"
-     }
-    ]
-   },
-   {
-    "type": "media",
-    "images": [
-     {
-      "id": "f04c0008a2",
-      "alt": "L'Azure hotel lobby with arches and palms"
-     }
-    ],
-    "caption": "Brand in environment · Lobby atmosphere — L'Azure Hospitality",
-    "layout": "full"
-   },
-   {
-    "type": "media",
-    "images": [
-     {
-      "id": "ef54a63039",
-      "alt": "L'Azure wordmark detail on tan"
-     }
-    ],
-    "caption": "Typography system · L'Azure wordmark detail — refined serif with custom characters — Brand typeface",
-    "layout": "full"
-   },
-   {
-    "type": "text",
-    "label": "Brand Applications",
-    "title": "Every touchpoint",
-    "paras": [],
-    "tags": []
-   },
-   {
-    "type": "media",
-    "images": [
-     {
-      "id": "22cc8dfc12",
-      "alt": "L'Azure amenities and welcome kit"
-     },
-     {
-      "id": "34e712ce6e",
-      "alt": "L'Azure business cards"
-     }
-    ],
-    "caption": null,
-    "layout": "pair"
-   },
-   {
-    "type": "media",
-    "images": [
-     {
-      "id": "d56d02672b",
-      "alt": "L'Azure envelope stationery"
-     }
-    ],
-    "caption": "Stationery · DL envelopes with blue interior lining and wave pattern — Print collateral",
-    "layout": "full"
-   },
-   {
-    "type": "text",
-    "label": "Digital Experience",
-    "title": "The brand online",
-    "paras": [],
-    "tags": []
-   },
-   {
-    "type": "media",
-    "images": [
-     {
-      "id": "064f977e1f",
-      "alt": "L'Azure website"
-     }
-    ],
-    "caption": "lazurehospitality.com — full website design & development brief",
-    "layout": "full"
-   },
-   {
-    "type": "list",
-    "label": "Deliverables",
-    "title": "What we delivered",
-    "items": [
-     {
-      "num": "01",
-      "name": "Brand Identity",
-      "desc": "Primary logo, wave symbol, sub-brand marks for Royal L'Azure and Sharma Resort, plus full usage guidelines."
-     },
-     {
-      "num": "02",
-      "name": "Color & Type",
-      "desc": "5-color palette, typography hierarchy, wave pattern library, and brand texture system."
-     },
-     {
-      "num": "03",
-      "name": "Print Collateral",
-      "desc": "Business cards, DL envelopes, letterheads, room key cards, door hangers, and branded packaging."
-     },
-     {
-      "num": "04",
-      "name": "Welcome Kit",
-      "desc": "Guest welcome experience: branded water bottles, envelopes, boxes, and hospitality touchpoints."
-     },
-     {
-      "num": "05",
-      "name": "Digital Design",
-      "desc": "Website UI design for lazurehospitality.com with booking engine integration and full responsive system."
-     },
-     {
-      "num": "06",
-      "name": "Brand Guidelines",
-      "desc": "Comprehensive brand manual covering all properties, color systems, typography, and application rules."
-     }
-    ]
-   }
-  ],
-  "year": "2024"
- },
- {
   "key": "skyfalcons",
   "slug": "sky-falcons",
   "title": "Sky Falcons",
@@ -1015,7 +552,7 @@
     "Beyond Limits"
    ]
   ],
-  "next": "rambourg",
+  "next": "lazure",
   "credits": [],
   "blocks": [
    {
@@ -1260,26 +797,26 @@
   "year": "2023"
  },
  {
-  "key": "rambourg",
-  "slug": "rambourg",
-  "title": "Fondation Rambourg",
-  "category": "Brand Identity · Foundation",
-  "lede": "Fondation Rambourg is a philanthropic foundation operating across the MENA region and internationally, supporting communities through education, arts, sport, culture, entrepreneurship, scholarships, human rights, craftsmanship, and festivals.",
+  "key": "lazure",
+  "slug": "lazure",
+  "title": "L'Azure Hospitality",
+  "category": "Brand Identity · Hospitality",
+  "lede": "L'Azure Hospitality is a premium hotel group operating luxury properties along the Saudi Red Sea coast, including Royal L'Azure Resort and Sharma Resort. The brand required a cohesive visual identity that evokes the calm of water, the warmth of sand, and the depth of the sea.",
   "meta": [
    [
     "Client",
-    "Fondation Rambourg"
+    "L'Azure Hospitality Group"
    ],
    [
     "Location",
-    "International · MENA"
+    "Tabuk, Saudi Arabia"
    ],
    [
     "Year",
-    "2023"
+    "2024"
    ]
   ],
-  "hero": "0beaeaaa38",
+  "hero": "3b6d2e3e84",
   "info": [
    [
     "Project Type",
@@ -1287,137 +824,88 @@
    ],
    [
     "Industry",
-    "Foundation · NGO"
+    "Luxury Hospitality"
    ],
    [
     "Scope",
-    "Identity, Collateral, Digital"
+    "Identity, Digital, Collateral"
    ],
    [
-    "Languages",
-    "Arabic · French · English"
+    "Properties",
+    "Royal L'Azure · Sharma Resort"
    ]
   ],
   "next": "ministry-of-foreign-affairs-jordan",
   "credits": [],
   "blocks": [
    {
-    "type": "media",
-    "images": [
-     {
-      "id": "0413343d6f",
-      "alt": "Fondation Rambourg logo on light and on blue"
-     }
-    ],
-    "caption": "Logo system · Light and dark background versions — Fondation Rambourg identity",
-    "layout": "full"
-   },
-   {
     "type": "text",
     "label": "Overview",
-    "title": "A foundation built on impact",
+    "title": "Where the sea meets luxury",
     "paras": [
-     "The identity challenge was designing a brand that could carry both institutional gravitas and vibrant cultural energy — formal enough for diplomatic and NGO contexts, yet bold and expressive enough to represent the diversity of the foundation's mission.",
-     "The solution: a geometric FR monogram with a refined serif structure — simultaneously classic and modern. The primary blue anchors the institutional tone, while a rich, multi-color system unlocks expressive power across the foundation's nine areas of impact."
+     "We built the identity around a fluid wave symbol — organic, elegant, and instantly recognizable. The mark is rooted in movement and tranquility simultaneously, working beautifully across all touchpoints from embossed stationery to digital interfaces.",
+     "The color system pairs Dark Blue (#506580) with Tan Gold (#D8BA9E) — evoking deep water against warm sandy shores — creating an atmosphere that feels both grounded and aspirational."
     ],
     "tags": [
      "Brand Identity",
      "Visual System",
-     "Typography",
+     "Web Design",
      "Print Collateral",
-     "Social Media",
-     "Arabic Type"
+     "Welcome Kit",
+     "Hotel Assets"
     ]
    },
    {
     "type": "media",
     "images": [
      {
-      "id": "724a21d7b5",
-      "alt": "Fondation Rambourg wordmark on blue paper"
+      "id": "b9912a1eee",
+      "alt": "L'Azure lobby and key card"
      }
     ],
-    "caption": null,
+    "caption": "Brand in environment · Lobby visual + room key card system — L'Azure Hospitality",
+    "layout": "full"
+   },
+   {
+    "type": "media",
+    "images": [
+     {
+      "id": "e0cdd98515",
+      "alt": "L'Azure wordmark over an aerial coastline"
+     }
+    ],
+    "caption": "Brand visual · The wordmark over the coastline — L'Azure Hospitality",
     "layout": "full"
    },
    {
     "type": "text",
-    "label": "Identity System",
-    "title": "The mark & its forms",
+    "label": "Color System",
+    "title": "Inspired by sea & shore",
     "paras": [],
     "tags": []
    },
    {
-    "type": "media",
-    "images": [
+    "type": "palette",
+    "swatches": [
      {
-      "id": "a96e2bc38f",
-      "alt": "Fondation Rambourg — logo forms"
-     }
-    ],
-    "caption": null,
-    "layout": "full"
-   },
-   {
-    "type": "media",
-    "images": [
-     {
-      "id": "9739c665b2",
-      "alt": "Fondation Rambourg color palette"
-     }
-    ],
-    "caption": "Color system · The foundation's multi-color identity palette — 13 distinct brand colors",
-    "layout": "full"
-   },
-   {
-    "type": "list",
-    "label": "Impact Areas",
-    "title": "Nine areas of impact",
-    "items": [
-     {
-      "color": "#1847F0",
-      "ar": "التعليم",
-      "name": "Education"
+      "hex": "#506580",
+      "name": "Dark Blue"
      },
      {
-      "color": "#2DAA5E",
-      "ar": "الرياضة",
-      "name": "Sport"
+      "hex": "#D8BA9E",
+      "name": "Tan Gold"
      },
      {
-      "color": "#00B4C5",
-      "ar": "الفن",
-      "name": "Arts"
+      "hex": "#3D506A",
+      "name": "Independence"
      },
      {
-      "color": "#E86090",
-      "ar": "الثقافة",
-      "name": "Culture"
+      "hex": "#111",
+      "name": "Black"
      },
      {
-      "color": "#6B4EC1",
-      "ar": "ريادة الأعمال",
-      "name": "Entrepreneurship"
-     },
-     {
-      "color": "#9B1750",
-      "ar": "المنح الدراسية",
-      "name": "Scholarships"
-     },
-     {
-      "color": "#E85D20",
-      "ar": "حقوق الإنسان",
-      "name": "Human Rights"
-     },
-     {
-      "color": "#E8AE00",
-      "ar": "الحرف اليدوية",
-      "name": "Craftsmanship"
-     },
-     {
-      "color": "#1B2F6E",
-      "ar": "المهرجانات",
-      "name": "Festivals"
+      "hex": "#f8f8f8",
+      "name": "White"
      }
     ]
    },
@@ -1425,17 +913,28 @@
     "type": "media",
     "images": [
      {
-      "id": "aa3af4b9ac",
-      "alt": "Fondation Rambourg — activities mosaic"
+      "id": "f04c0008a2",
+      "alt": "L'Azure hotel lobby with arches and palms"
      }
     ],
-    "caption": "Brand application · Activities mosaic system — Facebook cover — Multi-color identity in action",
+    "caption": "Brand in environment · Lobby atmosphere — L'Azure Hospitality",
+    "layout": "full"
+   },
+   {
+    "type": "media",
+    "images": [
+     {
+      "id": "ef54a63039",
+      "alt": "L'Azure wordmark detail on tan"
+     }
+    ],
+    "caption": "Typography system · L'Azure wordmark detail — refined serif with custom characters — Brand typeface",
     "layout": "full"
    },
    {
     "type": "text",
-    "label": "In Context",
-    "title": "Brand in the world",
+    "label": "Brand Applications",
+    "title": "Every touchpoint",
     "paras": [],
     "tags": []
    },
@@ -1443,12 +942,12 @@
     "type": "media",
     "images": [
      {
-      "id": "149fdf4649",
-      "alt": "Fondation Rambourg event"
+      "id": "22cc8dfc12",
+      "alt": "L'Azure amenities and welcome kit"
      },
      {
-      "id": "426fe886a7",
-      "alt": "Fondation Rambourg wordmark debossed on paper"
+      "id": "34e712ce6e",
+      "alt": "L'Azure business cards"
      }
     ],
     "caption": null,
@@ -1458,37 +957,29 @@
     "type": "media",
     "images": [
      {
-      "id": "a2c2c3312e",
-      "alt": "Fondation Rambourg stationery"
+      "id": "d56d02672b",
+      "alt": "L'Azure envelope stationery"
      }
     ],
-    "caption": "Print collateral · Stationery system — letterhead, envelopes, business cards (Arabic + French) — Corporate materials",
+    "caption": "Stationery · DL envelopes with blue interior lining and wave pattern — Print collateral",
     "layout": "full"
    },
    {
-    "type": "media",
-    "images": [
-     {
-      "id": "63b724f698",
-      "alt": "Fondation Rambourg posters"
-     },
-     {
-      "id": "5bcb72c2f7",
-      "alt": "Fondation Rambourg bilingual letterhead"
-     }
-    ],
-    "caption": "Print collateral · Branded posters by pillar and bilingual letterhead — Brand experience kit",
-    "layout": "pair"
+    "type": "text",
+    "label": "Digital Experience",
+    "title": "The brand online",
+    "paras": [],
+    "tags": []
    },
    {
     "type": "media",
     "images": [
      {
-      "id": "4366bfe7e3",
-      "alt": "Fondation Rambourg tote bag, mug and passport cover"
+      "id": "064f977e1f",
+      "alt": "L'Azure website"
      }
     ],
-    "caption": "Merchandise · Tote bags, mugs and passport covers in pillar colours — Brand experience kit",
+    "caption": "lazurehospitality.com — full website design & development brief",
     "layout": "full"
    },
    {
@@ -1499,37 +990,274 @@
      {
       "num": "01",
       "name": "Brand Identity",
-      "desc": "Primary logo, FR monogram, Arabic & French versions, plus full color and mono variants across all applications."
+      "desc": "Primary logo, wave symbol, sub-brand marks for Royal L'Azure and Sharma Resort, plus full usage guidelines."
      },
      {
       "num": "02",
-      "name": "Color System",
-      "desc": "A 13-color palette representing the nine impact areas — each with distinct visual personality while sharing a unified identity."
+      "name": "Color & Type",
+      "desc": "5-color palette, typography hierarchy, wave pattern library, and brand texture system."
      },
      {
       "num": "03",
       "name": "Print Collateral",
-      "desc": "Trilingual stationery system (Arabic, French, English): letterhead, envelopes, business cards, stamps, and press materials."
+      "desc": "Business cards, DL envelopes, letterheads, room key cards, door hangers, and branded packaging."
      },
      {
       "num": "04",
-      "name": "Campaign Posters",
-      "desc": "A complete poster series — one per impact area — using the multi-color system and bilingual Arabic/French typography."
+      "name": "Welcome Kit",
+      "desc": "Guest welcome experience: branded water bottles, envelopes, boxes, and hospitality touchpoints."
      },
      {
       "num": "05",
-      "name": "Brand Experience",
-      "desc": "Branded merchandise: tote bags, mugs, passport covers, and event giveaways across the full color palette."
+      "name": "Digital Design",
+      "desc": "Website UI design for lazurehospitality.com with booking engine integration and full responsive system."
      },
      {
       "num": "06",
-      "name": "Digital & Social",
-      "desc": "Social media identity, Facebook cover system, digital templates, and event screen graphics for in-person activations."
+      "name": "Brand Guidelines",
+      "desc": "Comprehensive brand manual covering all properties, color systems, typography, and application rules."
      }
     ]
    }
   ],
-  "year": "2023"
+  "year": "2024"
+ },
+ {
+  "key": "mofa",
+  "slug": "ministry-of-foreign-affairs-jordan",
+  "title": "Ministry of Foreign Affairs and Expatriates",
+  "category": "Visual Identity · Government",
+  "lede": "One visual language for Jordan's voice abroad: the branding and visual identity guidelines that bring the Ministry, its 59 diplomatic missions and its reach into 87 more countries under a single, consistent standard.",
+  "meta": [
+   [
+    "Client",
+    "Ministry of Foreign Affairs and Expatriates"
+   ],
+   [
+    "Department",
+    "Communication and Media"
+   ],
+   [
+    "Year",
+    "2018 — 2020"
+   ]
+  ],
+  "hero": "db0e23ca6f",
+  "info": [
+   [
+    "Project Type",
+    "Branding & Visual Identity Guidelines"
+   ],
+   [
+    "Sector",
+    "Government · Diplomacy"
+   ],
+   [
+    "Scope",
+    "Identity system, Guidelines, Print, Digital, Events"
+   ],
+   [
+    "Location",
+    "Amman, Jordan"
+   ]
+  ],
+  "next": "wakers17",
+  "credits": [
+   {
+    "role": "Design Director",
+    "name": "Moh'd Nour Shahen",
+    "href": null
+   },
+   {
+    "role": "Client",
+    "name": "Department of Communication and Media",
+    "href": null
+   }
+  ],
+  "year": "2018 — 2020",
+  "blocks": [
+   {
+    "type": "text",
+    "label": "Overview",
+    "title": "The voice of a kingdom, abroad",
+    "tags": [
+     "Government",
+     "Diplomacy",
+     "Visual Identity",
+     "Brand Guidelines"
+    ],
+    "paras": [
+     "Established in 1939, the Ministry of Foreign Affairs of the Hashemite Kingdom of Jordan represents the country through 59 diplomatic missions worldwide, with non-resident representation in a further 87 countries.",
+     "In 2013 it became the Ministry of Foreign Affairs and Expatriates. The new name signalled a new duty: closer care for Jordanians living abroad, stronger channels of communication with them, and deeper ties to home. A dedicated department followed, and with it the need for an identity that could speak for both."
+    ]
+   },
+   {
+    "type": "text",
+    "label": "The Brief",
+    "title": "Consistency is credibility",
+    "tags": [],
+    "paras": [
+     "For a ministry, visual presentation is never just design. It is a statement of what the state stands for, and every inconsistency across an embassy, a department or a feed reads as a crack in that statement.",
+     "The Branding and Visual Identity Guidelines give a decentralised institution one language: clear standards for the logo, colour, typography, photography and video that any unit, in any country, can apply with confidence, and that are never to be diluted, substituted or redrawn."
+    ]
+   },
+   {
+    "type": "text",
+    "label": "The Mark",
+    "title": "One crest, two scripts",
+    "tags": [],
+    "paras": [
+     "The identity is anchored by the emblem of the Royal Hashemite Court, set above the Ministry's name in Thuluth, the classical script of the Kingdom's state institutions, and in Trajan, whose Roman capitals give the English line the same ceremonial weight.",
+     "Primary, landscape, Arabic-only and English-only versions cover every composition, each with defined clear space and approved use on white, dark and maroon grounds."
+    ]
+   },
+   {
+    "type": "media",
+    "images": [
+     {
+      "id": "8fd006b13a",
+      "alt": "Primary stacked and landscape versions of the Ministry of Foreign Affairs and Expatriates logo"
+     }
+    ],
+    "caption": "Lockup system · Primary stacked and landscape versions",
+    "layout": "full"
+   },
+   {
+    "type": "media",
+    "images": [
+     {
+      "id": "fd67e406e5",
+      "alt": "The Ministry lockup in Korean, Russian, French, Hindi, Greek and Japanese"
+     }
+    ],
+    "caption": "For the missions · The lockup in Korean, Russian, French, Hindi, Greek and Japanese",
+    "layout": "full"
+   },
+   {
+    "type": "text",
+    "label": "Colour",
+    "title": "Maroon, white and black",
+    "tags": [],
+    "paras": [
+     "The Ministry's signature maroon carries the identity, with white and black as its only companions. A deep maroon gradient serves as the official ground for digital and broadcast use."
+    ]
+   },
+   {
+    "type": "palette",
+    "swatches": [
+     {
+      "hex": "#8E1A16",
+      "name": "MFA Maroon"
+     },
+     {
+      "hex": "#FFFFFF",
+      "name": "White"
+     },
+     {
+      "hex": "#000000",
+      "name": "Black"
+     }
+    ]
+   },
+   {
+    "type": "list",
+    "label": "Typography",
+    "title": "A type system in two languages",
+    "items": [
+     {
+      "num": "01",
+      "name": "Al-Thuluth",
+      "desc": "Primary Arabic. The classical calligraphic line of the Kingdom's governmental institutions."
+     },
+     {
+      "num": "02",
+      "name": "Trajan Pro",
+      "desc": "Primary English. Roman capitals, regular and bold, for the Ministry's name and formal titles."
+     },
+     {
+      "num": "03",
+      "name": "Bahij TheSansArabic",
+      "desc": "Arabic text face in three weights for all functional communication."
+     },
+     {
+      "num": "04",
+      "name": "Dubai",
+      "desc": "English text face in four weights for all functional communication."
+     }
+    ]
+   },
+   {
+    "type": "text",
+    "label": "Applications",
+    "title": "Every touchpoint, one voice",
+    "tags": [],
+    "paras": [
+     "The system was rolled out across official stationery, events and the Ministry's digital channels, with templates for every social format so that each post, wherever it is published, leaves looking like the Ministry."
+    ]
+   },
+   {
+    "type": "media",
+    "images": [
+     {
+      "id": "03d1e69e5a",
+      "alt": "English and landscape versions of the logo printed on textured paper"
+     }
+    ],
+    "caption": "Print · English and landscape lockups on textured stock",
+    "layout": "full"
+   },
+   {
+    "type": "media",
+    "images": [
+     {
+      "id": "be3f2c3aa7",
+      "alt": "Official maroon social media cover with the Ministry crest and calligraphy"
+     }
+    ],
+    "caption": "Digital · The official cover for Facebook, Twitter, LinkedIn and YouTube",
+    "layout": "full"
+   },
+   {
+    "type": "list",
+    "label": "Deliverables",
+    "title": "What we delivered",
+    "items": [
+     {
+      "num": "01",
+      "name": "Visual Identity System",
+      "desc": "Primary, landscape, Arabic and English lockups, with clear space and misuse rules."
+     },
+     {
+      "num": "02",
+      "name": "Brand Guidelines",
+      "desc": "Standards for logo, colour, typography, photography and video."
+     },
+     {
+      "num": "03",
+      "name": "Print & Stationery",
+      "desc": "Letterhead, folders, envelopes and business cards."
+     },
+     {
+      "num": "04",
+      "name": "Digital & Social",
+      "desc": "Profile and cover artwork, post templates and infographic visuals."
+     },
+     {
+      "num": "05",
+      "name": "Events & Environment",
+      "desc": "Press backdrops, street banners and signage."
+     },
+     {
+      "num": "06",
+      "name": "Video",
+      "desc": "Intro, outro and lower-third title bars."
+     }
+    ]
+   }
+  ],
+  "heroDense": true,
+  "heroFocus": "50% 18%",
+  "seoTitle": "Ministry of Foreign Affairs Jordan — Visual Identity | Lōn Visuals"
  },
  {
   "key": "wakers17",
@@ -1794,7 +1522,7 @@
   ],
   "hero": "8147017f1c",
   "info": [],
-  "next": "masar",
+  "next": "rambourg",
   "credits": [],
   "blocks": [
    {
@@ -2026,5 +1754,277 @@
   ],
   "heroMobile": "58d0e9b72f",
   "year": "2025"
+ },
+ {
+  "key": "rambourg",
+  "slug": "rambourg",
+  "title": "Fondation Rambourg",
+  "category": "Brand Identity · Foundation",
+  "lede": "Fondation Rambourg is a philanthropic foundation operating across the MENA region and internationally, supporting communities through education, arts, sport, culture, entrepreneurship, scholarships, human rights, craftsmanship, and festivals.",
+  "meta": [
+   [
+    "Client",
+    "Fondation Rambourg"
+   ],
+   [
+    "Location",
+    "International · MENA"
+   ],
+   [
+    "Year",
+    "2023"
+   ]
+  ],
+  "hero": "0beaeaaa38",
+  "info": [
+   [
+    "Project Type",
+    "Full Brand Identity"
+   ],
+   [
+    "Industry",
+    "Foundation · NGO"
+   ],
+   [
+    "Scope",
+    "Identity, Collateral, Digital"
+   ],
+   [
+    "Languages",
+    "Arabic · French · English"
+   ]
+  ],
+  "next": "zeryab-estates",
+  "credits": [],
+  "blocks": [
+   {
+    "type": "media",
+    "images": [
+     {
+      "id": "0413343d6f",
+      "alt": "Fondation Rambourg logo on light and on blue"
+     }
+    ],
+    "caption": "Logo system · Light and dark background versions — Fondation Rambourg identity",
+    "layout": "full"
+   },
+   {
+    "type": "text",
+    "label": "Overview",
+    "title": "A foundation built on impact",
+    "paras": [
+     "The identity challenge was designing a brand that could carry both institutional gravitas and vibrant cultural energy — formal enough for diplomatic and NGO contexts, yet bold and expressive enough to represent the diversity of the foundation's mission.",
+     "The solution: a geometric FR monogram with a refined serif structure — simultaneously classic and modern. The primary blue anchors the institutional tone, while a rich, multi-color system unlocks expressive power across the foundation's nine areas of impact."
+    ],
+    "tags": [
+     "Brand Identity",
+     "Visual System",
+     "Typography",
+     "Print Collateral",
+     "Social Media",
+     "Arabic Type"
+    ]
+   },
+   {
+    "type": "media",
+    "images": [
+     {
+      "id": "724a21d7b5",
+      "alt": "Fondation Rambourg wordmark on blue paper"
+     }
+    ],
+    "caption": null,
+    "layout": "full"
+   },
+   {
+    "type": "text",
+    "label": "Identity System",
+    "title": "The mark & its forms",
+    "paras": [],
+    "tags": []
+   },
+   {
+    "type": "media",
+    "images": [
+     {
+      "id": "a96e2bc38f",
+      "alt": "Fondation Rambourg — logo forms"
+     }
+    ],
+    "caption": null,
+    "layout": "full"
+   },
+   {
+    "type": "media",
+    "images": [
+     {
+      "id": "9739c665b2",
+      "alt": "Fondation Rambourg color palette"
+     }
+    ],
+    "caption": "Color system · The foundation's multi-color identity palette — 13 distinct brand colors",
+    "layout": "full"
+   },
+   {
+    "type": "list",
+    "label": "Impact Areas",
+    "title": "Nine areas of impact",
+    "items": [
+     {
+      "color": "#1847F0",
+      "ar": "التعليم",
+      "name": "Education"
+     },
+     {
+      "color": "#2DAA5E",
+      "ar": "الرياضة",
+      "name": "Sport"
+     },
+     {
+      "color": "#00B4C5",
+      "ar": "الفن",
+      "name": "Arts"
+     },
+     {
+      "color": "#E86090",
+      "ar": "الثقافة",
+      "name": "Culture"
+     },
+     {
+      "color": "#6B4EC1",
+      "ar": "ريادة الأعمال",
+      "name": "Entrepreneurship"
+     },
+     {
+      "color": "#9B1750",
+      "ar": "المنح الدراسية",
+      "name": "Scholarships"
+     },
+     {
+      "color": "#E85D20",
+      "ar": "حقوق الإنسان",
+      "name": "Human Rights"
+     },
+     {
+      "color": "#E8AE00",
+      "ar": "الحرف اليدوية",
+      "name": "Craftsmanship"
+     },
+     {
+      "color": "#1B2F6E",
+      "ar": "المهرجانات",
+      "name": "Festivals"
+     }
+    ]
+   },
+   {
+    "type": "media",
+    "images": [
+     {
+      "id": "aa3af4b9ac",
+      "alt": "Fondation Rambourg — activities mosaic"
+     }
+    ],
+    "caption": "Brand application · Activities mosaic system — Facebook cover — Multi-color identity in action",
+    "layout": "full"
+   },
+   {
+    "type": "text",
+    "label": "In Context",
+    "title": "Brand in the world",
+    "paras": [],
+    "tags": []
+   },
+   {
+    "type": "media",
+    "images": [
+     {
+      "id": "149fdf4649",
+      "alt": "Fondation Rambourg event"
+     },
+     {
+      "id": "426fe886a7",
+      "alt": "Fondation Rambourg wordmark debossed on paper"
+     }
+    ],
+    "caption": null,
+    "layout": "pair"
+   },
+   {
+    "type": "media",
+    "images": [
+     {
+      "id": "a2c2c3312e",
+      "alt": "Fondation Rambourg stationery"
+     }
+    ],
+    "caption": "Print collateral · Stationery system — letterhead, envelopes, business cards (Arabic + French) — Corporate materials",
+    "layout": "full"
+   },
+   {
+    "type": "media",
+    "images": [
+     {
+      "id": "63b724f698",
+      "alt": "Fondation Rambourg posters"
+     },
+     {
+      "id": "5bcb72c2f7",
+      "alt": "Fondation Rambourg bilingual letterhead"
+     }
+    ],
+    "caption": "Print collateral · Branded posters by pillar and bilingual letterhead — Brand experience kit",
+    "layout": "pair"
+   },
+   {
+    "type": "media",
+    "images": [
+     {
+      "id": "4366bfe7e3",
+      "alt": "Fondation Rambourg tote bag, mug and passport cover"
+     }
+    ],
+    "caption": "Merchandise · Tote bags, mugs and passport covers in pillar colours — Brand experience kit",
+    "layout": "full"
+   },
+   {
+    "type": "list",
+    "label": "Deliverables",
+    "title": "What we delivered",
+    "items": [
+     {
+      "num": "01",
+      "name": "Brand Identity",
+      "desc": "Primary logo, FR monogram, Arabic & French versions, plus full color and mono variants across all applications."
+     },
+     {
+      "num": "02",
+      "name": "Color System",
+      "desc": "A 13-color palette representing the nine impact areas — each with distinct visual personality while sharing a unified identity."
+     },
+     {
+      "num": "03",
+      "name": "Print Collateral",
+      "desc": "Trilingual stationery system (Arabic, French, English): letterhead, envelopes, business cards, stamps, and press materials."
+     },
+     {
+      "num": "04",
+      "name": "Campaign Posters",
+      "desc": "A complete poster series — one per impact area — using the multi-color system and bilingual Arabic/French typography."
+     },
+     {
+      "num": "05",
+      "name": "Brand Experience",
+      "desc": "Branded merchandise: tote bags, mugs, passport covers, and event giveaways across the full color palette."
+     },
+     {
+      "num": "06",
+      "name": "Digital & Social",
+      "desc": "Social media identity, Facebook cover system, digital templates, and event screen graphics for in-person activations."
+     }
+    ]
+   }
+  ],
+  "year": "2023"
  }
 ]
