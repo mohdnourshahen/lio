@@ -23,6 +23,10 @@ export interface Project {
   hero: string
   heroMobile?: string
   heroFocus?: string
+  /** darker shade under the title, for heroes with lettering of their own */
+  heroDense?: boolean
+  /** browser and search title when the default (title — category) runs past ~70 characters */
+  seoTitle?: string
   next: string | null
   credits: { role: string, name: string, href: string | null }[]
   blocks: Block[]
@@ -80,6 +84,7 @@ export const services = [
 /** `more`: further images of the same project, revealed one after another while the cover is hovered */
 export interface WorkCard { title: string, category: string, image: string, slug: string | null, focus?: string, ratio?: 'image', more?: string[] }
 export const selectedWork: WorkCard[] = [
+  { title: 'Ministry of Foreign Affairs and Expatriates', category: 'Visual Identity · Government', image: 'db0e23ca6f', slug: 'ministry-of-foreign-affairs-jordan', focus: '58% 50%' },
   { title: 'Zeryab Estates', category: 'Brand Identity · Real Estate', image: '618ce8170b', slug: 'zeryab-estates', more: ['92b5c6a3f8', '140e246667', 'cae8301bfd'] },
   { title: 'Masar Resort', category: 'Brand Identity · Hospitality', image: '0793b8d88b', slug: 'masar', more: ['7160f3fd32', '00936a2911', 'b135b8813b'] },
   { title: 'Lazure Hospitality', category: 'Brand Identity · Hospitality', image: '3b6d2e3e84', slug: 'lazure', focus: '52% 50%', more: ['f04c0008a2', '34e712ce6e', '22cc8dfc12'] },

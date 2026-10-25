@@ -333,8 +333,15 @@ def curate(P):
     return P
 
 
-ORDER = ['zeryab', 'masar', 'lazure', 'skyfalcons', 'rambourg', 'wakers17', 'sana-interiors']
+ORDER = ['mofa', 'zeryab', 'masar', 'lazure', 'skyfalcons', 'rambourg', 'wakers17', 'sana-interiors']
 projects = {p['key']: curate(p) for p in (proj(f) for f in sorted(os.listdir(clean)) if f.endswith('-project.html'))}
+# case studies written directly as JSON (no legacy page): content/manual/<key>.json, already in final shape
+manual = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'content', 'manual')
+for f in sorted(os.listdir(manual)):
+    m = json.load(open(os.path.join(manual, f)))
+    projects[m['key']] = m
+# the next-project chain runs through the new case study: Rambourg -> MFA -> Zeryab
+projects['rambourg']['next'] = projects['mofa']['slug']
 out = [projects[k] for k in ORDER]
 json.dump(out, open(os.path.join(outdir, 'projects.json'), 'w'), indent=1, ensure_ascii=False)
 print(len(out), 'projects')

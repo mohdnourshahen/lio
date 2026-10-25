@@ -29,7 +29,7 @@ const base = useSiteUrl()
 const url = `${base}/work/${p.slug}`
 const heroAlt = `${p.title} — ${p.category}`
 useSeo({
-  title: `${p.title} — ${p.category} | Lōn Visuals`,
+  title: p.seoTitle ?? `${p.title} — ${p.category} | Lōn Visuals`,
   description: plainLede,
   path: `/work/${p.slug}`,
   ogImage: `${p.slug}.jpg`,
@@ -121,7 +121,7 @@ const ratio = (id: string) => (media[id] ? media[id].w / media[id].h : 1.5)
         <div ref="heroMedia" class="c-hero-media atmos-soft grain">
           <MediaImage :id="p.hero" :alt="heroAlt" sizes="100vw" eager :mobile-id="p.heroMobile" :position="p.heroFocus" />
         </div>
-        <div class="c-hero-shade" aria-hidden="true" />
+        <div class="c-hero-shade" :class="{ 'is-dense': p.heroDense }" aria-hidden="true" />
         <div class="container c-hero-inner">
           <nav class="crumbs caps" aria-label="Breadcrumb">
             <ol>
@@ -244,6 +244,8 @@ const ratio = (id: string) => (media[id] ? media[id].w / media[id].h : 1.5)
 .c-hero-media :deep(picture), .c-hero-media :deep(img) { width: 100%; height: 100%; object-fit: cover; }
 .c-hero-media :deep(img) { filter: saturate(0.85) sepia(0.1) brightness(0.78); }
 .c-hero-shade { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(18, 16, 10, 0.55) 0%, rgba(18, 16, 10, 0.05) 32%, rgba(18, 16, 10, 0.8) 100%); }
+/* heroes that carry their own lettering (a logo on paper) need the title to sit on near-solid ink */
+.c-hero-shade.is-dense { background: linear-gradient(180deg, rgba(18, 16, 10, 0.6) 0%, rgba(18, 16, 10, 0.25) 30%, rgba(18, 16, 10, 0.9) 72%, rgba(18, 16, 10, 0.96) 100%); }
 .c-hero-inner { position: relative; height: 100%; grid-template-rows: auto 1fr auto; padding: 2vw 0 3.4vw; }
 .crumbs { grid-column: 2 / -1; padding-top: 0.2vw; color: rgba(245, 242, 234, 0.72); font-size: var(--fs-sub); }
 .crumbs ol { display: flex; flex-wrap: wrap; gap: 0.6em; }
