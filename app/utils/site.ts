@@ -77,17 +77,18 @@ export const services = [
  * Covers are chosen to sit inside the portrait frames without clipping a mark; `focus` is the
  * object-position when the frame still crops, `ratio: 'image'` shows the image uncropped.
  */
-export interface WorkCard { title: string, category: string, image: string, slug: string | null, focus?: string, ratio?: 'image' }
+/** `more`: further images of the same project, revealed one after another while the cover is hovered */
+export interface WorkCard { title: string, category: string, image: string, slug: string | null, focus?: string, ratio?: 'image', more?: string[] }
 export const selectedWork: WorkCard[] = [
-  { title: 'Zeryab Estates', category: 'Brand Identity · Real Estate', image: '618ce8170b', slug: 'zeryab-estates' },
-  { title: 'Masar Resort', category: 'Brand Identity · Hospitality', image: '0793b8d88b', slug: 'masar' },
-  { title: 'Lazure Hospitality', category: 'Brand Identity · Hospitality', image: '3b6d2e3e84', slug: 'lazure', focus: '52% 50%' },
-  { title: 'Sky Falcons', category: 'Visual Identity · Aviation', image: '0f50a57577', slug: 'sky-falcons' },
-  { title: 'Rambourg Foundation', category: 'Brand Identity · Foundation', image: '5bcb72c2f7', slug: 'rambourg', focus: '60% 50%' },
+  { title: 'Zeryab Estates', category: 'Brand Identity · Real Estate', image: '618ce8170b', slug: 'zeryab-estates', more: ['92b5c6a3f8', '140e246667', 'cae8301bfd'] },
+  { title: 'Masar Resort', category: 'Brand Identity · Hospitality', image: '0793b8d88b', slug: 'masar', more: ['7160f3fd32', '00936a2911', 'b135b8813b'] },
+  { title: 'Lazure Hospitality', category: 'Brand Identity · Hospitality', image: '3b6d2e3e84', slug: 'lazure', focus: '52% 50%', more: ['f04c0008a2', '34e712ce6e', '22cc8dfc12'] },
+  { title: 'Sky Falcons', category: 'Visual Identity · Aviation', image: '0f50a57577', slug: 'sky-falcons', more: ['639d8d09d7', 'cfba7fe891', 'a496defa86'] },
+  { title: 'Rambourg Foundation', category: 'Brand Identity · Foundation', image: '5bcb72c2f7', slug: 'rambourg', focus: '60% 50%', more: ['0beaeaaa38', '4366bfe7e3', '149fdf4649'] },
   { title: 'National Cyber Security Center', category: 'Identity · Government', image: 'ee591a3a9d', slug: null, ratio: 'image' },
   { title: 'Zain Alsharaf Center', category: 'Brand Identity · Culture', image: 'f86a45667b', slug: null, ratio: 'image' },
-  { title: 'Wakers17', category: 'Brand Identity · F&B', image: '9b31bd7444', slug: 'wakers17', focus: '50% 60%' },
-  { title: 'Sana Interiors', category: 'Brand Identity · Interior Design', image: '66a3bbd3ad', slug: 'sana-interiors' },
+  { title: 'Wakers17', category: 'Brand Identity · F&B', image: '9b31bd7444', slug: 'wakers17', focus: '50% 60%', more: ['a16077e013', '8b66e321e7', '28c1c11c00'] },
+  { title: 'Sana Interiors', category: 'Brand Identity · Interior Design', image: '66a3bbd3ad', slug: 'sana-interiors', more: ['58d0e9b72f', '4a1980355c', 'c04711e04a'] },
 ]
 
 export const clients = [
