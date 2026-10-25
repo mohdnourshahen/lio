@@ -19,7 +19,7 @@
    "2024"
   ]
  ],
- "hero": "2e74716d64",
+ "hero": "d654ff251e",
  "info": [
   [
    "Project Type",
@@ -186,6 +186,32 @@
    ]
   },
   {
+   "type": "media",
+   "images": [
+    {
+     "id": "a62419d16c",
+     "alt": "The FNF 40 stage: Welcome to the House of Freedom on the screen, flags of Germany and Jordan either side"
+    }
+   ],
+   "caption": "The evening · Welcome to the House of Freedom",
+   "layout": "full"
+  },
+  {
+   "type": "media",
+   "images": [
+    {
+     "id": "ef7b976ff9",
+     "alt": "Speaker at the branded podium in front of the 40 Years of Collaboration screen"
+    },
+    {
+     "id": "4a2f8062ee",
+     "alt": "Illustrated thank-you card on a guest's plate"
+    }
+   ],
+   "caption": "On stage and at the table · Podium, screen and the illustrated thank-you card",
+   "layout": "pair"
+  },
+  {
    "type": "list",
    "label": "Deliverables",
    "title": "What we delivered",
@@ -222,5 +248,6 @@
     }
    ]
   }
- ]
+ ],
+ "heroDense": true
 }

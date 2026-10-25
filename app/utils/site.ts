@@ -86,6 +86,7 @@ export interface WorkCard { title: string, category: string, image: string, slug
 export const selectedWork: WorkCard[] = [
   { title: 'Zeryab Estates', category: 'Brand Identity · Real Estate', image: '618ce8170b', slug: 'zeryab-estates', more: ['92b5c6a3f8', '140e246667', 'cae8301bfd'] },
   { title: 'Masar Resort', category: 'Brand Identity · Hospitality', image: '0793b8d88b', slug: 'masar', more: ['7160f3fd32', '00936a2911', 'b135b8813b'] },
+  { title: 'FNF 40 Years in Jordan', category: 'Anniversary Branding · Foundation', image: 'd654ff251e', slug: 'fnf-jordan-40-years', focus: '50% 45%', more: ['a62419d16c', 'ef7b976ff9', '4a2f8062ee'] },
   { title: 'Sky Falcons', category: 'Visual Identity · Aviation', image: '0f50a57577', slug: 'sky-falcons', more: ['639d8d09d7', 'cfba7fe891', 'a496defa86'] },
   { title: 'Lazure Hospitality', category: 'Brand Identity · Hospitality', image: '3b6d2e3e84', slug: 'lazure', focus: '52% 50%', more: ['f04c0008a2', '34e712ce6e', '22cc8dfc12'] },
   { title: 'Ministry of Foreign Affairs and Expatriates', category: 'Visual Identity · Government', image: 'db0e23ca6f', slug: 'ministry-of-foreign-affairs-jordan', focus: '58% 50%' },
