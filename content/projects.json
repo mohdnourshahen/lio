@@ -103,21 +103,6 @@
     "type": "media",
     "images": [
      {
-      "id": "5b8e501b42",
-      "alt": "Guidelines page: primary logo anatomy"
-     },
-     {
-      "id": "45dc1a593e",
-      "alt": "Guidelines page: standard use on white, dark and maroon backgrounds"
-     }
-    ],
-    "caption": "Guidelines · Primary logo anatomy, and standard use on white, dark and maroon",
-    "layout": "pair"
-   },
-   {
-    "type": "media",
-    "images": [
-     {
       "id": "fd67e406e5",
       "alt": "The Ministry lockup in Korean, Russian, French, Hindi, Greek and Japanese"
      }
@@ -179,21 +164,6 @@
     ]
    },
    {
-    "type": "media",
-    "images": [
-     {
-      "id": "35a281710f",
-      "alt": "Guidelines page: Al-Thuluth, the primary Arabic typeface"
-     },
-     {
-      "id": "75a4ab9a58",
-      "alt": "Guidelines page: Trajan Pro, the primary English typeface"
-     }
-    ],
-    "caption": "Guidelines · Primary Arabic and English typefaces",
-    "layout": "pair"
-   },
-   {
     "type": "text",
     "label": "Applications",
     "title": "Every touchpoint, one voice",
@@ -222,17 +192,6 @@
      }
     ],
     "caption": "Digital · The official cover for Facebook, Twitter, LinkedIn and YouTube",
-    "layout": "full"
-   },
-   {
-    "type": "media",
-    "images": [
-     {
-      "id": "5a6e917e3b",
-      "alt": "Guidelines page: branded social media templates in four standard sizes"
-     }
-    ],
-    "caption": "Social media system · Branded templates at 1080×1080, 1080×1350, 1080×1920 and 1920×1080",
     "layout": "full"
    },
    {
