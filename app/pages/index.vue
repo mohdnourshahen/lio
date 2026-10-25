@@ -188,9 +188,10 @@ onBeforeUnmount(() => {
             :to="w.slug ? `/work/${w.slug}` : undefined"
             class="work-link"
             :data-cursor="w.slug ? 'View' : undefined"
+            :data-cover-host="w.slug ? '' : undefined"
           >
-            <MediaFrame
-              :id="w.image"
+            <WorkCover
+              :images="[w.image, ...(w.more ?? [])]"
               :alt="w.title"
               :ratio="w.ratio === 'image' ? undefined : (i % 2 ? 3 / 4 : 4 / 5)"
               :focus="w.focus"
@@ -339,13 +340,17 @@ onBeforeUnmount(() => {
 .is-left { grid-column: 2 / 7; }
 .is-right { grid-column: 8 / 12; transform: translateY(22vw); }
 .work-link { display: block; }
-.work-link :deep(.media img) { transition: transform 1.4s var(--ease-out), filter 1s var(--ease-out); }
+/* hover (see WorkCover): the picture eases in and cycles; the caption lifts 10px and comes to full strength */
+@media (hover: hover) and (pointer: fine) {
+  .work-caption { opacity: 0.82; transition: transform 1s cubic-bezier(0.16, 1, 0.3, 1), opacity 1s cubic-bezier(0.16, 1, 0.3, 1); }
+  .work-link.is-hovered .work-caption { opacity: 1; transform: translateY(-10px); }
+}
+html.has-cursor .work-link[href] { cursor: none; }
 .work-caption { display: grid; grid-template-columns: auto 1fr; column-gap: 1.2vw; row-gap: 0.3vw; align-items: baseline; margin-top: 1.4vw; }
 .work-num { grid-row: span 2; color: var(--c-title); font-size: var(--fs-sub); }
 .work-name { font-family: var(--f-title); font-size: max(1.5vw, 17px); line-height: 1.25; color: var(--c-paper); transition: color 0.6s; }
 .work-cat { color: var(--fg-2); }
 @media (hover: hover) {
-  .work-link[href]:hover :deep(.media img) { transform: scale(1.05); }
   .work-link[href]:hover .work-name { color: var(--c-title); }
 }
 
@@ -454,6 +459,7 @@ onBeforeUnmount(() => {
   .is-left { grid-column: 1 / 10; }
   .is-right { grid-column: 3 / -1; transform: none; }
   .work-caption { margin-top: 3.4vw; column-gap: 3vw; row-gap: 1vw; }
+  .work-link[href] .work-caption { padding-right: 16vw; } /* room for the image counter */
   .work-name { font-size: 4.8vw; }
 
   .reel { min-height: calc(var(--vh) * 85); }

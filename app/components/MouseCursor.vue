@@ -48,6 +48,8 @@ function reset() { active = null; leave() }
 onMounted(() => {
   enabled.value = !isTouchDevice() && !prefersReducedMotion()
   if (!enabled.value) return
+  // lets elements that carry their own cursor label hide the native pointer (homepage covers)
+  document.documentElement.classList.add('has-cursor')
   nextTick(() => {
     gsap.set(inner.value!, { autoAlpha: 0, scale: 0.1 })
     window.addEventListener('pointermove', onMove, { passive: true })
