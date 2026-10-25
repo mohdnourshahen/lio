@@ -11,7 +11,7 @@ const NuxtLink = resolveComponent('NuxtLink')
 const base = useSiteUrl()
 useSeo({
   title: 'Lōn Visuals — Visual Strategy Studio in Amman, Jordan',
-  description: 'Lōn Visuals is a visual strategy studio in Amman, Jordan. We translate brands into visual language — brand strategy, visual identity, communication design and brand experience for organizations across the region.',
+  description: 'Lōn Visuals is a visual strategy studio in Amman, Jordan, translating brands into visual language: brand strategy, identity, design and experience.',
   path: '/',
   ogImage: 'home.jpg',
   ogImageAlt: 'Lōn Visuals — We translate brands into visual language',

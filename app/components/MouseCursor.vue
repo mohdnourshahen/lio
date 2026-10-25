@@ -14,9 +14,16 @@ let target = [0, 0]
 let current = [0, 0]
 let active: Element | null = null
 
+let moved = false
+let frame = 0
 function onMove(e: PointerEvent) {
   target = [e.clientX, e.clientY]
-  const hit = (e.target as Element | null)?.closest?.('[data-cursor]') ?? null
+  moved = true
+  hitTest(e.target as Element | null)
+}
+/** Content scrolls under a still pointer, so re-check what's beneath it, not only on pointermove. */
+function hitTest(under: Element | null) {
+  const hit = under?.closest?.('[data-cursor]') ?? null
   if (hit !== active) {
     active = hit
     if (hit) enter(hit.getAttribute('data-cursor') || '')
@@ -31,6 +38,7 @@ function leave() {
   gsap.to(inner.value!, { autoAlpha: 0, scale: 0.1, duration: 0.4, ease: EASE.inOut, onComplete: () => { if (!active) label.value = '' } })
 }
 function tick() {
+  if (moved && ++frame % 6 === 0) hitTest(document.elementFromPoint(target[0]!, target[1]!))
   current = [lerp(current[0]!, target[0]!, 0.1), lerp(current[1]!, target[1]!, 0.1)]
   el.value!.style.transform = `translate3d(${current[0]}px, ${current[1]}px, 0)`
 }

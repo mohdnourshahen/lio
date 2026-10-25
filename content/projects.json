@@ -82,10 +82,10 @@
     "images": [
      {
       "id": "e84764bbf5",
-      "alt": "Zeryab Estates courtyard pool with Moroccan arches"
+      "alt": "Zeryab Estates logo over a Moroccan heritage painting"
      }
     ],
-    "caption": "Marrakech · Private Courtyard · Moorish Architecture",
+    "caption": "Marrakech · Moorish Heritage — Zeryab Estates",
     "layout": "full"
    },
    {
@@ -103,12 +103,12 @@
     "type": "media",
     "images": [
      {
-      "id": "1ce61faf73",
+      "id": "ec41545efd",
       "alt": "Zellige pattern inspiration"
      },
      {
-      "id": "3ef0efd4f3",
-      "alt": "Moroccan arches inspiration"
+      "id": "0dcfaf4ade",
+      "alt": "Moroccan arch inspiration"
      }
     ],
     "caption": "Logomark Inspiration — Zellige Geometry & Moroccan Arch Form",
@@ -140,11 +140,11 @@
     "type": "media",
     "images": [
      {
-      "id": "ec41545efd",
-      "alt": "Embossed wordmark on dark metallic"
+      "id": "3ef0efd4f3",
+      "alt": "Zeryab wordmark embossed on dark metallic"
      },
      {
-      "id": "0dcfaf4ade",
+      "id": "609fce689b",
       "alt": "Terracotta 3D raised letters on cream"
      }
     ],
@@ -176,8 +176,8 @@
     "type": "media",
     "images": [
      {
-      "id": "92b5c6a3f8",
-      "alt": "Zeryab brand color palette"
+      "id": "1ce61faf73",
+      "alt": "Zeryab palette: six tones set in arch shapes"
      }
     ],
     "caption": "Brand Color Palette — Six Tones Drawn from Marrakech",
@@ -207,15 +207,15 @@
     "images": [
      {
       "id": "020b9e7113",
-      "alt": "Mark on parchment texture"
+      "alt": "Logo on aged ochre texture"
      },
      {
       "id": "618ce8170b",
-      "alt": "Mark on dark charcoal texture"
+      "alt": "Logo on aged dark teal texture"
      },
      {
       "id": "c98b3b0688",
-      "alt": "Mark on rust texture"
+      "alt": "Logo on aged rust texture"
      }
     ],
     "caption": "Brand Mark — Extended Texture Applications",
@@ -240,17 +240,6 @@
      }
     ],
     "caption": "Brand in Context — Marrakech Interior",
-    "layout": "full"
-   },
-   {
-    "type": "media",
-    "images": [
-     {
-      "id": "609fce689b",
-      "alt": "Zeryab branded arch palette shapes"
-     }
-    ],
-    "caption": "Brand Colors — Architectural Arch Application",
     "layout": "full"
    },
    {
@@ -599,10 +588,10 @@
     "images": [
      {
       "id": "e0cdd98515",
-      "alt": "L'Azure brand board — full identity overview"
+      "alt": "L'Azure wordmark over an aerial coastline"
      }
     ],
-    "caption": "Identity overview · Property photos, symbol, logo variations, hotel interiors — L'Azure brand system",
+    "caption": "Brand visual · The wordmark over the coastline — L'Azure Hospitality",
     "layout": "full"
    },
    {
@@ -642,10 +631,10 @@
     "images": [
      {
       "id": "f04c0008a2",
-      "alt": "L'Azure icon on teal"
+      "alt": "L'Azure hotel lobby with arches and palms"
      }
     ],
-    "caption": "Symbol application · Wave icon on brand teal background — L'Azure iconography",
+    "caption": "Brand in environment · Lobby atmosphere — L'Azure Hospitality",
     "layout": "full"
    },
    {
@@ -653,7 +642,7 @@
     "images": [
      {
       "id": "ef54a63039",
-      "alt": "L'Azure typography"
+      "alt": "L'Azure wordmark detail on tan"
      }
     ],
     "caption": "Typography system · L'Azure wordmark detail — refined serif with custom characters — Brand typeface",
@@ -671,7 +660,7 @@
     "images": [
      {
       "id": "22cc8dfc12",
-      "alt": "L'Azure welcome kit"
+      "alt": "L'Azure amenities and welcome kit"
      },
      {
       "id": "34e712ce6e",
@@ -898,10 +887,10 @@
     "images": [
      {
       "id": "30d27bd500",
-      "alt": "Sky Falcons — gold wordmark"
+      "alt": "Sky Falcons falcon symbol in relief"
      }
     ],
-    "caption": "Wordmark · SkyFalcons on Sand Gold — Pantone 7407C — Primary color application",
+    "caption": "Symbol · The falcon mark in relief",
     "layout": "full"
    },
    {
@@ -958,10 +947,10 @@
      },
      {
       "id": "6f010493c4",
-      "alt": "Sky Falcons typography"
+      "alt": "SkyFalcons wordmark on Sand Gold"
      }
     ],
-    "caption": null,
+    "caption": "Color system · Sand Gold Pantone 7407C with cool greys — Wordmark on Sand Gold",
     "layout": "pair"
    },
    {
@@ -1080,10 +1069,10 @@
     "images": [
      {
       "id": "0413343d6f",
-      "alt": "Fondation Rambourg — blue background logo"
+      "alt": "Fondation Rambourg logo on light and on blue"
      }
     ],
-    "caption": null,
+    "caption": "Logo system · Light and dark background versions — Fondation Rambourg identity",
     "layout": "full"
    },
    {
@@ -1108,10 +1097,10 @@
     "images": [
      {
       "id": "724a21d7b5",
-      "alt": "Fondation Rambourg logo variations — light and dark"
+      "alt": "Fondation Rambourg wordmark on blue paper"
      }
     ],
-    "caption": "Logo system · Light and dark background versions — Fondation Rambourg identity",
+    "caption": null,
     "layout": "full"
    },
    {
@@ -1222,7 +1211,7 @@
      },
      {
       "id": "426fe886a7",
-      "alt": "Fondation Rambourg digital"
+      "alt": "Fondation Rambourg wordmark debossed on paper"
      }
     ],
     "caption": null,
@@ -1248,10 +1237,10 @@
      },
      {
       "id": "5bcb72c2f7",
-      "alt": "Fondation Rambourg merchandise"
+      "alt": "Fondation Rambourg bilingual letterhead"
      }
     ],
-    "caption": "Print & merchandise · Branded posters by pillar + tote bags, mugs, passport covers — Brand experience kit",
+    "caption": "Print collateral · Branded posters by pillar and bilingual letterhead — Brand experience kit",
     "layout": "pair"
    },
    {
@@ -1259,10 +1248,10 @@
     "images": [
      {
       "id": "4366bfe7e3",
-      "alt": "Fondation Rambourg digital"
+      "alt": "Fondation Rambourg tote bag, mug and passport cover"
      }
     ],
-    "caption": "Digital assets · Social media and digital application across all brand colors — Digital identity system",
+    "caption": "Merchandise · Tote bags, mugs and passport covers in pillar colours — Brand experience kit",
     "layout": "full"
    },
    {
@@ -1461,7 +1450,7 @@
      },
      {
       "id": "ca2738edc8",
-      "alt": "Wakers17 mango juice cup"
+      "alt": "Wakers17 orange juice cup"
      },
      {
       "id": "507c2b5ae0",
@@ -1532,14 +1521,14 @@
     "images": [
      {
       "id": "13c4c30fe5",
-      "alt": "Wakers17 signage mockup close"
+      "alt": "Wakers17 cake box packaging"
      },
      {
       "id": "9b31bd7444",
-      "alt": "Wakers17 cup mockup"
+      "alt": "Wakers17 takeaway coffee cup in hand"
      }
     ],
-    "caption": "Signage System — Cup Mockup",
+    "caption": "Packaging & takeaway — cake box / branded coffee cup",
     "layout": "pair"
    }
   ],
@@ -1648,14 +1637,10 @@
      {
       "id": "ed54adafa8",
       "alt": "Logo sketch explorations"
-     },
-     {
-      "id": "307af80484",
-      "alt": "Sana Interiors logo on leather"
      }
     ],
     "caption": "Exploration sketches — 9 concepts developed before arriving at the final mark",
-    "layout": "pair"
+    "layout": "full"
    },
    {
     "type": "text",
@@ -1687,8 +1672,8 @@
       "alt": "Sana Interiors signage and stationery"
      },
      {
-      "id": "924930f33c",
-      "alt": "Sana Interiors silver on navy"
+      "id": "307af80484",
+      "alt": "Sana Interiors wordmark in silver foil on navy"
      }
     ],
     "caption": "Signage · Stationery — Silver · Navy",
@@ -1707,8 +1692,8 @@
     "type": "media",
     "images": [
      {
-      "id": "4a1980355c",
-      "alt": "Brand atmosphere materials"
+      "id": "924930f33c",
+      "alt": "Sana Interiors brand atmosphere board: leather, marble, wood and concrete"
      }
     ],
     "caption": null,
@@ -1718,12 +1703,16 @@
     "type": "media",
     "images": [
      {
+      "id": "4a1980355c",
+      "alt": "Inspired by nature. Defined by design. — set on walnut"
+     },
+     {
       "id": "c04711e04a",
-      "alt": "Material textures board"
+      "alt": "Sana Interiors business card on marble"
      }
     ],
     "caption": null,
-    "layout": "full"
+    "layout": "pair"
    },
    {
     "type": "text",
@@ -1779,7 +1768,7 @@
      },
      {
       "id": "0d4a07bf20",
-      "alt": "Sana Interiors navy business card"
+      "alt": "Sana Interiors material palette"
      },
      {
       "id": "66a3bbd3ad",
@@ -1787,11 +1776,11 @@
      },
      {
       "id": "7809d7b35e",
-      "alt": "Sana Interiors business card on marble"
+      "alt": "Sana Interiors stationery set"
      },
      {
       "id": "eb0c0b7f31",
-      "alt": "Sana Interiors business card alt"
+      "alt": "Sana Interiors signage and silver print"
      }
     ],
     "caption": "Stationery system — letterhead / business cards in taupe, navy, and oxblood colourways",

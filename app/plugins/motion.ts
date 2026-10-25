@@ -25,19 +25,22 @@ function revealMounted(el: RevealEl, binding: { value?: RevealOpts }) {
   setupGsap()
   const state: NonNullable<RevealEl['_reveal']> = {}
   el._reveal = state
-  let played = false
+  let started = false
 
   const preSplit = Array.from(el.querySelectorAll<HTMLElement>('[data-line]'))
+  // autoSplit re-splits when the web font lands or the width changes, often mid-reveal: the new
+  // lines pick the animation up where the old ones were. Nothing is returned to onSplit, so
+  // SplitText never hands its own (paused) copy of the old progress to the new tween.
   const build = (lines: Element[]) => {
     el.classList.add('is-split')
+    const progress = state.tween?.progress() ?? 0
     state.tween?.kill()
     state.tween = gsap.fromTo(lines, FROM, {
       autoAlpha: 1, rotation: 0, yPercent: 0,
       stagger: opts.stagger ?? 0.1, duration: 1, ease: EASE.out,
       paused: true,
     })
-    if (played) state.tween.progress(1)
-    return state.tween
+    if (started) state.tween.progress(progress).play()
   }
 
   if (preSplit.length) build(preSplit)
@@ -47,18 +50,20 @@ function revealMounted(el: RevealEl, binding: { value?: RevealOpts }) {
       mask: 'lines',
       linesClass: 'line',
       autoSplit: true,
-      onSplit: self => build(self.lines),
+      onSplit: (self) => { build(self.lines) },
     })
   }
 
   const play = (delay = 0) => {
-    played = true
-    state.tween?.delay(delay).play()
+    state.timer?.kill()
+    state.timer = gsap.delayedCall(delay, () => {
+      started = true
+      state.tween?.play()
+    })
   }
 
   if (opts.intro) {
-    const d = introDelay() + (opts.delay || 0)
-    state.timer = gsap.delayedCall(0, () => play(d))
+    play(introDelay() + (opts.delay || 0))
   }
   else {
     state.io = new IntersectionObserver((entries) => {
