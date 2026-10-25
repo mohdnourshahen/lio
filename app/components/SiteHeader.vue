@@ -14,7 +14,7 @@ const isHome = computed(() => route.path === '/')
 <template>
   <header
     class="site-header"
-    :class="[ { 'is-scrolled': appState.scrolled || !isHome, 'menu-open': appState.menuOpen }]"
+    :class="[ { 'is-scrolled': appState.scrolled || !isHome, 'menu-open': appState.menuOpen, 'on-paper': appState.headerTheme === 'paper' && !appState.menuOpen }]"
   >
     <NuxtLink to="/" class="logo" aria-label="Lōn Visuals — home" data-cursor-none>
       <LonLogo aria-hidden="true" />
@@ -51,6 +51,8 @@ const isHome = computed(() => route.path === '/')
   transition: color 0.5s var(--ease-in-out);
 }
 .site-header > * { pointer-events: auto; }
+.site-header.on-paper, .on-paper .logo { color: var(--c-ink); }
+.logo { transition: color 0.5s var(--ease-in-out); }
 .logo { display: block; width: 13.5vw; color: var(--c-title); }
 .logo :deep(svg) { width: 100%; height: auto; }
 

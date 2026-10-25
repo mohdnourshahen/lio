@@ -183,6 +183,16 @@
    "paras": [
     "The anniversary was marked with an event that drew guests from government, civil society and the private sector. The 40th-anniversary logo stood at the centre of the celebration, carried across print, stage, signage and screen, online and off.",
     "More than a record of FNF's achievements, it is a testament to what collaboration, innovation and shared values continue to build in Jordan and across the region."
+   ],
+   "links": [
+    {
+     "label": "Read more about the celebration",
+     "href": "https://www.freiheit.org/jordan/fnf-celebrates-landmark-anniversary-jordan"
+    },
+    {
+     "label": "More about FNF",
+     "href": "https://www.freiheit.org/jordan"
+    }
    ]
   },
   {
@@ -249,5 +259,6 @@
    ]
   }
  ],
- "heroDense": true
+ "heroDense": true,
+ "theme": "paper"
 }
