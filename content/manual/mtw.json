@@ -1,0 +1,427 @@
+{
+ "key": "mtw",
+ "slug": "muscat-tech-week",
+ "title": "Muscat Tech Week",
+ "seoTitle": "Muscat Tech Week — Event Identity | Lōn Visuals",
+ "category": "Event Identity · Technology",
+ "lede": "An identity for Muscat Tech Week that draws its soul from Oman’s evening skies: a lowercase monogram with a khanjar’s curve, and a sunset palette carried from the logo to the main stage.",
+ "meta": [
+  [
+   "Client",
+   "Pitlane Live"
+  ],
+  [
+   "Location",
+   "Muscat, Oman"
+  ],
+  [
+   "Year",
+   "2025"
+  ]
+ ],
+ "info": [
+  [
+   "Project Type",
+   "Event Identity"
+  ],
+  [
+   "Sector",
+   "Technology · Events"
+  ],
+  [
+   "Scope",
+   "Logo, Colour, Typography, Campaign, Event"
+  ]
+ ],
+ "hero": "3a6b392d83",
+ "heroDense": false,
+ "theme": "paper",
+ "next": null,
+ "year": "2025",
+ "credits": [
+  {
+   "role": "Design & Art Direction",
+   "name": "Moh'd Nour Shahen",
+   "href": null
+  },
+  {
+   "role": "Organiser",
+   "name": "Pitlane Live",
+   "href": null
+  }
+ ],
+ "blocks": [
+  {
+   "type": "text",
+   "label": "Overview",
+   "title": "The world is coming to Oman",
+   "paras": [
+    "Muscat Tech Week brings the region’s technology community to Oman’s capital, organised by Pitlane Live with the Sultanate’s Ministry of Transport, Communications and Information Technology.",
+    "Its identity had to stand beside the world’s leading tech events and still be unmistakably Omani: global in form, rooted in place."
+   ],
+   "tags": [
+    "Event Identity",
+    "Technology",
+    "Oman",
+    "Campaign"
+   ]
+  },
+  {
+   "type": "media",
+   "images": [
+    {
+     "id": "2eb55710f4",
+     "alt": "Campaign line The World Is Coming To Oman! on a blue gradient"
+    }
+   ],
+   "caption": "Campaign line · The World Is Coming To Oman!",
+   "layout": "full",
+   "surface": "#14105C"
+  },
+  {
+   "type": "text",
+   "label": "The Landscape",
+   "title": "Among the world’s tech events",
+   "paras": [
+    "The great tech gatherings, from Web Summit and GITEX to SXSW and LEAP, are known by short, confident marks. Tech weeks from London to Washington DC share the same language.",
+    "Muscat Tech Week needed to take its place in that company: a compact symbol that reads instantly at every scale, with a character of its own."
+   ],
+   "tags": []
+  },
+  {
+   "type": "media",
+   "images": [
+    {
+     "id": "bf60ff71b8",
+     "alt": "MTW among the logos of leading tech events: TNW, MWC, GITEX, SXSW, Viva Technology, CES, Web Summit and LEAP"
+    }
+   ],
+   "caption": "Benchmark · Among the world’s leading tech events",
+   "layout": "full"
+  },
+  {
+   "type": "media",
+   "images": [
+    {
+     "id": "4215804717",
+     "alt": "The mtw lockup between London Tech Week and DC Startup & Tech Week"
+    }
+   ],
+   "caption": "Benchmark · Alongside the tech weeks",
+   "layout": "full",
+   "surface": "#14105C"
+  },
+  {
+   "type": "text",
+   "label": "Logo Concept",
+   "title": "A monogram with Omani roots",
+   "paras": [
+    "The “mtw | muscat tech week” logo represents a clean, global and tech-forward identity. Designed in all lowercase, it communicates simplicity, accessibility and innovation. The core symbol “mtw” serves as a strong visual anchor, much like other leading tech events, while remaining adaptable across digital and physical touchpoints.",
+    "As a subtle tribute to Omani heritage, the letter “t” features a small serif with a rounded shape, crafted to echo the curve of the traditional Omani khanjar: not in a literal or obvious way, but as a respectful design reference. The “m” and “w” are mirrored reflections of each other, reinforcing the design’s balance and symmetry and adding a modern, cohesive rhythm. Together, these elements preserve a sense of place within a globally recognisable form."
+   ],
+   "tags": []
+  },
+  {
+   "type": "media",
+   "images": [
+    {
+     "id": "0877dacc82",
+     "alt": "Pencil study of the mtw monogram on a dotted grid"
+    },
+    {
+     "id": "4136feb59a",
+     "alt": "Construction of the mtw monogram, with the notch traced to the khanjar and Oman’s emblem"
+    }
+   ],
+   "caption": "From sketch to construction · The khanjar in the curve",
+   "layout": "pair"
+  },
+  {
+   "type": "text",
+   "label": "The Logo",
+   "title": "One mark, every scale",
+   "paras": [
+    "The monogram and its wordmark work as a single lockup, in the sunset gradient or in a single violet, and hold their shape from a 1000-pixel stage graphic down to a 100-pixel favicon."
+   ],
+   "tags": []
+  },
+  {
+   "type": "media",
+   "images": [
+    {
+     "id": "b9fc95f3b7",
+     "alt": "The mtw monogram and wordmark in a violet-to-rose gradient on white"
+    },
+    {
+     "id": "f5ffefe34a",
+     "alt": "The mtw monogram and wordmark in solid violet on a soft light gradient"
+    }
+   ],
+   "caption": "Logo · Gradient and solid colourways",
+   "layout": "pair"
+  },
+  {
+   "type": "media",
+   "images": [
+    {
+     "id": "d5ba063a84",
+     "alt": "The mtw monogram at 1000, 500 and 100 pixels"
+    }
+   ],
+   "caption": "Scalability · From 1000px to 100px",
+   "layout": "full"
+  },
+  {
+   "type": "media",
+   "images": [
+    {
+     "id": "c8995b319d",
+     "alt": "The mtw monogram repeated across twelve gradient tiles, from sunset beige to deep indigo"
+    }
+   ],
+   "caption": "Logo system · One mark across the palette",
+   "layout": "full",
+   "surface": "#14105C"
+  },
+  {
+   "type": "media",
+   "images": [
+    {
+     "id": "9aac8956e6",
+     "alt": "Clear space and lockup rules for co-branding with Pitlane Live and the Ministry"
+    },
+    {
+     "id": "13c7a97994",
+     "alt": "Co-branded lockups with Pitlane Live and the Ministry of Transport, Communications and IT"
+    }
+   ],
+   "caption": "Co-branding · Clear space and partner lockups",
+   "layout": "pair"
+  },
+  {
+   "type": "text",
+   "label": "Color Concept",
+   "title": "Inspired by Oman’s magical sunsets",
+   "paras": [
+    "The visual identity of Muscat Tech Week draws its soul from the breathtaking magic of Oman’s evening skies. The gradient palette is inspired by the natural harmony of sunset in Muscat, where deep indigo transitions into violet, then soft amber and golden hues melt into the cityscape.",
+    "This carefully designed colour system reflects both modern innovation and cultural depth. It captures the warmth of Omani hospitality, the richness of its heritage, and the rising energy of its future in technology. The palette works seamlessly across digital and physical mediums, on screens, stages, signage and merchandise, while remaining rooted in a sense of place.",
+    "This sunset isn’t just a view. It’s a symbol of transition, of energy, and of the promise that every new idea brings a new dawn."
+   ],
+   "tags": [],
+   "surface": "#14105C"
+  },
+  {
+   "type": "media",
+   "images": [
+    {
+     "id": "87756cee91",
+     "alt": "Colour palettes sampled from Muscat sunsets: a mosque, the mountains, a dhow at sea and the corniche, resolved into one gradient"
+    }
+   ],
+   "caption": "Colour system · Sampled from Muscat at dusk",
+   "layout": "full"
+  },
+  {
+   "type": "media",
+   "images": [
+    {
+     "id": "220a97ef79",
+     "alt": "Colour concept board: Magical sunsets of Oman, A Blend of Vibrant Purple and Blue Innovation, Blending Omani Skies with Tech Vibes"
+    }
+   ],
+   "caption": "Colour concept · Blending Omani skies with tech vibes",
+   "layout": "full"
+  },
+  {
+   "type": "text",
+   "label": "Key Visuals",
+   "title": "The sky as a canvas",
+   "paras": [
+    "Soft, layered gradients become the brand’s key visuals: fields of indigo, violet and amber that carry the logo across screens, stages and print, and change mood with the light of the day."
+   ],
+   "tags": [],
+   "surface": "#14105C"
+  },
+  {
+   "type": "media",
+   "images": [
+    {
+     "id": "456f0168d9",
+     "alt": "The mtw lockup in white on a beige-to-indigo sunset gradient"
+    }
+   ],
+   "caption": "Key visual · Dusk",
+   "layout": "full",
+   "surface": "#14105C"
+  },
+  {
+   "type": "media",
+   "images": [
+    {
+     "id": "ae0c58d852",
+     "alt": "The mtw lockup in white on flowing blue shapes"
+    },
+    {
+     "id": "42ab6e7bf6",
+     "alt": "The mtw lockup in white on a violet and beige gradient"
+    }
+   ],
+   "caption": "Key visuals · Night and first light",
+   "layout": "pair",
+   "surface": "#14105C"
+  },
+  {
+   "type": "text",
+   "label": "Typography",
+   "title": "One voice, two scripts",
+   "paras": [
+    "Neue Helvetica carries the identity in both English and Arabic: a neutral, global sans in Regular, Medium and SemiBold that lets the monogram and the colour lead, and gives Arabic headlines the same clarity as English ones."
+   ],
+   "tags": []
+  },
+  {
+   "type": "media",
+   "images": [
+    {
+     "id": "5456297cfc",
+     "alt": "Neue Helvetica specimen in Latin and Arabic: Helvetica Neue, مرحباً، مسقط، عُمان"
+    }
+   ],
+   "caption": "Typography · Neue Helvetica, Latin and Arabic",
+   "layout": "full"
+  },
+  {
+   "type": "text",
+   "label": "Campaign",
+   "title": "From every place, the destination is Oman",
+   "paras": [
+    "The campaign speaks to visitors in two languages. In English, “The World Is Coming To Oman!” and “Oman Awaits!”; in Arabic, “من كل ديرة… والوجهة عُمان”, from every place, the destination is Oman.",
+    "Each line is set over Muscat itself, its corniche, mountains and harbour washed in the identity’s indigo dusk."
+   ],
+   "tags": [],
+   "surface": "#14105C"
+  },
+  {
+   "type": "media",
+   "images": [
+    {
+     "id": "7ccd2c4c4c",
+     "alt": "Aerial view of the Omani coastline, mountains meeting the sea"
+    }
+   ],
+   "caption": "Oman · The destination",
+   "layout": "full"
+  },
+  {
+   "type": "media",
+   "images": [
+    {
+     "id": "483f1fd452",
+     "alt": "The mtw lockup over the Muttrah corniche at dusk"
+    }
+   ],
+   "caption": "Campaign · Muscat at dusk",
+   "layout": "full"
+  },
+  {
+   "type": "media",
+   "images": [
+    {
+     "id": "162a12f7a4",
+     "alt": "Oman Awaits! over Muscat harbour at dusk"
+    },
+    {
+     "id": "4df9918718",
+     "alt": "Arabic campaign line من كل ديرة… والوجهة عُمان over the Muscat corniche"
+    }
+   ],
+   "caption": "Campaign · English and Arabic",
+   "layout": "pair"
+  },
+  {
+   "type": "media",
+   "images": [
+    {
+     "id": "38649cfbdf",
+     "alt": "Campaign billboard against a sunset sky, dated 12–16 April 2025"
+    }
+   ],
+   "caption": "Outdoor · Billboard",
+   "layout": "full"
+  },
+  {
+   "type": "text",
+   "label": "The Event",
+   "title": "On stage, on site",
+   "paras": [
+    "At the event the identity becomes the room: the main-stage screen, delegate badges and lanyards, and branded installations across the venue."
+   ],
+   "tags": []
+  },
+  {
+   "type": "media",
+   "images": [
+    {
+     "id": "2dbf7a78e9",
+     "alt": "Main stage screen with the mtw logo and The World Is Coming To Oman!"
+    }
+   ],
+   "caption": "Main stage · The World Is Coming To Oman!",
+   "layout": "full",
+   "surface": "#14105C"
+  },
+  {
+   "type": "media",
+   "images": [
+    {
+     "id": "452a5eab07",
+     "alt": "Delegate badge and lanyard with the Pitlane Live and mtw lockup"
+    },
+    {
+     "id": "f08d014558",
+     "alt": "Stacked branded cubes with the mtw logo and Pitlane Live"
+    }
+   ],
+   "caption": "On site · Badge, lanyard and installations",
+   "layout": "pair"
+  },
+  {
+   "type": "list",
+   "label": "Deliverables",
+   "title": "What we delivered",
+   "items": [
+    {
+     "num": "01",
+     "name": "Logo & Monogram",
+     "desc": "The mtw monogram and wordmark, built on a construction grid."
+    },
+    {
+     "num": "02",
+     "name": "Logo System",
+     "desc": "Clear space, scale and co-branding with Pitlane Live and the Ministry."
+    },
+    {
+     "num": "03",
+     "name": "Colour System",
+     "desc": "A sunset gradient palette for screen, stage, signage and merchandise."
+    },
+    {
+     "num": "04",
+     "name": "Typography",
+     "desc": "Neue Helvetica for English and Arabic."
+    },
+    {
+     "num": "05",
+     "name": "Campaign",
+     "desc": "Bilingual campaign lines, key visuals and outdoor."
+    },
+    {
+     "num": "06",
+     "name": "Event Branding",
+     "desc": "Main stage, badges, lanyards and on-site installations."
+    }
+   ]
+  }
+ ],
+ "heroNatural": true
+}
