@@ -193,6 +193,9 @@ HEROES = {
 # the legacy caption and None to drop the block. ALTS describes what each image actually shows.
 KEEP = object()
 GALLERY = {
+    'masar': {
+        '3d82710a42': None,  # removed at the studio's request
+    },
     'zeryab': {
         'e84764bbf5': (['e84764bbf5'], 'Marrakech · Moorish Heritage — Zeryab Estates'),
         '1ce61faf73': (['ec41545efd', '0dcfaf4ade'], KEEP),
