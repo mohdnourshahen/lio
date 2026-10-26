@@ -123,7 +123,7 @@ const ratio = (id: string) => (media[id] ? media[id].w / media[id].h : 1.5)
     <article class="case" :class="p.surface ? 'is-surface' : p.theme ? `is-${p.theme}` : undefined" :style="p.surface ? { '--case-surface': p.surface } : undefined" :aria-labelledby="'case-title'">
       <!-- HERO -->
       <header ref="hero" class="c-hero theme-dark" data-theme="dark">
-        <div ref="heroMedia" class="c-hero-media atmos-soft grain">
+        <div ref="heroMedia" class="c-hero-media atmos-soft grain" :class="{ 'is-natural': p.heroNatural }">
           <MediaImage :id="p.hero" :alt="heroAlt" sizes="100vw" eager :mobile-id="p.heroMobile" :position="p.heroFocus" />
         </div>
         <div class="c-hero-shade" :class="{ 'is-dense': p.heroDense }" aria-hidden="true" />
@@ -251,6 +251,8 @@ const ratio = (id: string) => (media[id] ? media[id].w / media[id].h : 1.5)
 .c-hero-media { position: absolute; inset: 0; will-change: transform, opacity; }
 .c-hero-media :deep(picture), .c-hero-media :deep(img) { width: 100%; height: 100%; object-fit: cover; }
 .c-hero-media :deep(img) { filter: saturate(0.85) sepia(0.1) brightness(0.78); }
+/* brand-coloured heroes keep their true colour, with only a neutral darkening for the title */
+.c-hero-media.is-natural :deep(img) { filter: none; }
 .c-hero-shade { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(18, 16, 10, 0.55) 0%, rgba(18, 16, 10, 0.05) 32%, rgba(18, 16, 10, 0.8) 100%); }
 /* heroes that carry their own lettering (a logo on paper) need the title to sit on near-solid ink */
 .c-hero-shade.is-dense { background: linear-gradient(180deg, rgba(18, 16, 10, 0.6) 0%, rgba(18, 16, 10, 0.25) 30%, rgba(18, 16, 10, 0.9) 72%, rgba(18, 16, 10, 0.96) 100%); }

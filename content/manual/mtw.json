@@ -33,8 +33,8 @@
    "Logo, Colour, Typography, Campaign, Event"
   ]
  ],
- "hero": "3ed6f77d67",
- "heroDense": true,
+ "hero": "3a6b392d83",
+ "heroDense": false,
  "theme": "paper",
  "next": null,
  "year": "2025",
@@ -137,14 +137,38 @@
    "layout": "pair"
   },
   {
+   "type": "text",
+   "label": "The Logo",
+   "title": "One mark, every scale",
+   "paras": [
+    "The monogram and its wordmark work as a single lockup, in the sunset gradient or in a single violet, and hold their shape from a 1000-pixel stage graphic down to a 100-pixel favicon."
+   ],
+   "tags": []
+  },
+  {
    "type": "media",
    "images": [
     {
      "id": "b9fc95f3b7",
-     "alt": "The mtw monogram and muscat tech week wordmark in a violet-to-rose gradient"
+     "alt": "The mtw monogram and wordmark in a violet-to-rose gradient on white"
+    },
+    {
+     "id": "f5ffefe34a",
+     "alt": "The mtw monogram and wordmark in solid violet on a soft light gradient"
     }
    ],
-   "caption": "Logo · The monogram and wordmark",
+   "caption": "Logo · Gradient and solid colourways",
+   "layout": "pair"
+  },
+  {
+   "type": "media",
+   "images": [
+    {
+     "id": "d5ba063a84",
+     "alt": "The mtw monogram at 1000, 500 and 100 pixels"
+    }
+   ],
+   "caption": "Scalability · From 1000px to 100px",
    "layout": "full"
   },
   {
@@ -198,6 +222,55 @@
    "layout": "full"
   },
   {
+   "type": "media",
+   "images": [
+    {
+     "id": "220a97ef79",
+     "alt": "Colour concept board: Magical sunsets of Oman, A Blend of Vibrant Purple and Blue Innovation, Blending Omani Skies with Tech Vibes"
+    }
+   ],
+   "caption": "Colour concept · Blending Omani skies with tech vibes",
+   "layout": "full"
+  },
+  {
+   "type": "text",
+   "label": "Key Visuals",
+   "title": "The sky as a canvas",
+   "paras": [
+    "Soft, layered gradients become the brand’s key visuals: fields of indigo, violet and amber that carry the logo across screens, stages and print, and change mood with the light of the day."
+   ],
+   "tags": [],
+   "surface": "#14105C"
+  },
+  {
+   "type": "media",
+   "images": [
+    {
+     "id": "456f0168d9",
+     "alt": "The mtw lockup in white on a beige-to-indigo sunset gradient"
+    }
+   ],
+   "caption": "Key visual · Dusk",
+   "layout": "full",
+   "surface": "#14105C"
+  },
+  {
+   "type": "media",
+   "images": [
+    {
+     "id": "ae0c58d852",
+     "alt": "The mtw lockup in white on flowing blue shapes"
+    },
+    {
+     "id": "42ab6e7bf6",
+     "alt": "The mtw lockup in white on a violet and beige gradient"
+    }
+   ],
+   "caption": "Key visuals · Night and first light",
+   "layout": "pair",
+   "surface": "#14105C"
+  },
+  {
    "type": "text",
    "label": "Typography",
    "title": "One voice, two scripts",
@@ -237,6 +310,17 @@
     }
    ],
    "caption": "Oman · The destination",
+   "layout": "full"
+  },
+  {
+   "type": "media",
+   "images": [
+    {
+     "id": "483f1fd452",
+     "alt": "The mtw lockup over the Muttrah corniche at dusk"
+    }
+   ],
+   "caption": "Campaign · Muscat at dusk",
    "layout": "full"
   },
   {
@@ -338,5 +422,6 @@
     }
    ]
   }
- ]
+ ],
+ "heroNatural": true
 }

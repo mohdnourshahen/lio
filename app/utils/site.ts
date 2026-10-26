@@ -25,6 +25,8 @@ export interface Project {
   heroFocus?: string
   /** darker shade under the title, for heroes with lettering of their own */
   heroDense?: boolean
+  /** keep the hero image's own colours (no warm house filter) */
+  heroNatural?: boolean
   /** browser and search title when the default (title — category) runs past ~70 characters */
   seoTitle?: string
   /** page surface: omitted = the house dark tones, 'paper' = pure white, 'black' = pure black */
