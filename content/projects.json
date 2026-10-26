@@ -1792,6 +1792,11 @@
     "href": null
    },
    {
+    "role": "Official Photography",
+    "name": "Lōn Visuals",
+    "href": null
+   },
+   {
     "role": "Client",
     "name": "Department of Communication and Media",
     "href": null
@@ -2034,6 +2039,57 @@
     "layout": "pair"
    },
    {
+    "type": "text",
+    "label": "Official Photography",
+    "title": "Every arrival, on record",
+    "surface": "#8E1A16",
+    "tags": [],
+    "paras": [
+     "Lōn Visuals also led the photography of the Ministry’s official receptions, covering the arrivals of visiting foreign ministers from Bahrain, Egypt, Saudi Arabia and the United Arab Emirates.",
+     "Each image was delivered within a branded frame of its own design: the royal crest and the Ministry’s Thuluth name set on a maroon band, so every photograph leaves the Ministry carrying its identity."
+    ]
+   },
+   {
+    "type": "media",
+    "surface": "#8E1A16",
+    "images": [
+     {
+      "id": "c0cb2e478b",
+      "alt": "The Minister welcoming Bahrain’s foreign minister on the tarmac, in the Ministry’s branded photo frame"
+     }
+    ],
+    "caption": "Official reception · Bahrain",
+    "layout": "full"
+   },
+   {
+    "type": "media",
+    "surface": "#8E1A16",
+    "images": [
+     {
+      "id": "2051ac3479",
+      "alt": "The Minister greeting Egypt’s foreign minister on arrival, in the branded photo frame"
+     },
+     {
+      "id": "971e8a2290",
+      "alt": "The Minister welcoming Saudi Arabia’s foreign minister at the aircraft steps, in the branded photo frame"
+     }
+    ],
+    "caption": "Official receptions · Egypt and Saudi Arabia",
+    "layout": "pair"
+   },
+   {
+    "type": "media",
+    "surface": "#8E1A16",
+    "images": [
+     {
+      "id": "308fde484d",
+      "alt": "The Minister walking with the UAE foreign minister from the aircraft, in the branded photo frame"
+     }
+    ],
+    "caption": "Official reception · United Arab Emirates",
+    "layout": "full"
+   },
+   {
     "type": "list",
     "label": "Deliverables",
     "title": "What we delivered",
@@ -2067,6 +2123,11 @@
       "num": "06",
       "name": "Video",
       "desc": "Intro, outro and lower-third title bars."
+     },
+     {
+      "num": "07",
+      "name": "Official Photography",
+      "desc": "Coverage of official receptions, delivered in a branded photo frame."
      }
     ]
    }
