@@ -2159,7 +2159,7 @@
   ],
   "hero": "a16077e013",
   "info": [],
-  "next": "sana-interiors",
+  "next": "muscat-tech-week",
   "credits": [],
   "blocks": [
    {
@@ -2377,6 +2377,172 @@
   ],
   "heroMobile": "28c1c11c00",
   "year": "2023"
+ },
+ {
+  "key": "mtw",
+  "slug": "muscat-tech-week",
+  "title": "Muscat Tech Week",
+  "seoTitle": "Muscat Tech Week — Event Identity | Lōn Visuals",
+  "category": "Event Identity · Technology",
+  "lede": "An identity for Muscat Tech Week that draws its soul from Oman’s evening skies, pairing the warmth of an Omani sunset with the energy of a region rising in technology.",
+  "meta": [
+   [
+    "Client",
+    "Muscat Tech Week"
+   ],
+   [
+    "Location",
+    "Muscat, Oman"
+   ]
+  ],
+  "info": [
+   [
+    "Project Type",
+    "Event Identity"
+   ],
+   [
+    "Sector",
+    "Technology · Events"
+   ],
+   [
+    "Scope",
+    "Logo, Colour system, Campaign visuals"
+   ]
+  ],
+  "hero": "3ed6f77d67",
+  "heroDense": true,
+  "theme": "paper",
+  "next": "sana-interiors",
+  "year": "",
+  "credits": [
+   {
+    "role": "Design & Art Direction",
+    "name": "Moh'd Nour Shahen",
+    "href": null
+   },
+   {
+    "role": "Client",
+    "name": "Muscat Tech Week",
+    "href": null
+   }
+  ],
+  "blocks": [
+   {
+    "type": "text",
+    "label": "Overview",
+    "title": "The world is coming to Oman",
+    "tags": [
+     "Event Identity",
+     "Technology",
+     "Oman",
+     "Colour System"
+    ],
+    "paras": [
+     "Muscat Tech Week gathers the region’s technology community in Oman’s capital. Its identity had to feel global enough for an international stage and unmistakably Omani at the same time.",
+     "The answer was found in the city itself: a compact monogram shaped by Omani heritage, and a colour system drawn from the sky over Muscat at dusk."
+    ]
+   },
+   {
+    "type": "media",
+    "images": [
+     {
+      "id": "2eb55710f4",
+      "alt": "Campaign line The World Is Coming To Oman! on a blue gradient"
+     }
+    ],
+    "caption": "Campaign line · The World Is Coming To Oman!",
+    "layout": "full",
+    "surface": "#14105C"
+   },
+   {
+    "type": "text",
+    "label": "The Mark",
+    "title": "A monogram with Omani roots",
+    "tags": [],
+    "paras": [
+     "The mtw monogram is built on a strict grid of verticals and arcs. Its signature detail, the small notch that curls from the shoulder of the m and the foot of the t, is drawn from the curve of the khanjar, the dagger at the heart of Oman’s emblem.",
+     "It is a quiet reference, felt more than seen, that gives a technology brand a sense of place."
+    ]
+   },
+   {
+    "type": "media",
+    "images": [
+     {
+      "id": "0877dacc82",
+      "alt": "Pencil study of the mtw monogram on a dotted construction grid"
+     }
+    ],
+    "caption": "Sketch · The monogram drawn on the grid",
+    "layout": "full"
+   },
+   {
+    "type": "media",
+    "images": [
+     {
+      "id": "4136feb59a",
+      "alt": "Construction of the mtw monogram, with the notch detail traced to the khanjar and Oman’s emblem"
+     }
+    ],
+    "caption": "Construction · The notch, traced to the khanjar",
+    "layout": "full"
+   },
+   {
+    "type": "media",
+    "images": [
+     {
+      "id": "b9fc95f3b7",
+      "alt": "The mtw monogram and muscat tech week wordmark in a violet-to-rose gradient"
+     }
+    ],
+    "caption": "Logo · The monogram and wordmark",
+    "layout": "full"
+   },
+   {
+    "type": "text",
+    "label": "Color Concept",
+    "title": "Inspired by Oman’s magical sunsets",
+    "surface": "#14105C",
+    "tags": [],
+    "paras": [
+     "The visual identity of Muscat Tech Week draws its soul from the breathtaking magic of Oman’s evening skies. The gradient palette is inspired by the natural harmony of sunset in Muscat, where deep indigo transitions into violet, then soft amber and golden hues melt into the cityscape.",
+     "This carefully designed colour system reflects both modern innovation and cultural depth. It captures the warmth of Omani hospitality, the richness of its heritage, and the rising energy of its future in technology. The palette works seamlessly across digital and physical mediums, on screens, stages, signage and merchandise, while remaining rooted in a sense of place.",
+     "This sunset isn’t just a view. It’s a symbol of transition, of energy, and of the promise that every new idea brings a new dawn."
+    ]
+   },
+   {
+    "type": "media",
+    "images": [
+     {
+      "id": "87756cee91",
+      "alt": "Colour palettes sampled from Muscat sunsets: a mosque, the mountains, a dhow at sea and the corniche, resolved into one gradient"
+     }
+    ],
+    "caption": "Colour system · Sampled from Muscat at dusk",
+    "layout": "full"
+   },
+   {
+    "type": "list",
+    "label": "Deliverables",
+    "title": "What we delivered",
+    "items": [
+     {
+      "num": "01",
+      "name": "Logo & Monogram",
+      "desc": "The mtw monogram and the muscat tech week wordmark, built on a construction grid."
+     },
+     {
+      "num": "02",
+      "name": "Colour System",
+      "desc": "A sunset gradient palette for screen, stage, signage and merchandise."
+     },
+     {
+      "num": "03",
+      "name": "Campaign Visuals",
+      "desc": "Key visuals and the campaign line, The World Is Coming To Oman!"
+     }
+    ]
+   }
+  ]
  },
  {
   "key": "sana-interiors",
