@@ -2966,7 +2966,7 @@
       "alt": "Sana Interiors brand atmosphere board: leather, marble, wood and concrete"
      }
     ],
-    "caption": null,
+    "caption": "Brand atmosphere · Leather, marble, wood and concrete",
     "layout": "full"
    },
    {
@@ -2977,11 +2977,11 @@
       "alt": "Inspired by nature. Defined by design. — set on walnut"
      },
      {
-      "id": "c04711e04a",
-      "alt": "Sana Interiors business card on marble"
+      "id": "0d4a07bf20",
+      "alt": "Sana Interiors material palette"
      }
     ],
-    "caption": null,
+    "caption": "Inspired by nature · The material palette",
     "layout": "pair"
    },
    {
@@ -3035,26 +3035,36 @@
      {
       "id": "597c5362c7",
       "alt": "Sana Interiors letterhead dark"
-     },
+     }
+    ],
+    "caption": "Letterhead · Taupe, navy and oxblood colourways",
+    "layout": "pair"
+   },
+   {
+    "type": "media",
+    "images": [
      {
-      "id": "0d4a07bf20",
-      "alt": "Sana Interiors material palette"
+      "id": "c04711e04a",
+      "alt": "Sana Interiors business card on marble"
      },
      {
       "id": "66a3bbd3ad",
       "alt": "Sana Interiors leather emboss"
-     },
-     {
-      "id": "7809d7b35e",
-      "alt": "Sana Interiors stationery set"
-     },
+     }
+    ],
+    "caption": "Business card on marble · Monogram embossed in leather",
+    "layout": "pair"
+   },
+   {
+    "type": "media",
+    "images": [
      {
       "id": "eb0c0b7f31",
       "alt": "Sana Interiors signage and silver print"
      }
     ],
-    "caption": "Stationery system — letterhead / business cards in taupe, navy, and oxblood colourways",
-    "layout": "grid"
+    "caption": "Signage · Glass and silver print",
+    "layout": "full"
    }
   ],
   "heroMobile": "58d0e9b72f",

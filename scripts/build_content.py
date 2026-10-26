@@ -283,6 +283,29 @@ def fix_gallery(k, blocks):
     return out
 
 
+
+def sana_lower_half(blocks):
+    """Studio's order for the lower half of Sana: atmosphere, then print. The four-image collage
+    (7809d7b35e) is dropped at the studio's request; each of its pieces appears on its own."""
+    alt = {i['id']: i['alt'] for b in blocks if b['type'] == 'media' for i in b['images']}
+    def media(ids, caption):
+        return {'type': 'media', 'images': [{'id': i, 'alt': alt[i]} for i in ids], 'caption': caption,
+                'layout': {1: 'full', 2: 'pair'}[len(ids)]}
+    cut = next(n for n, b in enumerate(blocks) if b.get('label') == 'Brand Atmosphere')
+    head, tail = blocks[:cut], blocks[cut:]
+    text = {b.get('label'): b for b in tail if b['type'] == 'text'}
+    palette = next(b for b in tail if b['type'] == 'palette')
+    return head + [
+        text['Brand Atmosphere'],
+        media(['924930f33c'], 'Brand atmosphere · Leather, marble, wood and concrete'),
+        media(['4a1980355c', '0d4a07bf20'], 'Inspired by nature · The material palette'),
+        text['Colour Palette'], palette,
+        text['Stationery & Print'],
+        media(['354d190bb9', '597c5362c7'], 'Letterhead · Taupe, navy and oxblood colourways'),
+        media(['c04711e04a', '66a3bbd3ad'], 'Business card on marble · Monogram embossed in leather'),
+        media(['eb0c0b7f31'], 'Signage · Glass and silver print'),
+    ]
+
 def curate(P):
     k = P['key']
     P['hero'] = P['hero'][0]
@@ -334,6 +357,8 @@ def curate(P):
                 else:
                     it.update({'num': v[0], 'name': v[1] if len(v) > 1 else '', 'desc': ' '.join(v[2:]) or None})
     P['blocks'] = fix_gallery(k, out)
+    if k == 'sana-interiors':
+        P['blocks'] = sana_lower_half(P['blocks'])
     if k == 'rambourg':
         # the studio presents the client as "Rambourg Fondation"
         P = json.loads(json.dumps(P, ensure_ascii=False).replace('Fondation Rambourg', 'Rambourg Fondation').replace('Rambourg Foundation', 'Rambourg Fondation'))
