@@ -75,7 +75,8 @@
    "paras": [
     "For a ministry, visual presentation is never just design. It is a statement of what the state stands for, and every inconsistency across an embassy, a department or a feed reads as a crack in that statement.",
     "The Branding and Visual Identity Guidelines give a decentralised institution one language: clear standards for the logo, colour, typography, photography and video that any unit, in any country, can apply with confidence, and that are never to be diluted, substituted or redrawn."
-   ]
+   ],
+   "surface": "#8E1A16"
   },
   {
    "type": "text",
@@ -160,7 +161,8 @@
      "name": "Dubai",
      "desc": "English text face in four weights for all functional communication."
     }
-   ]
+   ],
+   "surface": "#8E1A16"
   },
   {
    "type": "text",
@@ -169,7 +171,8 @@
    "tags": [],
    "paras": [
     "The system was rolled out across official stationery, events and the Ministry's digital channels, with templates for every social format so that each post, wherever it is published, leaves looking like the Ministry."
-   ]
+   ],
+   "surface": "#8E1A16"
   },
   {
    "type": "media",
@@ -180,7 +183,8 @@
     }
    ],
    "caption": "Stationery · Folder, letterhead, envelope and business cards",
-   "layout": "full"
+   "layout": "full",
+   "surface": "#8E1A16"
   },
   {
    "type": "media",
@@ -202,7 +206,8 @@
     }
    ],
    "caption": "Digital · The official cover for Facebook, Twitter, LinkedIn and YouTube",
-   "layout": "full"
+   "layout": "full",
+   "surface": "#8E1A16"
   },
   {
    "type": "list",
@@ -244,5 +249,6 @@
  ],
  "heroDense": true,
  "heroFocus": "50% 18%",
- "seoTitle": "Ministry of Foreign Affairs Jordan — Visual Identity | Lōn Visuals"
+ "seoTitle": "Ministry of Foreign Affairs Jordan — Visual Identity | Lōn Visuals",
+ "theme": "paper"
 }

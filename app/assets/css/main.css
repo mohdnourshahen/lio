@@ -161,7 +161,7 @@ em { font-style: italic; }
 .label::before { content: ''; width: 2.4em; height: 1px; flex: none; background: currentColor; opacity: 0.6; }
 
 /* ---------- themes: three depths of warm ink (Exo Ape switches chrome per section; here the shift is tonal) ---------- */
-.theme-dark, .theme-light, .theme-sand, .theme-black {
+.theme-dark, .theme-light, .theme-sand, .theme-black, .theme-surface {
   --fg: var(--c-paper); --fg-2: rgba(245, 242, 234, 0.62); --rule: rgba(230, 223, 143, 0.16);
   --title: var(--c-title); --accent: var(--c-title);
   background: var(--bg); color: var(--fg);
@@ -171,6 +171,8 @@ em { font-style: italic; }
 .theme-sand  { --bg: var(--c-ink-3); }
 /* black: pure #000 for projects whose imagery sits on true black (project `theme: 'black'`) */
 .theme-black { --bg: #000000; }
+/* surface: a project's own dark colour (project `surface: '#06262d'`), set on the case article */
+.theme-surface { --bg: var(--case-surface); }
 /* paper: the light reading surface a case study can opt into (project `theme: 'paper'`) */
 .theme-paper {
   --bg: #ffffff; --fg: var(--c-ink); --fg-2: rgba(18, 16, 10, 0.62); --rule: rgba(18, 16, 10, 0.14);
