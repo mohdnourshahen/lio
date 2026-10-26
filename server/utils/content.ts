@@ -32,6 +32,6 @@ export const studio = {
     ['Experience', 'Brand Experience & Events, Corporate & Employee Kits — bringing the brand to life in physical spaces.'],
   ],
   disciplines: ['Brand Identity', 'Visual Strategy', 'Brand Systems', 'Print & Editorial', 'Creative Direction'],
-  clients: ['Joramco', 'Friedrich Naumann Foundation Jordan', 'Rababa', 'National Cyber Security Center', 'NEOM', 'Norwegian Refugee Council', 'Globitel', 'Rambourg Foundation', 'DAI', 'UNFPA', 'Omantel', 'Aircraft Marketing', 'SkyFalcons', 'World Health Organization', 'Halcyon', 'Save the Children', 'Art Engine Media & Films', 'Brinc', 'Tabuk', 'Roycelysian'],
+  clients: ['Joramco', 'Friedrich Naumann Foundation Jordan', 'Rababa', 'National Cyber Security Center', 'NEOM', 'Norwegian Refugee Council', 'Globitel', 'Rambourg Fondation', 'DAI', 'UNFPA', 'Omantel', 'Aircraft Marketing', 'SkyFalcons', 'World Health Organization', 'Halcyon', 'Save the Children', 'Art Engine Media & Films', 'Brinc', 'Tabuk', 'Roycelysian'],
   socials: ['https://www.instagram.com/lonvisuals/', 'https://www.behance.net/lon-visuals', 'https://www.linkedin.com/company/l%C5%8Dnvisuals'],
 }

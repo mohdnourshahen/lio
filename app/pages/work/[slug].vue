@@ -22,9 +22,11 @@ const facts = computed(() => {
   }
   return rows
 })
-/* body sections follow the project's surface: the house dark tones, or paper (white) when `theme: 'paper'` */
-const toneName = (dark: 'dark' | 'light') => (p.theme === 'paper' ? 'paper' : dark)
-const tone = (dark: 'dark' | 'light') => `theme-${toneName(dark)}`
+/* body sections follow the project's surface: the house dark tones, or one flat surface (`theme: 'paper' | 'black'`) */
+const toneName = (dark: 'dark' | 'light', b?: { surface?: string }) => (b?.surface || p.surface) ? 'surface' : (p.theme ?? dark)
+const tone = (dark: 'dark' | 'light', b?: { surface?: string }) => `theme-${toneName(dark, b)}`
+/* a block may take its own dark colour (e.g. MFA maroon between white sections) */
+const surfaceStyle = (b: { surface?: string }) => (b.surface ? { '--case-surface': b.surface } : undefined)
 const discipline = computed(() => p.category.split('·')[0]!.trim())
 const plainLede = p.lede.length > 158 ? `${p.lede.slice(0, p.lede.lastIndexOf(' ', 155))}…` : p.lede
 
@@ -118,7 +120,7 @@ const ratio = (id: string) => (media[id] ? media[id].w / media[id].h : 1.5)
 
 <template>
   <PageShell>
-    <article class="case" :class="{ 'is-paper': p.theme === 'paper' }" :aria-labelledby="'case-title'">
+    <article class="case" :class="p.surface ? 'is-surface' : p.theme ? `is-${p.theme}` : undefined" :style="p.surface ? { '--case-surface': p.surface } : undefined" :aria-labelledby="'case-title'">
       <!-- HERO -->
       <header ref="hero" class="c-hero theme-dark" data-theme="dark">
         <div ref="heroMedia" class="c-hero-media atmos-soft grain">
@@ -155,7 +157,7 @@ const ratio = (id: string) => (media[id] ? media[id].w / media[id].h : 1.5)
 
       <!-- BLOCKS -->
       <template v-for="(b, i) in p.blocks" :key="i">
-        <section v-if="b.type === 'text'" class="b-text" :class="tone('light')" :data-theme="toneName('light')" :aria-label="b.title || b.label || undefined">
+        <section v-if="b.type === 'text'" class="b-text" :class="tone('light', b)" :style="surfaceStyle(b)" :data-theme="toneName('light', b)" :aria-label="b.title || b.label || undefined">
           <div class="container">
             <p v-if="b.label" v-reveal class="label b-label">{{ b.label }}</p>
             <h2 v-if="b.title" v-reveal class="b-title t-h2">{{ b.title }}</h2>
@@ -172,7 +174,7 @@ const ratio = (id: string) => (media[id] ? media[id].w / media[id].h : 1.5)
         </section>
 
         <!-- gallery images keep their own proportions (no frame crop) with a light drift -->
-        <figure v-else-if="b.type === 'media'" class="b-media" :data-theme="toneName('light')" :class="[tone('light'), `is-${b.layout}`, { 'is-portrait': b.layout === 'full' && ratio(b.images[0]!.id) < 1 }]">
+        <figure v-else-if="b.type === 'media'" class="b-media" :data-theme="toneName('light', b)" :style="surfaceStyle(b)" :class="[tone('light', b), `is-${b.layout}`, { 'is-portrait': b.layout === 'full' && ratio(b.images[0]!.id) < 1 }]">
           <div class="container b-media-grid">
             <div v-for="(img, j) in b.images" :key="img.id" class="b-media-item" :class="`n-${j}`">
               <MediaFrame
@@ -187,7 +189,7 @@ const ratio = (id: string) => (media[id] ? media[id].w / media[id].h : 1.5)
           </div>
         </figure>
 
-        <section v-else-if="b.type === 'list'" class="b-list" :class="tone('dark')" :data-theme="toneName('dark')" :aria-label="b.title || b.label || 'Details'">
+        <section v-else-if="b.type === 'list'" class="b-list" :class="tone('dark', b)" :style="surfaceStyle(b)" :data-theme="toneName('dark', b)" :aria-label="b.title || b.label || 'Details'">
           <div class="container">
             <p v-if="b.label" v-reveal class="label b-label">{{ b.label }}</p>
             <h2 v-if="b.title" v-reveal class="b-title t-h2">{{ b.title }}</h2>
@@ -202,7 +204,7 @@ const ratio = (id: string) => (media[id] ? media[id].w / media[id].h : 1.5)
           </div>
         </section>
 
-        <section v-else-if="b.type === 'palette'" class="b-palette" :class="tone('light')" :data-theme="toneName('light')" aria-label="Colour palette">
+        <section v-else-if="b.type === 'palette'" class="b-palette" :class="tone('light', b)" :style="surfaceStyle(b)" :data-theme="toneName('light', b)" aria-label="Colour palette">
           <ul class="container">
             <li v-for="sw in b.swatches" :key="sw.hex" class="sw">
               <span class="sw-chip" :style="{ background: sw.hex }" />
@@ -295,6 +297,8 @@ const ratio = (id: string) => (media[id] ? media[id].w / media[id].h : 1.5)
 
 /* LIST */
 .b-list { padding: 12vw 0; margin: 6vw 0; }
+/* on a coloured surface the band must stay continuous with its neighbours: margin becomes padding */
+.b-list.theme-surface { margin: 0; padding: 18vw 0; }
 .b-items { grid-column: 2 / 12; margin-top: 5vw; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0 var(--gutter); }
 .b-item { padding: 2vw 0 2.8vw; border-top: 1px solid var(--rule); display: flex; flex-direction: column; gap: 0.8vw; }
 .b-num { color: var(--c-title); font-size: var(--fs-sub); }
@@ -317,7 +321,9 @@ const ratio = (id: string) => (media[id] ? media[id].w / media[id].h : 1.5)
 .b-links { grid-column: 5 / 11; display: flex; flex-wrap: wrap; gap: 0.6vw 2.4vw; margin-top: 2.2vw; color: var(--c-title); }
 .b-credits { padding: 6vw 0 10vw; }
 /* the gaps between paper sections must not show the ink page underneath */
-.case.is-paper { background: var(--c-white); }
+.case.is-paper { background: #ffffff; }
+.case.is-black { background: #000000; }
+.case.is-surface { background: var(--case-surface); }
 /* paper surface: swap the gold-on-ink accents for ink and a deep gold that hold up on white */
 .theme-paper .c-lede, .theme-paper .b-name { color: var(--c-ink); }
 .theme-paper .b-body p:first-child { color: rgba(18, 16, 10, 0.86); }
@@ -387,6 +393,7 @@ const ratio = (id: string) => (media[id] ? media[id].w / media[id].h : 1.5)
   .b-caption { grid-column: 1 / -1; margin: 2vw var(--margin) 0; }
 
   .b-list { padding: 22vw 0; margin: 10vw 0; }
+  .b-list.theme-surface { margin: 0; padding: 32vw 0; }
   .b-items, .b-items.is-words { grid-column: 1 / -1; grid-template-columns: 1fr; margin-top: 10vw; }
   .b-items.is-words { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .b-items.is-chips { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 3vw; }

@@ -4,11 +4,11 @@ import mediaJson from '../../public/media/media.json'
 /** All copy here comes from the legacy Lōn Visuals site (legacy/lon-visuals-final.html). */
 
 export interface MediaRef { id: string, alt: string }
-export interface TextBlock { type: 'text', label: string | null, title: string | null, paras: string[], tags: string[], links?: { label: string, href: string }[] }
-export interface MediaBlock { type: 'media', layout: 'full' | 'pair' | 'trio' | 'grid', images: MediaRef[], caption: string | null }
+export interface TextBlock { type: 'text', label: string | null, title: string | null, paras: string[], tags: string[], links?: { label: string, href: string }[], surface?: string }
+export interface MediaBlock { type: 'media', layout: 'full' | 'pair' | 'trio' | 'grid', images: MediaRef[], caption: string | null, surface?: string }
 export interface ListItem { num?: string, name: string, desc?: string | null, ar?: string, color?: string }
-export interface ListBlock { type: 'list', label: string | null, title: string | null, items: ListItem[] }
-export interface PaletteBlock { type: 'palette', swatches: { hex: string, name: string | null }[] }
+export interface ListBlock { type: 'list', label: string | null, title: string | null, items: ListItem[], surface?: string }
+export interface PaletteBlock { type: 'palette', swatches: { hex: string, name: string | null }[], surface?: string }
 export type Block = TextBlock | MediaBlock | ListBlock | PaletteBlock
 
 export interface Project {
@@ -27,8 +27,10 @@ export interface Project {
   heroDense?: boolean
   /** browser and search title when the default (title — category) runs past ~70 characters */
   seoTitle?: string
-  /** page surface: omitted = the house dark tones, 'paper' = white reading surface */
-  theme?: 'paper'
+  /** page surface: omitted = the house dark tones, 'paper' = pure white, 'black' = pure black */
+  theme?: 'paper' | 'black'
+  /** a dark brand colour for the page surface (hex), e.g. '#06262d'; light text stays as on the house dark */
+  surface?: string
   next: string | null
   credits: { role: string, name: string, href: string | null }[]
   blocks: Block[]
@@ -91,18 +93,18 @@ export const selectedWork: WorkCard[] = [
   { title: 'FNF 40 Years in Jordan', category: 'Anniversary Branding · Foundation', image: 'd654ff251e', slug: 'fnf-jordan-40-years', focus: '50% 45%', more: ['a62419d16c', 'ef7b976ff9', '4a2f8062ee'] },
   { title: 'Sky Falcons', category: 'Visual Identity · Aviation', image: '0f50a57577', slug: 'sky-falcons', more: ['639d8d09d7', 'cfba7fe891', 'a496defa86'] },
   { title: 'Lazure Hospitality', category: 'Brand Identity · Hospitality', image: '3b6d2e3e84', slug: 'lazure', focus: '52% 50%', more: ['f04c0008a2', '34e712ce6e', '22cc8dfc12'] },
-  { title: 'Creativology', category: 'Rebranding · Digital Agency', image: '77376c3732', slug: 'creativology', more: ['cc7cab8295', 'b0cab47322', '8c6c72023f'] },
-  { title: 'Ministry of Foreign Affairs and Expatriates', category: 'Visual Identity · Government', image: 'db0e23ca6f', slug: 'ministry-of-foreign-affairs-jordan', focus: '58% 50%' },
+  { title: 'Creativology', category: 'Rebranding · Digital Agency', image: '0d67b93def', slug: 'creativology', focus: '55% 50%', more: ['77376c3732', 'cc7cab8295', 'b0cab47322', '8c6c72023f'] },
+  { title: 'Ministry of Foreign Affairs and Expatriates', category: 'Visual Identity · Government', image: 'db0e23ca6f', slug: 'ministry-of-foreign-affairs-jordan', focus: '58% 50%', more: ['40a0e0f2bb'] },
   { title: 'Wakers17', category: 'Brand Identity · F&B', image: '9b31bd7444', slug: 'wakers17', focus: '50% 60%', more: ['a16077e013', '8b66e321e7', '28c1c11c00'] },
   { title: 'Sana Interiors', category: 'Brand Identity · Interior Design', image: '66a3bbd3ad', slug: 'sana-interiors', more: ['58d0e9b72f', '4a1980355c', 'c04711e04a'] },
-  { title: 'Rambourg Foundation', category: 'Brand Identity · Foundation', image: '5bcb72c2f7', slug: 'rambourg', focus: '60% 50%', more: ['0beaeaaa38', '4366bfe7e3', '149fdf4649'] },
+  { title: 'Rambourg Fondation', category: 'Brand Identity · Foundation', image: 'd4ea00b977', slug: 'rambourg', focus: '50% 50%', more: ['5bcb72c2f7', '0beaeaaa38', '4366bfe7e3', '149fdf4649'] },
   { title: 'National Cyber Security Center', category: 'Identity · Government', image: 'ee591a3a9d', slug: null, ratio: 'image' },
   { title: 'Zain Alsharaf Center', category: 'Brand Identity · Culture', image: 'f86a45667b', slug: null, ratio: 'image' },
 ]
 
 export const clients = [
   'Joramco', 'Friedrich Naumann Foundation Jordan', 'Rababa', 'National Cyber Security Center', 'NEOM',
-  'Norwegian Refugee Council', 'Globitel', 'Rambourg Foundation', 'DAI', 'UNFPA', 'Omantel', 'Aircraft Marketing',
+  'Norwegian Refugee Council', 'Globitel', 'Rambourg Fondation', 'DAI', 'UNFPA', 'Omantel', 'Aircraft Marketing',
   'SkyFalcons', 'World Health Organization', 'Halcyon', 'Save the Children', 'Art Engine Media & Films', 'Brinc', 'Tabuk', 'Roycelysian',
 ].map((name, i) => ({ name, src: `/clients/${String(i + 1).padStart(2, '0')}.svg` }))
 
