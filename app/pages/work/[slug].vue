@@ -22,8 +22,8 @@ const facts = computed(() => {
   }
   return rows
 })
-/* body sections follow the project's surface: the house dark tones, or paper (white) when `theme: 'paper'` */
-const toneName = (dark: 'dark' | 'light') => (p.theme === 'paper' ? 'paper' : dark)
+/* body sections follow the project's surface: the house dark tones, or one flat surface (`theme: 'paper' | 'black'`) */
+const toneName = (dark: 'dark' | 'light') => p.theme ?? dark
 const tone = (dark: 'dark' | 'light') => `theme-${toneName(dark)}`
 const discipline = computed(() => p.category.split('·')[0]!.trim())
 const plainLede = p.lede.length > 158 ? `${p.lede.slice(0, p.lede.lastIndexOf(' ', 155))}…` : p.lede
@@ -118,7 +118,7 @@ const ratio = (id: string) => (media[id] ? media[id].w / media[id].h : 1.5)
 
 <template>
   <PageShell>
-    <article class="case" :class="{ 'is-paper': p.theme === 'paper' }" :aria-labelledby="'case-title'">
+    <article class="case" :class="p.theme ? `is-${p.theme}` : undefined" :aria-labelledby="'case-title'">
       <!-- HERO -->
       <header ref="hero" class="c-hero theme-dark" data-theme="dark">
         <div ref="heroMedia" class="c-hero-media atmos-soft grain">
@@ -317,7 +317,8 @@ const ratio = (id: string) => (media[id] ? media[id].w / media[id].h : 1.5)
 .b-links { grid-column: 5 / 11; display: flex; flex-wrap: wrap; gap: 0.6vw 2.4vw; margin-top: 2.2vw; color: var(--c-title); }
 .b-credits { padding: 6vw 0 10vw; }
 /* the gaps between paper sections must not show the ink page underneath */
-.case.is-paper { background: var(--c-white); }
+.case.is-paper { background: #ffffff; }
+.case.is-black { background: #000000; }
 /* paper surface: swap the gold-on-ink accents for ink and a deep gold that hold up on white */
 .theme-paper .c-lede, .theme-paper .b-name { color: var(--c-ink); }
 .theme-paper .b-body p:first-child { color: rgba(18, 16, 10, 0.86); }

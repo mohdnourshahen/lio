@@ -289,6 +289,7 @@ def curate(P):
     P.update(HEROES.get(k, {}))
     P['next'] = NAMES.get(P['next'])
     if k == 'skyfalcons':
+        P['theme'] = 'black'  # the identity imagery sits on true black
         P['meta'] = [['Client', 'SkyFalcons — Beyond Limits'], ['Industry', 'Aviation Brokerage'], ['Year', '2023']]
     if k == 'sana-interiors':
         P['meta'] = [['Client', 'Sana Interiors'], ['Location', 'Amman, Jordan'], ['Year', '2025']]

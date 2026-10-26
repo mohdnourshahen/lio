@@ -27,8 +27,8 @@ export interface Project {
   heroDense?: boolean
   /** browser and search title when the default (title — category) runs past ~70 characters */
   seoTitle?: string
-  /** page surface: omitted = the house dark tones, 'paper' = white reading surface */
-  theme?: 'paper'
+  /** page surface: omitted = the house dark tones, 'paper' = pure white, 'black' = pure black */
+  theme?: 'paper' | 'black'
   next: string | null
   credits: { role: string, name: string, href: string | null }[]
   blocks: Block[]
