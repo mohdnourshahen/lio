@@ -97,14 +97,14 @@ export const selectedWork: WorkCard[] = [
   { title: 'Ministry of Foreign Affairs and Expatriates', category: 'Visual Identity · Government', image: 'db0e23ca6f', slug: 'ministry-of-foreign-affairs-jordan', focus: '58% 50%', more: ['40a0e0f2bb'] },
   { title: 'Wakers17', category: 'Brand Identity · F&B', image: '9b31bd7444', slug: 'wakers17', focus: '50% 60%', more: ['a16077e013', '8b66e321e7', '28c1c11c00'] },
   { title: 'Sana Interiors', category: 'Brand Identity · Interior Design', image: '66a3bbd3ad', slug: 'sana-interiors', more: ['58d0e9b72f', '4a1980355c', 'c04711e04a'] },
-  { title: 'Rambourg Foundation', category: 'Brand Identity · Foundation', image: '5bcb72c2f7', slug: 'rambourg', focus: '60% 50%', more: ['0beaeaaa38', '4366bfe7e3', '149fdf4649'] },
+  { title: 'Rambourg Fondation', category: 'Brand Identity · Foundation', image: 'd4ea00b977', slug: 'rambourg', focus: '50% 50%', more: ['5bcb72c2f7', '0beaeaaa38', '4366bfe7e3', '149fdf4649'] },
   { title: 'National Cyber Security Center', category: 'Identity · Government', image: 'ee591a3a9d', slug: null, ratio: 'image' },
   { title: 'Zain Alsharaf Center', category: 'Brand Identity · Culture', image: 'f86a45667b', slug: null, ratio: 'image' },
 ]
 
 export const clients = [
   'Joramco', 'Friedrich Naumann Foundation Jordan', 'Rababa', 'National Cyber Security Center', 'NEOM',
-  'Norwegian Refugee Council', 'Globitel', 'Rambourg Foundation', 'DAI', 'UNFPA', 'Omantel', 'Aircraft Marketing',
+  'Norwegian Refugee Council', 'Globitel', 'Rambourg Fondation', 'DAI', 'UNFPA', 'Omantel', 'Aircraft Marketing',
   'SkyFalcons', 'World Health Organization', 'Halcyon', 'Save the Children', 'Art Engine Media & Films', 'Brinc', 'Tabuk', 'Roycelysian',
 ].map((name, i) => ({ name, src: `/clients/${String(i + 1).padStart(2, '0')}.svg` }))
 

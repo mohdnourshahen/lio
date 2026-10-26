@@ -212,7 +212,7 @@ GALLERY = {
         'fff41ff7c0': (['fff41ff7c0', '6f010493c4'], 'Color system · Sand Gold Pantone 7407C with cool greys — Wordmark on Sand Gold'),
     },
     'rambourg': {
-        '0413343d6f': (['0413343d6f'], 'Logo system · Light and dark background versions — Fondation Rambourg identity'),
+        '0413343d6f': (['0413343d6f'], 'Logo system · Light and dark background versions — Rambourg Fondation identity'),
         '724a21d7b5': (['724a21d7b5'], None),
         '63b724f698': (['63b724f698', '5bcb72c2f7'], 'Print collateral · Branded posters by pillar and bilingual letterhead — Brand experience kit'),
         '4366bfe7e3': (['4366bfe7e3'], 'Merchandise · Tote bags, mugs and passport covers in pillar colours — Brand experience kit'),
@@ -244,11 +244,11 @@ ALTS = {
     '22cc8dfc12': "L'Azure amenities and welcome kit",
     '30d27bd500': 'Sky Falcons falcon symbol in relief',
     '6f010493c4': 'SkyFalcons wordmark on Sand Gold',
-    '0413343d6f': 'Fondation Rambourg logo on light and on blue',
-    '724a21d7b5': 'Fondation Rambourg wordmark on blue paper',
-    '426fe886a7': 'Fondation Rambourg wordmark debossed on paper',
-    '5bcb72c2f7': 'Fondation Rambourg bilingual letterhead',
-    '4366bfe7e3': 'Fondation Rambourg tote bag, mug and passport cover',
+    '0413343d6f': 'Rambourg Fondation logo on light and on blue',
+    '724a21d7b5': 'Rambourg Fondation wordmark on blue paper',
+    '426fe886a7': 'Rambourg Fondation wordmark debossed on paper',
+    '5bcb72c2f7': 'Rambourg Fondation bilingual letterhead',
+    '4366bfe7e3': 'Rambourg Fondation tote bag, mug and passport cover',
     'ca2738edc8': 'Wakers17 orange juice cup',
     '13c4c30fe5': 'Wakers17 cake box packaging',
     '9b31bd7444': 'Wakers17 takeaway coffee cup in hand',
@@ -334,6 +334,10 @@ def curate(P):
                 else:
                     it.update({'num': v[0], 'name': v[1] if len(v) > 1 else '', 'desc': ' '.join(v[2:]) or None})
     P['blocks'] = fix_gallery(k, out)
+    if k == 'rambourg':
+        # the studio presents the client as "Rambourg Fondation"
+        P = json.loads(json.dumps(P, ensure_ascii=False).replace('Fondation Rambourg', 'Rambourg Fondation').replace('Rambourg Foundation', 'Rambourg Fondation'))
+        P['title'] = 'Rambourg Fondation'
     return P
 
 
