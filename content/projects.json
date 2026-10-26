@@ -1839,6 +1839,17 @@
     "type": "media",
     "images": [
      {
+      "id": "367990541e",
+      "alt": "Pencil study of the Ministry name in Thuluth calligraphy on a construction grid"
+     }
+    ],
+    "caption": "Calligraphy · The Ministry name drawn in Thuluth",
+    "layout": "full"
+   },
+   {
+    "type": "media",
+    "images": [
+     {
       "id": "8fd006b13a",
       "alt": "Primary stacked and landscape versions of the Ministry of Foreign Affairs and Expatriates logo"
      }
@@ -1955,6 +1966,37 @@
     "caption": "Digital · The official cover for Facebook, Twitter, LinkedIn and YouTube",
     "layout": "full",
     "surface": "#8E1A16"
+   },
+   {
+    "type": "text",
+    "label": "In Place",
+    "title": "From the gate to the hall",
+    "tags": [],
+    "paras": [
+     "The identity takes its place in the Ministry itself: carved in timber in its halls and set in stone across the gate of its Amman headquarters."
+    ]
+   },
+   {
+    "type": "media",
+    "images": [
+     {
+      "id": "e975fc1a58",
+      "alt": "The Ministry crest and name in relief on a carved wood panel"
+     }
+    ],
+    "caption": "Interior · The crest and name in carved wood",
+    "layout": "full"
+   },
+   {
+    "type": "media",
+    "images": [
+     {
+      "id": "51c1a1e34a",
+      "alt": "Architectural drawing of the Ministry gate in Amman bearing the bilingual identity"
+     }
+    ],
+    "caption": "Architecture · The headquarters gate",
+    "layout": "full"
    },
    {
     "type": "list",
