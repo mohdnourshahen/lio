@@ -1999,6 +1999,41 @@
     "layout": "full"
    },
    {
+    "type": "text",
+    "label": "On the World Stage",
+    "title": "Where the identity speaks",
+    "tags": [],
+    "paras": [
+     "At joint press conferences in Amman, the identity frames the Ministry’s voice: the bilingual lockup repeated across the backdrop, the crest on every podium, consistent in every frame the world’s press carries."
+    ]
+   },
+   {
+    "type": "media",
+    "images": [
+     {
+      "id": "4b853ab255",
+      "alt": "Joint press conference: three foreign ministers at podiums bearing the crest, before the Ministry backdrop"
+     }
+    ],
+    "caption": "Press conference · Backdrop and podiums in the Ministry identity",
+    "layout": "full"
+   },
+   {
+    "type": "media",
+    "images": [
+     {
+      "id": "0a6bc799aa",
+      "alt": "A minister speaking before the Ministry’s bilingual backdrop"
+     },
+     {
+      "id": "2d29c200ef",
+      "alt": "Three ministers at branded podiums during a joint press conference"
+     }
+    ],
+    "caption": "On camera · The identity in every frame",
+    "layout": "pair"
+   },
+   {
     "type": "list",
     "label": "Deliverables",
     "title": "What we delivered",
