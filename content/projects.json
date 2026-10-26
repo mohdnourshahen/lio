@@ -634,6 +634,17 @@
     "layout": "full"
    },
    {
+    "type": "media",
+    "images": [
+     {
+      "id": "ab1c1a45fb",
+      "alt": "The anniversary lockup in white on textured FNF blue"
+     }
+    ],
+    "caption": "In application · White on FNF blue",
+    "layout": "full"
+   },
+   {
     "type": "text",
     "label": "Colour",
     "title": "Blue, magenta and teal",
@@ -677,6 +688,52 @@
      }
     ],
     "caption": "Celebration pattern · Fragments of the 40",
+    "layout": "full"
+   },
+   {
+    "type": "media",
+    "images": [
+     {
+      "id": "fe973c4def",
+      "alt": "Solid celebration pattern in blue, magenta and teal"
+     }
+    ],
+    "caption": "Celebration pattern · Solid",
+    "layout": "full"
+   },
+   {
+    "type": "text",
+    "label": "Print",
+    "title": "Invitations, letters, thanks",
+    "tags": [],
+    "paras": [
+     "The system carries into print: an invitation suite wrapped in the pattern, letterhead that sets the anniversary mark beside the foundation’s own, and an illustrated thank-you card that links Jordan and Germany through their landmarks."
+    ]
+   },
+   {
+    "type": "media",
+    "images": [
+     {
+      "id": "51e60788f6",
+      "alt": "Invitation card and envelopes with the celebration pattern"
+     },
+     {
+      "id": "3bebb4cb41",
+      "alt": "FNF letterhead with the 40th-anniversary mark"
+     }
+    ],
+    "caption": "Print · Invitation suite and letterhead",
+    "layout": "pair"
+   },
+   {
+    "type": "media",
+    "images": [
+     {
+      "id": "1cc1dc1ce8",
+      "alt": "Illustrated thank-you card on a plate, linking Jordanian and German landmarks"
+     }
+    ],
+    "caption": "Illustration · The thank-you card",
     "layout": "full"
    },
    {

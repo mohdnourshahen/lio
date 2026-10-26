@@ -29,6 +29,9 @@ const digit = ref<HTMLElement>()
 const index = ref(0)
 const shown = ref(1)
 
+/* an entry may carry its own focus point after a pipe: '<id>|70% 50%' keeps that part in the frame */
+const idOf = (entry: string) => entry.split('|')[0]!
+const focusOf = (entry: string) => entry.split('|')[1]
 const many = computed(() => props.images.length > 1)
 const aspect = computed(() => props.ratio ?? (media[props.images[0]!] ? media[props.images[0]!]!.w / media[props.images[0]!]!.h : 4 / 5))
 const pad = (n: number) => String(n).padStart(2, '0')
@@ -153,12 +156,12 @@ onBeforeUnmount(() => {
 
 <template>
   <div ref="root" class="cover">
-    <div v-parallax="{ y: travel, scale }" class="media" :style="{ aspectRatio: String(aspect), '--ph': media[images[0]!]?.color }">
+    <div v-parallax="{ y: travel, scale }" class="media" :style="{ aspectRatio: String(aspect), '--ph': media[idOf(images[0]!)]?.color }">
       <div class="media-inner">
         <div ref="zoom" class="zoom">
-          <div v-for="(id, i) in images" :key="id" ref="slides" class="slide" :class="{ 'is-first': i === 0 }">
+          <div v-for="(entry, i) in images" :key="entry" ref="slides" class="slide" :class="{ 'is-first': i === 0 }">
             <div class="slide-img">
-              <MediaImage :id="id" :alt="i === 0 ? alt : ''" :sizes="sizes" :position="i === 0 ? focus : undefined" />
+              <MediaImage :id="idOf(entry)" :alt="i === 0 ? alt : ''" :sizes="sizes" :position="i === 0 ? focus : focusOf(entry)" />
             </div>
           </div>
         </div>
