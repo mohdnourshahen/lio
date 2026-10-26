@@ -2953,21 +2953,24 @@
     "type": "text",
     "label": "Brand Atmosphere",
     "title": "Inspired by material.",
-    "paras": [
-     "The visual atmosphere of Sana Interiors is drawn from the natural architectural materials at the heart of interior design — leather, marble, wood, and concrete. These textures express warmth, depth, and authenticity while reinforcing the brand's semi-luxury, architectural character."
-    ],
+    "paras": [],
     "tags": []
    },
    {
     "type": "media",
+    "layout": "split",
     "images": [
      {
-      "id": "924930f33c",
-      "alt": "Sana Interiors brand atmosphere board: leather, marble, wood and concrete"
+      "id": "0d4a07bf20",
+      "alt": "Sana Interiors material palette"
      }
     ],
-    "caption": "Brand atmosphere · Leather, marble, wood and concrete",
-    "layout": "full"
+    "caption": "Material palette · Leather, marble, wood and concrete",
+    "text": [
+     "The visual atmosphere of Sana Interiors is inspired by natural architectural materials commonly found in interior spaces.",
+     "Textures such as leather, marble, wood and concrete reflect the brand’s balance between refined elegance and contemporary structure. These materials express warmth, depth and authenticity while reinforcing the brand’s semi-luxury and architectural character.",
+     "Together, they create a tactile and sophisticated visual environment that supports the identity across brand imagery and communication."
+    ]
    },
    {
     "type": "media",
@@ -2975,14 +2978,10 @@
      {
       "id": "4a1980355c",
       "alt": "Inspired by nature. Defined by design. — set on walnut"
-     },
-     {
-      "id": "0d4a07bf20",
-      "alt": "Sana Interiors material palette"
      }
     ],
-    "caption": "Inspired by nature · The material palette",
-    "layout": "pair"
+    "caption": "Inspired by nature · Defined by design",
+    "layout": "full"
    },
    {
     "type": "text",

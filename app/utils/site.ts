@@ -5,7 +5,7 @@ import mediaJson from '../../public/media/media.json'
 
 export interface MediaRef { id: string, alt: string }
 export interface TextBlock { type: 'text', label: string | null, title: string | null, paras: string[], tags: string[], links?: { label: string, href: string }[], surface?: string }
-export interface MediaBlock { type: 'media', layout: 'full' | 'pair' | 'trio' | 'grid', images: MediaRef[], caption: string | null, surface?: string }
+export interface MediaBlock { type: 'media', layout: 'full' | 'pair' | 'trio' | 'grid' | 'split', images: MediaRef[], caption: string | null, surface?: string, text?: string[] }
 export interface ListItem { num?: string, name: string, desc?: string | null, ar?: string, color?: string }
 export interface ListBlock { type: 'list', label: string | null, title: string | null, items: ListItem[], surface?: string }
 export interface PaletteBlock { type: 'palette', swatches: { hex: string, name: string | null }[], surface?: string }

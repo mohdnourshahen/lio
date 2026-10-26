@@ -286,7 +286,7 @@ def fix_gallery(k, blocks):
 
 def sana_lower_half(blocks):
     """Studio's order for the lower half of Sana: atmosphere, then print. The four-image collage
-    (7809d7b35e) is dropped at the studio's request; each of its pieces appears on its own."""
+    (7809d7b35e) and the atmosphere board (924930f33c) are dropped at the studio's request."""
     alt = {i['id']: i['alt'] for b in blocks if b['type'] == 'media' for i in b['images']}
     def media(ids, caption):
         return {'type': 'media', 'images': [{'id': i, 'alt': alt[i]} for i in ids], 'caption': caption,
@@ -296,9 +296,14 @@ def sana_lower_half(blocks):
     text = {b.get('label'): b for b in tail if b['type'] == 'text'}
     palette = next(b for b in tail if b['type'] == 'palette')
     return head + [
-        text['Brand Atmosphere'],
-        media(['924930f33c'], 'Brand atmosphere · Leather, marble, wood and concrete'),
-        media(['4a1980355c', '0d4a07bf20'], 'Inspired by nature · The material palette'),
+        {**text['Brand Atmosphere'], 'paras': []},
+        # the atmosphere board repeated the material tiles; its text now sits beside them (studio's request)
+        {'type': 'media', 'layout': 'split', 'images': [{'id': '0d4a07bf20', 'alt': alt['0d4a07bf20']}],
+         'caption': 'Material palette · Leather, marble, wood and concrete', 'text': [
+            'The visual atmosphere of Sana Interiors is inspired by natural architectural materials commonly found in interior spaces.',
+            'Textures such as leather, marble, wood and concrete reflect the brand’s balance between refined elegance and contemporary structure. These materials express warmth, depth and authenticity while reinforcing the brand’s semi-luxury and architectural character.',
+            'Together, they create a tactile and sophisticated visual environment that supports the identity across brand imagery and communication.']},
+        media(['4a1980355c'], 'Inspired by nature · Defined by design'),
         text['Colour Palette'], palette,
         text['Stationery & Print'],
         media(['354d190bb9', '597c5362c7'], 'Letterhead · Taupe, navy and oxblood colourways'),
