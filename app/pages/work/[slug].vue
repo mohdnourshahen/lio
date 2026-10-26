@@ -185,6 +185,9 @@ const ratio = (id: string) => (media[id] ? media[id].w / media[id].h : 1.5)
                 :scale="[1.045, 1.045]"
               />
             </div>
+            <div v-if="b.text?.length" class="b-side">
+              <p v-for="(para, j) in b.text" :key="j" v-reveal class="t-p">{{ para }}</p>
+            </div>
             <figcaption v-if="b.caption" class="b-caption t-small">{{ b.caption }}</figcaption>
           </div>
         </figure>
@@ -287,6 +290,10 @@ const ratio = (id: string) => (media[id] ? media[id].w / media[id].h : 1.5)
 .is-full.is-portrait .n-0, .is-portrait .b-caption { grid-column: 4 / 10; }
 .is-pair .n-0 { grid-column: 2 / 7; margin-top: 8vw; }
 .is-pair .n-1 { grid-column: 7 / 12; }
+/* split: one image with its text alongside */
+.is-split .n-0 { grid-column: 2 / 8; }
+.b-side { grid-column: 9 / 12; align-self: center; display: grid; gap: 1.2em; color: var(--fg-2); }
+.b-side p:first-child { color: var(--fg); }
 .is-trio .b-media-item { grid-column: span 3; }
 .is-trio .n-0 { grid-column: 2 / span 3; }
 .is-trio .n-1 { grid-column: 5 / span 4; margin-top: 6vw; }
@@ -367,6 +374,8 @@ const ratio = (id: string) => (media[id] ? media[id].w / media[id].h : 1.5)
 
 @media (min-width: 601px) and (max-width: 1024px) {
   .is-full.is-portrait .n-0, .is-portrait .b-caption { grid-column: 3 / 11; }
+  .is-split .n-0 { grid-column: 1 / 7; }
+  .b-side { grid-column: 7 / -1; }
 }
 
 @media (max-width: 600px) {
@@ -393,6 +402,8 @@ const ratio = (id: string) => (media[id] ? media[id].w / media[id].h : 1.5)
   .is-trio .n-0, .is-trio .n-1, .is-trio .n-2,
   .is-grid .b-media-item:nth-child(odd), .is-grid .b-media-item:nth-child(even) { grid-column: 1 / -1; margin: 0; }
   .b-caption { grid-column: 1 / -1; margin: 2vw var(--margin) 0; }
+  .is-split .n-0, .b-side { grid-column: 1 / -1; }
+  .b-side { margin: 6vw var(--margin) 0; }
 
   .b-list { padding: 22vw 0; margin: 10vw 0; }
   .b-list.theme-surface { margin: 0; padding: 32vw 0; }
