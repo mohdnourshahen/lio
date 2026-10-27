@@ -183,7 +183,7 @@ TONES = {'blue': '#1847F0', 'green': '#2DAA5E', 'teal': '#00B4C5', 'navy': '#1B2
 HEROES = {
     'zeryab': {'hero': '92b5c6a3f8'},
     'masar': {'hero': '7160f3fd32'},
-    'wakers17': {'hero': 'a16077e013', 'heroMobile': '28c1c11c00'},
+    'wakers17': {'hero': '78df232c2e', 'heroMobile': '9bbadab823'},
     'sana-interiors': {'heroMobile': '58d0e9b72f'},
 }
 
@@ -311,6 +311,65 @@ def sana_lower_half(blocks):
         media(['eb0c0b7f31'], 'Signage · Glass and silver print'),
     ]
 
+
+def wakers_book(blocks):
+    """Wakers17, ordered by its brand book: strategy, personality, brand world, applications.
+    Copy is drawn from the book's text. 270673d184 and aaf4e9f31a are replaced by the studio's
+    sharper versions of the same designs (78df232c2e, now the hero, and 5fe5c99f55)."""
+    old = next(b for b in blocks if b['type'] == 'palette')
+    def img(i, alt): return {'id': i, 'alt': alt}
+    def media(imgs, caption, layout=None):
+        return {'type': 'media', 'images': [img(*x) for x in imgs], 'caption': caption,
+                'layout': layout or {1: 'full', 2: 'pair', 3: 'trio'}[len(imgs)]}
+    def text(label, title, paras):
+        return {'type': 'text', 'label': label, 'title': title, 'paras': paras, 'tags': []}
+    return [
+        text('Brand Strategy', 'Creativity begins here.', [
+            'Wakers17 was imagined as more than bricks and mortar: a Coffee House that grows into an artistic and cultural community, a vibrant hub where creators, thinkers and environmental enthusiasts meet.',
+            'That idea is the strategy behind everything that follows. Every colour, word and touchpoint is made to serve it.']),
+        text('Brand Purpose', 'To inspire creative self-expression.', [
+            'The purpose is to turn a café into a crucible where ideas are conceived, thoughts are nurtured and environmental awareness flourishes, pushing past the boundaries of a typical coffee shop and rippling well beyond its walls.']),
+        media([('7e845d5a09', 'Wakers17 Coffee & Juice landscape logo in white on bright green')], 'Master logo · Landscape lockup'),
+        text('Brand Personality', 'The Confident Adventurer.', [
+            'Wakers17 is built on confidence and an adventurous spirit: a haven for people who move through life with self-assurance and an unquenchable thirst for exploration.',
+            'It meets challenges head-on, embraces the unfamiliar with courage, and invites its guests to step into the unknown, make real connections and seize every moment.']),
+        {'type': 'list', 'label': 'Brand Essence', 'title': 'Our four values', 'items': [
+            {'num': '01', 'name': 'Unyielding Confidence', 'desc': 'Empowering growth through self-assurance.'},
+            {'num': '02', 'name': 'Fearless Exploration', 'desc': 'Embracing the unknown with bold curiosity.'},
+            {'num': '03', 'name': 'Vibrant Engagement', 'desc': 'Connecting hearts, kindling conversations.'},
+            {'num': '04', 'name': 'Enduring Inspiration', 'desc': 'Igniting motivation that stands the test of time.'}]},
+        {'type': 'list', 'label': 'Key Traits', 'title': 'How the brand behaves', 'items': [
+            {'num': '01', 'name': 'Assured', 'desc': 'A space where hesitation is replaced with conviction.'},
+            {'num': '02', 'name': 'Engaging', 'desc': 'Not just a place to sip coffee: an arena to connect and converse.'},
+            {'num': '03', 'name': 'Inspirational', 'desc': 'A catalyst for personal and collective growth.'},
+            {'num': '04', 'name': 'Curious', 'desc': 'Questions, new ideas and wider horizons, in good company.'},
+            {'num': '05', 'name': 'Vibrant', 'desc': 'A lively ambiance, spirited conversation, offerings full of energy.'},
+            {'num': '06', 'name': 'Fearless', 'desc': 'For those who dive into uncharted waters and pursue their passions.'}]},
+        text('Brand World', 'Logotype, logomark, descriptor.', [
+            'The identity is built from three parts: the Wakers17 logotype, the W17 logomark and the Coffee & Juice descriptor. They lock up in landscape and portrait masters, and the mark works solid or in lines.']),
+        media([('f01e224bf2', 'W17 logomark with Coffee & Juice descriptor on deep green'), ('89bb13e565', 'Wakers17 portrait lockup in dimensional relief on a white wall')], 'Logos · Logomark and portrait lockup'),
+        text('Colour', 'A colours map for the menu.', [
+            'The prime palette is a navigation system as much as a look: every colour belongs to a part of the menu, from deep green for hot coffee to orange for fresh juice and lilac for sweets. A quieter secondary palette of peach, deep green, charcoal and teal grey holds it together.']),
+        old,
+        {'type': 'palette', 'swatches': [
+            {'hex': '#f7d2bb', 'name': 'Peach'}, {'hex': '#224541', 'name': 'Deep Green'},
+            {'hex': '#353738', 'name': 'Charcoal'}, {'hex': '#528189', 'name': 'Teal Grey'}]},
+        text('Typography', 'Blue Cashews.', [
+            'A display serif by Aluyeah Studio, with vintage, floral character. Its swashes give Wakers17 its voice, from the logotype to menu names and lines like “Wake up, your coffee is ready!”']),
+        {'type': 'media', 'layout': 'split', 'caption': 'Brand pattern · Morning Windows',
+         'images': [img('83f684ef92', 'Wakers17 Coffee & Juice logo on the Morning Windows pattern')],
+         'text': ['Morning Windows: a geometric pattern of window frames, quiet enough to sit behind the logo and strong enough to carry a surface on its own.']},
+        text('Brand Applications', 'From the cup to the street.', [
+            'The system comes alive on every touchpoint: cups coloured by the colours map, juice campaigns, takeaway packaging, signage and the shopfront itself.']),
+        media([('8b66e321e7', 'Wakers17 iced coffee cup on amber'), ('ca2738edc8', 'Wakers17 orange juice cup on yellow'), ('507c2b5ae0', 'Wakers17 strawberry cup on orange')], 'Cup series · Each colourway follows the colours map'),
+        media([('b0d3a32aec', 'The Big Bang Celery juice campaign: pear, ginger, lemon, spinach, celery and cucumber')], 'Campaign · The Big Bang Celery'),
+        media([('09a546817d', 'Wakers17 glass with juice and mint'), ('b4d67334f0', 'Green Wakers17 paper cup: Wake up, your coffee is ready!')], 'Glass and paper cup · Juice and coffee'),
+        media([('9b31bd7444', 'Wakers17 takeaway coffee cup in hand'), ('13c4c30fe5', 'Wakers17 cake box packaging')], 'Takeaway · Coffee cup and cake box'),
+        media([('8056e282c1', 'Wakers17 sandwich packaging on green'), ('b3d93181b6', 'Wakers17 pillow box packaging on purple')], 'Packaging · Sandwich box and pillow box'),
+        media([('5fe5c99f55', 'W17 Coffee & Juice projecting sign on a stone facade'), ('28c1c11c00', 'Wakers17 sign seen through branches')], 'Signage · The projecting sign'),
+        media([('34da50d446', 'Wakers17 storefront on an Amman street'), ('a16077e013', 'W17 on rainy glass')], 'In the city · Storefront and window'),
+    ]
+
 def curate(P):
     k = P['key']
     P['hero'] = P['hero'][0]
@@ -364,6 +423,10 @@ def curate(P):
     P['blocks'] = fix_gallery(k, out)
     if k == 'sana-interiors':
         P['blocks'] = sana_lower_half(P['blocks'])
+    if k == 'wakers17':
+        P['blocks'] = wakers_book(P['blocks'])
+        P['surface'] = '#224541'  # the brand's deep green
+        P['credits'] = [{'role': 'Design & Art Direction', 'name': "Moh'd Nour Shahen", 'href': None}]
     if k == 'rambourg':
         # the studio presents the client as "Rambourg Fondation"
         P = json.loads(json.dumps(P, ensure_ascii=False).replace('Fondation Rambourg', 'Rambourg Fondation').replace('Rambourg Foundation', 'Rambourg Fondation'))

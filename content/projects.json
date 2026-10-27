@@ -2157,26 +2157,128 @@
     "2023"
    ]
   ],
-  "hero": "a16077e013",
+  "hero": "78df232c2e",
   "info": [],
   "next": "muscat-tech-week",
-  "credits": [],
+  "credits": [
+   {
+    "role": "Design & Art Direction",
+    "name": "Moh'd Nour Shahen",
+    "href": null
+   }
+  ],
   "blocks": [
    {
     "type": "text",
-    "label": "Project Overview",
-    "title": "The Confident Adventurer — a café that wears its personality out loud.",
+    "label": "Brand Strategy",
+    "title": "Creativity begins here.",
     "paras": [
-     "Wakers17 is more than a coffee shop. It's a haven for people who navigate life with self-assurance and an unquenchable thirst for exploration. The brand needed an identity as bold and expressive as its clientele — one that communicates energy, creativity, and belonging from the first glance.",
-     "The identity system spans logo design, colour architecture, packaging, signage, and brand applications — all anchored by the custom typeface Blue Cashews and a multi-colour palette mapped to the menu categories."
+     "Wakers17 was imagined as more than bricks and mortar: a Coffee House that grows into an artistic and cultural community, a vibrant hub where creators, thinkers and environmental enthusiasts meet.",
+     "That idea is the strategy behind everything that follows. Every colour, word and touchpoint is made to serve it."
     ],
     "tags": []
    },
    {
     "type": "text",
-    "label": "Identity System",
-    "title": null,
-    "paras": [],
+    "label": "Brand Purpose",
+    "title": "To inspire creative self-expression.",
+    "paras": [
+     "The purpose is to turn a café into a crucible where ideas are conceived, thoughts are nurtured and environmental awareness flourishes, pushing past the boundaries of a typical coffee shop and rippling well beyond its walls."
+    ],
+    "tags": []
+   },
+   {
+    "type": "media",
+    "images": [
+     {
+      "id": "7e845d5a09",
+      "alt": "Wakers17 Coffee & Juice landscape logo in white on bright green"
+     }
+    ],
+    "caption": "Master logo · Landscape lockup",
+    "layout": "full"
+   },
+   {
+    "type": "text",
+    "label": "Brand Personality",
+    "title": "The Confident Adventurer.",
+    "paras": [
+     "Wakers17 is built on confidence and an adventurous spirit: a haven for people who move through life with self-assurance and an unquenchable thirst for exploration.",
+     "It meets challenges head-on, embraces the unfamiliar with courage, and invites its guests to step into the unknown, make real connections and seize every moment."
+    ],
+    "tags": []
+   },
+   {
+    "type": "list",
+    "label": "Brand Essence",
+    "title": "Our four values",
+    "items": [
+     {
+      "num": "01",
+      "name": "Unyielding Confidence",
+      "desc": "Empowering growth through self-assurance."
+     },
+     {
+      "num": "02",
+      "name": "Fearless Exploration",
+      "desc": "Embracing the unknown with bold curiosity."
+     },
+     {
+      "num": "03",
+      "name": "Vibrant Engagement",
+      "desc": "Connecting hearts, kindling conversations."
+     },
+     {
+      "num": "04",
+      "name": "Enduring Inspiration",
+      "desc": "Igniting motivation that stands the test of time."
+     }
+    ]
+   },
+   {
+    "type": "list",
+    "label": "Key Traits",
+    "title": "How the brand behaves",
+    "items": [
+     {
+      "num": "01",
+      "name": "Assured",
+      "desc": "A space where hesitation is replaced with conviction."
+     },
+     {
+      "num": "02",
+      "name": "Engaging",
+      "desc": "Not just a place to sip coffee: an arena to connect and converse."
+     },
+     {
+      "num": "03",
+      "name": "Inspirational",
+      "desc": "A catalyst for personal and collective growth."
+     },
+     {
+      "num": "04",
+      "name": "Curious",
+      "desc": "Questions, new ideas and wider horizons, in good company."
+     },
+     {
+      "num": "05",
+      "name": "Vibrant",
+      "desc": "A lively ambiance, spirited conversation, offerings full of energy."
+     },
+     {
+      "num": "06",
+      "name": "Fearless",
+      "desc": "For those who dive into uncharted waters and pursue their passions."
+     }
+    ]
+   },
+   {
+    "type": "text",
+    "label": "Brand World",
+    "title": "Logotype, logomark, descriptor.",
+    "paras": [
+     "The identity is built from three parts: the Wakers17 logotype, the W17 logomark and the Coffee & Juice descriptor. They lock up in landscape and portrait masters, and the mark works solid or in lines."
+    ],
     "tags": []
    },
    {
@@ -2184,59 +2286,22 @@
     "images": [
      {
       "id": "f01e224bf2",
-      "alt": "Wakers17 logo dark green"
-     },
-     {
-      "id": "7e845d5a09",
-      "alt": "Wakers17 logo bright green"
-     }
-    ],
-    "caption": null,
-    "layout": "pair"
-   },
-   {
-    "type": "media",
-    "images": [
-     {
-      "id": "270673d184",
-      "alt": "Wakers17 logo gold texture"
+      "alt": "W17 logomark with Coffee & Juice descriptor on deep green"
      },
      {
       "id": "89bb13e565",
-      "alt": "Wakers17 logo 3D wall"
+      "alt": "Wakers17 portrait lockup in dimensional relief on a white wall"
      }
     ],
-    "caption": "Logo system — dark green / bright green / gold emboss / dimensional applications",
+    "caption": "Logos · Logomark and portrait lockup",
     "layout": "pair"
    },
    {
-    "type": "list",
-    "label": "Brand Character",
-    "title": null,
-    "items": [
-     {
-      "num": "01",
-      "name": "Assured",
-      "desc": "Radiates confidence. A space where hesitation is replaced with conviction — and patrons are invited to be unabashedly themselves."
-     },
-     {
-      "num": "02",
-      "name": "Vibrant",
-      "desc": "The colour system is alive. Each menu category owns a distinct hue — from the deep green of hot coffee to the sunlit orange of fresh juice."
-     },
-     {
-      "num": "03",
-      "name": "Fearless",
-      "desc": "Encourages visitors to confront the unfamiliar, embrace the bold, and dive into uncharted waters. A brand built for those who pursue their passions."
-     }
-    ]
-   },
-   {
     "type": "text",
-    "label": "Colour Architecture",
-    "title": null,
+    "label": "Colour",
+    "title": "A colours map for the menu.",
     "paras": [
-     "Each colour maps to a product category — not just a visual system, but a navigational one. The full palette covers coffee, juices, sweets, and food."
+     "The prime palette is a navigation system as much as a look: every colour belongs to a part of the menu, from deep green for hot coffee to orange for fresh juice and lilac for sweets. A quieter secondary palette of peach, deep green, charcoal and teal grey holds it together."
     ],
     "tags": []
    },
@@ -2278,10 +2343,56 @@
     ]
    },
    {
+    "type": "palette",
+    "swatches": [
+     {
+      "hex": "#f7d2bb",
+      "name": "Peach"
+     },
+     {
+      "hex": "#224541",
+      "name": "Deep Green"
+     },
+     {
+      "hex": "#353738",
+      "name": "Charcoal"
+     },
+     {
+      "hex": "#528189",
+      "name": "Teal Grey"
+     }
+    ]
+   },
+   {
     "type": "text",
-    "label": "Packaging",
-    "title": null,
-    "paras": [],
+    "label": "Typography",
+    "title": "Blue Cashews.",
+    "paras": [
+     "A display serif by Aluyeah Studio, with vintage, floral character. Its swashes give Wakers17 its voice, from the logotype to menu names and lines like “Wake up, your coffee is ready!”"
+    ],
+    "tags": []
+   },
+   {
+    "type": "media",
+    "layout": "split",
+    "caption": "Brand pattern · Morning Windows",
+    "images": [
+     {
+      "id": "83f684ef92",
+      "alt": "Wakers17 Coffee & Juice logo on the Morning Windows pattern"
+     }
+    ],
+    "text": [
+     "Morning Windows: a geometric pattern of window frames, quiet enough to sit behind the logo and strong enough to carry a surface on its own."
+    ]
+   },
+   {
+    "type": "text",
+    "label": "Brand Applications",
+    "title": "From the cup to the street.",
+    "paras": [
+     "The system comes alive on every touchpoint: cups coloured by the colours map, juice campaigns, takeaway packaging, signage and the shopfront itself."
+    ],
     "tags": []
    },
    {
@@ -2289,94 +2400,110 @@
     "images": [
      {
       "id": "8b66e321e7",
-      "alt": "Wakers17 iced coffee cup"
+      "alt": "Wakers17 iced coffee cup on amber"
      },
      {
       "id": "ca2738edc8",
-      "alt": "Wakers17 orange juice cup"
+      "alt": "Wakers17 orange juice cup on yellow"
      },
      {
       "id": "507c2b5ae0",
-      "alt": "Wakers17 strawberry cup"
+      "alt": "Wakers17 strawberry cup on orange"
      }
     ],
-    "caption": "Cup series — each colourway maps to a product category in the Colours Map system",
+    "caption": "Cup series · Each colourway follows the colours map",
     "layout": "trio"
+   },
+   {
+    "type": "media",
+    "images": [
+     {
+      "id": "b0d3a32aec",
+      "alt": "The Big Bang Celery juice campaign: pear, ginger, lemon, spinach, celery and cucumber"
+     }
+    ],
+    "caption": "Campaign · The Big Bang Celery",
+    "layout": "full"
    },
    {
     "type": "media",
     "images": [
      {
       "id": "09a546817d",
-      "alt": "Wakers17 glass with juice"
+      "alt": "Wakers17 glass with juice and mint"
      },
      {
-      "id": "aaf4e9f31a",
-      "alt": "Wakers17 street signage"
+      "id": "b4d67334f0",
+      "alt": "Green Wakers17 paper cup: Wake up, your coffee is ready!"
      }
     ],
-    "caption": "Glass · Juice Series — Exterior Signage",
+    "caption": "Glass and paper cup · Juice and coffee",
     "layout": "pair"
    },
    {
-    "type": "text",
-    "label": "Brand Applications",
-    "title": null,
-    "paras": [],
-    "tags": []
+    "type": "media",
+    "images": [
+     {
+      "id": "9b31bd7444",
+      "alt": "Wakers17 takeaway coffee cup in hand"
+     },
+     {
+      "id": "13c4c30fe5",
+      "alt": "Wakers17 cake box packaging"
+     }
+    ],
+    "caption": "Takeaway · Coffee cup and cake box",
+    "layout": "pair"
    },
    {
     "type": "media",
     "images": [
      {
       "id": "8056e282c1",
-      "alt": "Wakers17 sandwich packaging"
+      "alt": "Wakers17 sandwich packaging on green"
      },
      {
       "id": "b3d93181b6",
-      "alt": "Wakers17 pillow box packaging purple"
+      "alt": "Wakers17 pillow box packaging on purple"
      }
     ],
-    "caption": "Packaging system — sandwich box / pillow box gift packaging",
+    "caption": "Packaging · Sandwich box and pillow box",
     "layout": "pair"
    },
    {
     "type": "media",
     "images": [
      {
-      "id": "28c1c11c00",
-      "alt": "Wakers17 signage through branches"
+      "id": "5fe5c99f55",
+      "alt": "W17 Coffee & Juice projecting sign on a stone facade"
      },
      {
+      "id": "28c1c11c00",
+      "alt": "Wakers17 sign seen through branches"
+     }
+    ],
+    "caption": "Signage · The projecting sign",
+    "layout": "pair"
+   },
+   {
+    "type": "media",
+    "images": [
+     {
       "id": "34da50d446",
-      "alt": "Wakers17 storefront Amman"
+      "alt": "Wakers17 storefront on an Amman street"
      },
      {
       "id": "a16077e013",
-      "alt": "Wakers17 logo on rainy glass"
+      "alt": "W17 on rainy glass"
      }
     ],
-    "caption": "In-situ — signage, storefront, and environmental applications",
-    "layout": "trio"
-   },
-   {
-    "type": "media",
-    "images": [
-     {
-      "id": "13c4c30fe5",
-      "alt": "Wakers17 cake box packaging"
-     },
-     {
-      "id": "9b31bd7444",
-      "alt": "Wakers17 takeaway coffee cup in hand"
-     }
-    ],
-    "caption": "Packaging & takeaway — cake box / branded coffee cup",
+    "caption": "In the city · Storefront and window",
     "layout": "pair"
    }
   ],
-  "heroMobile": "28c1c11c00",
-  "year": "2023"
+  "heroMobile": "9bbadab823",
+  "year": "2023",
+  "surface": "#224541"
  },
  {
   "key": "mtw",
