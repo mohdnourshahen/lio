@@ -6,7 +6,10 @@ import { gsap, prefersReducedMotion } from '~/utils/motion'
  * and drifts from a slight zoom back to rest while it holds, so the cover always feels alive
  * without pulling the eye from the title. Reduced motion: the first image, still.
  */
-const props = withDefaults(defineProps<{ images: string[], hold?: number, fade?: number }>(), { hold: 6, fade: 1.8 })
+/* an entry may carry a darkening after a pipe, '<id>|0.35', for busy images that need the title to read */
+const props = withDefaults(defineProps<{ images: string[], hold?: number, fade?: number }>(), { hold: 4.5, fade: 1.8 })
+const idOf = (entry: string) => entry.split('|')[0]!
+const dimOf = (entry: string) => Number(entry.split('|')[1] ?? 0)
 
 const slides = ref<HTMLElement[]>([])
 let index = 0
@@ -60,10 +63,11 @@ onBeforeUnmount(() => {
 
 <template>
   <div class="hero-slides" aria-hidden="true">
-    <div v-for="(id, i) in images" :key="id" ref="slides" class="hero-slide" :class="{ 'is-first': i === 0 }">
+    <div v-for="(entry, i) in images" :key="entry" ref="slides" class="hero-slide" :class="{ 'is-first': i === 0 }">
       <div class="hero-slide-img">
-        <MediaImage :id="id" alt="" sizes="100vw" :eager="i === 0" />
+        <MediaImage :id="idOf(entry)" alt="" sizes="100vw" :eager="i === 0" />
       </div>
+      <div v-if="dimOf(entry)" class="hero-slide-dim" :style="{ opacity: dimOf(entry) }" />
     </div>
   </div>
 </template>
@@ -73,4 +77,5 @@ onBeforeUnmount(() => {
 .hero-slide { position: absolute; inset: 0; overflow: hidden; visibility: hidden; opacity: 0; }
 .hero-slide.is-first { visibility: visible; opacity: 1; }
 .hero-slide-img { width: 100%; height: 100%; will-change: transform; transform-origin: 50% 45%; }
+.hero-slide-dim { position: absolute; inset: 0; background: #000; pointer-events: none; }
 </style>
