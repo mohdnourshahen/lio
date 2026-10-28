@@ -112,3 +112,5 @@ export const clients = [
 ].map((name, i) => ({ name, src: `/clients/${String(i + 1).padStart(2, '0')}.svg` }))
 
 export const HERO_IMAGE = 'b42e0ba664'
+/** Homepage hero sequence, in the studio's order: Duomo di San Gennaro, An Iron Forge, Merian's Rome, the Blue Quran, zellige */
+export const HERO_SLIDES = ['c5aa67204b', '3fea306359', '2fc713ce80', '6ff9f0f345', 'e3eaf56e13']

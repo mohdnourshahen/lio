@@ -2,7 +2,7 @@
 import { EASE, clamp, gsap, isMobileWidth, prefersReducedMotion } from '~/utils/motion'
 import { assetUrl } from '~/utils/assets'
 import { onFrame } from '~/utils/scroll'
-import { HERO_IMAGE, clients, marquee, projects, selectedWork, services, site, stats } from '~/utils/site'
+import { HERO_SLIDES, clients, marquee, projects, selectedWork, services, site, stats } from '~/utils/site'
 
 const workCount = String(selectedWork.length).padStart(2, '0')
 import { appState, introDelay } from '~/utils/state'
@@ -75,7 +75,7 @@ onMounted(() => {
   else heroTl.fromTo(heroMedia.value!, { y: 0, opacity: 1 }, { y: () => hero.value!.offsetHeight / 2, opacity: 0.5, ease: 'none' })
   const lines = heroTitle.value!.querySelectorAll('[data-line]')
   // the image settles from 1.2 as the title rises — the capabilities-deck reveal
-  gsap.fromTo(heroMedia.value!.querySelector('picture'), { scale: 1.2 }, { scale: 1, duration: 2.8, ease: EASE.out, delay: Math.max(0, introDelay() - 0.9) })
+  gsap.fromTo(heroMedia.value!.querySelector('.hero-slides'), { scale: 1.2 }, { scale: 1, duration: 2.8, ease: EASE.out, delay: Math.max(0, introDelay() - 0.9) })
 
   stopHero = onFrame((s) => {
     const r = hero.value!.getBoundingClientRect()
@@ -119,7 +119,7 @@ onBeforeUnmount(() => {
     <!-- HERO — centred, ceremonial: the capabilities-deck cover -->
     <section ref="hero" class="hero theme-dark" data-theme="dark" aria-labelledby="hero-title" data-cursor="Scroll">
       <div ref="heroMedia" class="hero-media atmos grain">
-        <MediaImage :id="HERO_IMAGE" alt="" sizes="100vw" eager />
+        <HeroSlides :images="HERO_SLIDES" />
       </div>
       <div class="hero-vignette" aria-hidden="true" />
       <div class="hero-inner">
@@ -285,7 +285,8 @@ onBeforeUnmount(() => {
 .hero { height: calc(var(--vh) * 100); min-height: 600px; overflow: hidden; display: flex; flex-direction: column; }
 .hero-media { position: absolute; inset: 0; will-change: transform, opacity; overflow: hidden; }
 .hero-media :deep(picture), .hero-media :deep(img) { width: 100%; height: 100%; object-fit: cover; object-position: center 30%; }
-.hero-media :deep(picture) { display: block; transform-origin: 50% 40%; }
+.hero-media :deep(picture) { display: block; }
+.hero-media :deep(.hero-slides) { transform-origin: 50% 40%; }
 .hero-vignette {
   position: absolute; inset: 0;
   background:
