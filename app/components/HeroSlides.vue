@@ -7,7 +7,8 @@ import { gsap, prefersReducedMotion } from '~/utils/motion'
  * without pulling the eye from the title. Reduced motion: the first image, still.
  */
 /* an entry may carry a darkening after a pipe, '<id>|0.35', for busy images that need the title to read */
-const props = withDefaults(defineProps<{ images: string[], hold?: number, fade?: number }>(), { hold: 4.5, fade: 1.8 })
+/* firstHold: the opening image stays a little longer while the page introduces itself */
+const props = withDefaults(defineProps<{ images: string[], hold?: number, firstHold?: number, fade?: number }>(), { hold: 3.5, firstHold: 4, fade: 1.8 })
 const idOf = (entry: string) => entry.split('|')[0]!
 const dimOf = (entry: string) => Number(entry.split('|')[1] ?? 0)
 
@@ -20,7 +21,8 @@ function show(i: number, first = false) {
   const img = el.firstElementChild
   gsap.set(slides.value, { zIndex: 0 })
   gsap.set(el, { zIndex: 1 })
-  gsap.fromTo(img, { scale: 1.08 }, { scale: 1, duration: props.hold + props.fade, ease: 'none', overwrite: true })
+  const hold = i === 0 ? props.firstHold : props.hold
+  gsap.fromTo(img, { scale: 1.08 }, { scale: 1, duration: hold + props.fade, ease: 'none', overwrite: true })
   if (first) gsap.set(el, { autoAlpha: 1 })
   else {
     const prev = slides.value[(i - 1 + slides.value.length) % slides.value.length]!
@@ -34,7 +36,7 @@ function show(i: number, first = false) {
 function next() {
   index = (index + 1) % props.images.length
   show(index)
-  timer = gsap.delayedCall(props.hold, next)
+  timer = gsap.delayedCall(index === 0 ? props.firstHold : props.hold, next)
 }
 
 /* a hidden tab should not race through the sequence on return */
@@ -51,7 +53,7 @@ onMounted(() => {
     gsap.set(slides.value[0]!.firstElementChild, { scale: 1 })
     return
   }
-  timer = gsap.delayedCall(props.hold, next)
+  timer = gsap.delayedCall(props.firstHold, next)
   document.addEventListener('visibilitychange', onVisibility)
 })
 onBeforeUnmount(() => {
