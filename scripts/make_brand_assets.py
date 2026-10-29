@@ -61,7 +61,7 @@ def main():
         tile.save(PUB / 'favicon.ico', sizes=[(16, 16), (32, 32), (48, 48)])
 
         pg = b.new_page(viewport={'width': 1200, 'height': 630})
-        cards = [('home', 'b42e0ba664', 'Visual Strategy Studio · Amman', 'We translate brands<br>into <em>visual language</em>', 'Strategic brand &amp; visual communication studio')]
+        cards = [('home', 'c5aa67204b', 'Visual Strategy Studio · Amman', 'We translate brands<br>into <em>visual language</em>', 'Strategic brand &amp; visual communication studio')]
         cards += [(pr['slug'], pr['hero'], 'Case study' + (f" · {pr['year']}" if pr['year'] else ''), pr['title'], pr['category']) for pr in projects]
         for slug, iid, kicker, title, sub in cards:
             # loaded from a file URL so the page may read local fonts and images

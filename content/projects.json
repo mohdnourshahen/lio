@@ -2474,31 +2474,27 @@
     "type": "media",
     "images": [
      {
-      "id": "5fe5c99f55",
-      "alt": "W17 Coffee & Juice projecting sign on a stone facade"
-     },
-     {
       "id": "28c1c11c00",
       "alt": "Wakers17 sign seen through branches"
+     },
+     {
+      "id": "34da50d446",
+      "alt": "Wakers17 storefront on an Amman street"
      }
     ],
-    "caption": "Signage · The projecting sign",
+    "caption": "Signage · The projecting sign and the storefront",
     "layout": "pair"
    },
    {
     "type": "media",
     "images": [
      {
-      "id": "34da50d446",
-      "alt": "Wakers17 storefront on an Amman street"
-     },
-     {
       "id": "a16077e013",
       "alt": "W17 on rainy glass"
      }
     ],
-    "caption": "In the city · Storefront and window",
-    "layout": "pair"
+    "caption": "In the city · W17 on the window",
+    "layout": "full"
    }
   ],
   "heroMobile": "9bbadab823",
@@ -2881,16 +2877,12 @@
     "type": "media",
     "images": [
      {
-      "id": "452a5eab07",
-      "alt": "Delegate badge and lanyard with the Pitlane Live and mtw lockup"
-     },
-     {
       "id": "4757945f59",
       "alt": "Stacked branded cubes with the mtw logo and Pitlane Live"
      }
     ],
-    "caption": "On site · Badge, lanyard and installations",
-    "layout": "pair"
+    "caption": "On site · Branded installations",
+    "layout": "full"
    },
    {
     "type": "list",
