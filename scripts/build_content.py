@@ -315,7 +315,8 @@ def sana_lower_half(blocks):
 def wakers_book(blocks):
     """Wakers17, ordered by its brand book: strategy, personality, brand world, applications.
     Copy is drawn from the book's text. 270673d184 and aaf4e9f31a are replaced by the studio's
-    sharper versions of the same designs (78df232c2e, now the hero, and 5fe5c99f55)."""
+    sharper version of the same design (78df232c2e, now the hero). The projecting-sign render
+    (5fe5c99f55, aaf4e9f31a) is left out at the studio's request: its artwork misspells Juice."""
     old = next(b for b in blocks if b['type'] == 'palette')
     def img(i, alt): return {'id': i, 'alt': alt}
     def media(imgs, caption, layout=None):
@@ -366,8 +367,8 @@ def wakers_book(blocks):
         media([('09a546817d', 'Wakers17 glass with juice and mint'), ('b4d67334f0', 'Green Wakers17 paper cup: Wake up, your coffee is ready!')], 'Glass and paper cup · Juice and coffee'),
         media([('9b31bd7444', 'Wakers17 takeaway coffee cup in hand'), ('13c4c30fe5', 'Wakers17 cake box packaging')], 'Takeaway · Coffee cup and cake box'),
         media([('8056e282c1', 'Wakers17 sandwich packaging on green'), ('b3d93181b6', 'Wakers17 pillow box packaging on purple')], 'Packaging · Sandwich box and pillow box'),
-        media([('5fe5c99f55', 'W17 Coffee & Juice projecting sign on a stone facade'), ('28c1c11c00', 'Wakers17 sign seen through branches')], 'Signage · The projecting sign'),
-        media([('34da50d446', 'Wakers17 storefront on an Amman street'), ('a16077e013', 'W17 on rainy glass')], 'In the city · Storefront and window'),
+        media([('28c1c11c00', 'Wakers17 sign seen through branches'), ('34da50d446', 'Wakers17 storefront on an Amman street')], 'Signage · The projecting sign and the storefront'),
+        media([('a16077e013', 'W17 on rainy glass')], 'In the city · W17 on the window'),
     ]
 
 def curate(P):

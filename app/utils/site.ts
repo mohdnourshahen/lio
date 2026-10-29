@@ -102,7 +102,6 @@ export const selectedWork: WorkCard[] = [
   { title: 'Sana Interiors', category: 'Brand Identity · Interior Design', image: '4e29c410bb', slug: 'sana-interiors', more: ['66a3bbd3ad', '58d0e9b72f', '4a1980355c', 'c04711e04a'] },
   { title: 'Rambourg Fondation', category: 'Brand Identity · Foundation', image: 'd4ea00b977', slug: 'rambourg', focus: '50% 50%', more: ['5bcb72c2f7', '0beaeaaa38', '4366bfe7e3', '149fdf4649'] },
   { title: 'National Cyber Security Center', category: 'Identity · Government', image: 'ee591a3a9d', slug: null, ratio: 'image' },
-  { title: 'Zain Alsharaf Center', category: 'Brand Identity · Culture', image: 'f86a45667b', slug: null, ratio: 'image' },
 ]
 
 export const clients = [
@@ -111,7 +110,8 @@ export const clients = [
   'SkyFalcons', 'World Health Organization', 'Halcyon', 'Save the Children', 'Art Engine Media & Films', 'Brinc', 'Tabuk', 'Roycelysian',
 ].map((name, i) => ({ name, src: `/clients/${String(i + 1).padStart(2, '0')}.svg` }))
 
-export const HERO_IMAGE = 'b42e0ba664'
+/** menu and social card image: the first image of the hero sequence */
+export const HERO_IMAGE = 'c5aa67204b'
 /** Homepage hero sequence, in the studio's order: Duomo di San Gennaro, An Iron Forge, Merian's Rome, the Blue Quran, zellige.
  *  The last three are busy: '|0.4' darkens them so the title reads */
 export const HERO_SLIDES = ['c5aa67204b', '3fea306359', '2fc713ce80|0.4', '6ff9f0f345|0.4', 'e3eaf56e13|0.45']
