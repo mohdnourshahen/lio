@@ -3552,6 +3552,18 @@
     "theme": "paper"
    },
    {
+    "type": "media",
+    "images": [
+     {
+      "id": "4ad2a723e0",
+      "alt": "The NCSC heptagram drawn in fine line on a dotted grid, each segment filled with binary, network, fingerprint and circuit patterns"
+     }
+    ],
+    "caption": "The symbol · Four patterns, one star",
+    "layout": "full",
+    "theme": "paper"
+   },
+   {
     "type": "text",
     "label": "The Process",
     "title": "From shield to star",
@@ -3583,18 +3595,6 @@
      }
     ],
     "caption": "Evolution · The heptagram, study by study",
-    "layout": "full",
-    "theme": "paper"
-   },
-   {
-    "type": "media",
-    "images": [
-     {
-      "id": "4ad2a723e0",
-      "alt": "The NCSC heptagram drawn in fine line on a dotted grid, each segment filled with binary, network, fingerprint and circuit patterns"
-     }
-    ],
-    "caption": "The symbol · Four patterns, one star",
     "layout": "full",
     "theme": "paper"
    },
