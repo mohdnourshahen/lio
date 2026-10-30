@@ -3630,7 +3630,8 @@
     ],
     "caption": "Logo system and typography · Portrait, landscape left and right",
     "layout": "full",
-    "theme": "paper"
+    "theme": "paper",
+    "wide": true
    },
    {
     "type": "list",
@@ -3717,7 +3718,8 @@
      }
     ],
     "caption": "Stationery, digital, fleet and events",
-    "layout": "full"
+    "layout": "full",
+    "wide": true
    },
    {
     "type": "media",
