@@ -3549,6 +3549,38 @@
     ]
    },
    {
+    "type": "text",
+    "label": "The Process",
+    "title": "From shield to star",
+    "tags": [],
+    "paras": [
+     "The route to the final mark ran through five stages: from a map of the Kingdom, to shields, seals and the royal emblem, to a circuit-drawn shield, before the seven-pointed star emerged as the one symbol that could carry the nation and the network at once.",
+     "The star itself was then refined through successive studies of division, colour and pattern, until four parts in the colours of the flag settled into the final heptagram."
+    ]
+   },
+   {
+    "type": "media",
+    "images": [
+     {
+      "id": "0f36c0c6cd",
+      "alt": "First stages of the NCSC logo, from the previous mark through five rounds of exploration to the final logo"
+     }
+    ],
+    "caption": "First stages · From the previous mark to the final logo",
+    "layout": "full"
+   },
+   {
+    "type": "media",
+    "images": [
+     {
+      "id": "f4419031db",
+      "alt": "Evolution of the heptagram star through six studies of division, colour and pattern, beside the final star"
+     }
+    ],
+    "caption": "Evolution · The heptagram, study by study",
+    "layout": "full"
+   },
+   {
     "type": "media",
     "images": [
      {
