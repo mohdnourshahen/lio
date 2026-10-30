@@ -23,8 +23,9 @@ const facts = computed(() => {
   return rows
 })
 /* body sections follow the project's surface: the house dark tones, or one flat surface (`theme: 'paper' | 'black'`) */
-const toneName = (dark: 'dark' | 'light', b?: { surface?: string }) => (b?.surface || p.surface) ? 'surface' : (p.theme ?? dark)
-const tone = (dark: 'dark' | 'light', b?: { surface?: string }) => `theme-${toneName(dark, b)}`
+/* a block may also step onto paper (`theme: 'paper'`) inside a coloured case, e.g. a white opening before the surface takes over */
+const toneName = (dark: 'dark' | 'light', b?: { surface?: string, theme?: 'paper' }) => b?.theme ?? ((b?.surface || p.surface) ? 'surface' : (p.theme ?? dark))
+const tone = (dark: 'dark' | 'light', b?: { surface?: string, theme?: 'paper' }) => `theme-${toneName(dark, b)}`
 /* a block may take its own dark colour (e.g. MFA maroon between white sections) */
 const surfaceStyle = (b: { surface?: string }) => (b.surface ? { '--case-surface': b.surface } : undefined)
 const discipline = computed(() => p.category.split('·')[0]!.trim())
@@ -143,7 +144,7 @@ const ratio = (id: string) => (media[id] ? media[id].w / media[id].h : 1.5)
       </header>
 
       <!-- INTRO -->
-      <section class="c-intro" :class="tone('dark')" :data-theme="toneName('dark')" aria-label="Project overview">
+      <section class="c-intro" :class="tone('dark', { theme: p.introTheme })" :data-theme="toneName('dark', { theme: p.introTheme })" aria-label="Project overview">
         <div class="container">
           <p v-reveal class="c-lede t-h3">{{ p.lede }}</p>
           <dl class="c-facts">

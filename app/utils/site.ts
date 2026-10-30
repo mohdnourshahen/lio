@@ -4,11 +4,11 @@ import mediaJson from '../../public/media/media.json'
 /** All copy here comes from the legacy Lōn Visuals site (legacy/lon-visuals-final.html). */
 
 export interface MediaRef { id: string, alt: string }
-export interface TextBlock { type: 'text', label: string | null, title: string | null, paras: string[], tags: string[], links?: { label: string, href: string }[], surface?: string }
-export interface MediaBlock { type: 'media', layout: 'full' | 'pair' | 'trio' | 'grid' | 'split', images: MediaRef[], caption: string | null, surface?: string, text?: string[] }
+export interface TextBlock { type: 'text', label: string | null, title: string | null, paras: string[], tags: string[], links?: { label: string, href: string }[], surface?: string, theme?: 'paper' }
+export interface MediaBlock { type: 'media', layout: 'full' | 'pair' | 'trio' | 'grid' | 'split', images: MediaRef[], caption: string | null, surface?: string, theme?: 'paper', text?: string[] }
 export interface ListItem { num?: string, name: string, desc?: string | null, ar?: string, color?: string }
-export interface ListBlock { type: 'list', label: string | null, title: string | null, items: ListItem[], surface?: string }
-export interface PaletteBlock { type: 'palette', swatches: { hex: string, name: string | null }[], surface?: string }
+export interface ListBlock { type: 'list', label: string | null, title: string | null, items: ListItem[], surface?: string, theme?: 'paper' }
+export interface PaletteBlock { type: 'palette', swatches: { hex: string, name: string | null }[], surface?: string, theme?: 'paper' }
 export type Block = TextBlock | MediaBlock | ListBlock | PaletteBlock
 
 export interface Project {
@@ -33,6 +33,8 @@ export interface Project {
   theme?: 'paper' | 'black'
   /** a dark brand colour for the page surface (hex), e.g. '#06262d'; light text stays as on the house dark */
   surface?: string
+  /** the overview (lede and facts) on paper while the body keeps the surface */
+  introTheme?: 'paper'
   next: string | null
   credits: { role: string, name: string, href: string | null }[]
   blocks: Block[]
