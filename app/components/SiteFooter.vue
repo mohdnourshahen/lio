@@ -2,7 +2,7 @@
 import { nav, site } from '~/utils/site'
 
 /** Contact + footer — Exo Ape's closing "Our Story" block, carrying Lōn's contact section. */
-const year = 2025
+const year = 2026
 </script>
 
 <template>
