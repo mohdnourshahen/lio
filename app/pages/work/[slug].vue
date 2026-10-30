@@ -175,7 +175,7 @@ const ratio = (id: string) => (media[id] ? media[id].w / media[id].h : 1.5)
         </section>
 
         <!-- gallery images keep their own proportions (no frame crop) with a light drift -->
-        <figure v-else-if="b.type === 'media'" class="b-media" :data-theme="toneName('light', b)" :style="surfaceStyle(b)" :class="[tone('light', b), `is-${b.layout}`, { 'is-portrait': b.layout === 'full' && ratio(b.images[0]!.id) < 1 }]">
+        <figure v-else-if="b.type === 'media'" class="b-media" :data-theme="toneName('light', b)" :style="surfaceStyle(b)" :class="[tone('light', b), `is-${b.layout}`, { 'is-portrait': b.layout === 'full' && !b.wide && ratio(b.images[0]!.id) < 1 }]">
           <div class="container b-media-grid">
             <div v-for="(img, j) in b.images" :key="img.id" class="b-media-item" :class="`n-${j}`">
               <MediaFrame

@@ -3552,6 +3552,18 @@
     "theme": "paper"
    },
    {
+    "type": "media",
+    "images": [
+     {
+      "id": "4ad2a723e0",
+      "alt": "The NCSC heptagram drawn in fine line on a dotted grid, each segment filled with binary, network, fingerprint and circuit patterns"
+     }
+    ],
+    "caption": "The symbol · Four patterns, one star",
+    "layout": "full",
+    "theme": "paper"
+   },
+   {
     "type": "text",
     "label": "The Process",
     "title": "From shield to star",
@@ -3590,18 +3602,6 @@
     "type": "media",
     "images": [
      {
-      "id": "4ad2a723e0",
-      "alt": "The NCSC heptagram drawn in fine line on a dotted grid, each segment filled with binary, network, fingerprint and circuit patterns"
-     }
-    ],
-    "caption": "The symbol · Four patterns, one star",
-    "layout": "full",
-    "theme": "paper"
-   },
-   {
-    "type": "media",
-    "images": [
-     {
       "id": "489c86c9bd",
       "alt": "The National Cyber Security Center logo in red, black, white and green, mounted in relief on a textured wall"
      }
@@ -3630,7 +3630,8 @@
     ],
     "caption": "Logo system and typography · Portrait, landscape left and right",
     "layout": "full",
-    "theme": "paper"
+    "theme": "paper",
+    "wide": true
    },
    {
     "type": "list",
@@ -3717,7 +3718,8 @@
      }
     ],
     "caption": "Stationery, digital, fleet and events",
-    "layout": "full"
+    "layout": "full",
+    "wide": true
    },
    {
     "type": "media",
