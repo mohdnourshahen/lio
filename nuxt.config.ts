@@ -8,6 +8,7 @@ import projects from './content/projects.json'
  * every asset inlined. The default build is the static site served by nginx on Fly.io.
  */
 const offline = process.env.LON_OFFLINE === '1'
+const GA_ID = 'G-N31DVNBJV4'
 
 export default defineNuxtConfig({
   compatibilityDate: '2026-10-01',
@@ -53,7 +54,15 @@ export default defineNuxtConfig({
         { rel: 'alternate', type: 'text/markdown', href: '/llms.txt', title: 'llms.txt' },
       ],
       // Flags the document before hydration so the preloader and hidden reveal states never flash.
-      script: [{ innerHTML: "document.documentElement.classList.add('js')", tagPosition: 'head' }],
+      script: [
+        { innerHTML: "document.documentElement.classList.add('js')", tagPosition: 'head' },
+        // Google Analytics 4 on every page of the live site; GA's enhanced measurement records the
+        // client-side route changes between pages. Not in the offline file edition.
+        ...(offline ? [] : [
+          { src: `https://www.googletagmanager.com/gtag/js?id=${GA_ID}`, async: true, tagPosition: 'head' as const },
+          { innerHTML: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${GA_ID}');`, tagPosition: 'head' as const },
+        ]),
+      ],
     },
   },
 

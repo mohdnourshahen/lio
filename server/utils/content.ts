@@ -6,9 +6,10 @@ export interface ServerProject {
   category: string
   lede: string
   year: string
+  hero: string
   meta: [string, string][]
   info: [string, string][]
-  blocks: { type: string, label?: string | null, title?: string | null, paras?: string[], tags?: string[], items?: { num?: string, name: string, desc?: string | null }[] }[]
+  blocks: { type: string, images?: { id: string, alt?: string }[], label?: string | null, title?: string | null, paras?: string[], tags?: string[], items?: { num?: string, name: string, desc?: string | null }[] }[]
 }
 
 export const projects = projectsJson as unknown as ServerProject[]

@@ -43,6 +43,7 @@ useSeo({
   type: 'article',
   jsonLd: [
     organizationLd(base),
+    founderLd(base),
     {
       '@type': 'CreativeWork',
       '@id': `${url}#work`,
@@ -50,10 +51,11 @@ useSeo({
       'headline': `${p.title} — ${p.category}`,
       'description': p.lede,
       'url': url,
-      'image': [`${base}/og/${p.slug}.jpg`],
+      'image': [`${base}/og/${p.slug}.jpg`, ...[...new Set([p.hero, ...p.blocks.flatMap(b => (b.type === 'media' ? b.images.map(i => i.id) : []))])].slice(0, 12).map(id => `${base}/media/${id}-${Math.max(...(media[id]?.widths ?? [960]))}.webp`)],
       'genre': p.category,
       'dateCreated': p.year || undefined,
-      'creator': { '@id': `${base}/#organization` },
+      'creator': [{ '@id': `${base}/#organization` }, { '@id': `${base}/#founder` }],
+      'sourceOrganization': facts.value.find(([k]) => k === 'Client') ? { '@type': 'Organization', 'name': facts.value.find(([k]) => k === 'Client')![1] } : undefined,
       'publisher': { '@id': `${base}/#organization` },
       'keywords': p.blocks.flatMap(b => (b.type === 'text' ? b.tags : [])).join(', ') || undefined,
       'locationCreated': facts.value.find(([k]) => k === 'Location')?.[1],
