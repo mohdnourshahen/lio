@@ -101,7 +101,7 @@ export const selectedWork: WorkCard[] = [
   { title: 'Muscat Tech Week', category: 'Event Identity · Technology', image: 'c234e70cb6', slug: 'muscat-tech-week', ratio: 'image', more: ['3ed6f77d67|62% 50%', '2eb55710f4', 'b9fc95f3b7'] },
   { title: 'Sana Interiors', category: 'Brand Identity · Interior Design', image: '4e29c410bb', slug: 'sana-interiors', more: ['66a3bbd3ad', '58d0e9b72f', '4a1980355c', 'c04711e04a'] },
   { title: 'Rambourg Fondation', category: 'Brand Identity · Foundation', image: 'd4ea00b977', slug: 'rambourg', focus: '50% 50%', more: ['5bcb72c2f7', '0beaeaaa38', '4366bfe7e3', '149fdf4649'] },
-  { title: 'National Cyber Security Center', category: 'Identity · Government', image: 'ee591a3a9d', slug: null, ratio: 'image' },
+  { title: 'National Cyber Security Center', category: 'Identity · Government', image: 'ee591a3a9d', slug: 'national-cyber-security-center', ratio: 'image', more: ['4ad2a723e0', '60db31f31a', 'e1505cf932'] },
 ]
 
 export const clients = [

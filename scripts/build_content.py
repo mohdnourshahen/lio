@@ -435,7 +435,7 @@ def curate(P):
     return P
 
 
-ORDER = ['zeryab', 'masar', 'fnf', 'skyfalcons', 'lazure', 'creativology', 'mofa', 'wakers17', 'mtw', 'sana-interiors', 'rambourg']
+ORDER = ['zeryab', 'masar', 'fnf', 'skyfalcons', 'lazure', 'creativology', 'mofa', 'wakers17', 'mtw', 'sana-interiors', 'rambourg', 'ncsc']
 projects = {p['key']: curate(p) for p in (proj(f) for f in sorted(os.listdir(clean)) if f.endswith('-project.html'))}
 # case studies written directly as JSON (no legacy page): content/manual/<key>.json, already in final shape
 manual = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'content', 'manual')
@@ -443,7 +443,7 @@ for f in sorted(os.listdir(manual)):
     m = json.load(open(os.path.join(manual, f)))
     projects[m['key']] = m
 # "Next project" follows the homepage order (app/utils/site.ts), looping back to the first
-CHAIN = ['zeryab', 'masar', 'fnf', 'skyfalcons', 'lazure', 'creativology', 'mofa', 'wakers17', 'mtw', 'sana-interiors', 'rambourg']
+CHAIN = ['zeryab', 'masar', 'fnf', 'skyfalcons', 'lazure', 'creativology', 'mofa', 'wakers17', 'mtw', 'sana-interiors', 'rambourg', 'ncsc']
 for a, b in zip(CHAIN, CHAIN[1:] + CHAIN[:1]):
     projects[a]['next'] = projects[b]['slug']
 out = [projects[k] for k in ORDER]
