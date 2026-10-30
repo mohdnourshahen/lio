@@ -33,6 +33,23 @@ export function organizationLd(base: string) {
     'knowsAbout': ['Brand strategy', 'Visual identity', 'Brand systems', 'Creative direction', 'Communication design', 'Print and editorial design', 'Brand experience'],
     'knowsLanguage': ['en', 'ar'],
     'sameAs': site.socials.map(s => s.href),
+    'founder': { '@id': `${base}/#founder` },
+    'foundingLocation': { '@type': 'Place', 'name': 'Amman, Jordan' },
+    'contactPoint': { '@type': 'ContactPoint', 'contactType': 'new business', 'email': site.email, 'availableLanguage': ['English', 'Arabic'] },
+  }
+}
+
+/** The studio's founder and creative director: named authorship behind the work (E-E-A-T). */
+export function founderLd(base: string) {
+  return {
+    '@type': 'Person',
+    '@id': `${base}/#founder`,
+    'name': "Moh'd Nour Shahen",
+    'alternateName': 'Mohammad Nour Shahein',
+    'jobTitle': 'Creative Director & Founder',
+    'worksFor': { '@id': `${base}/#organization` },
+    'knowsAbout': ['Brand strategy', 'Visual identity', 'Art direction', 'Creative direction'],
+    'knowsLanguage': ['en', 'ar'],
   }
 }
 

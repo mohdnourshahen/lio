@@ -10,13 +10,14 @@ import { appState, introDelay } from '~/utils/state'
 const NuxtLink = resolveComponent('NuxtLink')
 const base = useSiteUrl()
 useSeo({
-  title: 'Lōn Visuals — Visual Strategy Studio in Amman, Jordan',
-  description: 'Lōn Visuals is a visual strategy studio in Amman, Jordan, translating brands into visual language: brand strategy, identity, design and experience.',
+  title: 'Lōn Visuals — Branding & Visual Identity Studio in Amman, Jordan',
+  description: 'Branding and visual identity studio in Amman, Jordan: brand strategy, identity systems, guidelines and brand experience for leading organizations across MENA.',
   path: '/',
   ogImage: 'home.jpg',
   ogImageAlt: 'Lōn Visuals — We translate brands into visual language',
   jsonLd: [
     organizationLd(base),
+    founderLd(base),
     {
       '@type': 'WebSite',
       '@id': `${base}/#website`,
