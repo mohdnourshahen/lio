@@ -3527,7 +3527,8 @@
     "paras": [
      "Established under Cyber Security Law No. 16 of 2019, the National Cyber Security Center is the government body charged with building, developing and regulating an effective national framework that protects the Kingdom's cyberspace from threats.",
      "Its vision is a secure, trusted and resilient Jordanian cyberspace, and its work reaches across every sector: training and educating people to strengthen the country's resilience, and positioning Jordan as a regional and global leader in cyber security."
-    ]
+    ],
+    "theme": "paper"
    },
    {
     "type": "text",
@@ -3536,7 +3537,8 @@
     "tags": [],
     "paras": [
      "A new centre needed a brand that could speak for the state in a domain without borders. The identity had to carry national authority and technological conviction at once, and hold its ground everywhere the Centre appears, from an official letter to a summit stage."
-    ]
+    ],
+    "theme": "paper"
    },
    {
     "type": "text",
@@ -3546,7 +3548,43 @@
     "paras": [
      "The symbol starts from the seven-pointed star of the Jordanian flag, the mark of the nation, and divides it into four parts. Each part is drawn from the language of the field it protects: binary code for data, a mesh of nodes for connection, a circuit for protection and a fingerprint for identity.",
      "Together they describe a single effective system of cyber security working at the scale of the Kingdom, and an opening at the centre, a star held within the star, keeps the national emblem whole."
-    ]
+    ],
+    "theme": "paper"
+   },
+   {
+    "type": "text",
+    "label": "The Process",
+    "title": "From shield to star",
+    "tags": [],
+    "paras": [
+     "The route to the final mark ran through five stages: from a map of the Kingdom, to shields, seals and the royal emblem, to a circuit-drawn shield, before the seven-pointed star emerged as the one symbol that could carry the nation and the network at once.",
+     "The star itself was then refined through successive studies of division, colour and pattern, until four parts in the colours of the flag settled into the final heptagram."
+    ],
+    "theme": "paper"
+   },
+   {
+    "type": "media",
+    "images": [
+     {
+      "id": "0f36c0c6cd",
+      "alt": "First stages of the NCSC logo, from the previous mark through five rounds of exploration to the final logo"
+     }
+    ],
+    "caption": "First stages · From the previous mark to the final logo",
+    "layout": "full",
+    "theme": "paper"
+   },
+   {
+    "type": "media",
+    "images": [
+     {
+      "id": "f4419031db",
+      "alt": "Evolution of the heptagram star through six studies of division, colour and pattern, beside the final star"
+     }
+    ],
+    "caption": "Evolution · The heptagram, study by study",
+    "layout": "full",
+    "theme": "paper"
    },
    {
     "type": "media",
@@ -3557,7 +3595,8 @@
      }
     ],
     "caption": "The symbol · Four patterns, one star",
-    "layout": "full"
+    "layout": "full",
+    "theme": "paper"
    },
    {
     "type": "media",
@@ -3568,7 +3607,8 @@
      }
     ],
     "caption": "The mark · In the colours of the flag",
-    "layout": "full"
+    "layout": "full",
+    "theme": "paper"
    },
    {
     "type": "text",
@@ -3577,18 +3617,20 @@
     "tags": [],
     "paras": [
      "The symbol is paired with a modern bilingual wordmark in Arabic and English. A prime portrait version leads, with landscape lockups for right-to-left and left-to-right layouts, each with defined clear space and rules for use on light, dark and photographic grounds."
-    ]
+    ],
+    "theme": "paper"
    },
    {
     "type": "media",
     "images": [
      {
-      "id": "2a6d1c99a4",
+      "id": "8c82a24ad3",
       "alt": "Prime portrait logo, landscape left and right lockups, and the Amareddine and Campton type specimens on slate"
      }
     ],
     "caption": "Logo system and typography · Portrait, landscape left and right",
-    "layout": "full"
+    "layout": "full",
+    "theme": "paper"
    },
    {
     "type": "list",
@@ -3763,6 +3805,7 @@
      }
     ]
    }
-  ]
+  ],
+  "introTheme": "paper"
  }
 ]

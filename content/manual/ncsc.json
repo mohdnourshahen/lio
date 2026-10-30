@@ -6,14 +6,32 @@
  "category": "Visual Identity · Government",
  "lede": "A national identity for Jordan in the digital realm: the Kingdom's seven-pointed star, rebuilt from data, networks, circuitry and the fingerprint, and carried in the colours of the flag.",
  "meta": [
-  ["Client", "National Cyber Security Center"],
-  ["Location", "Amman, Jordan"],
-  ["Year", "2022"]
+  [
+   "Client",
+   "National Cyber Security Center"
+  ],
+  [
+   "Location",
+   "Amman, Jordan"
+  ],
+  [
+   "Year",
+   "2022"
+  ]
  ],
  "info": [
-  ["Project Type", "Brand & Visual Identity"],
-  ["Sector", "Government · Cyber Security"],
-  ["Scope", "Logo, Identity system, Guidelines, Print, Digital, Events"]
+  [
+   "Project Type",
+   "Brand & Visual Identity"
+  ],
+  [
+   "Sector",
+   "Government · Cyber Security"
+  ],
+  [
+   "Scope",
+   "Logo, Identity system, Guidelines, Print, Digital, Events"
+  ]
  ],
  "hero": "189ce6a24a",
  "heroNatural": true,
@@ -22,19 +40,33 @@
  "next": null,
  "year": "2022",
  "credits": [
-  {"role": "Art Direction & Design", "name": "Moh'd Nour Shahen", "href": null},
-  {"role": "Client", "name": "National Cyber Security Center", "href": null}
+  {
+   "role": "Art Direction & Design",
+   "name": "Moh'd Nour Shahen",
+   "href": null
+  },
+  {
+   "role": "Client",
+   "name": "National Cyber Security Center",
+   "href": null
+  }
  ],
  "blocks": [
   {
    "type": "text",
    "label": "Overview",
    "title": "A new authority, a national presence",
-   "tags": ["Government", "Cyber Security", "Visual Identity", "Brand Guidelines"],
+   "tags": [
+    "Government",
+    "Cyber Security",
+    "Visual Identity",
+    "Brand Guidelines"
+   ],
    "paras": [
     "Established under Cyber Security Law No. 16 of 2019, the National Cyber Security Center is the government body charged with building, developing and regulating an effective national framework that protects the Kingdom's cyberspace from threats.",
     "Its vision is a secure, trusted and resilient Jordanian cyberspace, and its work reaches across every sector: training and educating people to strengthen the country's resilience, and positioning Jordan as a regional and global leader in cyber security."
-   ]
+   ],
+   "theme": "paper"
   },
   {
    "type": "text",
@@ -43,7 +75,8 @@
    "tags": [],
    "paras": [
     "A new centre needed a brand that could speak for the state in a domain without borders. The identity had to carry national authority and technological conviction at once, and hold its ground everywhere the Centre appears, from an official letter to a summit stage."
-   ]
+   ],
+   "theme": "paper"
   },
   {
    "type": "text",
@@ -53,19 +86,67 @@
    "paras": [
     "The symbol starts from the seven-pointed star of the Jordanian flag, the mark of the nation, and divides it into four parts. Each part is drawn from the language of the field it protects: binary code for data, a mesh of nodes for connection, a circuit for protection and a fingerprint for identity.",
     "Together they describe a single effective system of cyber security working at the scale of the Kingdom, and an opening at the centre, a star held within the star, keeps the national emblem whole."
-   ]
+   ],
+   "theme": "paper"
+  },
+  {
+   "type": "text",
+   "label": "The Process",
+   "title": "From shield to star",
+   "tags": [],
+   "paras": [
+    "The route to the final mark ran through five stages: from a map of the Kingdom, to shields, seals and the royal emblem, to a circuit-drawn shield, before the seven-pointed star emerged as the one symbol that could carry the nation and the network at once.",
+    "The star itself was then refined through successive studies of division, colour and pattern, until four parts in the colours of the flag settled into the final heptagram."
+   ],
+   "theme": "paper"
   },
   {
    "type": "media",
-   "images": [{"id": "4ad2a723e0", "alt": "The NCSC heptagram drawn in fine line on a dotted grid, each segment filled with binary, network, fingerprint and circuit patterns"}],
+   "images": [
+    {
+     "id": "0f36c0c6cd",
+     "alt": "First stages of the NCSC logo, from the previous mark through five rounds of exploration to the final logo"
+    }
+   ],
+   "caption": "First stages · From the previous mark to the final logo",
+   "layout": "full",
+   "theme": "paper"
+  },
+  {
+   "type": "media",
+   "images": [
+    {
+     "id": "f4419031db",
+     "alt": "Evolution of the heptagram star through six studies of division, colour and pattern, beside the final star"
+    }
+   ],
+   "caption": "Evolution · The heptagram, study by study",
+   "layout": "full",
+   "theme": "paper"
+  },
+  {
+   "type": "media",
+   "images": [
+    {
+     "id": "4ad2a723e0",
+     "alt": "The NCSC heptagram drawn in fine line on a dotted grid, each segment filled with binary, network, fingerprint and circuit patterns"
+    }
+   ],
    "caption": "The symbol · Four patterns, one star",
-   "layout": "full"
+   "layout": "full",
+   "theme": "paper"
   },
   {
    "type": "media",
-   "images": [{"id": "489c86c9bd", "alt": "The National Cyber Security Center logo in red, black, white and green, mounted in relief on a textured wall"}],
+   "images": [
+    {
+     "id": "489c86c9bd",
+     "alt": "The National Cyber Security Center logo in red, black, white and green, mounted in relief on a textured wall"
+    }
+   ],
    "caption": "The mark · In the colours of the flag",
-   "layout": "full"
+   "layout": "full",
+   "theme": "paper"
   },
   {
    "type": "text",
@@ -74,13 +155,20 @@
    "tags": [],
    "paras": [
     "The symbol is paired with a modern bilingual wordmark in Arabic and English. A prime portrait version leads, with landscape lockups for right-to-left and left-to-right layouts, each with defined clear space and rules for use on light, dark and photographic grounds."
-   ]
+   ],
+   "theme": "paper"
   },
   {
    "type": "media",
-   "images": [{"id": "2a6d1c99a4", "alt": "Prime portrait logo, landscape left and right lockups, and the Amareddine and Campton type specimens on slate"}],
+   "images": [
+    {
+     "id": "8c82a24ad3",
+     "alt": "Prime portrait logo, landscape left and right lockups, and the Amareddine and Campton type specimens on slate"
+    }
+   ],
    "caption": "Logo system and typography · Portrait, landscape left and right",
-   "layout": "full"
+   "layout": "full",
+   "theme": "paper"
   },
   {
    "type": "list",
@@ -88,8 +176,16 @@
    "title": "Two scripts, one voice",
    "surface": "#29504D",
    "items": [
-    {"num": "01", "name": "Amareddine", "desc": "Primary Arabic, in Thin, Book and Medium. Clean, geometric and contemporary."},
-    {"num": "02", "name": "Campton", "desc": "Primary English, in Light, Book and Medium, drawn on the same geometric logic."}
+    {
+     "num": "01",
+     "name": "Amareddine",
+     "desc": "Primary Arabic, in Thin, Book and Medium. Clean, geometric and contemporary."
+    },
+    {
+     "num": "02",
+     "name": "Campton",
+     "desc": "Primary English, in Light, Book and Medium, drawn on the same geometric logic."
+    }
    ]
   },
   {
@@ -104,17 +200,40 @@
   {
    "type": "palette",
    "swatches": [
-    {"hex": "#E5204F", "name": "Flag Red"},
-    {"hex": "#00A735", "name": "Flag Green"},
-    {"hex": "#00C9FF", "name": "Cyber Cyan"},
-    {"hex": "#29504D", "name": "Deep Teal"},
-    {"hex": "#334044", "name": "Slate"},
-    {"hex": "#F2F2F2", "name": "Light Grey"}
+    {
+     "hex": "#E5204F",
+     "name": "Flag Red"
+    },
+    {
+     "hex": "#00A735",
+     "name": "Flag Green"
+    },
+    {
+     "hex": "#00C9FF",
+     "name": "Cyber Cyan"
+    },
+    {
+     "hex": "#29504D",
+     "name": "Deep Teal"
+    },
+    {
+     "hex": "#334044",
+     "name": "Slate"
+    },
+    {
+     "hex": "#F2F2F2",
+     "name": "Light Grey"
+    }
    ]
   },
   {
    "type": "media",
-   "images": [{"id": "60db31f31a", "alt": "The landscape logo reversed in white on the cyan-to-teal brand gradient, over a field of binary code"}],
+   "images": [
+    {
+     "id": "60db31f31a",
+     "alt": "The landscape logo reversed in white on the cyan-to-teal brand gradient, over a field of binary code"
+    }
+   ],
    "caption": "Reversed · The landscape lockup on the brand gradient",
    "layout": "full"
   },
@@ -129,13 +248,23 @@
   },
   {
    "type": "media",
-   "images": [{"id": "dc698eef34", "alt": "NCSC stationery, social media cover and profile picture on devices, a branded black car and an event backdrop with roll-ups"}],
+   "images": [
+    {
+     "id": "dc698eef34",
+     "alt": "NCSC stationery, social media cover and profile picture on devices, a branded black car and an event backdrop with roll-ups"
+    }
+   ],
    "caption": "Stationery, digital, fleet and events",
    "layout": "full"
   },
   {
    "type": "media",
-   "images": [{"id": "4380ee8b58", "alt": "A television news bulletin on cyber security, with the NCSC symbol's patterns filling the studio screen"}],
+   "images": [
+    {
+     "id": "4380ee8b58",
+     "alt": "A television news bulletin on cyber security, with the NCSC symbol's patterns filling the studio screen"
+    }
+   ],
    "caption": "On air · The symbol in the national news",
    "layout": "full"
   },
@@ -152,7 +281,12 @@
   {
    "type": "media",
    "surface": "#29504D",
-   "images": [{"id": "e1505cf932", "alt": "His Royal Highness the Crown Prince walking through the NCSC pavilion under arches of blue light"}],
+   "images": [
+    {
+     "id": "e1505cf932",
+     "alt": "His Royal Highness the Crown Prince walking through the NCSC pavilion under arches of blue light"
+    }
+   ],
    "caption": "The pavilion · Arches of light and the bilingual mark",
    "layout": "full"
   },
@@ -160,8 +294,14 @@
    "type": "media",
    "surface": "#29504D",
    "images": [
-    {"id": "2808e7ff4b", "alt": "A briefing before the Government Security Operations Center wall, with the NCSC symbol behind"},
-    {"id": "d1b0613554", "alt": "The Crown Prince greeting a member of the NCSC team before a circuit wall built around the star"}
+    {
+     "id": "2808e7ff4b",
+     "alt": "A briefing before the Government Security Operations Center wall, with the NCSC symbol behind"
+    },
+    {
+     "id": "d1b0613554",
+     "alt": "The Crown Prince greeting a member of the NCSC team before a circuit wall built around the star"
+    }
    ],
    "caption": "GSOC · The operations wall and the circuit star",
    "layout": "pair"
@@ -171,13 +311,38 @@
    "label": "Deliverables",
    "title": "What we delivered",
    "items": [
-    {"num": "01", "name": "Visual Identity", "desc": "Symbol, bilingual wordmark, portrait and landscape lockups."},
-    {"num": "02", "name": "Brand Guidelines", "desc": "Logo, typography, colour, icons, data visualisation and pattern."},
-    {"num": "03", "name": "Print & Stationery", "desc": "Letterhead, folders, envelopes and business cards."},
-    {"num": "04", "name": "Digital & Social", "desc": "Profile and cover artwork and social templates."},
-    {"num": "05", "name": "Events & Environment", "desc": "Summit stage, pavilion, GSOC space, backdrops and roll-ups."},
-    {"num": "06", "name": "Fleet", "desc": "Vehicle branding for the Centre's official cars."}
+    {
+     "num": "01",
+     "name": "Visual Identity",
+     "desc": "Symbol, bilingual wordmark, portrait and landscape lockups."
+    },
+    {
+     "num": "02",
+     "name": "Brand Guidelines",
+     "desc": "Logo, typography, colour, icons, data visualisation and pattern."
+    },
+    {
+     "num": "03",
+     "name": "Print & Stationery",
+     "desc": "Letterhead, folders, envelopes and business cards."
+    },
+    {
+     "num": "04",
+     "name": "Digital & Social",
+     "desc": "Profile and cover artwork and social templates."
+    },
+    {
+     "num": "05",
+     "name": "Events & Environment",
+     "desc": "Summit stage, pavilion, GSOC space, backdrops and roll-ups."
+    },
+    {
+     "num": "06",
+     "name": "Fleet",
+     "desc": "Vehicle branding for the Centre's official cars."
+    }
    ]
   }
- ]
+ ],
+ "introTheme": "paper"
 }
