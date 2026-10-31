@@ -25,7 +25,7 @@ export const studio = {
   name: 'Lōn Visuals',
   summary: 'Lōn Visuals is a strategic brand and visual communication studio based in Amman, Jordan. Creativity meets strategy to shape how organizations communicate, evolve, and grow through design.',
   email: 'hello@lonvisuals.com',
-  stats: ['8+ years of strategic brand practice', '60+ brands built across the region & beyond', '12+ industries served, from government to tech', '100% long-term client partnerships'],
+  stats: ['11+ years of strategic brand practice', '60+ brands built across the region & beyond', '12+ industries served, from government to tech', '100% long-term client partnerships'],
   services: [
     ['Strategy', 'Brand Strategy — defining direction, positioning, and the visual foundations that guide how brands communicate.'],
     ['Design', 'Visual Identity & Communication Design — complete brand systems, corporate collateral, and all designed touchpoints.'],
