@@ -52,6 +52,18 @@ Disciplines: ${studio.disciplines.join(', ')}.
 
 ${studio.clients.join(', ')}.
 
+## Solutions
+
+${solutions.map(so => `### ${so.title}
+
+URL: ${base}/solutions/${so.slug}
+
+${so.lede}
+
+${so.services.items.map(([n, d]) => `- ${n}: ${d}`).join('\n')}
+
+${so.faq.items.map(([q, a]) => `**${q}** ${a}`).join('\n\n')}`).join('\n\n')}
+
 ## Case studies
 
 ${cases}

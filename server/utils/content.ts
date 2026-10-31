@@ -1,4 +1,5 @@
 import projectsJson from '../../content/projects.json'
+import solutionsJson from '../../content/solutions.json'
 
 export interface ServerProject {
   slug: string
@@ -36,3 +37,6 @@ export const studio = {
   clients: ['Joramco', 'Friedrich Naumann Foundation Jordan', 'Rababa', 'National Cyber Security Center', 'NEOM', 'Norwegian Refugee Council', 'Globitel', 'Rambourg Fondation', 'DAI', 'UNFPA', 'Omantel', 'Aircraft Marketing', 'SkyFalcons', 'World Health Organization', 'Halcyon', 'Save the Children', 'Art Engine Media & Films', 'Brinc', 'Tabuk', 'Roycelysian'],
   socials: ['https://www.instagram.com/lonvisuals/', 'https://www.behance.net/lon-visuals', 'https://www.linkedin.com/company/l%C5%8Dnvisuals'],
 }
+
+/** Sector landing pages under /solutions. */
+export const solutions = solutionsJson as unknown as { slug: string, title: string, sector: string, description: string, lede: string, hero: string, faq: { items: [string, string][] }, services: { items: [string, string][] }, touchpoints: { images: { id: string }[] }, work: { items: { image: string }[] } }[]

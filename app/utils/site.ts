@@ -1,5 +1,6 @@
 import projectsJson from '../../content/projects.json'
 import mediaJson from '../../public/media/media.json'
+import solutionsJson from '../../content/solutions.json'
 
 /** All copy here comes from the legacy Lōn Visuals site (legacy/lon-visuals-final.html). */
 
@@ -46,6 +47,24 @@ export const media = mediaJson as Record<string, MediaInfo>
 export const projects = projectsJson as unknown as Project[]
 export const projectBySlug = (slug: string) => projects.find(p => p.slug === slug)
 
+/* sector landing pages under /solutions (content/solutions.json) */
+type Pair = [string, string]
+export interface Solution {
+  key: string, slug: string, sector: string, seoTitle: string, description: string, kicker: string, title: string
+  hero: string, heroAlt: string, lede: string, facts: Pair[]
+  brief: { label: string, title: string, paras: string[] }
+  services: { label: string, title: string, items: Pair[] }
+  work: { label: string, title: string, items: { slug: string, image: string, line: string }[] }
+  touchpoints: { label: string, title: string, images: MediaRef[], caption: string }
+  sectors: { label: string, title: string, items: Pair[] }
+  process: { label: string, title: string, items: Pair[] }
+  why: { label: string, title: string, items: Pair[] }
+  faq: { label: string, title: string, items: Pair[] }
+  cta: { kicker: string, title: string, subject: string }
+}
+export const solutions = solutionsJson as unknown as Solution[]
+export const solutionBySlug = (slug: string) => solutions.find(s => s.slug === slug)
+
 export const site = {
   name: 'Lōn Visuals',
   tagline: 'Visual Strategy Studio',
@@ -63,6 +82,7 @@ export const site = {
 
 export const nav = [
   { label: 'Work', to: '/#work' },
+  { label: 'Solutions', to: '/solutions/hospitality-branding', children: [{ label: 'Hospitality', to: '/solutions/hospitality-branding' }] },
   { label: 'Services', to: '/#services' },
   { label: 'Studio', to: '/#studio' },
   { label: 'Contact', to: '/#contact' },

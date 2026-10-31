@@ -1,0 +1,108 @@
+[
+ {
+  "key": "hospitality",
+  "slug": "hospitality-branding",
+  "sector": "Hospitality",
+  "seoTitle": "Hospitality Branding Agency | Hotel & Resort Brand Identity — Lōn Visuals",
+  "description": "Hospitality branding studio for hotels, resorts and F&B in Saudi Arabia, Jordan and the GCC: brand strategy, naming, bilingual identity and pre-opening launch.",
+  "kicker": "Solutions · Hotels, Resorts & F&B",
+  "title": "Hospitality Branding",
+  "hero": "f04c0008a2",
+  "heroAlt": "Hotel lobby with arches and palms, from L'Azure Hospitality Group's brand identity by Lōn Visuals",
+  "lede": "Brands for hotels, resorts and restaurants that guests remember long after check-out. From positioning and naming to a bilingual identity carried from the arrival experience to the key card, for owners and operators across Saudi Arabia, Jordan and the GCC.",
+  "facts": [
+   ["Hospitality clients", "NEOM · Masar Resort, L'Azure Hospitality Group, Zeryab Estates, Wakers 17"],
+   ["Markets", "Saudi Arabia, Jordan, the GCC and Morocco"],
+   ["Practice", "11+ years · 60+ brands built"],
+   ["Languages", "Arabic and English, designed together"]
+  ],
+  "brief": {
+   "label": "The Brief",
+   "title": "Opening is a deadline. Being remembered is the goal.",
+   "paras": [
+    "The region is opening hotels at a pace it has never seen. Across the Red Sea coast, NEOM, Riyadh and Diriyah, new properties open beside the world's best-known flags, and every one of them is competing for the same guest's attention.",
+    "A hospitality brand has to do more than look good. It has to tell a guest, in seconds, why this place and not the one next door; speak with equal confidence in Arabic and English; and hold together across hundreds of touchpoints, from the hoarding on the construction site to the amenity on the pillow, before the first guest arrives."
+   ]
+  },
+  "services": {
+   "label": "What We Deliver",
+   "title": "Everything a guest sees, designed as one",
+   "items": [
+    ["Brand Strategy & Positioning", "Guest profiles, the competitive set and a positioning that sets the property apart in its market."],
+    ["Naming & Verbal Identity", "Names for properties, outlets and suites, with a tone of voice in Arabic and English."],
+    ["Visual Identity", "Logo, bilingual wordmark, colour, typography and pattern, built for both scripts from the first sketch."],
+    ["Brand Guidelines", "Standards that operators, fit-out teams and agencies can apply with confidence."],
+    ["Guest Touchpoints", "Key cards, amenities, in-room collateral, menus, uniforms and welcome kits."],
+    ["Signage & Environment", "Arrival, wayfinding and interior graphics that guide guests in the brand's own language."],
+    ["Pre-opening & Launch", "Hoardings, sales collateral, launch campaigns and social content ahead of opening day."],
+    ["Digital", "Website direction, imagery guidance and social templates that carry the brand online."]
+   ]
+  },
+  "work": {
+   "label": "Hospitality Work",
+   "title": "Selected hospitality brands",
+   "items": [
+    { "slug": "masar", "image": "7160f3fd32", "line": "NEOM's Sports Village: a resort identity where world-class athletics meets immersive hospitality." },
+    { "slug": "lazure", "image": "3b6d2e3e84", "line": "A premium hotel group on the Saudi Red Sea coast, from group brand to lobby, key card and amenities." },
+    { "slug": "zeryab-estates", "image": "92b5c6a3f8", "line": "A private luxury retreat in Marrakech, drawn from Andalusian, Berber and Arab heritage." },
+    { "slug": "wakers17", "image": "9bbadab823", "line": "A character-led coffee and juice brand built to be recognised on any street in Amman." }
+   ]
+  },
+  "touchpoints": {
+   "label": "In the Guest's Hands",
+   "title": "The brand lives in the details",
+   "images": [
+    { "id": "b9912a1eee", "alt": "L'Azure lobby and branded key card" },
+    { "id": "22cc8dfc12", "alt": "L'Azure amenities and welcome kit" }
+   ],
+   "caption": "L'Azure Hospitality Group · Key card, amenities and welcome kit"
+  },
+  "sectors": {
+   "label": "Who We Work With",
+   "title": "Built for every kind of stay",
+   "items": [
+    ["Hotels & Resorts", "New openings, independents and multi-property groups, from city hotels to coastal resorts."],
+    ["Residences & Estates", "Branded residences, private retreats and luxury estates."],
+    ["Restaurants & Cafés", "F&B concepts and outlets, from a single café to a hotel's dining portfolio."],
+    ["Destinations", "Mixed-use destinations, sports villages and resort communities."]
+   ]
+  },
+  "process": {
+   "label": "How We Work",
+   "title": "Planned back from your opening date",
+   "items": [
+    ["Discover", "The site, the market, the competitive set and the guest you want to win."],
+    ["Position", "The strategy, the name and the story the property will tell."],
+    ["Design", "The identity, the bilingual system and the guidelines that hold it together."],
+    ["Deploy", "Touchpoints, signage and the launch, delivered in step with pre-opening."]
+   ]
+  },
+  "why": {
+   "label": "Why Lōn",
+   "title": "A studio fluent in the region",
+   "items": [
+    ["Bilingual by design", "Arabic and English are drawn together from the start, never translated after the fact."],
+    ["Regional fluency", "Work for NEOM, the Saudi Red Sea coast, Marrakech and Amman, rooted in each place's culture."],
+    ["One studio, end to end", "Strategy, identity and every guest touchpoint from a single team, so the brand never loses its thread."]
+   ]
+  },
+  "faq": {
+   "label": "Questions",
+   "title": "Hospitality branding, answered",
+   "items": [
+    ["What does hospitality branding include?", "Strategy and positioning, naming, the visual identity, brand guidelines and every guest touchpoint: signage, key cards, amenities, menus, uniforms, collateral, digital and the launch. We shape the scope around your property and opening plan."],
+    ["Do you work with hotels in Saudi Arabia?", "Yes. Our hospitality work includes NEOM's Masar Resort and L'Azure Hospitality Group on the Red Sea coast in Tabuk. We work across Saudi Arabia, Jordan, the GCC and Morocco from our studio in Amman."],
+    ["Can you design the brand in Arabic and English?", "Always. Every identity we build is bilingual from the first sketch, so the Arabic and English carry equal weight on every sign, card and screen."],
+    ["Do you work with independent hotels as well as groups?", "Yes, from a single boutique retreat to a multi-property hotel group, and the restaurants and cafés within them."],
+    ["Can you rebrand an existing hotel?", "Yes. A rebrand starts from what guests already value about the property, then sharpens the positioning and renews the identity across every touchpoint."],
+    ["How long does a hotel brand identity take?", "It depends on the scope. We plan every project back from your opening date and share a clear timeline in our first conversation."],
+    ["How do we start?", "Send us a short brief: the property, its location, the guest you want to attract and your opening date. We will come back with an approach and a proposal."]
+   ]
+  },
+  "cta": {
+   "kicker": "Opening soon?",
+   "title": "Let's build a brand guests remember",
+   "subject": "Hospitality branding enquiry"
+  }
+ }
+]

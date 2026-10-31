@@ -15,7 +15,7 @@ const route = useRoute()
 
 const links = [
   { label: 'Home', to: '/', image: HERO_IMAGE, alt: 'Lōn Visuals studio visual' },
-  ...nav.map((n, i) => ({ ...n, image: ['ab4f72775a', '76a786afab', '7e084baf44', '5749a13a08'][i]!, alt: '' })),
+  ...nav.map((n, i) => ({ ...n, image: ['ab4f72775a', 'f04c0008a2', '76a786afab', '7e084baf44', '5749a13a08'][i]!, alt: '' })),
 ]
 
 const root = ref<HTMLElement>()
@@ -131,6 +131,12 @@ defineExpose({ open, close, visible })
               >
                 <span class="main-line">{{ l.label }}</span>
               </NuxtLink>
+              <!-- sectors under Solutions: small links beside the big word -->
+              <ul v-if="'children' in l && l.children" class="sub" aria-label="Solutions by sector">
+                <li v-for="c in l.children" :key="c.label" class="mask">
+                  <NuxtLink :to="c.to" class="sub-link caps u-link u-link--rev" @click="emit('close')">{{ c.label }}</NuxtLink>
+                </li>
+              </ul>
             </li>
           </ul>
         </nav>
@@ -160,8 +166,10 @@ defineExpose({ open, close, visible })
 .site-menu { position: fixed; inset: 0; z-index: 30; overflow: hidden; }
 .wrapper { position: absolute; inset: 0; display: flex; align-items: center; transform-origin: center; }
 .container { width: 100%; align-items: end; }
-.main { grid-column: 2 / 8; }
-.main-item { overflow: hidden; padding-bottom: 0.12em; margin-bottom: -0.12em; }
+.main { grid-column: 2 / 9; }
+.main-item { overflow: hidden; padding-bottom: 0.12em; margin-bottom: -0.12em; display: flex; align-items: baseline; gap: 2vw; }
+.sub { flex: none; display: flex; flex-wrap: wrap; gap: 0.4em 1.4em; white-space: nowrap; }
+.sub-link { color: var(--fg-2); font-size: var(--fs-label); }
 .main-link { display: inline-block; color: var(--c-title); }
 .main-line { display: inline-block; transition: transform 0.8s var(--ease-out), color 0.4s; }
 @media (hover: hover) {
@@ -179,9 +187,9 @@ defineExpose({ open, close, visible })
 .social-line { display: inline-block; font-size: var(--fs-cta); line-height: 1.5; }
 .muted { color: var(--fg-2); }
 
-/* landscape phones: fit five links in a short viewport */
+/* landscape phones: fit six links in a short viewport */
 @media (min-width: 601px) and (max-height: 560px) {
-  .main-link { font-size: 15vh; line-height: 15vh; }
+  .main-link { font-size: 12.5vh; line-height: 12.5vh; }
   .wrapper { align-items: flex-end; padding-bottom: 6vh; }
 }
 
