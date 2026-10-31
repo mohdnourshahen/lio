@@ -69,7 +69,7 @@ export const nav = [
 ]
 
 export const stats = [
-  { value: '8', unit: '+', desc: ['Years of strategic', 'brand practice'] },
+  { value: '11', unit: '+', desc: ['Years of strategic', 'brand practice'] },
   { value: '60', unit: '+', desc: ['Brands built across', 'the region & beyond'] },
   { value: '12', unit: '+', desc: ['Industries served,', 'from gov to tech'] },
   { value: '100', unit: '%', desc: ['Long-term client', 'partnerships'] },
