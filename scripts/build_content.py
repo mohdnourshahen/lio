@@ -312,6 +312,56 @@ def sana_lower_half(blocks):
     ]
 
 
+def masar_additions(blocks):
+    """Studio's additions to Masar, placed where they serve the story: the symbol and its ribbons
+    after the overview, the guidelines after the identity overview, the resort on site and the
+    race-car partnership in the wild, and a guest-experience section before the stationery.
+    Every existing block keeps its place."""
+    def media(ids, alts, caption):
+        return {'type': 'media', 'images': [{'id': i, 'alt': a} for i, a in zip(ids, alts)], 'caption': caption,
+                'layout': {1: 'full', 2: 'pair'}[len(ids)]}
+    out = []
+    for b in blocks:
+        out.append(b)
+        if b['type'] == 'media' and b['images'][0]['id'] == '7160f3fd32':
+            out += [
+                {'type': 'text', 'label': 'The Symbol', 'title': 'Five ribbons, one achievement', 'tags': [], 'paras': [
+                    'At the heart of the identity is the Achievement Star: five ribbons that cross at the centre, the way athletes and guests meet at the village. Each ribbon carries a value of the resort: activity and adventure, unity and growth, harmony and balance, movement and speed, energy and youth.',
+                    'The ribbons also become the brand’s graphic language. Flowing through every layout, they stand for movement, energy and support, and give each touchpoint the rhythm of sport.']},
+                media(['a492650e01'], ['The Masar Achievement Star: five coloured ribbons, each naming a value of the resort'],
+                      'The Achievement Star · Activity & Adventure, Unity & Growth, Harmony & Balance, Movement & Speed, Energy & Youth'),
+                media(['6fbcaf1aea'], ['Interlacing ribbons in the Masar gradient, labelled movement, energy and support'],
+                      'Design concept · Ribbons of movement, energy and support'),
+            ]
+        elif b['type'] == 'media' and b['images'][0]['id'] == '465cd92cef':
+            out.append(media(['da2b0013b1'], ['Pages of the Masar Resort brand guidelines: concept, logo, colour, typography, pattern and partner lockups'],
+                             'Brand guidelines · Concept, marks, colour, typography, pattern and partner lockups'))
+        elif b['type'] == 'text' and b.get('label') == 'In the Wild':
+            out.append(media(['336d598ee9'], ['The NEOM | Masar Resort sign on the Sports Village building, with a shaded lounge in the foreground'],
+                             'On site · NEOM | Masar Resort at the Sports Village'))
+        elif b['type'] == 'media' and b['images'][0]['id'] == '00936a2911':
+            out += [
+                media(['a17643788f'], ['The NEOM McLaren Extreme E race car on display, carrying the Masar Resort mark'],
+                      'Partnership · The Masar mark on the NEOM McLaren Extreme E car'),
+                {'type': 'text', 'label': 'Guest Experience', 'title': 'From check-in to coastal dining', 'tags': [], 'paras': [
+                    'The identity follows the guest through their stay. Key-card sleeves in the resort’s colours carry the line “the key to your dreams”, door hangers and dining menus pick up the ribbons, and the ribbons return as art in every room.']},
+                media(['7f9b4b0d34'], ['Masar Resort key cards and sleeves in yellow, lime, teal and orange: the key to your dreams'],
+                      'Key cards · The key to your dreams'),
+                media(['9e4d63e1e7', '7e02f08d86'], ['Teal Masar door hanger on a hotel room door: I’m out, please clean my room',
+                                                     'Masar Resort Coastal Dining Experience food menu on a wooden table'],
+                      'In the room · Door hanger and the Coastal Dining menu'),
+                media(['0f52f23dbe'], ['Masar guest room with a ribbon artwork in the brand gradient above the bed'],
+                      'In-room art · The ribbons above the bed'),
+            ]
+        elif b['type'] == 'media' and b['images'][0]['id'] == 'b135b8813b':
+            out.append(media(['4c220d0580'], ['Masar Resort business cards: bilingual white card and dark card with the ribbons'],
+                             'Business cards · Bilingual, on white and on night'))
+        elif b['type'] == 'list' and b.get('label') == 'Deliverables' and not any(it['name'] == 'Guest Experience' for it in b['items']):
+            b['items'].append({'num': '%02d' % (len(b['items']) + 1), 'name': 'Guest Experience',
+                               'desc': 'Key cards and sleeves, door hangers, menus and in-room art.'})
+    return out
+
+
 def wakers_book(blocks):
     """Wakers17, ordered by its brand book: strategy, personality, brand world, applications.
     Copy is drawn from the book's text. 270673d184 and aaf4e9f31a are replaced by the studio's
@@ -428,6 +478,8 @@ def curate(P):
         P['blocks'] = wakers_book(P['blocks'])
         P['surface'] = '#224541'  # the brand's deep green
         P['credits'] = [{'role': 'Design & Art Direction', 'name': "Moh'd Nour Shahen", 'href': None}]
+    if k == 'masar':
+        P['blocks'] = masar_additions(P['blocks'])
     if k == 'rambourg':
         # the studio presents the client as "Rambourg Fondation"
         P = json.loads(json.dumps(P, ensure_ascii=False).replace('Fondation Rambourg', 'Rambourg Fondation').replace('Rambourg Foundation', 'Rambourg Fondation'))
