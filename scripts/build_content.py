@@ -317,9 +317,9 @@ def masar_additions(blocks):
     after the overview, the guidelines after the identity overview, the resort on site and the
     race-car partnership in the wild, and a guest-experience section before the stationery.
     Every existing block keeps its place."""
-    def media(ids, alts, caption):
+    def media(ids, alts, caption, **extra):
         return {'type': 'media', 'images': [{'id': i, 'alt': a} for i, a in zip(ids, alts)], 'caption': caption,
-                'layout': {1: 'full', 2: 'pair'}[len(ids)]}
+                'layout': {1: 'full', 2: 'pair'}[len(ids)], **extra}
     out = []
     for b in blocks:
         out.append(b)
@@ -329,13 +329,13 @@ def masar_additions(blocks):
                     'At the heart of the identity is the Achievement Star: five ribbons that cross at the centre, the way athletes and guests meet at the village. Each ribbon carries a value of the resort: activity and adventure, unity and growth, harmony and balance, movement and speed, energy and youth.',
                     'The ribbons also become the brand’s graphic language. Flowing through every layout, they stand for movement, energy and support, and give each touchpoint the rhythm of sport.']},
                 media(['a492650e01'], ['The Masar Achievement Star: five coloured ribbons, each naming a value of the resort'],
-                      'The Achievement Star · Activity & Adventure, Unity & Growth, Harmony & Balance, Movement & Speed, Energy & Youth'),
+                      'The Achievement Star · Activity & Adventure, Unity & Growth, Harmony & Balance, Movement & Speed, Energy & Youth', theme='paper'),
                 media(['6fbcaf1aea'], ['Interlacing ribbons in the Masar gradient, labelled movement, energy and support'],
-                      'Design concept · Ribbons of movement, energy and support'),
+                      'Design concept · Ribbons of movement, energy and support', theme='paper'),
             ]
         elif b['type'] == 'media' and b['images'][0]['id'] == '465cd92cef':
             out.append(media(['da2b0013b1'], ['Pages of the Masar Resort brand guidelines: concept, logo, colour, typography, pattern and partner lockups'],
-                             'Brand guidelines · Concept, marks, colour, typography, pattern and partner lockups'))
+                             'Brand guidelines · Concept, marks, colour, typography, pattern and partner lockups', theme='paper'))
         elif b['type'] == 'text' and b.get('label') == 'In the Wild':
             out.append(media(['336d598ee9'], ['The NEOM | Masar Resort sign on the Sports Village building, with a shaded lounge in the foreground'],
                              'On site · NEOM | Masar Resort at the Sports Village'))

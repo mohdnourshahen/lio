@@ -82,9 +82,10 @@ useSeo({
           <h1 id="sol-title" v-reveal="{ intro: true }" class="s-title t-h1">
             <span class="line-mask"><span data-line>{{ s.title }}</span></span>
           </h1>
-          <p v-reveal="{ intro: true, delay: 0.3 }" class="s-hero-cta">
+          <!-- not v-reveal: its line-split wrapper would swallow the flex gap between the two links -->
+          <p class="s-hero-cta">
             <a :href="mail" class="btn" data-cursor="Write">Start a {{ s.sector.toLowerCase() }} project</a>
-            <a href="#work" class="u-link u-link--rev caps">See the work</a>
+            <a href="#work" class="s-link caps">See the work <span aria-hidden="true">↓</span></a>
           </p>
         </div>
       </header>
@@ -245,7 +246,7 @@ useSeo({
           <h2 v-reveal class="s-cta-title t-h1">{{ s.cta.title }}</h2>
           <p class="s-cta-actions">
             <a :href="mail" class="btn" data-cursor="Write">{{ site.email }}</a>
-            <NuxtLink to="/#work" class="u-link u-link--rev caps">All work</NuxtLink>
+            <NuxtLink to="/#work" class="s-link caps">All work <span aria-hidden="true">→</span></NuxtLink>
           </p>
         </div>
       </section>
@@ -266,18 +267,28 @@ useSeo({
 .crumbs li + li::before { content: '/'; margin-right: 0.6em; opacity: 0.5; }
 .s-kicker { grid-column: 2 / -1; grid-row: 3; color: var(--c-title); margin-bottom: 1.2vw; }
 .s-title { grid-column: 2 / -1; grid-row: 4; }
-.s-hero-cta { grid-column: 2 / -1; grid-row: 5; margin-top: 2.4vw; display: flex; align-items: center; flex-wrap: wrap; gap: 1.4vw 2.6vw; color: var(--c-paper); }
+.s-hero-cta { grid-column: 2 / -1; grid-row: 5; margin-top: 2.8vw; display: flex; align-items: center; flex-wrap: wrap; gap: 1.4vw 3.2vw; }
 
+.s-hero-cta { opacity: 0; animation: s-cta-in 1s var(--ease-out) 1.1s forwards; }
+@keyframes s-cta-in { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
+
+/* primary action: a hairline frame in the house gold that fills on hover — quiet until it is wanted */
 .btn {
-  display: inline-flex; align-items: center; gap: 0.8em; padding: 1.05em 1.9em; border-radius: 99px;
-  background: var(--c-title); color: var(--c-ink); font-family: var(--f-title); text-transform: uppercase;
-  letter-spacing: 0.09em; font-size: var(--fs-label); transition: background 0.5s var(--ease-out), color 0.5s var(--ease-out);
+  display: inline-flex; align-items: center; gap: 1.1em; padding: 1.15em 1.7em;
+  border: 1px solid rgba(230, 223, 143, 0.55); color: var(--c-title); background: transparent;
+  font-family: var(--f-title); text-transform: uppercase; letter-spacing: 0.14em; font-size: var(--fs-sub); line-height: 1;
+  transition: background 0.6s var(--ease-out), color 0.6s var(--ease-out), border-color 0.6s var(--ease-out);
 }
-.btn::after { content: '→'; transition: transform 0.6s var(--ease-out); }
+.btn::after { content: '→'; font-family: var(--f-sans); letter-spacing: 0; transition: transform 0.6s var(--ease-out); }
+.s-link { display: inline-flex; gap: 0.7em; align-items: center; color: rgba(245, 242, 234, 0.78); font-size: var(--fs-sub); letter-spacing: 0.14em; transition: color 0.4s; }
+.s-link span { font-family: var(--f-sans); letter-spacing: 0; transition: transform 0.6s var(--ease-out); }
 @media (hover: hover) {
-  .btn:hover { background: var(--c-paper); }
-  .btn:hover::after { transform: translateX(0.3em); }
+  .btn:hover { background: var(--c-title); border-color: var(--c-title); color: var(--c-ink); }
+  .btn:hover::after { transform: translateX(0.35em); }
+  .s-link:hover { color: var(--c-title); }
+  .s-link:hover span { transform: translateY(0.2em); }
 }
+@media (prefers-reduced-motion: reduce) { .s-hero-cta { animation: none; opacity: 1; } }
 
 /* INTRO */
 .s-intro { padding: 10vw 0 11vw; }
@@ -370,7 +381,8 @@ useSeo({
   .crumbs, .s-kicker, .s-title, .s-hero-cta { grid-column: 1 / -1; }
   .s-hero-inner { padding: 22vw 0 8vw; }
   .s-kicker { margin-bottom: 3vw; }
-  .s-hero-cta { margin-top: 6vw; gap: 5vw; }
+  .s-hero-cta { margin-top: 7vw; gap: 6vw; }
+  .btn { padding: 1.2em 1.5em; }
   .s-intro { padding: 18vw 0 20vw; }
   .s-lede { grid-column: 1 / -1; }
   .s-facts { grid-column: 1 / -1; grid-template-columns: 1fr 1fr; gap: 7vw 4vw; margin-top: 14vw; }
