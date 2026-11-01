@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { media, projectBySlug, site, solutionBySlug } from '~/utils/site'
+import { media, projectBySlug, site, solutionBySlug, type MediaRef } from '~/utils/site'
 
 /**
  * Sector landing page (/solutions/<slug>): written for the owners and operators of one sector,
@@ -13,6 +13,23 @@ if (!s) throw createError({ statusCode: 404, statusMessage: 'Not found', fatal: 
 const work = s.work.items.map(w => ({ ...w, p: projectBySlug(w.slug)! })).filter(w => w.p)
 const mail = `mailto:${site.email}?subject=${encodeURIComponent(s.cta.subject)}`
 const pad = (n: number) => String(n + 1).padStart(2, '0')
+
+/* Exo Ape's work grid: images never sit in a row. Each goes to whichever of two columns (wide left,
+   narrow right that starts lower) is shorter, alternating full and inset widths, so the group reads as
+   a loose, staggered collage; `order` keeps the original sequence when the columns fold on phones. */
+function scatter(rows: MediaRef[][]) {
+  const cols: { im: MediaRef, w: 'full' | 'inset', order: number }[][] = [[], []]
+  const height: [number, number] = [0, 0.16]
+  const span: [number, number] = [6, 4]
+  rows.flat().forEach((im, order) => {
+    const c = height[0] <= height[1] ? 0 : 1
+    const w = cols[c]!.length % 2 ? 'inset' : 'full'
+    const r = media[im.id] ? media[im.id]!.h / media[im.id]!.w : 0.75
+    height[c] += span[c] / 12 * (w === 'inset' ? 0.76 : 1) * r + 0.07
+    cols[c]!.push({ im, w, order })
+  })
+  return cols
+}
 
 const base = useSiteUrl()
 const url = `${base}/solutions/${s.slug}`
@@ -82,15 +99,16 @@ useSeo({
           <h1 id="sol-title" v-reveal="{ intro: true }" class="s-title t-h1">
             <span class="line-mask"><span data-line>{{ s.title }}</span></span>
           </h1>
-          <p v-reveal="{ intro: true, delay: 0.3 }" class="s-hero-cta">
+          <!-- not v-reveal: its line-split wrapper would swallow the flex gap between the two links -->
+          <p class="s-hero-cta">
             <a :href="mail" class="btn" data-cursor="Write">Start a {{ s.sector.toLowerCase() }} project</a>
-            <a href="#work" class="u-link u-link--rev caps">See the work</a>
+            <a href="#work" class="s-link caps">See the work <span aria-hidden="true">↓</span></a>
           </p>
         </div>
       </header>
 
       <!-- LEDE + FACTS -->
-      <section class="s-intro theme-dark" data-theme="dark" aria-label="Overview">
+      <section class="s-intro theme-paper" data-theme="paper" aria-label="Overview">
         <div class="container">
           <p v-reveal class="s-lede">{{ s.lede }}</p>
           <dl class="s-facts">
@@ -103,7 +121,7 @@ useSeo({
       </section>
 
       <!-- THE BRIEF -->
-      <section class="s-text theme-light" data-theme="light" :aria-label="s.brief.title">
+      <section class="s-text theme-paper" data-theme="paper" :aria-label="s.brief.title">
         <div class="container">
           <p v-reveal class="label s-label">{{ s.brief.label }}</p>
           <h2 v-reveal class="s-h2 t-h2">{{ s.brief.title }}</h2>
@@ -129,7 +147,7 @@ useSeo({
       </section>
 
       <!-- WORK -->
-      <section id="work" class="s-work theme-light" data-theme="light" :aria-label="s.work.title">
+      <section id="work" class="s-work theme-dark" data-theme="dark" :aria-label="s.work.title">
         <div class="container">
           <p v-reveal class="label s-label">{{ s.work.label }}</p>
           <h2 v-reveal class="s-h2 t-h2">{{ s.work.title }}</h2>
@@ -149,7 +167,7 @@ useSeo({
       </section>
 
       <!-- TOUCHPOINTS -->
-      <figure class="s-touch theme-light" data-theme="light">
+      <figure class="s-touch theme-dark" data-theme="dark">
         <div class="container">
           <p v-reveal class="label s-label">{{ s.touchpoints.label }}</p>
           <h2 v-reveal class="s-h2 t-h2">{{ s.touchpoints.title }}</h2>
@@ -161,7 +179,7 @@ useSeo({
       </figure>
 
       <!-- PORTFOLIO: work beyond the full case studies, grouped by kind of place -->
-      <section v-if="s.portfolio" class="s-port theme-dark" data-theme="dark" :aria-label="s.portfolio.title">
+      <section v-if="s.portfolio" class="s-port theme-paper" data-theme="paper" :aria-label="s.portfolio.title">
         <div class="container">
           <p v-reveal class="label s-label">{{ s.portfolio.label }}</p>
           <h2 v-reveal class="s-h2 t-h2">{{ s.portfolio.title }}</h2>
@@ -172,9 +190,12 @@ useSeo({
             <h3 v-reveal class="s-group-name t-h3">{{ g.name }}</h3>
             <p v-reveal class="s-group-desc t-small">{{ g.desc }}</p>
           </div>
-          <div v-for="(row, r) in g.rows" :key="r" class="s-row" :class="row.length > 1 ? 'is-pair' : (media[row[0]!.id]?.h ?? 0) > (media[row[0]!.id]?.w ?? 0) ? 'is-full is-tall' : 'is-full'">
-            <div v-for="(im, j) in row" :key="im.id" class="s-row-item" :class="`n-${j}`">
-              <MediaFrame :id="im.id" :alt="im.alt" :sizes="row.length > 1 ? '(max-width: 600px) 100vw, 42vw' : '(max-width: 600px) 100vw, 84vw'" :travel="4" :scale="[1.045, 1.045]" />
+          <!-- two free columns at different widths and speeds; on phones they fold back into reading order -->
+          <div class="sc">
+            <div v-for="(col, c) in scatter(g.rows)" :key="c" class="sc-col" :class="c ? 'sc-r' : 'sc-l'">
+              <div v-for="it in col" :key="it.im.id" class="sc-item" :class="`w-${it.w}`" :style="{ order: it.order }">
+                <MediaFrame :id="it.im.id" :alt="it.im.alt" :sizes="c ? '(max-width: 600px) 100vw, 34vw' : '(max-width: 600px) 100vw, 46vw'" :travel="c ? 14 : 6" :scale="[1.06, 1.06]" />
+              </div>
             </div>
           </div>
           <p class="s-caption t-small">{{ g.caption }}</p>
@@ -182,7 +203,7 @@ useSeo({
       </section>
 
       <!-- SECTORS -->
-      <section class="s-list theme-dark" data-theme="dark" :aria-label="s.sectors.title">
+      <section class="s-list theme-paper" data-theme="paper" :aria-label="s.sectors.title">
         <div class="container">
           <p v-reveal class="label s-label">{{ s.sectors.label }}</p>
           <h2 v-reveal class="s-h2 t-h2">{{ s.sectors.title }}</h2>
@@ -225,7 +246,7 @@ useSeo({
       </section>
 
       <!-- FAQ -->
-      <section class="s-faq theme-light" data-theme="light" :aria-label="s.faq.title">
+      <section class="s-faq theme-paper" data-theme="paper" :aria-label="s.faq.title">
         <div class="container">
           <p v-reveal class="label s-label">{{ s.faq.label }}</p>
           <h2 v-reveal class="s-h2 t-h2">{{ s.faq.title }}</h2>
@@ -245,7 +266,7 @@ useSeo({
           <h2 v-reveal class="s-cta-title t-h1">{{ s.cta.title }}</h2>
           <p class="s-cta-actions">
             <a :href="mail" class="btn" data-cursor="Write">{{ site.email }}</a>
-            <NuxtLink to="/#work" class="u-link u-link--rev caps">All work</NuxtLink>
+            <NuxtLink to="/#work" class="s-link caps">All work <span aria-hidden="true">→</span></NuxtLink>
           </p>
         </div>
       </section>
@@ -266,18 +287,28 @@ useSeo({
 .crumbs li + li::before { content: '/'; margin-right: 0.6em; opacity: 0.5; }
 .s-kicker { grid-column: 2 / -1; grid-row: 3; color: var(--c-title); margin-bottom: 1.2vw; }
 .s-title { grid-column: 2 / -1; grid-row: 4; }
-.s-hero-cta { grid-column: 2 / -1; grid-row: 5; margin-top: 2.4vw; display: flex; align-items: center; flex-wrap: wrap; gap: 1.4vw 2.6vw; color: var(--c-paper); }
+.s-hero-cta { grid-column: 2 / -1; grid-row: 5; margin-top: 2.8vw; display: flex; align-items: center; flex-wrap: wrap; gap: 1.4vw 3.2vw; }
 
+.s-hero-cta { opacity: 0; animation: s-cta-in 1s var(--ease-out) 1.1s forwards; }
+@keyframes s-cta-in { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
+
+/* primary action: a hairline frame in the house gold that fills on hover — quiet until it is wanted */
 .btn {
-  display: inline-flex; align-items: center; gap: 0.8em; padding: 1.05em 1.9em; border-radius: 99px;
-  background: var(--c-title); color: var(--c-ink); font-family: var(--f-title); text-transform: uppercase;
-  letter-spacing: 0.09em; font-size: var(--fs-label); transition: background 0.5s var(--ease-out), color 0.5s var(--ease-out);
+  display: inline-flex; align-items: center; gap: 1.1em; padding: 1.15em 1.7em;
+  border: 1px solid rgba(230, 223, 143, 0.55); color: var(--c-title); background: transparent;
+  font-family: var(--f-title); text-transform: uppercase; letter-spacing: 0.14em; font-size: var(--fs-sub); line-height: 1;
+  transition: background 0.6s var(--ease-out), color 0.6s var(--ease-out), border-color 0.6s var(--ease-out);
 }
-.btn::after { content: '→'; transition: transform 0.6s var(--ease-out); }
+.btn::after { content: '→'; font-family: var(--f-sans); letter-spacing: 0; transition: transform 0.6s var(--ease-out); }
+.s-link { display: inline-flex; gap: 0.7em; align-items: center; color: rgba(245, 242, 234, 0.78); font-size: var(--fs-sub); letter-spacing: 0.14em; transition: color 0.4s; }
+.s-link span { font-family: var(--f-sans); letter-spacing: 0; transition: transform 0.6s var(--ease-out); }
 @media (hover: hover) {
-  .btn:hover { background: var(--c-paper); }
-  .btn:hover::after { transform: translateX(0.3em); }
+  .btn:hover { background: var(--c-title); border-color: var(--c-title); color: var(--c-ink); }
+  .btn:hover::after { transform: translateX(0.35em); }
+  .s-link:hover { color: var(--c-title); }
+  .s-link:hover span { transform: translateY(0.2em); }
 }
+@media (prefers-reduced-motion: reduce) { .s-hero-cta { animation: none; opacity: 1; } }
 
 /* INTRO */
 .s-intro { padding: 10vw 0 11vw; }
@@ -333,11 +364,21 @@ useSeo({
 .s-group-head { grid-column: 2 / 12; display: flex; align-items: baseline; justify-content: space-between; gap: 2vw; padding-top: 1.6vw; border-top: 1px solid var(--rule); margin-bottom: 2.4vw; }
 .s-group-name { color: var(--c-title); }
 .s-group-desc { color: var(--fg-2); max-width: 30em; text-align: right; }
-.s-row { grid-column: 1 / -1; display: grid; grid-template-columns: subgrid; align-items: start; margin-bottom: var(--gutter); }
-.s-row.is-full .n-0 { grid-column: 2 / 12; }
-.s-row.is-full.is-tall .n-0 { grid-column: 4 / 10; }
-.s-row.is-pair .n-0 { grid-column: 2 / 7; }
-.s-row.is-pair .n-1 { grid-column: 7 / 12; }
+.sc { grid-column: 1 / -1; display: grid; grid-template-columns: subgrid; align-items: start; }
+.sc-l { grid-column: 2 / 8; }
+.sc-r { grid-column: 8 / 12; padding-top: 16vw; }
+.sc-l { padding-right: 1vw; }
+.theme-paper .sc-item :deep(.media) { box-shadow: 0 0 0 1px rgba(18, 16, 10, 0.08); }
+.sc-item { margin-bottom: 7vw; }
+.sc-item.w-inset { width: 76%; }
+.sc-l .sc-item.w-inset { margin-left: auto; }
+
+/* white sections: ink type, deep-gold accents */
+.theme-paper .s-lede, .theme-paper .s-name, .theme-paper .qa-q, .theme-paper .s-group-name { color: var(--c-ink); }
+.theme-paper .s-label, .theme-paper .s-fact dt, .theme-paper .s-num { color: var(--accent); }
+.theme-paper .s-body p:first-child { color: rgba(18, 16, 10, 0.86); }
+.theme-paper .s-caption::before { background: var(--accent); }
+.theme-paper .qa-q::after { color: var(--accent); }
 
 /* FAQ */
 .s-faq { padding: 11vw 0; }
@@ -370,7 +411,8 @@ useSeo({
   .crumbs, .s-kicker, .s-title, .s-hero-cta { grid-column: 1 / -1; }
   .s-hero-inner { padding: 22vw 0 8vw; }
   .s-kicker { margin-bottom: 3vw; }
-  .s-hero-cta { margin-top: 6vw; gap: 5vw; }
+  .s-hero-cta { margin-top: 7vw; gap: 6vw; }
+  .btn { padding: 1.2em 1.5em; }
   .s-intro { padding: 18vw 0 20vw; }
   .s-lede { grid-column: 1 / -1; }
   .s-facts { grid-column: 1 / -1; grid-template-columns: 1fr 1fr; gap: 7vw 4vw; margin-top: 14vw; }
@@ -381,8 +423,10 @@ useSeo({
   .s-group { margin-top: 16vw; }
   .s-group-head { flex-direction: column; gap: 2vw; padding-top: 4vw; margin-bottom: 5vw; }
   .s-group-desc { text-align: left; }
-  .s-row { row-gap: 3vw; margin-bottom: 3vw; }
-  .s-row.is-full .n-0, .s-row.is-pair .n-0, .s-row.is-pair .n-1 { grid-column: 1 / -1; }
+  .sc { display: flex; flex-direction: column; }
+  .sc-col { display: contents; }
+  .sc-item { margin-bottom: 6vw; }
+  .sc-item.w-inset { width: 78%; align-self: flex-end; }
   .s-h2 { margin-top: 4vw; }
   .s-text, .s-list, .s-faq { padding: 22vw 0; }
   .s-body { margin-top: 6vw; }

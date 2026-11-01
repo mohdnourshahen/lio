@@ -415,7 +415,8 @@
      }
     ],
     "caption": "The Achievement Star · Activity & Adventure, Unity & Growth, Harmony & Balance, Movement & Speed, Energy & Youth",
-    "layout": "full"
+    "layout": "full",
+    "theme": "paper"
    },
    {
     "type": "media",
@@ -426,7 +427,8 @@
      }
     ],
     "caption": "Design concept · Ribbons of movement, energy and support",
-    "layout": "full"
+    "layout": "full",
+    "theme": "paper"
    },
    {
     "type": "text",
@@ -470,7 +472,8 @@
      }
     ],
     "caption": "Brand guidelines · Concept, marks, colour, typography, pattern and partner lockups",
-    "layout": "full"
+    "layout": "full",
+    "theme": "paper"
    },
    {
     "type": "text",
