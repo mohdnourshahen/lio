@@ -344,7 +344,7 @@ useSeo({
 .s-group-head { grid-column: 2 / 12; display: flex; align-items: baseline; justify-content: space-between; gap: 2vw; padding-top: 1.6vw; border-top: 1px solid var(--rule); margin-bottom: 2.4vw; }
 .s-group-name { color: var(--c-title); }
 .s-group-desc { color: var(--fg-2); max-width: 30em; text-align: right; }
-.s-row { grid-column: 1 / -1; display: grid; grid-template-columns: subgrid; align-items: start; margin-bottom: var(--gutter); }
+.s-row { grid-column: 1 / -1; display: grid; grid-template-columns: subgrid; align-items: center; margin-bottom: var(--gutter); }
 .s-row.is-full .n-0 { grid-column: 2 / 12; }
 .s-row.is-full.is-tall .n-0 { grid-column: 4 / 10; }
 .s-row.is-pair .n-0 { grid-column: 2 / 7; }
