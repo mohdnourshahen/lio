@@ -11,10 +11,22 @@
   "heroAlt": "Hotel lobby with arches and palms, from L'Azure Hospitality Group's brand identity by Lōn Visuals",
   "lede": "Brands for hotels, resorts and restaurants that guests remember long after check-out. From positioning and naming to a bilingual identity carried from the arrival experience to the key card, for owners and operators across Saudi Arabia, Jordan and the GCC.",
   "facts": [
-   ["Hospitality clients", "NEOM · Masar Resort, L'Azure Hospitality Group, Zeryab Estates, Wakers 17"],
-   ["Markets", "Saudi Arabia, Jordan, the GCC and Morocco"],
-   ["Practice", "11+ years · 60+ brands built"],
-   ["Languages", "Arabic and English, designed together"]
+   [
+    "Hospitality clients",
+    "NEOM · Masar Resort, L'Azure Hospitality Group, Zeryab Estates, Wakers 17"
+   ],
+   [
+    "Markets",
+    "Saudi Arabia, Jordan, the GCC and Morocco"
+   ],
+   [
+    "Practice",
+    "11+ years · 60+ brands built"
+   ],
+   [
+    "Languages",
+    "Arabic and English, designed together"
+   ]
   ],
   "brief": {
    "label": "The Brief",
@@ -28,75 +40,289 @@
    "label": "What We Deliver",
    "title": "Everything a guest sees, designed as one",
    "items": [
-    ["Brand Strategy & Positioning", "Guest profiles, the competitive set and a positioning that sets the property apart in its market."],
-    ["Naming & Verbal Identity", "Names for properties, outlets and suites, with a tone of voice in Arabic and English."],
-    ["Visual Identity", "Logo, bilingual wordmark, colour, typography and pattern, built for both scripts from the first sketch."],
-    ["Brand Guidelines", "Standards that operators, fit-out teams and agencies can apply with confidence."],
-    ["Guest Touchpoints", "Key cards, amenities, in-room collateral, menus, uniforms and welcome kits."],
-    ["Signage & Environment", "Arrival, wayfinding and interior graphics that guide guests in the brand's own language."],
-    ["Pre-opening & Launch", "Hoardings, sales collateral, launch campaigns and social content ahead of opening day."],
-    ["Digital", "Website direction, imagery guidance and social templates that carry the brand online."]
+    [
+     "Brand Strategy & Positioning",
+     "Guest profiles, the competitive set and a positioning that sets the property apart in its market."
+    ],
+    [
+     "Naming & Verbal Identity",
+     "Names for properties, outlets and suites, with a tone of voice in Arabic and English."
+    ],
+    [
+     "Visual Identity",
+     "Logo, bilingual wordmark, colour, typography and pattern, built for both scripts from the first sketch."
+    ],
+    [
+     "Brand Guidelines",
+     "Standards that operators, fit-out teams and agencies can apply with confidence."
+    ],
+    [
+     "Guest Touchpoints",
+     "Key cards, amenities, in-room collateral, menus, uniforms and welcome kits."
+    ],
+    [
+     "Signage & Environment",
+     "Arrival, wayfinding and interior graphics that guide guests in the brand's own language."
+    ],
+    [
+     "Pre-opening & Launch",
+     "Hoardings, sales collateral, launch campaigns and social content ahead of opening day."
+    ],
+    [
+     "Digital",
+     "Website direction, imagery guidance and social templates that carry the brand online."
+    ]
    ]
   },
   "work": {
    "label": "Hospitality Work",
-   "title": "Selected hospitality brands",
+   "title": "Selected hospitality & F&B brands",
    "items": [
-    { "slug": "masar", "image": "7160f3fd32", "line": "NEOM's Sports Village: a resort identity where world-class athletics meets immersive hospitality." },
-    { "slug": "lazure", "image": "3b6d2e3e84", "line": "A premium hotel group on the Saudi Red Sea coast, from group brand to lobby, key card and amenities." },
-    { "slug": "zeryab-estates", "image": "92b5c6a3f8", "line": "A private luxury retreat in Marrakech, drawn from Andalusian, Berber and Arab heritage." },
-    { "slug": "wakers17", "image": "9bbadab823", "line": "A character-led coffee and juice brand built to be recognised on any street in Amman." }
+    {
+     "slug": "masar",
+     "image": "7160f3fd32",
+     "line": "NEOM's Sports Village: a resort identity where world-class athletics meets immersive hospitality."
+    },
+    {
+     "slug": "lazure",
+     "image": "3b6d2e3e84",
+     "line": "A premium hotel group on the Saudi Red Sea coast, from group brand to lobby, key card and amenities."
+    },
+    {
+     "slug": "zeryab-estates",
+     "image": "92b5c6a3f8",
+     "line": "A private luxury retreat in Marrakech, drawn from Andalusian, Berber and Arab heritage."
+    },
+    {
+     "slug": "wakers17",
+     "image": "9bbadab823",
+     "line": "A coffee & juice house in Amman: a character-led brand built to be recognised on any street."
+    }
    ]
   },
   "touchpoints": {
    "label": "In the Guest's Hands",
    "title": "The brand lives in the details",
    "images": [
-    { "id": "b9912a1eee", "alt": "L'Azure lobby and branded key card" },
-    { "id": "22cc8dfc12", "alt": "L'Azure amenities and welcome kit" }
+    {
+     "id": "b9912a1eee",
+     "alt": "L'Azure lobby and branded key card"
+    },
+    {
+     "id": "22cc8dfc12",
+     "alt": "L'Azure amenities and welcome kit"
+    }
    ],
    "caption": "L'Azure Hospitality Group · Key card, amenities and welcome kit"
+  },
+  "portfolio": {
+   "label": "Portfolio",
+   "title": "More from the hospitality studio",
+   "intro": "Beyond the full case studies: identities, campaigns, signage and guest details for hotels, restaurants and destinations across the region.",
+   "groups": [
+    {
+     "name": "Hotels & Resorts",
+     "desc": "Group brands, resort identities and the details a guest holds.",
+     "rows": [
+      [
+       {
+        "id": "8aadcc3457",
+        "alt": "A coastal resort from above: villas, gardens, pool and amphitheatre in the desert"
+       }
+      ],
+      [
+       {
+        "id": "3b1907b8ab",
+        "alt": "Royal L’Azure Resort logo embossed in gold on black"
+       },
+       {
+        "id": "4cfabfeb5f",
+        "alt": "L’Azure Hospitality and Royal L’Azure Resort key cards in slate blue and gold"
+       }
+      ],
+      [
+       {
+        "id": "3fc3a87269",
+        "alt": "Royal L’Azure Resort campaign: the monogram beside dining, room and service imagery"
+       }
+      ],
+      [
+       {
+        "id": "d2f08b88e7",
+        "alt": "Resort beach and seafront restaurant from above"
+       },
+       {
+        "id": "49bc0dc54e",
+        "alt": "Resort pool, amphitheatre and main building from above"
+       }
+      ],
+      [
+       {
+        "id": "a6e4e2447c",
+        "alt": "L’Azure Executive Residence floor-number signs in a stencil serif, with a dimensional 3 on the wall"
+       }
+      ]
+     ],
+     "caption": "Royal L’Azure Resort · L’Azure Hospitality · L’Azure Executive Residence"
+    },
+    {
+     "name": "Restaurants & Rooftops",
+     "desc": "Identities for dining, from a rooftop bar to international kitchens.",
+     "rows": [
+      [
+       {
+        "id": "c24db5d11a",
+        "alt": "Theas Rooftop wordmark in teal and red, its palette and an exterior sign"
+       }
+      ],
+      [
+       {
+        "id": "87b5e0fc2d",
+        "alt": "Menza Restaurant International Cuisine logo with ornamental flourishes"
+       },
+       {
+        "id": "016c17d432",
+        "alt": "Dara International Cuisine logo: Arabic calligraphy and wordmark in white on deep teal"
+       }
+      ],
+      [
+       {
+        "id": "286c48e7e6",
+        "alt": "A floral symbol in ink and stone, on dark and light grounds"
+       },
+       {
+        "id": "a17dd4e3fa",
+        "alt": "An interlocking DD monogram in line on saffron"
+       }
+      ]
+     ],
+     "caption": "Theas Rooftop · Menza Restaurant · Dara International Cuisine · Marks"
+    },
+    {
+     "name": "Destinations & Tourism",
+     "desc": "Brands for the authorities and operators that bring people to the coast and the desert.",
+     "rows": [
+      [
+       {
+        "id": "a644d71641",
+        "alt": "Saudi Red Sea Authority flags with the palm-and-wave symbol"
+       },
+       {
+        "id": "0f8a12a3d7",
+        "alt": "A jet ski in the Saudi Red Sea Authority livery"
+       }
+      ],
+      [
+       {
+        "id": "792cd6a76d",
+        "alt": "Saudi Silk Road company profile cover over the tombs of AlUla"
+       }
+      ],
+      [
+       {
+        "id": "65bbea6e46",
+        "alt": "Saudi Silk Road itinerary poster: The Nabataean Trail, 13 days and 12 nights, at Petra"
+       }
+      ]
+     ],
+     "caption": "Saudi Red Sea Authority · Saudi Silk Road"
+    }
+   ]
   },
   "sectors": {
    "label": "Who We Work With",
    "title": "Built for every kind of stay",
    "items": [
-    ["Hotels & Resorts", "New openings, independents and multi-property groups, from city hotels to coastal resorts."],
-    ["Residences & Estates", "Branded residences, private retreats and luxury estates."],
-    ["Restaurants & Cafés", "F&B concepts and outlets, from a single café to a hotel's dining portfolio."],
-    ["Destinations", "Mixed-use destinations, sports villages and resort communities."]
+    [
+     "Hotels & Resorts",
+     "New openings, independents and multi-property groups, from city hotels to coastal resorts."
+    ],
+    [
+     "Residences & Estates",
+     "Branded residences, private retreats and luxury estates."
+    ],
+    [
+     "Restaurants & Cafés",
+     "F&B concepts and outlets, from a single café to a hotel's dining portfolio."
+    ],
+    [
+     "Destinations",
+     "Mixed-use destinations, sports villages and resort communities."
+    ]
    ]
   },
   "process": {
    "label": "How We Work",
    "title": "Planned back from your opening date",
    "items": [
-    ["Discover", "The site, the market, the competitive set and the guest you want to win."],
-    ["Position", "The strategy, the name and the story the property will tell."],
-    ["Design", "The identity, the bilingual system and the guidelines that hold it together."],
-    ["Deploy", "Touchpoints, signage and the launch, delivered in step with pre-opening."]
+    [
+     "Discover",
+     "The site, the market, the competitive set and the guest you want to win."
+    ],
+    [
+     "Position",
+     "The strategy, the name and the story the property will tell."
+    ],
+    [
+     "Design",
+     "The identity, the bilingual system and the guidelines that hold it together."
+    ],
+    [
+     "Deploy",
+     "Touchpoints, signage and the launch, delivered in step with pre-opening."
+    ]
    ]
   },
   "why": {
    "label": "Why Lōn",
    "title": "A studio fluent in the region",
    "items": [
-    ["Bilingual by design", "Arabic and English are drawn together from the start, never translated after the fact."],
-    ["Regional fluency", "Work for NEOM, the Saudi Red Sea coast, Marrakech and Amman, rooted in each place's culture."],
-    ["One studio, end to end", "Strategy, identity and every guest touchpoint from a single team, so the brand never loses its thread."]
+    [
+     "Bilingual by design",
+     "Arabic and English are drawn together from the start, never translated after the fact."
+    ],
+    [
+     "Regional fluency",
+     "Work for NEOM, the Saudi Red Sea coast, Marrakech and Amman, rooted in each place's culture."
+    ],
+    [
+     "One studio, end to end",
+     "Strategy, identity and every guest touchpoint from a single team, so the brand never loses its thread."
+    ]
    ]
   },
   "faq": {
    "label": "Questions",
    "title": "Hospitality branding, answered",
    "items": [
-    ["What does hospitality branding include?", "Strategy and positioning, naming, the visual identity, brand guidelines and every guest touchpoint: signage, key cards, amenities, menus, uniforms, collateral, digital and the launch. We shape the scope around your property and opening plan."],
-    ["Do you work with hotels in Saudi Arabia?", "Yes. Our hospitality work includes NEOM's Masar Resort and L'Azure Hospitality Group on the Red Sea coast in Tabuk. We work across Saudi Arabia, Jordan, the GCC and Morocco from our studio in Amman."],
-    ["Can you design the brand in Arabic and English?", "Always. Every identity we build is bilingual from the first sketch, so the Arabic and English carry equal weight on every sign, card and screen."],
-    ["Do you work with independent hotels as well as groups?", "Yes, from a single boutique retreat to a multi-property hotel group, and the restaurants and cafés within them."],
-    ["Can you rebrand an existing hotel?", "Yes. A rebrand starts from what guests already value about the property, then sharpens the positioning and renews the identity across every touchpoint."],
-    ["How long does a hotel brand identity take?", "It depends on the scope. We plan every project back from your opening date and share a clear timeline in our first conversation."],
-    ["How do we start?", "Send us a short brief: the property, its location, the guest you want to attract and your opening date. We will come back with an approach and a proposal."]
+    [
+     "What does hospitality branding include?",
+     "Strategy and positioning, naming, the visual identity, brand guidelines and every guest touchpoint: signage, key cards, amenities, menus, uniforms, collateral, digital and the launch. We shape the scope around your property and opening plan."
+    ],
+    [
+     "Do you work with hotels in Saudi Arabia?",
+     "Yes. Our hospitality work includes NEOM's Masar Resort and L'Azure Hospitality Group on the Red Sea coast in Tabuk. We work across Saudi Arabia, Jordan, the GCC and Morocco from our studio in Amman."
+    ],
+    [
+     "Can you design the brand in Arabic and English?",
+     "Always. Every identity we build is bilingual from the first sketch, so the Arabic and English carry equal weight on every sign, card and screen."
+    ],
+    [
+     "Do you work with independent hotels as well as groups?",
+     "Yes, from a single boutique retreat to a multi-property hotel group, and the restaurants and cafés within them."
+    ],
+    [
+     "Can you rebrand an existing hotel?",
+     "Yes. A rebrand starts from what guests already value about the property, then sharpens the positioning and renews the identity across every touchpoint."
+    ],
+    [
+     "How long does a hotel brand identity take?",
+     "It depends on the scope. We plan every project back from your opening date and share a clear timeline in our first conversation."
+    ],
+    [
+     "How do we start?",
+     "Send us a short brief: the property, its location, the guest you want to attract and your opening date. We will come back with an approach and a proposal."
+    ]
    ]
   },
   "cta": {

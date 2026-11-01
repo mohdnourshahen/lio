@@ -398,6 +398,38 @@
    },
    {
     "type": "text",
+    "label": "The Symbol",
+    "title": "Five ribbons, one achievement",
+    "tags": [],
+    "paras": [
+     "At the heart of the identity is the Achievement Star: five ribbons that cross at the centre, the way athletes and guests meet at the village. Each ribbon carries a value of the resort: activity and adventure, unity and growth, harmony and balance, movement and speed, energy and youth.",
+     "The ribbons also become the brand’s graphic language. Flowing through every layout, they stand for movement, energy and support, and give each touchpoint the rhythm of sport."
+    ]
+   },
+   {
+    "type": "media",
+    "images": [
+     {
+      "id": "a492650e01",
+      "alt": "The Masar Achievement Star: five coloured ribbons, each naming a value of the resort"
+     }
+    ],
+    "caption": "The Achievement Star · Activity & Adventure, Unity & Growth, Harmony & Balance, Movement & Speed, Energy & Youth",
+    "layout": "full"
+   },
+   {
+    "type": "media",
+    "images": [
+     {
+      "id": "6fbcaf1aea",
+      "alt": "Interlacing ribbons in the Masar gradient, labelled movement, energy and support"
+     }
+    ],
+    "caption": "Design concept · Ribbons of movement, energy and support",
+    "layout": "full"
+   },
+   {
+    "type": "text",
     "label": "Identity System",
     "title": "The mark & its variations",
     "paras": [],
@@ -430,11 +462,33 @@
     "layout": "full"
    },
    {
+    "type": "media",
+    "images": [
+     {
+      "id": "da2b0013b1",
+      "alt": "Pages of the Masar Resort brand guidelines: concept, logo, colour, typography, pattern and partner lockups"
+     }
+    ],
+    "caption": "Brand guidelines · Concept, marks, colour, typography, pattern and partner lockups",
+    "layout": "full"
+   },
+   {
     "type": "text",
     "label": "In the Wild",
     "title": "Brand applications",
     "paras": [],
     "tags": []
+   },
+   {
+    "type": "media",
+    "images": [
+     {
+      "id": "336d598ee9",
+      "alt": "The NEOM | Masar Resort sign on the Sports Village building, with a shaded lounge in the foreground"
+     }
+    ],
+    "caption": "On site · NEOM | Masar Resort at the Sports Village",
+    "layout": "full"
    },
    {
     "type": "media",
@@ -455,11 +509,79 @@
     "type": "media",
     "images": [
      {
+      "id": "a17643788f",
+      "alt": "The NEOM McLaren Extreme E race car on display, carrying the Masar Resort mark"
+     }
+    ],
+    "caption": "Partnership · The Masar mark on the NEOM McLaren Extreme E car",
+    "layout": "full"
+   },
+   {
+    "type": "text",
+    "label": "Guest Experience",
+    "title": "From check-in to coastal dining",
+    "tags": [],
+    "paras": [
+     "The identity follows the guest through their stay. Key-card sleeves in the resort’s colours carry the line “the key to your dreams”, door hangers and dining menus pick up the ribbons, and the ribbons return as art in every room."
+    ]
+   },
+   {
+    "type": "media",
+    "images": [
+     {
+      "id": "7f9b4b0d34",
+      "alt": "Masar Resort key cards and sleeves in yellow, lime, teal and orange: the key to your dreams"
+     }
+    ],
+    "caption": "Key cards · The key to your dreams",
+    "layout": "full"
+   },
+   {
+    "type": "media",
+    "images": [
+     {
+      "id": "9e4d63e1e7",
+      "alt": "Teal Masar door hanger on a hotel room door: I’m out, please clean my room"
+     },
+     {
+      "id": "7e02f08d86",
+      "alt": "Masar Resort Coastal Dining Experience food menu on a wooden table"
+     }
+    ],
+    "caption": "In the room · Door hanger and the Coastal Dining menu",
+    "layout": "pair"
+   },
+   {
+    "type": "media",
+    "images": [
+     {
+      "id": "0f52f23dbe",
+      "alt": "Masar guest room with a ribbon artwork in the brand gradient above the bed"
+     }
+    ],
+    "caption": "In-room art · The ribbons above the bed",
+    "layout": "full"
+   },
+   {
+    "type": "media",
+    "images": [
+     {
       "id": "b135b8813b",
       "alt": "Masar Resort stationery"
      }
     ],
     "caption": "Stationery system · Business cards, letterheads, notebooks, ID badges — Brand Experience kit",
+    "layout": "full"
+   },
+   {
+    "type": "media",
+    "images": [
+     {
+      "id": "4c220d0580",
+      "alt": "Masar Resort business cards: bilingual white card and dark card with the ribbons"
+     }
+    ],
+    "caption": "Business cards · Bilingual, on white and on night",
     "layout": "full"
    },
    {
@@ -496,6 +618,11 @@
       "num": "06",
       "name": "Brand Guidelines",
       "desc": "Full brand manual covering identity usage, color systems, typography hierarchy, and do's & don'ts."
+     },
+     {
+      "num": "07",
+      "name": "Guest Experience",
+      "desc": "Key cards and sleeves, door hangers, menus and in-room art."
      }
     ]
    }
