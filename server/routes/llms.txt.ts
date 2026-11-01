@@ -13,6 +13,10 @@ We translate brands into visual language. Lōn Visuals works across brand strate
 - [Home](${base}/): who we are, services, selected projects, clients and contact
 - [Full text for language models](${base}/llms-full.txt): every page's copy in one file
 
+## Solutions
+
+${solutions.map(so => `- [${so.title}](${base}/solutions/${so.slug}): ${so.description}`).join('\n')}
+
 ## Case studies
 
 ${projects.map(p => `- [${p.title}](${base}/work/${p.slug}): ${p.category}${p.year ? `, ${p.year}` : ''}. ${p.lede}`).join('\n')}

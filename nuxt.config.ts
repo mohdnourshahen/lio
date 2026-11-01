@@ -1,6 +1,7 @@
 import { resolve } from 'node:path'
 import process from 'node:process'
 import projects from './content/projects.json'
+import solutions from './content/solutions.json'
 
 /**
  * LON_OFFLINE=1 builds the downloadable single-file edition (scripts/build-offline.mjs):
@@ -78,7 +79,7 @@ export default defineNuxtConfig({
     ...(offline ? { output: { dir: '.output-offline' } } : {}),
     prerender: {
       crawlLinks: true,
-      routes: ['/', ...projects.map(p => `/work/${p.slug}`), '/sitemap.xml', '/robots.txt', '/llms.txt', '/llms-full.txt'],
+      routes: ['/', ...projects.map(p => `/work/${p.slug}`), ...solutions.map(s => `/solutions/${s.slug}`), '/sitemap.xml', '/robots.txt', '/llms.txt', '/llms-full.txt'],
     },
   },
 

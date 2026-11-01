@@ -19,6 +19,11 @@ export default defineEventHandler((event) => {
       priority: '0.8',
       images: [`${base}/og/${p.slug}.jpg`, ...pageImages(p).map(id => imageUrl(base, id))],
     })),
+    ...solutions.map(so => ({
+      loc: `${base}/solutions/${so.slug}`,
+      priority: '0.9',
+      images: [`${base}/og/solutions-${so.slug}.jpg`, ...[so.hero, ...so.work.items.map(w => w.image), ...so.touchpoints.images.map(i => i.id)].map(id => imageUrl(base, id))],
+    })),
   ]
   const body = urls.map(u => `  <url>
     <loc>${u.loc}</loc>
