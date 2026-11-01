@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { media, projectBySlug, site, solutionBySlug } from '~/utils/site'
+import { media, projectBySlug, site, solutionBySlug, type MediaRef } from '~/utils/site'
 
 /**
  * Sector landing page (/solutions/<slug>): written for the owners and operators of one sector,
@@ -13,6 +13,23 @@ if (!s) throw createError({ statusCode: 404, statusMessage: 'Not found', fatal: 
 const work = s.work.items.map(w => ({ ...w, p: projectBySlug(w.slug)! })).filter(w => w.p)
 const mail = `mailto:${site.email}?subject=${encodeURIComponent(s.cta.subject)}`
 const pad = (n: number) => String(n + 1).padStart(2, '0')
+
+/* Exo Ape's work grid: images never sit in a row. Each goes to whichever of two columns (wide left,
+   narrow right that starts lower) is shorter, alternating full and inset widths, so the group reads as
+   a loose, staggered collage; `order` keeps the original sequence when the columns fold on phones. */
+function scatter(rows: MediaRef[][]) {
+  const cols: { im: MediaRef, w: 'full' | 'inset', order: number }[][] = [[], []]
+  const height: [number, number] = [0, 0.16]
+  const span: [number, number] = [6, 4]
+  rows.flat().forEach((im, order) => {
+    const c = height[0] <= height[1] ? 0 : 1
+    const w = cols[c]!.length % 2 ? 'inset' : 'full'
+    const r = media[im.id] ? media[im.id]!.h / media[im.id]!.w : 0.75
+    height[c] += span[c] / 12 * (w === 'inset' ? 0.76 : 1) * r + 0.07
+    cols[c]!.push({ im, w, order })
+  })
+  return cols
+}
 
 const base = useSiteUrl()
 const url = `${base}/solutions/${s.slug}`
@@ -91,7 +108,7 @@ useSeo({
       </header>
 
       <!-- LEDE + FACTS -->
-      <section class="s-intro theme-dark" data-theme="dark" aria-label="Overview">
+      <section class="s-intro theme-paper" data-theme="paper" aria-label="Overview">
         <div class="container">
           <p v-reveal class="s-lede">{{ s.lede }}</p>
           <dl class="s-facts">
@@ -104,7 +121,7 @@ useSeo({
       </section>
 
       <!-- THE BRIEF -->
-      <section class="s-text theme-light" data-theme="light" :aria-label="s.brief.title">
+      <section class="s-text theme-paper" data-theme="paper" :aria-label="s.brief.title">
         <div class="container">
           <p v-reveal class="label s-label">{{ s.brief.label }}</p>
           <h2 v-reveal class="s-h2 t-h2">{{ s.brief.title }}</h2>
@@ -130,7 +147,7 @@ useSeo({
       </section>
 
       <!-- WORK -->
-      <section id="work" class="s-work theme-light" data-theme="light" :aria-label="s.work.title">
+      <section id="work" class="s-work theme-dark" data-theme="dark" :aria-label="s.work.title">
         <div class="container">
           <p v-reveal class="label s-label">{{ s.work.label }}</p>
           <h2 v-reveal class="s-h2 t-h2">{{ s.work.title }}</h2>
@@ -150,7 +167,7 @@ useSeo({
       </section>
 
       <!-- TOUCHPOINTS -->
-      <figure class="s-touch theme-light" data-theme="light">
+      <figure class="s-touch theme-dark" data-theme="dark">
         <div class="container">
           <p v-reveal class="label s-label">{{ s.touchpoints.label }}</p>
           <h2 v-reveal class="s-h2 t-h2">{{ s.touchpoints.title }}</h2>
@@ -162,7 +179,7 @@ useSeo({
       </figure>
 
       <!-- PORTFOLIO: work beyond the full case studies, grouped by kind of place -->
-      <section v-if="s.portfolio" class="s-port theme-dark" data-theme="dark" :aria-label="s.portfolio.title">
+      <section v-if="s.portfolio" class="s-port theme-paper" data-theme="paper" :aria-label="s.portfolio.title">
         <div class="container">
           <p v-reveal class="label s-label">{{ s.portfolio.label }}</p>
           <h2 v-reveal class="s-h2 t-h2">{{ s.portfolio.title }}</h2>
@@ -173,9 +190,12 @@ useSeo({
             <h3 v-reveal class="s-group-name t-h3">{{ g.name }}</h3>
             <p v-reveal class="s-group-desc t-small">{{ g.desc }}</p>
           </div>
-          <div v-for="(row, r) in g.rows" :key="r" class="s-row" :class="row.length > 1 ? 'is-pair' : (media[row[0]!.id]?.h ?? 0) > (media[row[0]!.id]?.w ?? 0) ? 'is-full is-tall' : 'is-full'">
-            <div v-for="(im, j) in row" :key="im.id" class="s-row-item" :class="`n-${j}`">
-              <MediaFrame :id="im.id" :alt="im.alt" :sizes="row.length > 1 ? '(max-width: 600px) 100vw, 42vw' : '(max-width: 600px) 100vw, 84vw'" :travel="4" :scale="[1.045, 1.045]" />
+          <!-- two free columns at different widths and speeds; on phones they fold back into reading order -->
+          <div class="sc">
+            <div v-for="(col, c) in scatter(g.rows)" :key="c" class="sc-col" :class="c ? 'sc-r' : 'sc-l'">
+              <div v-for="it in col" :key="it.im.id" class="sc-item" :class="`w-${it.w}`" :style="{ order: it.order }">
+                <MediaFrame :id="it.im.id" :alt="it.im.alt" :sizes="c ? '(max-width: 600px) 100vw, 34vw' : '(max-width: 600px) 100vw, 46vw'" :travel="c ? 14 : 6" :scale="[1.06, 1.06]" />
+              </div>
             </div>
           </div>
           <p class="s-caption t-small">{{ g.caption }}</p>
@@ -183,7 +203,7 @@ useSeo({
       </section>
 
       <!-- SECTORS -->
-      <section class="s-list theme-dark" data-theme="dark" :aria-label="s.sectors.title">
+      <section class="s-list theme-paper" data-theme="paper" :aria-label="s.sectors.title">
         <div class="container">
           <p v-reveal class="label s-label">{{ s.sectors.label }}</p>
           <h2 v-reveal class="s-h2 t-h2">{{ s.sectors.title }}</h2>
@@ -226,7 +246,7 @@ useSeo({
       </section>
 
       <!-- FAQ -->
-      <section class="s-faq theme-light" data-theme="light" :aria-label="s.faq.title">
+      <section class="s-faq theme-paper" data-theme="paper" :aria-label="s.faq.title">
         <div class="container">
           <p v-reveal class="label s-label">{{ s.faq.label }}</p>
           <h2 v-reveal class="s-h2 t-h2">{{ s.faq.title }}</h2>
@@ -344,11 +364,21 @@ useSeo({
 .s-group-head { grid-column: 2 / 12; display: flex; align-items: baseline; justify-content: space-between; gap: 2vw; padding-top: 1.6vw; border-top: 1px solid var(--rule); margin-bottom: 2.4vw; }
 .s-group-name { color: var(--c-title); }
 .s-group-desc { color: var(--fg-2); max-width: 30em; text-align: right; }
-.s-row { grid-column: 1 / -1; display: grid; grid-template-columns: subgrid; align-items: center; margin-bottom: var(--gutter); }
-.s-row.is-full .n-0 { grid-column: 2 / 12; }
-.s-row.is-full.is-tall .n-0 { grid-column: 4 / 10; }
-.s-row.is-pair .n-0 { grid-column: 2 / 7; }
-.s-row.is-pair .n-1 { grid-column: 7 / 12; }
+.sc { grid-column: 1 / -1; display: grid; grid-template-columns: subgrid; align-items: start; }
+.sc-l { grid-column: 2 / 8; }
+.sc-r { grid-column: 8 / 12; padding-top: 16vw; }
+.sc-l { padding-right: 1vw; }
+.theme-paper .sc-item :deep(.media) { box-shadow: 0 0 0 1px rgba(18, 16, 10, 0.08); }
+.sc-item { margin-bottom: 7vw; }
+.sc-item.w-inset { width: 76%; }
+.sc-l .sc-item.w-inset { margin-left: auto; }
+
+/* white sections: ink type, deep-gold accents */
+.theme-paper .s-lede, .theme-paper .s-name, .theme-paper .qa-q, .theme-paper .s-group-name { color: var(--c-ink); }
+.theme-paper .s-label, .theme-paper .s-fact dt, .theme-paper .s-num { color: var(--accent); }
+.theme-paper .s-body p:first-child { color: rgba(18, 16, 10, 0.86); }
+.theme-paper .s-caption::before { background: var(--accent); }
+.theme-paper .qa-q::after { color: var(--accent); }
 
 /* FAQ */
 .s-faq { padding: 11vw 0; }
@@ -393,8 +423,10 @@ useSeo({
   .s-group { margin-top: 16vw; }
   .s-group-head { flex-direction: column; gap: 2vw; padding-top: 4vw; margin-bottom: 5vw; }
   .s-group-desc { text-align: left; }
-  .s-row { row-gap: 3vw; margin-bottom: 3vw; }
-  .s-row.is-full .n-0, .s-row.is-pair .n-0, .s-row.is-pair .n-1 { grid-column: 1 / -1; }
+  .sc { display: flex; flex-direction: column; }
+  .sc-col { display: contents; }
+  .sc-item { margin-bottom: 6vw; }
+  .sc-item.w-inset { width: 78%; align-self: flex-end; }
   .s-h2 { margin-top: 4vw; }
   .s-text, .s-list, .s-faq { padding: 22vw 0; }
   .s-body { margin-top: 6vw; }

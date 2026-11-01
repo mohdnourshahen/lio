@@ -161,12 +161,18 @@
     },
     {
      "name": "Restaurants & Rooftops",
-     "desc": "Identities for dining, from a rooftop bar to international kitchens.",
+     "desc": "Identities for dining, from a rooftop bar and a coffee house to international kitchens.",
      "rows": [
       [
        {
         "id": "c24db5d11a",
         "alt": "Theas Rooftop wordmark in teal and red, its palette and an exterior sign"
+       }
+      ],
+      [
+       {
+        "id": "91f9305de5",
+        "alt": "Aman Coffee House wordmark in white over roasted coffee beans"
        }
       ],
       [
@@ -196,7 +202,7 @@
        }
       ]
      ],
-     "caption": "Theas Rooftop · Dara International Cuisine, logo and the mark in the restaurant · Menza Restaurant · Marks"
+     "caption": "Theas Rooftop · Aman Coffee House · Dara International Cuisine, logo and the mark in the restaurant · Menza Restaurant · Marks"
     },
     {
      "name": "Destinations & Tourism",
