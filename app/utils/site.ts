@@ -56,6 +56,7 @@ export interface Solution {
   services: { label: string, title: string, items: Pair[] }
   work: { label: string, title: string, items: { slug: string, image: string, line: string }[] }
   touchpoints: { label: string, title: string, images: MediaRef[], caption: string }
+  portfolio?: { label: string, title: string, intro: string, groups: { name: string, desc: string, rows: MediaRef[][], caption: string }[] }
   sectors: { label: string, title: string, items: Pair[] }
   process: { label: string, title: string, items: Pair[] }
   why: { label: string, title: string, items: Pair[] }

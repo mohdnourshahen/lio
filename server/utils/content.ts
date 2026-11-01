@@ -39,4 +39,4 @@ export const studio = {
 }
 
 /** Sector landing pages under /solutions. */
-export const solutions = solutionsJson as unknown as { slug: string, title: string, sector: string, description: string, lede: string, hero: string, faq: { items: [string, string][] }, services: { items: [string, string][] }, touchpoints: { images: { id: string }[] }, work: { items: { image: string }[] } }[]
+export const solutions = solutionsJson as unknown as { slug: string, title: string, sector: string, description: string, lede: string, hero: string, faq: { items: [string, string][] }, services: { items: [string, string][] }, touchpoints: { images: { id: string }[] }, portfolio?: { groups: { rows: { id: string }[][] }[] }, work: { items: { image: string }[] } }[]

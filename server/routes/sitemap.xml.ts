@@ -22,7 +22,7 @@ export default defineEventHandler((event) => {
     ...solutions.map(so => ({
       loc: `${base}/solutions/${so.slug}`,
       priority: '0.9',
-      images: [`${base}/og/solutions-${so.slug}.jpg`, ...[so.hero, ...so.work.items.map(w => w.image), ...so.touchpoints.images.map(i => i.id)].map(id => imageUrl(base, id))],
+      images: [`${base}/og/solutions-${so.slug}.jpg`, ...[so.hero, ...so.work.items.map(w => w.image), ...so.touchpoints.images.map(i => i.id), ...(so.portfolio?.groups.flatMap(g => g.rows.flat().map(i => i.id)) ?? [])].map(id => imageUrl(base, id))],
     })),
   ]
   const body = urls.map(u => `  <url>

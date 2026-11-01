@@ -160,6 +160,27 @@ useSeo({
         </div>
       </figure>
 
+      <!-- PORTFOLIO: work beyond the full case studies, grouped by kind of place -->
+      <section v-if="s.portfolio" class="s-port theme-dark" data-theme="dark" :aria-label="s.portfolio.title">
+        <div class="container">
+          <p v-reveal class="label s-label">{{ s.portfolio.label }}</p>
+          <h2 v-reveal class="s-h2 t-h2">{{ s.portfolio.title }}</h2>
+          <p v-reveal class="s-port-intro t-p">{{ s.portfolio.intro }}</p>
+        </div>
+        <div v-for="g in s.portfolio.groups" :key="g.name" class="container s-group">
+          <div class="s-group-head">
+            <h3 v-reveal class="s-group-name t-h3">{{ g.name }}</h3>
+            <p v-reveal class="s-group-desc t-small">{{ g.desc }}</p>
+          </div>
+          <div v-for="(row, r) in g.rows" :key="r" class="s-row" :class="row.length > 1 ? 'is-pair' : (media[row[0]!.id]?.h ?? 0) > (media[row[0]!.id]?.w ?? 0) ? 'is-full is-tall' : 'is-full'">
+            <div v-for="(im, j) in row" :key="im.id" class="s-row-item" :class="`n-${j}`">
+              <MediaFrame :id="im.id" :alt="im.alt" :sizes="row.length > 1 ? '(max-width: 600px) 100vw, 42vw' : '(max-width: 600px) 100vw, 84vw'" :travel="4" :scale="[1.045, 1.045]" />
+            </div>
+          </div>
+          <p class="s-caption t-small">{{ g.caption }}</p>
+        </div>
+      </section>
+
       <!-- SECTORS -->
       <section class="s-list theme-dark" data-theme="dark" :aria-label="s.sectors.title">
         <div class="container">
@@ -305,6 +326,19 @@ useSeo({
 .s-caption { grid-column: 2 / 9; margin-top: 1.2vw; color: var(--fg-2); padding-left: 1.2em; position: relative; }
 .s-caption::before { content: ''; position: absolute; left: 0; top: 0.75em; width: 0.6em; height: 1px; background: var(--c-title); }
 
+/* PORTFOLIO */
+.s-port { padding: 11vw 0 6vw; }
+.s-port-intro { grid-column: 5 / 10; margin-top: 2.6vw; color: var(--fg-2); }
+.s-group { margin-top: 8vw; }
+.s-group-head { grid-column: 2 / 12; display: flex; align-items: baseline; justify-content: space-between; gap: 2vw; padding-top: 1.6vw; border-top: 1px solid var(--rule); margin-bottom: 2.4vw; }
+.s-group-name { color: var(--c-title); }
+.s-group-desc { color: var(--fg-2); max-width: 30em; text-align: right; }
+.s-row { grid-column: 1 / -1; display: grid; grid-template-columns: subgrid; align-items: start; margin-bottom: var(--gutter); }
+.s-row.is-full .n-0 { grid-column: 2 / 12; }
+.s-row.is-full.is-tall .n-0 { grid-column: 4 / 10; }
+.s-row.is-pair .n-0 { grid-column: 2 / 7; }
+.s-row.is-pair .n-1 { grid-column: 7 / 12; }
+
 /* FAQ */
 .s-faq { padding: 11vw 0; }
 .s-qa { grid-column: 5 / 12; margin-top: 4vw; border-bottom: 1px solid var(--rule); }
@@ -327,6 +361,7 @@ useSeo({
   .s-facts { grid-template-columns: repeat(2, 1fr); }
   .s-label { grid-column: 2 / -1; margin-bottom: 2.4vw; }
   .s-h2, .s-qa { grid-column: 2 / 12; }
+  .s-port-intro { grid-column: 2 / 11; }
   .s-body { grid-column: 2 / 11; }
   .s-items.is-4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
@@ -340,7 +375,14 @@ useSeo({
   .s-lede { grid-column: 1 / -1; }
   .s-facts { grid-column: 1 / -1; grid-template-columns: 1fr 1fr; gap: 7vw 4vw; margin-top: 14vw; }
   .s-fact dd { margin-top: 1.6vw; }
-  .s-label, .s-h2, .s-body, .s-items, .s-cards, .s-qa, .s-caption { grid-column: 1 / -1; }
+  .s-label, .s-h2, .s-body, .s-items, .s-cards, .s-qa, .s-caption, .s-port-intro, .s-group-head { grid-column: 1 / -1; }
+  .s-port { padding: 22vw 0 10vw; }
+  .s-port-intro { margin-top: 6vw; }
+  .s-group { margin-top: 16vw; }
+  .s-group-head { flex-direction: column; gap: 2vw; padding-top: 4vw; margin-bottom: 5vw; }
+  .s-group-desc { text-align: left; }
+  .s-row { row-gap: 3vw; margin-bottom: 3vw; }
+  .s-row.is-full .n-0, .s-row.is-pair .n-0, .s-row.is-pair .n-1 { grid-column: 1 / -1; }
   .s-h2 { margin-top: 4vw; }
   .s-text, .s-list, .s-faq { padding: 22vw 0; }
   .s-body { margin-top: 6vw; }
