@@ -64,7 +64,7 @@ def main():
         pg = b.new_page(viewport={'width': 1200, 'height': 630})
         cards = [('home', 'c5aa67204b', 'Visual Strategy Studio · Amman', 'We translate brands<br>into <em>visual language</em>', 'Strategic brand &amp; visual communication studio')]
         cards += [(pr['slug'], pr['hero'], 'Case study' + (f" · {pr['year']}" if pr['year'] else ''), pr['title'], pr['category']) for pr in projects]
-        cards += [(f"solutions-{so['slug']}", so['hero'], 'Solutions · Lōn Visuals', so['title'], 'Hotels, resorts &amp; F&amp;B · Saudi Arabia, Jordan &amp; the GCC') for so in solutions]
+        cards += [(f"solutions-{so['slug']}", so['hero'], 'Solutions · Lōn Visuals', so['title'], so['ogSub']) for so in solutions]
         for slug, iid, kicker, title, sub in cards:
             # loaded from a file URL so the page may read local fonts and images
             tmp = PUB / 'og' / '_card.html'

@@ -53,7 +53,7 @@ useSeo({
       'image': img(s.hero),
       'provider': { '@id': `${base}/#organization` },
       'areaServed': ['Saudi Arabia', 'Jordan', 'United Arab Emirates', 'Qatar', 'Oman', 'Morocco', 'Middle East and North Africa'],
-      'audience': { '@type': 'BusinessAudience', 'name': 'Hotel owners, operators and developers' },
+      'audience': { '@type': 'BusinessAudience', 'name': s.audience },
       'hasOfferCatalog': {
         '@type': 'OfferCatalog',
         'name': `${s.sector} branding services`,

@@ -50,7 +50,7 @@ export const projectBySlug = (slug: string) => projects.find(p => p.slug === slu
 /* sector landing pages under /solutions (content/solutions.json) */
 type Pair = [string, string]
 export interface Solution {
-  key: string, slug: string, sector: string, seoTitle: string, description: string, kicker: string, title: string
+  key: string, slug: string, sector: string, seoTitle: string, description: string, audience: string, kicker: string, title: string
   hero: string, heroAlt: string, lede: string, facts: Pair[]
   brief: { label: string, title: string, paras: string[] }
   services: { label: string, title: string, items: Pair[] }
@@ -83,7 +83,7 @@ export const site = {
 
 export const nav = [
   { label: 'Work', to: '/#work' },
-  { label: 'Solutions', to: '/solutions/hospitality-branding', children: [{ label: 'Hospitality', to: '/solutions/hospitality-branding' }] },
+  { label: 'Solutions', to: '/solutions/hospitality-branding', children: [{ label: 'Hospitality', to: '/solutions/hospitality-branding' }, { label: 'Government', to: '/solutions/government-branding' }] },
   { label: 'Services', to: '/#services' },
   { label: 'Studio', to: '/#studio' },
   { label: 'Contact', to: '/#contact' },
