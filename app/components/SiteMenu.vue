@@ -168,7 +168,7 @@ defineExpose({ open, close, visible })
 .container { width: 100%; align-items: end; }
 .main { grid-column: 2 / 9; }
 .main-item { overflow: hidden; padding-bottom: 0.12em; margin-bottom: -0.12em; display: flex; align-items: baseline; gap: 2vw; }
-.sub { flex: none; display: flex; flex-wrap: wrap; gap: 0.4em 1.4em; white-space: nowrap; }
+.sub { flex: none; align-self: center; display: flex; flex-direction: column; gap: 0.5em; white-space: nowrap; }
 .sub-link { color: var(--fg-2); font-size: var(--fs-label); }
 .main-link { display: inline-block; color: var(--c-title); }
 .main-line { display: inline-block; transition: transform 0.8s var(--ease-out), color 0.4s; }

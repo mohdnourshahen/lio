@@ -335,6 +335,244 @@
    "kicker": "Opening soon?",
    "title": "Let's build a brand guests remember",
    "subject": "Hospitality branding enquiry"
+  },
+  "audience": "Hotel owners, operators and developers",
+  "ogSub": "Hotels, resorts &amp; F&amp;B · Saudi Arabia, Jordan &amp; the GCC"
+ },
+ {
+  "key": "government",
+  "slug": "government-branding",
+  "sector": "Government",
+  "seoTitle": "Government Branding Agency | Identity for Ministries & Public Institutions — Lōn Visuals",
+  "description": "Government branding for ministries, authorities and public institutions in Jordan, Saudi Arabia and the GCC: identity, bilingual guidelines, events and media.",
+  "audience": "Ministries, authorities and public institutions",
+  "ogSub": "Ministries, authorities &amp; public institutions · Jordan, Saudi Arabia &amp; the GCC",
+  "kicker": "Solutions · Ministries, Authorities & Public Institutions",
+  "title": "Government Branding",
+  "hero": "4b853ab255",
+  "heroAlt": "A joint press conference before the Ministry of Foreign Affairs and Expatriates backdrop, its identity by Lōn Visuals",
+  "lede": "Identities for the institutions that speak for a nation. We give ministries, authorities and national centres one clear, bilingual visual language: rooted in national symbols, set down in guidelines every department, mission and partner can apply, and carried from official stationery to the summit stage.",
+  "facts": [
+   [
+    "Government clients",
+    "Ministry of Foreign Affairs and Expatriates, National Cyber Security Center, Saudi Red Sea Authority"
+   ],
+   [
+    "Markets",
+    "Jordan, Saudi Arabia and the GCC"
+   ],
+   [
+    "Practice",
+    "11+ years · 60+ brands built"
+   ],
+   [
+    "Languages",
+    "Arabic and English, designed together"
+   ]
+  ],
+  "brief": {
+   "label": "The Brief",
+   "title": "Consistency is credibility.",
+   "paras": [
+    "For a public institution, design is never decoration. Every letterhead, sign and broadcast frame speaks for the state, and every inconsistency between a department, an embassy or a partner reads as a crack in that voice.",
+    "The bar keeps rising. National visions, digital transformation and international summits ask institutions for identities that carry heritage and modernity at once, in Arabic and English with equal authority, and that hold together when hundreds of people apply them."
+   ]
+  },
+  "services": {
+   "label": "What We Deliver",
+   "title": "One standard for every official touchpoint",
+   "items": [
+    [
+     "Institutional Identity",
+     "Emblems, logotypes and bilingual lockups built around national symbols, with every official variation."
+    ],
+    [
+     "Brand Guidelines",
+     "Standards for logo, colour, typography, photography and video that every department and mission can apply."
+    ],
+    [
+     "Arabic & English Typography",
+     "Calligraphic and typographic systems in which both scripts carry equal authority."
+    ],
+    [
+     "Official Stationery & Print",
+     "Letterheads, folders, envelopes, business cards and reports."
+    ],
+    [
+     "Events & Summits",
+     "Stages, backdrops, podiums, pavilions and press-conference settings for national and international events."
+    ],
+    [
+     "Digital & Social",
+     "Templates for every channel, infographics and a data-visualisation language for reports."
+    ],
+    [
+     "Official Photography",
+     "Coverage of receptions and visits, delivered in a branded frame."
+    ],
+    [
+     "Environment & Fleet",
+     "Building signage, interior graphics and vehicle livery."
+    ]
+   ]
+  },
+  "work": {
+   "label": "Government Work",
+   "title": "Selected government brands",
+   "items": [
+    {
+     "slug": "ministry-of-foreign-affairs-jordan",
+     "image": "db0e23ca6f",
+     "line": "One visual language for Jordan's voice abroad: guidelines for the Ministry, its 59 diplomatic missions and its reach into 87 more countries."
+    },
+    {
+     "slug": "national-cyber-security-center",
+     "image": "489c86c9bd",
+     "line": "A national identity for Jordan's cyberspace: the Kingdom's seven-pointed star, rebuilt from data, networks, circuitry and the fingerprint."
+    }
+   ]
+  },
+  "touchpoints": {
+   "label": "In Official Use",
+   "title": "Where the identity speaks",
+   "images": [
+    {
+     "id": "0a6bc799aa",
+     "alt": "A minister speaking before the Ministry of Foreign Affairs bilingual backdrop"
+    },
+    {
+     "id": "2808e7ff4b",
+     "alt": "A briefing before the Government Security Operations Center wall, with the NCSC symbol behind"
+    }
+   ],
+   "caption": "Ministry of Foreign Affairs and Expatriates · Press conference — National Cyber Security Center · GSOC"
+  },
+  "portfolio": {
+   "label": "Portfolio",
+   "title": "More from the public sector",
+   "intro": "Beyond the full case studies: identities and applications for national authorities and programmes.",
+   "groups": [
+    {
+     "name": "Authorities & Agencies",
+     "desc": "Marine, tourism and regulatory bodies.",
+     "rows": [
+      [
+       {
+        "id": "a644d71641",
+        "alt": "Saudi Red Sea Authority flags with the palm-and-wave symbol"
+       }
+      ],
+      [
+       {
+        "id": "0f8a12a3d7",
+        "alt": "A jet ski in the Saudi Red Sea Authority livery"
+       }
+      ]
+     ],
+     "caption": "Saudi Red Sea Authority · Flags and fleet"
+    }
+   ]
+  },
+  "sectors": {
+   "label": "Who We Work With",
+   "title": "Built for public institutions",
+   "items": [
+    [
+     "Ministries & Diplomacy",
+     "Ministries, embassies and missions abroad."
+    ],
+    [
+     "Authorities & Regulators",
+     "National authorities, regulators and agencies."
+    ],
+    [
+     "National Centres",
+     "Specialised centres, national strategies and programmes."
+    ],
+    [
+     "Summits & Events",
+     "Conferences, summits, exhibitions and official visits."
+    ]
+   ]
+  },
+  "process": {
+   "label": "How We Work",
+   "title": "Built to be adopted, not just approved",
+   "items": [
+    [
+     "Listen",
+     "Leadership, departments and the public the institution serves."
+    ],
+    [
+     "Define",
+     "The positioning, the symbol and the values the identity must carry."
+    ],
+    [
+     "Design",
+     "The identity, the bilingual system and the guidelines that protect it."
+    ],
+    [
+     "Roll Out",
+     "Templates and handover across every unit, mission and partner."
+    ]
+   ]
+  },
+  "why": {
+   "label": "Why Lōn",
+   "title": "A studio fluent in the language of the state",
+   "items": [
+    [
+     "Rooted in national symbols",
+     "The seven-pointed star, the royal crest, the classical scripts: identities that speak the state's own visual language."
+    ],
+    [
+     "Bilingual by design",
+     "Arabic and English are drawn together from the start, never translated after the fact."
+    ],
+    [
+     "Systems that scale",
+     "Guidelines written for decentralised institutions: ministries with missions abroad, centres with partners nationwide."
+    ]
+   ]
+  },
+  "faq": {
+   "label": "Questions",
+   "title": "Government branding, answered",
+   "items": [
+    [
+     "What does government branding include?",
+     "The institutional identity and its official variations, brand guidelines, Arabic and English typography, stationery, events and summits, digital templates, photography and signage. We shape the scope around the institution's mandate and timeline."
+    ],
+    [
+     "Have you worked with ministries and public institutions?",
+     "Yes. Our government work includes the Ministry of Foreign Affairs and Expatriates and the National Cyber Security Center in Jordan, and the Saudi Red Sea Authority."
+    ],
+    [
+     "Can you build around an existing emblem or national symbol?",
+     "Yes. Many institutions carry an official emblem. We build the system around it, as with the royal crest of the Ministry of Foreign Affairs, or draw a new symbol from national heritage, as with the National Cyber Security Center's seven-pointed star."
+    ],
+    [
+     "Will the identity work in Arabic and English?",
+     "Always. Every identity we build is bilingual from the first sketch, so both scripts carry equal weight on every document, sign and screen."
+    ],
+    [
+     "Do you write guidelines that departments and partners can follow?",
+     "Yes. Guidelines are at the heart of every government project: clear standards, approved variations and templates that make the identity easy to apply and hard to dilute."
+    ],
+    [
+     "Can you brand a summit or national event?",
+     "Yes. From the stage and backdrops to pavilions and press conferences, as for the National Cyber Security Center's summit presence and the Ministry's joint press conferences."
+    ],
+    [
+     "How do we start?",
+     "Send us a short brief: the institution, its mandate, the audiences it serves and your timeline. We will come back with an approach and a proposal."
+    ]
+   ]
+  },
+  "cta": {
+   "kicker": "Building a national brand?",
+   "title": "Let's give your institution one clear voice",
+   "subject": "Government branding enquiry"
   }
  }
 ]
