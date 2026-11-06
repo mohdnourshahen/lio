@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { nav } from '~/utils/site'
+import { chrome, langOf } from '~/utils/i18n'
 import { appState } from '~/utils/state'
 
 /**
@@ -8,7 +8,8 @@ import { appState } from '~/utils/state'
  */
 const emit = defineEmits<{ toggle: [] }>()
 const route = useRoute()
-const isHome = computed(() => route.path === '/')
+const isHome = computed(() => route.path === '/' || route.path === '/ar')
+const c = computed(() => chrome[langOf(route.path)])
 </script>
 
 <template>
@@ -16,15 +17,16 @@ const isHome = computed(() => route.path === '/')
     class="site-header"
     :class="[ { 'is-scrolled': appState.scrolled || !isHome, 'menu-open': appState.menuOpen, 'on-paper': appState.headerTheme === 'paper' && !appState.menuOpen }]"
   >
-    <NuxtLink to="/" class="logo" aria-label="Lōn Visuals — home" data-cursor-none>
+    <NuxtLink :to="langOf(route.path) === 'ar' ? '/ar' : '/'" class="logo" aria-label="Lōn Visuals — home" data-cursor-none>
       <LonLogo aria-hidden="true" />
     </NuxtLink>
 
     <nav class="inline-nav" aria-label="Primary">
       <ul>
-        <li v-for="item in nav" :key="item.to">
+        <li v-for="item in c.nav" :key="item.to">
           <NuxtLink :to="item.to" class="u-link u-link--rev" :tabindex="appState.scrolled || !isHome ? -1 : 0">{{ item.label }}</NuxtLink>
         </li>
+        <li><NuxtLink :to="c.switchTo" :lang="c.switchLang" class="u-link u-link--rev lang-switch" :tabindex="appState.scrolled || !isHome ? -1 : 0">{{ c.switchLabel }}</NuxtLink></li>
       </ul>
     </nav>
 
@@ -35,7 +37,7 @@ const isHome = computed(() => route.path === '/')
       aria-controls="site-menu"
       @click="emit('toggle')"
     >
-      <span class="menu-label">{{ appState.menuOpen ? 'Close' : 'Menu' }}</span>
+      <span class="menu-label">{{ appState.menuOpen ? c.close : c.menu }}</span>
       <span class="menu-icon" aria-hidden="true"><i /><i /><i /></span>
     </button>
   </header>
@@ -67,6 +69,8 @@ const isHome = computed(() => route.path === '/')
 }
 .is-scrolled .inline-nav, .menu-open .inline-nav { opacity: 0; transform: translateY(-30%); pointer-events: none; }
 .is-scrolled .menu-button, .menu-open .menu-button { opacity: 1; visibility: visible; transform: none; }
+
+/* right-to-left: the logo sits on the right, so the menu button takes the left edge */
 
 .menu-icon { position: relative; width: 1.25vw; height: 0.9vw; display: block; }
 .menu-icon i { position: absolute; left: 0; right: 0; height: 1px; background: currentColor; transition: transform 0.6s var(--ease-in-out), opacity 0.4s; }

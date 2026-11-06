@@ -9,6 +9,10 @@ interface SeoInput {
   ogImageAlt: string
   type?: 'website' | 'article'
   jsonLd?: Record<string, unknown>[]
+  /** page language; Arabic pages are also set right-to-left */
+  lang?: 'en' | 'ar'
+  /** the same page in each language, for hreflang */
+  alternates?: { en: string, ar: string }
 }
 
 export function useSiteUrl() {
@@ -68,7 +72,7 @@ export function useSeo(input: SeoInput) {
     ogImageWidth: 1200,
     ogImageHeight: 630,
     ogImageAlt: input.ogImageAlt,
-    ogLocale: 'en_US',
+    ogLocale: input.lang === 'ar' ? 'ar_JO' : 'en_US',
     twitterCard: 'summary_large_image',
     twitterTitle: input.title,
     twitterDescription: input.description,
@@ -76,8 +80,19 @@ export function useSeo(input: SeoInput) {
     twitterImageAlt: input.ogImageAlt,
     robots: 'index, follow, max-image-preview:large, max-snippet:-1',
   })
+  const alt = input.alternates
   useHead({
-    link: [{ rel: 'canonical', href: url }],
+    htmlAttrs: { lang: input.lang ?? 'en', dir: input.lang === 'ar' ? 'rtl' : 'ltr' },
+    link: [
+      { rel: 'canonical' as const, href: url },
+      ...(alt
+        ? [
+            { rel: 'alternate' as const, hreflang: 'en', href: `${base}${alt.en}` },
+            { rel: 'alternate' as const, hreflang: 'ar', href: `${base}${alt.ar}` },
+            { rel: 'alternate' as const, hreflang: 'x-default', href: `${base}${alt.en}` },
+          ]
+        : []),
+    ],
     script: [{
       type: 'application/ld+json',
       key: 'ld',

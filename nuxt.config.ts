@@ -30,6 +30,12 @@ export default defineNuxtConfig({
     '@fontsource/cormorant-garamond/400.css',
     '@fontsource/cormorant-garamond/400-italic.css',
     '@fontsource-variable/inter-tight/index.css',
+    // Arabic pages (/ar): Amiri for titles, a classical naskh that sits with the serif display; IBM Plex Sans Arabic for text
+    '@fontsource/amiri/arabic-400.css',
+    '@fontsource/amiri/arabic-700.css',
+    '@fontsource/ibm-plex-sans-arabic/arabic-300.css',
+    '@fontsource/ibm-plex-sans-arabic/arabic-400.css',
+    '@fontsource/ibm-plex-sans-arabic/arabic-500.css',
     '~/assets/css/main.css',
   ],
 
@@ -79,7 +85,7 @@ export default defineNuxtConfig({
     ...(offline ? { output: { dir: '.output-offline' } } : {}),
     prerender: {
       crawlLinks: true,
-      routes: ['/', ...projects.map(p => `/work/${p.slug}`), ...solutions.map(s => `/solutions/${s.slug}`), '/sitemap.xml', '/robots.txt', '/llms.txt', '/llms-full.txt'],
+      routes: ['/', '/ar', ...projects.map(p => `/work/${p.slug}`), ...solutions.map(s => `/solutions/${s.slug}`), '/sitemap.xml', '/robots.txt', '/llms.txt', '/llms-full.txt'],
     },
   },
 

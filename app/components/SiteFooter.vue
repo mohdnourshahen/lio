@@ -1,43 +1,47 @@
 <script setup lang="ts">
-import { nav, site } from '~/utils/site'
+import { site } from '~/utils/site'
+import { chrome, langOf } from '~/utils/i18n'
 
 /** Contact + footer — Exo Ape's closing "Our Story" block, carrying Lōn's contact section. */
 const year = 2026
+const route = useRoute()
+const c = computed(() => chrome[langOf(route.path)])
 </script>
 
 <template>
   <footer id="contact" class="site-footer theme-dark" data-theme="dark">
     <div class="container">
-      <p v-reveal class="caps kicker">Let’s Talk</p>
+      <p v-reveal class="caps kicker">{{ c.footer.kicker }}</p>
       <h2 v-reveal class="title t-h1">
-        <span class="line-mask"><span data-line>Have a project</span></span>
-        <span class="line-mask"><span data-line><em>in mind?</em></span></span>
+        <span class="line-mask"><span data-line>{{ c.footer.title[0] }}</span></span>
+        <span class="line-mask"><span data-line><em>{{ c.footer.title[1] }}</em></span></span>
       </h2>
-      <p v-reveal class="sub t-h4">We’d love to hear about it — let’s build something extraordinary together.</p>
+      <p v-reveal class="sub t-h4">{{ c.footer.sub }}</p>
       <a :href="`mailto:${site.email}`" class="email u-link" data-cursor="Write">{{ site.email }}</a>
 
       <div class="rule" />
 
       <address class="col col-1">
-        <p class="t-small dim">Studio</p>
-        <p class="t-small">{{ site.name }}</p>
-        <p class="t-small">{{ site.tagline }}</p>
-        <p class="t-small">{{ site.city }}, {{ site.country }}</p>
+        <p class="t-small dim">{{ c.footer.studio }}</p>
+        <p class="t-small">{{ langOf(route.path) === 'ar' ? 'لُون' : site.name }}</p>
+        <p class="t-small">{{ langOf(route.path) === 'ar' ? 'استوديو الاستراتيجية البصرية' : site.tagline }}</p>
+        <p class="t-small">{{ c.footer.place }}</p>
         <a class="t-small u-link u-link--rev" :href="`mailto:${site.email}`">{{ site.email }}</a>
       </address>
       <nav class="col col-2" aria-label="Footer">
-        <p class="t-small dim">Navigate</p>
+        <p class="t-small dim">{{ c.footer.navigate }}</p>
         <ul>
-          <li v-for="n in nav" :key="n.to"><NuxtLink :to="n.to" class="t-small u-link u-link--rev">{{ n.label }}</NuxtLink></li>
+          <li v-for="n in c.nav" :key="n.to"><NuxtLink :to="n.to" class="t-small u-link u-link--rev">{{ n.label }}</NuxtLink></li>
+          <li><NuxtLink :to="c.switchTo" :lang="c.switchLang" class="t-small u-link u-link--rev">{{ c.switchLabel }}</NuxtLink></li>
         </ul>
       </nav>
       <div class="col col-3">
-        <p class="t-small dim">Follow</p>
+        <p class="t-small dim">{{ c.follow }}</p>
         <ul>
           <li v-for="s in site.socials" :key="s.name"><a :href="s.href" target="_blank" rel="noopener" class="t-small u-link u-link--rev">{{ s.name }}</a></li>
         </ul>
       </div>
-      <p class="copy t-small dim">© {{ year }} Lōn Visuals. All rights reserved.</p>
+      <p class="copy t-small dim">© {{ year }} {{ c.footer.rights }}</p>
     </div>
   </footer>
 </template>
