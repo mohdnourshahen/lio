@@ -14,6 +14,7 @@ export default defineEventHandler((event) => {
   const pageImages = (p: typeof projects[number]) => [...new Set([p.hero, ...p.blocks.flatMap(b => ('images' in b && b.images ? (b.images as { id: string }[]).map(i => i.id) : []))])]
   const urls = [
     { loc: `${base}/`, priority: '1.0', images: [`${base}/og/home.jpg`, ...projects.map(p => imageUrl(base, p.hero))] },
+    { loc: `${base}/ar`, priority: '0.9', images: [`${base}/og/home.jpg`] },
     ...projects.map(p => ({
       loc: `${base}/work/${p.slug}`,
       priority: '0.8',

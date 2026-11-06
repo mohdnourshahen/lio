@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { EASE, gsap, isTouchDevice, prefersReducedMotion } from '~/utils/motion'
-import { HERO_IMAGE, nav, site } from '~/utils/site'
+import { HERO_IMAGE, site } from '~/utils/site'
+import { chrome, langOf } from '~/utils/i18n'
 import { appState } from '~/utils/state'
 
 /**
@@ -13,10 +14,11 @@ import { appState } from '~/utils/state'
 const emit = defineEmits<{ close: [] }>()
 const route = useRoute()
 
-const links = [
-  { label: 'Home', to: '/', image: HERO_IMAGE, alt: 'Lōn Visuals studio visual' },
-  ...nav.map((n, i) => ({ ...n, image: ['ab4f72775a', 'f04c0008a2', '76a786afab', '7e084baf44', '5749a13a08'][i]!, alt: '' })),
-]
+const c = computed(() => chrome[langOf(route.path)])
+const links = computed(() => [
+  { label: c.value.home, to: langOf(route.path) === 'ar' ? '/ar' : '/', image: HERO_IMAGE, alt: 'Lōn Visuals studio visual' },
+  ...c.value.nav.map((n, i) => ({ ...n, image: ['ab4f72775a', 'f04c0008a2', '76a786afab', '7e084baf44', '5749a13a08'][i]!, alt: '' })),
+])
 
 const root = ref<HTMLElement>()
 const wrapper = ref<HTMLElement>()
@@ -50,7 +52,7 @@ async function open() {
   await nextTick()
   const el = root.value!
   const vh = window.innerHeight
-  showImage(Math.max(0, links.findIndex(l => l.to === route.path)), false)
+  showImage(Math.max(0, links.value.findIndex(l => l.to === route.path)), false)
   el.querySelector<HTMLElement>('a')?.focus({ preventScroll: true })
   if (prefersReducedMotion()) return
   appState.menuAnimating = true
@@ -148,12 +150,13 @@ defineExpose({ open, close, visible })
             </div>
           </div>
           <div class="social">
-            <p class="caps muted">Follow</p>
+            <p class="caps muted">{{ c.follow }}</p>
             <ul>
               <li v-for="s in site.socials" :key="s.name" class="mask">
                 <a :href="s.href" target="_blank" rel="noopener" class="social-line u-link u-link--rev">{{ s.name }}</a>
               </li>
               <li class="mask"><a :href="`mailto:${site.email}`" class="social-line u-link u-link--rev">{{ site.email }}</a></li>
+              <li class="mask"><NuxtLink :to="c.switchTo" :lang="c.switchLang" class="social-line u-link u-link--rev" @click="emit('close')">{{ c.switchLabel }}</NuxtLink></li>
             </ul>
           </div>
         </div>
