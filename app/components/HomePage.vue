@@ -136,7 +136,7 @@ onBeforeUnmount(() => {
       <div class="hero-inner">
         <p v-reveal="{ intro: true, delay: -0.2 }" class="hero-kicker caps">{{ t.kicker }}</p>
         <h1 id="hero-title" ref="heroTitle" v-reveal="{ intro: true }" class="hero-title t-h1">
-          <span v-for="(line, i) in t.title" :key="i" class="line-mask"><span data-line><em v-if="i === t.accentLine">{{ line }}</em><template v-else>{{ line }}</template></span></span>
+          <span v-for="(line, i) in t.title" :key="i" class="line-mask"><span data-line><em v-if="i === t.accentLine"><Calli :text="line" /></em><Calli v-else :text="line" /></span></span>
         </h1>
         <p v-reveal="{ intro: true, delay: 0.4 }" class="hero-caps caps">{{ t.caps }}</p>
       </div>
@@ -234,7 +234,7 @@ onBeforeUnmount(() => {
       <div class="container">
         <p v-reveal class="label s-label">{{ t.servicesLabel }}</p>
         <h2 id="services-title" v-reveal class="s-title t-h1">
-          <span class="line-mask"><span data-line>{{ t.servicesTitle[0] }}<em>{{ t.servicesTitle[1] }}</em></span></span>
+          <span class="line-mask"><span data-line>{{ t.servicesTitle[0] }}<em><Calli :text="t.servicesTitle[1]" /></em></span></span>
         </h2>
         <div class="s-intro">
           <p v-reveal class="t-h4">{{ t.servicesLead[0] }}<strong>{{ t.servicesLead[1] }}</strong>{{ t.servicesLead[2] }}</p>
@@ -276,7 +276,7 @@ onBeforeUnmount(() => {
         <div class="st-content">
           <p v-reveal class="label">{{ t.studioLabel }}</p>
           <h2 id="studio-title" v-reveal class="st-title t-h1">
-            <span v-for="(line, i) in t.studioTitle" :key="i" class="line-mask"><span data-line><em v-if="i === 1">{{ line }}</em><template v-else>{{ line }}</template></span></span>
+            <span v-for="(line, i) in t.studioTitle" :key="i" class="line-mask"><span data-line><em v-if="i === 1"><Calli :text="line" /></em><Calli v-else :text="line" /></span></span>
           </h2>
           <p v-reveal class="st-body t-h4">{{ t.studioBody }}</p>
         </div>

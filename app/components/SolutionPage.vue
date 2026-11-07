@@ -107,7 +107,7 @@ useSeo({
           </nav>
           <p v-reveal="{ intro: true, delay: -0.1 }" class="s-kicker caps">{{ s.kicker }}</p>
           <h1 id="sol-title" v-reveal="{ intro: true }" class="s-title t-h1">
-            <span class="line-mask"><span data-line>{{ s.title }}</span></span>
+            <span class="line-mask"><span data-line><Calli :text="s.title" /></span></span>
           </h1>
           <!-- not v-reveal: its line-split wrapper would swallow the flex gap between the two links -->
           <p class="s-hero-cta">
@@ -273,7 +273,7 @@ useSeo({
       <section class="s-cta theme-sand" data-theme="sand" :aria-label="ui.start">
         <div class="container">
           <p v-reveal class="caps s-cta-kicker">{{ s.cta.kicker }}</p>
-          <h2 v-reveal class="s-cta-title t-h1">{{ s.cta.title }}</h2>
+          <h2 v-reveal class="s-cta-title t-h1"><Calli :text="s.cta.title" /></h2>
           <p class="s-cta-actions">
             <a :href="mail" class="btn" data-cursor="Write">{{ site.email }}</a>
             <NuxtLink :to="`${pre || '/'}#work`" class="s-link caps">{{ ui.allWork }} <span aria-hidden="true">{{ lang === 'ar' ? '←' : '→' }}</span></NuxtLink>
