@@ -263,3 +263,7 @@ html[lang="ar"] .site-menu .main-link { font-size: min(5.2vw, calc((var(--vh) * 
 @media (max-width: 600px) { html[lang="ar"] .site-menu .main-link { font-size: min(9.6vw, calc(var(--vh) * 4.6)); } }
 /* the client logos are white artwork: on the light edition's paper they print in ink */
 html[data-mode="light"] .clients .c-cell img { filter: brightness(0); opacity: 0.78; }
+/* Arabic titles that run to two lines carry harakat above and below: a touch smaller, with room between lines */
+html[lang="ar"] .t-h2 { font-size: calc(var(--fs-h2) * 0.76); line-height: 1.55; }
+html[lang="ar"] .t-h3 { line-height: 1.5; }
+html[lang="ar"] .s-cta-title { font-size: calc(var(--fs-h1) * 0.62); line-height: 1.5; max-width: 16ch; }

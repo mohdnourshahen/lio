@@ -15,8 +15,8 @@ const c = computed(() => chrome[langOf(route.path)])
     <div class="container">
       <p v-reveal class="caps kicker">{{ c.footer.kicker }}</p>
       <h2 v-reveal class="title t-h1">
-        <span class="line-mask"><span data-line>{{ c.footer.title[0] }}</span></span>
-        <span class="line-mask"><span data-line><em>{{ c.footer.title[1] }}</em></span></span>
+        <span class="line-mask"><span data-line><Calli :text="c.footer.title[0]" /></span></span>
+        <span class="line-mask"><span data-line><em><Calli :text="c.footer.title[1]" /></em></span></span>
       </h2>
       <p v-reveal class="sub t-h4">{{ c.footer.sub }}</p>
       <a :href="`mailto:${site.email}`" class="email u-link" data-cursor="Write">{{ site.email }}</a>
