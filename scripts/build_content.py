@@ -480,6 +480,9 @@ def curate(P):
         P['credits'] = [{'role': 'Design & Art Direction', 'name': "Moh'd Nour Shahen", 'href': None}]
     if k == 'masar':
         P['blocks'] = masar_additions(P['blocks'])
+    if k == 'lazure':
+        # the photography is by Roycelysian, as on Zeryab Estates
+        P['credits'] = [{'role': 'Photography', 'name': 'Roycelysian', 'href': 'https://roycelysian.com'}]
     if k == 'rambourg':
         # the studio presents the client as "Rambourg Fondation"
         P = json.loads(json.dumps(P, ensure_ascii=False).replace('Fondation Rambourg', 'Rambourg Fondation').replace('Rambourg Foundation', 'Rambourg Fondation'))

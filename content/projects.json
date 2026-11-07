@@ -52,7 +52,7 @@
    },
    {
     "role": "Photography",
-    "name": "Roy Celysian",
+    "name": "Roycelysian",
     "href": "https://roycelysian.com"
    },
    {
@@ -1277,7 +1277,13 @@
    ]
   ],
   "next": "creativology",
-  "credits": [],
+  "credits": [
+   {
+    "role": "Photography",
+    "name": "Roycelysian",
+    "href": "https://roycelysian.com"
+   }
+  ],
   "blocks": [
    {
     "type": "text",
