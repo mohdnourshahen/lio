@@ -227,13 +227,22 @@ html:not(.has-smooth) .scroll-spacer { display: none; }
   .js [data-reveal] { visibility: visible; }
 }
 
+/* ---------- the light edition (html[data-mode="light"], set by the visitor) ----------
+   Every ground turns light: the three ink depths become three paper depths beside the white reading
+   surfaces (theme-paper, unchanged), so sections still part by tone, as they do in the dark edition.
+   The palette is redefined on each section, so every component that reads it follows. Image heroes
+   (.keep-dark), true black and a project's own brand colour (theme-black, theme-surface) keep theirs. */
+html[data-mode="light"] body { background: #f7f4ed; }
+html[data-mode="light"] :is(.theme-dark, .theme-light, .theme-sand):not(.keep-dark) {
+  --c-ink: #f7f4ed; --c-ink-2: #efeadf; --c-ink-3: #e7e0cf;
+  --c-paper: #16130c; --c-white: #16130c;
+  /* the citron titles become an antique gold that reads on paper */
+  --c-title: #6b5719;
+  --fg-2: rgba(22, 19, 12, 0.62); --rule: rgba(22, 19, 12, 0.14); --accent: #8a6d1c;
+}
+html[data-mode="light"] :focus-visible { outline-color: #6b5719; }
+
 /* ---------- Arabic (/ar): right-to-left, Arabic faces, no tracking or case games ---------- */
-@font-face { font-family: 'Thmanyah Serif Display'; src: url('/fonts/thmanyah/thmanyahserifdisplay-Light.otf') format('opentype'); font-weight: 300; font-display: swap; unicode-range: U+0600-06FF, U+0750-077F, U+08A0-08FF, U+FB50-FDFF, U+FE70-FEFF, U+200C-200F; }
-@font-face { font-family: 'Thmanyah Serif Display'; src: url('/fonts/thmanyah/thmanyahserifdisplay-Regular.otf') format('opentype'); font-weight: 400; font-display: swap; unicode-range: U+0600-06FF, U+0750-077F, U+08A0-08FF, U+FB50-FDFF, U+FE70-FEFF, U+200C-200F; }
-@font-face { font-family: 'Thmanyah Serif Display'; src: url('/fonts/thmanyah/thmanyahserifdisplay-Medium.otf') format('opentype'); font-weight: 500; font-display: swap; unicode-range: U+0600-06FF, U+0750-077F, U+08A0-08FF, U+FB50-FDFF, U+FE70-FEFF, U+200C-200F; }
-@font-face { font-family: 'Thmanyah Sans'; src: url('/fonts/thmanyah/thmanyahsans-Light.otf') format('opentype'); font-weight: 300; font-display: swap; unicode-range: U+0600-06FF, U+0750-077F, U+08A0-08FF, U+FB50-FDFF, U+FE70-FEFF, U+200C-200F; }
-@font-face { font-family: 'Thmanyah Sans'; src: url('/fonts/thmanyah/thmanyahsans-Regular.otf') format('opentype'); font-weight: 400; font-display: swap; unicode-range: U+0600-06FF, U+0750-077F, U+08A0-08FF, U+FB50-FDFF, U+FE70-FEFF, U+200C-200F; }
-@font-face { font-family: 'Thmanyah Sans'; src: url('/fonts/thmanyah/thmanyahsans-Medium.otf') format('opentype'); font-weight: 500; font-display: swap; unicode-range: U+0600-06FF, U+0750-077F, U+08A0-08FF, U+FB50-FDFF, U+FE70-FEFF, U+200C-200F; }
 html[lang="ar"] {
   --f-title: 'Thmanyah Serif Display', 'Amiri', 'Slack', 'Iowan Old Style', Georgia, serif;
   --f-display: 'Thmanyah Serif Display', 'Amiri', 'Cormorant Garamond', Georgia, serif;
@@ -249,3 +258,8 @@ html[lang="ar"] .line-mask { padding-top: 0.22em; margin-top: -0.22em; padding-b
 html[lang="ar"] .t-h4, html[lang="ar"] .t-p, html[lang="ar"] .t-small { line-height: 1.85; }
 html[dir="rtl"] .site-header .menu-button { right: auto; left: 3.4722vw; }
 @media (max-width: 600px) { html[dir="rtl"] .site-header .menu-button { right: auto; left: 6.4vw; } }
+/* the menu in Arabic: taller lines, so a smaller size fits the six links under the header */
+html[lang="ar"] .site-menu .main-link { font-size: min(5.2vw, calc((var(--vh) * 95 - 10.4167vw) / 8.4)); line-height: 1.3; }
+@media (max-width: 600px) { html[lang="ar"] .site-menu .main-link { font-size: min(9.6vw, calc(var(--vh) * 4.6)); } }
+/* the client logos are white artwork: on the light edition's paper they print in ink */
+html[data-mode="light"] .clients .c-cell img { filter: brightness(0); opacity: 0.78; }

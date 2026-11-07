@@ -4,7 +4,7 @@ import type { NuxtError } from '#app'
 /** Not-found / error page in the site's own voice, instead of the framework default. */
 const props = defineProps<{ error: NuxtError }>()
 const notFound = computed(() => props.error.statusCode === 404)
-useHead({ title: notFound.value ? 'Page not found — Lōn Visuals' : 'Something went wrong — Lōn Visuals', meta: [{ name: 'robots', content: 'noindex' }] })
+useHead({ title: notFound.value ? 'Page not found | Lōn Visuals' : 'Something went wrong | Lōn Visuals', meta: [{ name: 'robots', content: 'noindex' }] })
 const home = () => clearError({ redirect: '/' })
 </script>
 

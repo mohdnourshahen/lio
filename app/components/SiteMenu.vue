@@ -1,7 +1,8 @@
 <script setup lang="ts">
 import { EASE, gsap, isTouchDevice, prefersReducedMotion } from '~/utils/motion'
 import { HERO_IMAGE, site } from '~/utils/site'
-import { chrome, langOf } from '~/utils/i18n'
+import { chrome, langOf, switchPath } from '~/utils/i18n'
+import { toggleMode } from '~/utils/mode'
 import { appState } from '~/utils/state'
 
 /**
@@ -156,7 +157,8 @@ defineExpose({ open, close, visible })
                 <a :href="s.href" target="_blank" rel="noopener" class="social-line u-link u-link--rev">{{ s.name }}</a>
               </li>
               <li class="mask"><a :href="`mailto:${site.email}`" class="social-line u-link u-link--rev">{{ site.email }}</a></li>
-              <li class="mask"><NuxtLink :to="c.switchTo" :lang="c.switchLang" class="social-line u-link u-link--rev" @click="emit('close')">{{ c.switchLabel }}</NuxtLink></li>
+              <li class="mask"><NuxtLink :to="switchPath(route.path)" :lang="c.switchLang" class="social-line u-link u-link--rev" @click="emit('close')">{{ c.switchLabel }}</NuxtLink></li>
+              <li class="mask"><button type="button" class="social-line u-link u-link--rev" :aria-label="appState.mode === 'light' ? c.toDarkLabel : c.toLightLabel" @click="toggleMode">{{ appState.mode === 'light' ? c.toDark : c.toLight }}</button></li>
             </ul>
           </div>
         </div>
@@ -167,13 +169,14 @@ defineExpose({ open, close, visible })
 
 <style scoped>
 .site-menu { position: fixed; inset: 0; z-index: 30; overflow: hidden; }
-.wrapper { position: absolute; inset: 0; display: flex; align-items: center; transform-origin: center; }
+.wrapper { position: absolute; inset: 0; display: flex; align-items: center; transform-origin: center; padding-top: 10.4167vw; padding-bottom: calc(var(--vh) * 5); }
 .container { width: 100%; align-items: end; }
 .main { grid-column: 2 / 9; }
 .main-item { overflow: hidden; padding-bottom: 0.12em; margin-bottom: -0.12em; display: flex; align-items: baseline; gap: 2vw; }
 .sub { flex: none; align-self: center; display: flex; flex-direction: column; gap: 0.5em; white-space: nowrap; }
 .sub-link { color: var(--fg-2); font-size: var(--fs-label); }
-.main-link { display: inline-block; color: var(--c-title); }
+/* the links start below the header, and their size gives way to the viewport height so six lines never reach the logo */
+.main-link { display: inline-block; color: var(--c-title); font-size: min(6vw, calc((var(--vh) * 95 - 10.4167vw) / 6.6)); line-height: 1.02; }
 .main-line { display: inline-block; transition: transform 0.8s var(--ease-out), color 0.4s; }
 @media (hover: hover) {
   .main-link:hover .main-line { transform: translateX(1.5vw); color: var(--c-paper); }
@@ -192,12 +195,16 @@ defineExpose({ open, close, visible })
 
 /* landscape phones: fit six links in a short viewport */
 @media (min-width: 601px) and (max-height: 560px) {
-  .main-link { font-size: 12.5vh; line-height: 12.5vh; }
-  .wrapper { align-items: flex-end; padding-bottom: 6vh; }
+  .main-link { font-size: 11vh; line-height: 11.5vh; }
+  .wrapper { align-items: flex-end; padding-top: 0; padding-bottom: 6vh; }
 }
 
 @media (max-width: 600px) {
-  .wrapper { align-items: flex-start; padding-top: calc(var(--vh) * 18); }
+  .wrapper { align-items: flex-start; padding-top: calc(var(--vh) * 18); padding-bottom: 0; }
+  .main-link { font-size: min(10.4vw, calc(var(--vh) * 5.6)); }
+  /* the sector links drop under Solutions instead of running off the screen */
+  .main-item { flex-wrap: wrap; row-gap: 0.4em; }
+  .sub { flex-basis: 100%; flex-direction: row; gap: 1.6em; padding-bottom: 0.6em; }
   .main { grid-column: 1 / -1; }
   .side { grid-column: 1 / -1; margin-top: 12vw; }
   .images { display: none; }

@@ -480,6 +480,9 @@ def curate(P):
         P['credits'] = [{'role': 'Design & Art Direction', 'name': "Moh'd Nour Shahen", 'href': None}]
     if k == 'masar':
         P['blocks'] = masar_additions(P['blocks'])
+    if k == 'lazure':
+        # the photography is by Roycelysian, as on Zeryab Estates
+        P['credits'] = [{'role': 'Photography', 'name': 'Roycelysian', 'href': 'https://roycelysian.com'}]
     if k == 'rambourg':
         # the studio presents the client as "Rambourg Fondation"
         P = json.loads(json.dumps(P, ensure_ascii=False).replace('Fondation Rambourg', 'Rambourg Fondation').replace('Rambourg Foundation', 'Rambourg Fondation'))
@@ -499,5 +502,12 @@ CHAIN = ['zeryab', 'masar', 'fnf', 'skyfalcons', 'lazure', 'creativology', 'mofa
 for a, b in zip(CHAIN, CHAIN[1:] + CHAIN[:1]):
     projects[a]['next'] = projects[b]['slug']
 out = [projects[k] for k in ORDER]
+# studio copy edits (content/copyedits.json): whole field values swapped for their edited text
+EDITS = json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'content', 'copyedits.json')))['edits']
+def edit(o):
+    if isinstance(o, dict): return {k: edit(v) for k, v in o.items()}
+    if isinstance(o, list): return [edit(v) for v in o]
+    return EDITS.get(o, o) if isinstance(o, str) else o
+out = edit(out)
 json.dump(out, open(os.path.join(outdir, 'projects.json'), 'w'), indent=1, ensure_ascii=False)
 print(len(out), 'projects')

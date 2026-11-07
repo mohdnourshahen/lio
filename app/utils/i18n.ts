@@ -6,8 +6,10 @@
 export type Lang = 'en' | 'ar'
 
 export const langOf = (path: string): Lang => (path === '/ar' || path.startsWith('/ar/') ? 'ar' : 'en')
-/** the same page in the other language, where one exists */
 export const homeOf = (lang: Lang) => (lang === 'ar' ? '/ar' : '/')
+/** the same page in the other language: every page exists in both (/, /work/*, /solutions/*) */
+export const switchPath = (path: string) =>
+  langOf(path) === 'ar' ? path.replace(/^\/ar/, '') || '/' : path === '/' ? '/ar' : `/ar${path}`
 
 const en = {
   chrome: {
@@ -23,12 +25,16 @@ const en = {
     close: 'Close',
     follow: 'Follow',
     switchLabel: 'العربية',
-    switchTo: '/ar',
     switchLang: 'ar',
+    /** the edition switch: the label names the edition it switches to */
+    toLight: 'Light',
+    toDark: 'Dark',
+    toLightLabel: 'Switch to the light edition',
+    toDarkLabel: 'Switch to the dark edition',
     footer: {
       kicker: 'Let’s Talk',
       title: ['Have a project', 'in mind?'],
-      sub: 'We’d love to hear about it — let’s build something extraordinary together.',
+      sub: 'We’d love to hear about it. Let’s build something extraordinary together.',
       studio: 'Studio',
       navigate: 'Navigate',
       place: 'Amman, Jordan',
@@ -43,7 +49,7 @@ const ar: { chrome: Chrome } = {
   chrome: {
     nav: [
       { label: 'الأعمال', to: '/ar#work' },
-      { label: 'الحلول', to: '/solutions/hospitality-branding', children: [{ label: 'الضيافة', to: '/solutions/hospitality-branding' }, { label: 'الحكومات', to: '/solutions/government-branding' }] },
+      { label: 'الحلول', to: '/ar/solutions/hospitality-branding', children: [{ label: 'الضيافة', to: '/ar/solutions/hospitality-branding' }, { label: 'الحكومات', to: '/ar/solutions/government-branding' }] },
       { label: 'الخدمات', to: '/ar#services' },
       { label: 'الاستوديو', to: '/ar#studio' },
       { label: 'تواصل', to: '/ar#contact' },
@@ -53,8 +59,11 @@ const ar: { chrome: Chrome } = {
     close: 'إغلاق',
     follow: 'تابعنا',
     switchLabel: 'English',
-    switchTo: '/',
     switchLang: 'en',
+    toLight: 'فاتح',
+    toDark: 'داكن',
+    toLightLabel: 'التبديل إلى النسخة الفاتحة',
+    toDarkLabel: 'التبديل إلى النسخة الداكنة',
     footer: {
       kicker: 'لنتحدّث',
       title: ['مشروعك', 'يستحق لغته'],
@@ -72,21 +81,21 @@ export const chrome = { en: en.chrome, ar: ar.chrome }
 /* ---------- homepage ---------- */
 export const homeCopy = {
   en: {
-    seoTitle: 'Lōn Visuals — Branding & Visual Identity Studio in Amman, Jordan',
-    seoDescription: 'Branding and visual identity studio in Amman, Jordan: brand strategy, identity systems, guidelines and brand experience for leading organizations across MENA.',
-    ogAlt: 'Lōn Visuals — We translate brands into visual language',
+    seoTitle: 'Lōn Visuals | Branding & Visual Identity Studio in Amman, Jordan',
+    seoDescription: 'Branding and visual identity studio in Amman, Jordan: brand strategy, identity systems, guidelines and brand experience for leading organisations across MENA.',
+    ogAlt: 'Lōn Visuals: we translate brands into visual language',
     kicker: 'Visual Strategy Studio · Amman',
     title: ['We translate', 'brands into', 'visual language'],
     accentLine: 2,
     caps: 'Strategic brand & visual communication studio',
     est: 'Est. Amman 2015',
     scroll: 'Scroll',
-    loc: '2025 — Amman, JO',
-    statement: 'At Lōn Visuals, creativity meets strategy to shape how organizations communicate, evolve, and grow through design.',
+    loc: '2026 · Amman, JO',
+    statement: 'At Lōn Visuals, creativity meets strategy to shape how organisations communicate, evolve and grow through design.',
     stats: [
       ['Years of strategic', 'brand practice'],
       ['Brands built across', 'the region & beyond'],
-      ['Industries served,', 'from gov to tech'],
+      ['Industries served,', 'from government to tech'],
       ['Long-term client', 'partnerships'],
     ],
     marquee: ['Brand Identity', 'Visual Strategy', 'Brand Systems', 'Print & Editorial', 'Creative Direction'],
@@ -96,19 +105,19 @@ export const homeCopy = {
     reel: ['Creativity', 'Strategy'],
     servicesLabel: 'Services',
     servicesTitle: ['What We ', 'Do'],
-    servicesLead: ['Lōn Visuals provides ', 'strategic design and visual communication services', ' that help organizations maintain clarity, consistency, and strong brand presence across all visual touchpoints.'],
-    servicesSub: 'We act as a reliable visual partner — translating ideas into clear, consistent, and meaningful design.',
+    servicesLead: ['Lōn Visuals offers ', 'strategic design and visual communication', ' that keep organisations clear, consistent and present across every visual touchpoint.'],
+    servicesSub: 'A reliable visual partner, translating ideas into clear, consistent and meaningful design.',
     services: null as null | { name: string, desc: string }[],
     clientsLabel: 'Clients',
-    clientsTitle: 'Trusted by leading organizations',
+    clientsTitle: 'Trusted by leading organisations',
     studioLabel: 'Studio · Est. Amman 2015',
     studioTitle: ['Creativity.', 'Direction.', 'Design.'],
-    studioBody: 'Lōn Visuals is a strategic brand and visual communication studio dedicated to helping organizations communicate with clarity and impact. We combine creativity with structured thinking to build visual systems that support brands across their daily communication, corporate presence, and long-term evolution.',
+    studioBody: 'Lōn Visuals is a strategic brand and visual communication studio. We help organisations communicate with clarity and impact, pairing creativity with structured thinking to build visual systems that support a brand in its daily communication, its corporate presence and its long-term growth.',
   },
   ar: {
-    seoTitle: 'لُون — استوديو الهوية البصرية والعلامات التجارية في عمّان',
+    seoTitle: 'لُون | استوديو الهوية البصرية والعلامات التجارية في عمّان',
     seoDescription: 'استوديو للهوية البصرية والعلامة التجارية في عمّان: استراتيجية العلامة، وأنظمة الهوية، والأدلة الإرشادية، وتجربة العلامة لمؤسساتٍ رائدة في المنطقة.',
-    ogAlt: 'لُون — نمنح كلَّ علامةٍ لَونَها',
+    ogAlt: 'لُون: نمنح كلّ علامة لونها',
     kicker: 'استوديو الاستراتيجية البصرية · عمّان',
     // «لُون» and «لَون»: the studio's name and the word for colour, and colour in Arabic is also character
     title: ['نمنح', 'كلّ علامة', 'لونها'],
@@ -174,3 +183,38 @@ const termAr: Record<string, string> = {
 export const workTitle = (title: string, lang: Lang) => (lang === 'ar' ? titleAr[title] ?? title : title)
 export const workCategory = (cat: string, lang: Lang) =>
   lang === 'ar' ? cat.split(' · ').map(t => termAr[t] ?? t).join(' · ') : cat
+
+/* ---------- inner pages: Arabic text layered over the English content ----------
+   content/ar/<name>.json maps each English string of a page to its Arabic; common.json holds the
+   terms every page shares. Structure, images and order stay in the English source, so the two
+   editions can never drift; a string without an entry (a brand name, an address) stays as it is. */
+const arDicts = import.meta.glob<Record<string, string>>('../../content/ar/*.json', { eager: true, import: 'default' })
+const dict = (name: string) => ({ ...arDicts['../../content/ar/common.json'], ...arDicts[`../../content/ar/${name}.json`] })
+const KEEP = new Set(['id', 'slug', 'key', 'href', 'hex', 'image', 'hero', 'heroMobile', 'next', 'to', 'theme', 'surface', 'layout', 'type', 'color'])
+export function localize<T>(o: T, lang: Lang, name: string): T {
+  if (lang !== 'ar') return o
+  const d = dict(name)
+  const walk = (v: unknown, k?: string): unknown =>
+    typeof v === 'string' ? (k && KEEP.has(k) ? v : d[v] ?? v)
+      : Array.isArray(v) ? v.map(x => walk(x))
+        : v && typeof v === 'object' ? Object.fromEntries(Object.entries(v).map(([kk, x]) => [kk, walk(x, kk)]))
+          : v
+  return walk(o) as T
+}
+/** strings of a page that have no Arabic yet: mirrored by scripts/check_ar.py */
+export const arMissing = (o: unknown, name: string) => {
+  const d = dict(name), out: string[] = []
+  const walk = (v: unknown, k?: string) => {
+    if (typeof v === 'string') { if (!(k && KEEP.has(k)) && /[A-Za-z]{3}/.test(v) && !d[v]) out.push(v) }
+    else if (Array.isArray(v)) v.forEach(x => walk(x))
+    else if (v && typeof v === 'object') Object.entries(v).forEach(([kk, x]) => walk(x, kk))
+  }
+  walk(o)
+  return [...new Set(out)]
+}
+
+/* interface words of the case-study and solution pages */
+export const pageCopy = {
+  en: { work: 'Work', solutions: 'Solutions', overview: 'Project overview', disciplines: 'Disciplines', details: 'Details', palette: 'Colour palette', credits: 'Credits', next: 'Next project', nextCursor: 'Next', view: 'View', seeWork: 'See the work', solutionOverview: 'Overview', start: 'Start a project', allWork: 'All work' },
+  ar: { work: 'الأعمال', solutions: 'الحلول', overview: 'نظرة على المشروع', disciplines: 'التخصصات', details: 'التفاصيل', palette: 'لوحة الألوان', credits: 'فريق العمل', next: 'المشروع التالي', nextCursor: 'التالي', view: 'شاهد', seeWork: 'شاهد الأعمال', solutionOverview: 'نظرة عامة', start: 'ابدأ مشروعك', allWork: 'كل الأعمال' },
+}

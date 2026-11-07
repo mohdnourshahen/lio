@@ -1,0 +1,9 @@
+/* Thmanyah (font.thmanyah.com), the studio's chosen Arabic faces. Per its license the files are used unmodified and
+   only as part of the compiled site: Vite bundles them into /_nuxt with the build. Not in the offline file edition,
+   which falls back to Amiri and IBM Plex Sans Arabic. Arabic ranges only, so Latin keeps the site's own faces. */
+@font-face { font-family: 'Thmanyah Serif Display'; src: url('../fonts/thmanyah/thmanyahserifdisplay-Light.otf') format('opentype'); font-weight: 300; font-display: swap; unicode-range: U+0600-06FF, U+0750-077F, U+08A0-08FF, U+FB50-FDFF, U+FE70-FEFF, U+200C-200F; }
+@font-face { font-family: 'Thmanyah Serif Display'; src: url('../fonts/thmanyah/thmanyahserifdisplay-Regular.otf') format('opentype'); font-weight: 400; font-display: swap; unicode-range: U+0600-06FF, U+0750-077F, U+08A0-08FF, U+FB50-FDFF, U+FE70-FEFF, U+200C-200F; }
+@font-face { font-family: 'Thmanyah Serif Display'; src: url('../fonts/thmanyah/thmanyahserifdisplay-Medium.otf') format('opentype'); font-weight: 500; font-display: swap; unicode-range: U+0600-06FF, U+0750-077F, U+08A0-08FF, U+FB50-FDFF, U+FE70-FEFF, U+200C-200F; }
+@font-face { font-family: 'Thmanyah Sans'; src: url('../fonts/thmanyah/thmanyahsans-Light.otf') format('opentype'); font-weight: 300; font-display: swap; unicode-range: U+0600-06FF, U+0750-077F, U+08A0-08FF, U+FB50-FDFF, U+FE70-FEFF, U+200C-200F; }
+@font-face { font-family: 'Thmanyah Sans'; src: url('../fonts/thmanyah/thmanyahsans-Regular.otf') format('opentype'); font-weight: 400; font-display: swap; unicode-range: U+0600-06FF, U+0750-077F, U+08A0-08FF, U+FB50-FDFF, U+FE70-FEFF, U+200C-200F; }
+@font-face { font-family: 'Thmanyah Sans'; src: url('../fonts/thmanyah/thmanyahsans-Medium.otf') format('opentype'); font-weight: 500; font-display: swap; unicode-range: U+0600-06FF, U+0750-077F, U+08A0-08FF, U+FB50-FDFF, U+FE70-FEFF, U+200C-200F; }

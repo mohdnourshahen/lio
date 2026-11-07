@@ -6,7 +6,7 @@ export default defineEventHandler((event) => {
     const facts = [...p.meta, ...p.info].filter(([, v], i, all) => v && all.findIndex(([k]) => k === all[i]![0]) === i)
     const blocks = p.blocks.map((b) => {
       if (b.type === 'text') {
-        return [b.label && `### ${b.label}${b.title ? ` — ${b.title}` : ''}`, !b.label && b.title && `### ${b.title}`, ...(b.paras || []), b.tags?.length ? `Disciplines: ${b.tags.join(', ')}` : '']
+        return [b.label && `### ${b.label}${b.title ? ` · ${b.title}` : ''}`, !b.label && b.title && `### ${b.title}`, ...(b.paras || []), b.tags?.length ? `Disciplines: ${b.tags.join(', ')}` : '']
           .filter(Boolean).join('\n\n')
       }
       if (b.type === 'list') {
@@ -26,7 +26,7 @@ ${p.lede}
 ${blocks}`
   }).join('\n\n---\n\n')
 
-  return `# ${studio.name} — full text
+  return `# ${studio.name}: full text
 
 > ${studio.summary}
 
@@ -36,9 +36,9 @@ Location: Amman, Jordan
 
 ## About
 
-Lōn Visuals is a strategic brand and visual communication studio dedicated to helping organizations communicate with clarity and impact. We combine creativity with structured thinking to build visual systems that support brands across their daily communication, corporate presence, and long-term evolution.
+Lōn Visuals is a strategic brand and visual communication studio. We help organisations communicate with clarity and impact, pairing creativity with structured thinking to build visual systems that support a brand in its daily communication, its corporate presence and its long-term growth.
 
-Lōn Visuals provides strategic design and visual communication services that help organizations maintain clarity, consistency, and strong brand presence across all visual touchpoints. We act as a reliable visual partner — translating ideas into clear, consistent, and meaningful design.
+Lōn Visuals offers strategic design and visual communication that keep organisations clear, consistent and present across every visual touchpoint: a reliable visual partner, translating ideas into clear, consistent and meaningful design.
 
 ${studio.stats.map(s => `- ${s}`).join('\n')}
 

@@ -69,7 +69,7 @@ export const solutionBySlug = (slug: string) => solutions.find(s => s.slug === s
 export const site = {
   name: 'Lōn Visuals',
   tagline: 'Visual Strategy Studio',
-  description: 'At Lōn Visuals, creativity meets strategy to shape how organizations communicate, evolve, and grow through design.',
+  description: 'At Lōn Visuals, creativity meets strategy to shape how organisations communicate, evolve and grow through design.',
   email: 'hello@lonvisuals.com',
   city: 'Amman',
   country: 'Jordan',
@@ -92,17 +92,17 @@ export const nav = [
 export const stats = [
   { value: '11', unit: '+', desc: ['Years of strategic', 'brand practice'] },
   { value: '60', unit: '+', desc: ['Brands built across', 'the region & beyond'] },
-  { value: '12', unit: '+', desc: ['Industries served,', 'from gov to tech'] },
+  { value: '12', unit: '+', desc: ['Industries served,', 'from government to tech'] },
   { value: '100', unit: '%', desc: ['Long-term client', 'partnerships'] },
 ]
 
 export const marquee = ['Brand Identity', 'Visual Strategy', 'Brand Systems', 'Print & Editorial', 'Creative Direction']
 
 export const services = [
-  { num: '01', name: 'Strategy', desc: 'Brand Strategy — defining direction, positioning, and the visual foundations that guide how brands communicate.' },
-  { num: '02', name: 'Design', desc: 'Visual Identity & Communication Design — complete brand systems, corporate collateral, and all designed touchpoints.' },
-  { num: '03', name: 'Support', desc: 'Corporate Visual Support & Brand Evolution — ongoing partnership to keep brands consistent and current.' },
-  { num: '04', name: 'Experience', desc: 'Brand Experience & Events, Corporate & Employee Kits — bringing the brand to life in physical spaces.' },
+  { num: '01', name: 'Strategy', desc: 'Brand strategy: the direction, positioning and visual foundations that guide how a brand communicates.' },
+  { num: '02', name: 'Design', desc: 'Visual identity and communication design: complete brand systems, corporate collateral and every designed touchpoint.' },
+  { num: '03', name: 'Support', desc: 'Corporate visual support and brand evolution: an ongoing partnership that keeps a brand consistent and current.' },
+  { num: '04', name: 'Experience', desc: 'Brand experience, events, and corporate and employee kits: the brand brought to life in physical space.' },
 ]
 
 /**
@@ -117,7 +117,7 @@ export const selectedWork: WorkCard[] = [
   { title: 'Masar Resort', category: 'Brand Identity · Hospitality', image: '0793b8d88b', slug: 'masar', more: ['7160f3fd32', '00936a2911', 'b135b8813b'] },
   { title: 'FNF 40 Years in Jordan', category: 'Anniversary Branding · Foundation', image: '6983caa024', slug: 'fnf-jordan-40-years', more: ['ab1c1a45fb|90% 50%', 'fe973c4def', '1cc1dc1ce8|62% 50%', '51e60788f6|62% 50%'] },
   { title: 'Sky Falcons', category: 'Visual Identity · Aviation', image: '0f50a57577', slug: 'sky-falcons', more: ['639d8d09d7', 'cfba7fe891', 'a496defa86'] },
-  { title: 'Lazure Hospitality', category: 'Brand Identity · Hospitality', image: '3b6d2e3e84', slug: 'lazure', focus: '52% 50%', more: ['f04c0008a2', '34e712ce6e', '22cc8dfc12'] },
+  { title: 'L\'Azure Hospitality', category: 'Brand Identity · Hospitality', image: '3b6d2e3e84', slug: 'lazure', focus: '52% 50%', more: ['f04c0008a2', '34e712ce6e', '22cc8dfc12'] },
   { title: 'Creativology', category: 'Rebranding · Digital Agency', image: '2f6d874695', slug: 'creativology', more: ['9ba29468b9', '0d67b93def', '77376c3732', 'cc7cab8295', 'b0cab47322', '8c6c72023f'] },
   { title: 'Ministry of Foreign Affairs and Expatriates', category: 'Visual Identity · Government', image: 'db0e23ca6f', slug: 'ministry-of-foreign-affairs-jordan', focus: '58% 50%', more: ['40a0e0f2bb'] },
   { title: 'Wakers17', category: 'Brand Identity · F&B', image: '9bbadab823', slug: 'wakers17', focus: '50% 30%', more: ['9b31bd7444|50% 60%', 'a16077e013', '8b66e321e7', '28c1c11c00'] },

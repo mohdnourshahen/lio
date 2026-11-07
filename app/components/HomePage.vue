@@ -3,7 +3,7 @@ import { EASE, clamp, gsap, isMobileWidth, prefersReducedMotion } from '~/utils/
 import { assetUrl } from '~/utils/assets'
 import { onFrame } from '~/utils/scroll'
 import { HERO_SLIDES, clients, projects, selectedWork, services, site, stats } from '~/utils/site'
-import { type Lang, homeCopy, workCategory, workTitle } from '~/utils/i18n'
+import { type Lang, homeCopy, workCategory, workTitle, localize } from '~/utils/i18n'
 
 /** The homepage, in English at / and in Arabic at /ar: one layout, two languages. */
 const props = defineProps<{ lang: Lang }>()
@@ -50,7 +50,7 @@ useSeo({
     {
       '@type': 'ItemList',
       'name': 'Selected projects',
-      'itemListElement': projects.map((p, i) => ({ '@type': 'ListItem', 'position': i + 1, 'url': `${base}/work/${p.slug}`, 'name': p.title })),
+      'itemListElement': projects.map((p, i) => ({ '@type': 'ListItem', 'position': i + 1, 'url': `${base}${ar ? '/ar' : ''}/work/${p.slug}`, 'name': ar ? localize(p, 'ar', `work-${p.key}`).title : p.title })),
     },
     {
       '@type': 'OfferCatalog',
@@ -128,7 +128,7 @@ onBeforeUnmount(() => {
 <template>
   <PageShell>
     <!-- HERO — centred, ceremonial: the capabilities-deck cover -->
-    <section ref="hero" class="hero theme-dark" data-theme="dark" aria-labelledby="hero-title" data-cursor="Scroll">
+    <section ref="hero" class="hero theme-dark keep-dark" data-theme="dark" aria-labelledby="hero-title" data-cursor="Scroll">
       <div ref="heroMedia" class="hero-media atmos grain">
         <HeroSlides :images="HERO_SLIDES" />
       </div>
@@ -194,7 +194,7 @@ onBeforeUnmount(() => {
         <li v-for="(w, i) in selectedWork" :key="w.title" class="work-item" :class="i % 2 ? 'is-right' : 'is-left'">
           <component
             :is="w.slug ? NuxtLink : 'div'"
-            :to="w.slug ? `/work/${w.slug}` : undefined"
+            :to="w.slug ? `${ar ? '/ar' : ''}/work/${w.slug}` : undefined"
             class="work-link"
             :data-cursor="w.slug ? 'View' : undefined"
             :data-cover-host="w.slug ? '' : undefined"
@@ -379,7 +379,7 @@ html.has-cursor .work-link[href] { cursor: none; }
 .s-title { grid-column: 2 / 12; margin-top: 2.4vw; }
 .s-intro { grid-column: 7 / 12; margin-top: 4vw; display: grid; gap: 1.6vw; }
 .s-intro strong { font-weight: 450; color: var(--c-paper); }
-.s-intro .t-h4 { color: rgba(245, 242, 234, 0.82); }
+.s-intro .t-h4 { color: color-mix(in srgb, var(--c-paper) 82%, transparent); }
 .s-list { grid-column: 2 / 12; margin-top: 8vw; border-top: 1px solid var(--rule); }
 .s-item {
   position: relative; display: grid; grid-template-columns: 1fr 4fr 4fr 1fr; align-items: baseline;
