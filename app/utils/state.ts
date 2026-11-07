@@ -12,6 +12,8 @@ export const appState = reactive({
   transition: 'default' as 'default' | 'loadProject',
   headerTheme: 'dark' as 'dark' | 'light' | 'sand' | 'paper' | 'black' | 'surface',
   scrolled: false,
+  /** the site's two editions: the house dark, or the light (white) edition; set by the visitor, remembered */
+  mode: 'dark' as 'dark' | 'light',
 })
 
 /** Delay before a page's intro text plays: Exo Ape uses 2.5s after the preloader, 0.5s after a page transition. */

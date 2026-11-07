@@ -64,7 +64,8 @@ export default defineNuxtConfig({
       ],
       // Flags the document before hydration so the preloader and hidden reveal states never flash.
       script: [
-        { innerHTML: "document.documentElement.classList.add('js')", tagPosition: 'head' },
+        // the light edition is applied here too, before first paint, so a returning visitor never sees a flash of dark
+        { innerHTML: "document.documentElement.classList.add('js');try{if(localStorage.getItem('lon-mode')==='light')document.documentElement.dataset.mode='light'}catch(e){}", tagPosition: 'head' },
         // Google Analytics 4 on every page of the live site; GA's enhanced measurement records the
         // client-side route changes between pages. Not in the offline file edition.
         ...(offline ? [] : [

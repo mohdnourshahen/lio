@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { groundOf, readMode } from '~/utils/mode'
 import type { TransitionProps } from 'vue'
 import { EASE, gsap, prefersReducedMotion } from '~/utils/motion'
 import { onFrame, pauseScroll, scroll, scrollToElement, startScroll } from '~/utils/scroll'
@@ -123,6 +124,7 @@ function onPreloaderDone() {
 }
 
 onMounted(() => {
+  readMode()
   startScroll(spacer.value!)
   /* header colour follows whichever [data-theme] section sits under it */
   onFrame((s) => {
@@ -134,7 +136,7 @@ onMounted(() => {
     for (const sec of page.querySelectorAll<HTMLElement>('[data-theme]')) {
       const r = sec.getBoundingClientRect()
       if (r.top <= probe && r.bottom > probe) {
-        appState.headerTheme = sec.dataset.theme as typeof appState.headerTheme
+        appState.headerTheme = groundOf(sec)
         break
       }
     }

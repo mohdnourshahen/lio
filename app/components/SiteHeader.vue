@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { chrome, langOf, switchPath } from '~/utils/i18n'
+import { toggleMode } from '~/utils/mode'
 import { appState } from '~/utils/state'
 
 /**
@@ -15,7 +16,7 @@ const c = computed(() => chrome[langOf(route.path)])
 <template>
   <header
     class="site-header"
-    :class="[ { 'is-scrolled': appState.scrolled || !isHome, 'menu-open': appState.menuOpen, 'on-paper': appState.headerTheme === 'paper' && !appState.menuOpen }]"
+    :class="[ { 'is-scrolled': appState.scrolled || !isHome, 'menu-open': appState.menuOpen, 'on-paper': appState.menuOpen ? appState.mode === 'light' : appState.headerTheme === 'paper' }]"
   >
     <NuxtLink :to="langOf(route.path) === 'ar' ? '/ar' : '/'" class="logo" aria-label="Lōn Visuals, home" data-cursor-none>
       <LonLogo aria-hidden="true" />
@@ -27,6 +28,7 @@ const c = computed(() => chrome[langOf(route.path)])
           <NuxtLink :to="item.to" class="u-link u-link--rev" :tabindex="appState.scrolled || !isHome ? -1 : 0">{{ item.label }}</NuxtLink>
         </li>
         <li><NuxtLink :to="switchPath(route.path)" :lang="c.switchLang" class="u-link u-link--rev lang-switch" :tabindex="appState.scrolled || !isHome ? -1 : 0">{{ c.switchLabel }}</NuxtLink></li>
+        <li><button type="button" class="u-link u-link--rev mode-switch" :aria-label="appState.mode === 'light' ? c.toDarkLabel : c.toLightLabel" :tabindex="appState.scrolled || !isHome ? -1 : 0" @click="toggleMode">{{ appState.mode === 'light' ? c.toDark : c.toLight }}</button></li>
       </ul>
     </nav>
 

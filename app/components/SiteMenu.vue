@@ -2,6 +2,7 @@
 import { EASE, gsap, isTouchDevice, prefersReducedMotion } from '~/utils/motion'
 import { HERO_IMAGE, site } from '~/utils/site'
 import { chrome, langOf, switchPath } from '~/utils/i18n'
+import { toggleMode } from '~/utils/mode'
 import { appState } from '~/utils/state'
 
 /**
@@ -157,6 +158,7 @@ defineExpose({ open, close, visible })
               </li>
               <li class="mask"><a :href="`mailto:${site.email}`" class="social-line u-link u-link--rev">{{ site.email }}</a></li>
               <li class="mask"><NuxtLink :to="switchPath(route.path)" :lang="c.switchLang" class="social-line u-link u-link--rev" @click="emit('close')">{{ c.switchLabel }}</NuxtLink></li>
+              <li class="mask"><button type="button" class="social-line u-link u-link--rev" :aria-label="appState.mode === 'light' ? c.toDarkLabel : c.toLightLabel" @click="toggleMode">{{ appState.mode === 'light' ? c.toDark : c.toLight }}</button></li>
             </ul>
           </div>
         </div>

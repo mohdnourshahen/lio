@@ -92,7 +92,7 @@ useSeo({
   <PageShell>
     <article class="sol" aria-labelledby="sol-title">
       <!-- HERO -->
-      <header class="s-hero theme-dark" data-theme="dark">
+      <header class="s-hero theme-dark keep-dark" data-theme="dark">
         <div class="s-hero-media atmos-soft grain">
           <MediaImage :id="s.hero" :alt="s.heroAlt" sizes="100vw" eager />
         </div>
@@ -305,7 +305,7 @@ useSeo({
 /* primary action: a hairline frame in the house gold that fills on hover — quiet until it is wanted */
 .btn {
   display: inline-flex; align-items: center; gap: 1.1em; padding: 1.15em 1.7em;
-  border: 1px solid rgba(230, 223, 143, 0.55); color: var(--c-title); background: transparent;
+  border: 1px solid color-mix(in srgb, var(--c-title) 55%, transparent); color: var(--c-title); background: transparent;
   font-family: var(--f-title); text-transform: uppercase; letter-spacing: 0.14em; font-size: var(--fs-sub); line-height: 1;
   transition: background 0.6s var(--ease-out), color 0.6s var(--ease-out), border-color 0.6s var(--ease-out);
 }
@@ -334,7 +334,7 @@ useSeo({
 /* TEXT */
 .s-text { padding: 11vw 0; }
 .s-body { grid-column: 5 / 10; margin-top: 2.6vw; display: grid; gap: 1.2em; color: var(--fg-2); }
-.s-body p:first-child { color: rgba(245, 242, 234, 0.86); font-size: max(1.35vw, 16px); line-height: 1.55; }
+.s-body p:first-child { color: color-mix(in srgb, var(--c-paper) 86%, transparent); font-size: max(1.35vw, 16px); line-height: 1.55; }
 
 /* LISTS */
 .s-list { padding: 11vw 0; }
@@ -378,7 +378,7 @@ useSeo({
 .sc-l { grid-column: 2 / 8; }
 .sc-r { grid-column: 8 / 12; padding-top: 16vw; }
 .sc-l { padding-right: 1vw; }
-.theme-paper .sc-item :deep(.media) { box-shadow: 0 0 0 1px rgba(18, 16, 10, 0.08); }
+.theme-paper .sc-item :deep(.media) { box-shadow: 0 0 0 1px color-mix(in srgb, var(--c-ink) 8%, transparent); }
 .sc-item { margin-bottom: 7vw; }
 .sc-item.w-inset { width: 76%; }
 .sc-l .sc-item.w-inset { margin-left: auto; }
@@ -386,7 +386,7 @@ useSeo({
 /* white sections: ink type, deep-gold accents */
 .theme-paper .s-lede, .theme-paper .s-name, .theme-paper .qa-q, .theme-paper .s-group-name { color: var(--c-ink); }
 .theme-paper .s-label, .theme-paper .s-fact dt, .theme-paper .s-num { color: var(--accent); }
-.theme-paper .s-body p:first-child { color: rgba(18, 16, 10, 0.86); }
+.theme-paper .s-body p:first-child { color: color-mix(in srgb, var(--c-ink) 86%, transparent); }
 .theme-paper .s-caption::before { background: var(--accent); }
 .theme-paper .qa-q::after { color: var(--accent); }
 

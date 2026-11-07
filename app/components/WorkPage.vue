@@ -133,7 +133,7 @@ const ratio = (id: string) => (media[id] ? media[id].w / media[id].h : 1.5)
   <PageShell>
     <article class="case" :class="p.surface ? 'is-surface' : p.theme ? `is-${p.theme}` : undefined" :style="p.surface ? { '--case-surface': p.surface } : undefined" :aria-labelledby="'case-title'">
       <!-- HERO -->
-      <header ref="hero" class="c-hero theme-dark" data-theme="dark">
+      <header ref="hero" class="c-hero theme-dark keep-dark" data-theme="dark">
         <div ref="heroMedia" class="c-hero-media atmos-soft grain" :class="{ 'is-natural': p.heroNatural }">
           <MediaImage :id="p.hero" :alt="heroAlt" sizes="100vw" eager :mobile-id="p.heroMobile" :position="p.heroFocus" />
         </div>
@@ -243,7 +243,7 @@ const ratio = (id: string) => (media[id] ? media[id].w / media[id].h : 1.5)
     </article>
 
     <!-- NEXT -->
-    <section v-if="next" ref="nextSection" class="c-next theme-dark" data-theme="dark" :aria-label="ui.next">
+    <section v-if="next" ref="nextSection" class="c-next theme-dark keep-dark" data-theme="dark" :aria-label="ui.next">
       <!-- plain anchor: RouterLink would navigate before goNext can hand off -->
       <a :href="`${pre}/work/${next.slug}`" class="c-next-link" :data-cursor="ui.nextCursor" @click="goNext">
         <div class="c-next-media">
@@ -290,7 +290,7 @@ const ratio = (id: string) => (media[id] ? media[id].w / media[id].h : 1.5)
 .b-label { grid-column: 2 / 5; align-self: start; margin-top: 0.8vw; }
 .b-title { grid-column: 5 / 12; }
 .b-body { grid-column: 5 / 10; margin-top: 2.6vw; display: grid; gap: 1.2em; color: var(--fg-2); }
-.b-body p:first-child { color: rgba(245, 242, 234, 0.86); font-size: max(1.35vw, 16px); line-height: 1.55; }
+.b-body p:first-child { color: color-mix(in srgb, var(--c-paper) 86%, transparent); font-size: max(1.35vw, 16px); line-height: 1.55; }
 .b-tags { grid-column: 5 / 12; margin-top: 2.6vw; display: flex; flex-wrap: wrap; gap: 0.5vw; }
 .b-tags li { border: 1px solid var(--rule); border-radius: 99px; padding: 0.5em 1.1em; font-family: var(--f-title); text-transform: uppercase; letter-spacing: 0.08em; color: var(--c-title); }
 
@@ -334,7 +334,7 @@ const ratio = (id: string) => (media[id] ? media[id].w / media[id].h : 1.5)
 .b-palette { padding: 4vw 0 6vw; }
 .b-palette ul { grid-template-columns: repeat(auto-fit, minmax(0, 1fr)); margin: 0 var(--margin); padding-left: calc(var(--col) + var(--gutter)); padding-right: calc(var(--col) + var(--gutter)); }
 .sw { display: flex; flex-direction: column; gap: 0.4vw; min-width: 0; }
-.sw-chip { display: block; aspect-ratio: 1 / 2.2; border-radius: 2px; margin-bottom: 0.6vw; box-shadow: inset 0 0 0 1px rgba(245, 242, 234, 0.08); }
+.sw-chip { display: block; aspect-ratio: 1 / 2.2; border-radius: 2px; margin-bottom: 0.6vw; box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--c-paper) 8%, transparent); }
 .dim { color: var(--fg-2); }
 
 /* CREDITS */
@@ -346,12 +346,12 @@ const ratio = (id: string) => (media[id] ? media[id].w / media[id].h : 1.5)
 .case.is-surface { background: var(--case-surface); }
 /* paper surface: swap the gold-on-ink accents for ink and a deep gold that hold up on white */
 .theme-paper .c-lede, .theme-paper .b-name { color: var(--c-ink); }
-.theme-paper .b-body p:first-child { color: rgba(18, 16, 10, 0.86); }
+.theme-paper .b-body p:first-child { color: color-mix(in srgb, var(--c-ink) 86%, transparent); }
 .theme-paper .c-fact dt, .theme-paper .b-num, .theme-paper .b-tags li, .theme-paper .b-links,
 .theme-paper .b-label, .theme-paper .b-title { color: var(--accent); }
 .theme-paper .b-title { color: var(--c-ink); }
 .theme-paper .b-caption::before { background: var(--accent); }
-.theme-paper .sw-chip { box-shadow: inset 0 0 0 1px rgba(18, 16, 10, 0.12); }
+.theme-paper .sw-chip { box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--c-ink) 12%, transparent); }
 .b-credits dl { row-gap: 2vw; }
 .credit { grid-column: span 2; }
 .credit:first-child { grid-column: 2 / span 3; }

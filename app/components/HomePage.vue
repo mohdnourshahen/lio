@@ -128,7 +128,7 @@ onBeforeUnmount(() => {
 <template>
   <PageShell>
     <!-- HERO — centred, ceremonial: the capabilities-deck cover -->
-    <section ref="hero" class="hero theme-dark" data-theme="dark" aria-labelledby="hero-title" data-cursor="Scroll">
+    <section ref="hero" class="hero theme-dark keep-dark" data-theme="dark" aria-labelledby="hero-title" data-cursor="Scroll">
       <div ref="heroMedia" class="hero-media atmos grain">
         <HeroSlides :images="HERO_SLIDES" />
       </div>
@@ -379,7 +379,7 @@ html.has-cursor .work-link[href] { cursor: none; }
 .s-title { grid-column: 2 / 12; margin-top: 2.4vw; }
 .s-intro { grid-column: 7 / 12; margin-top: 4vw; display: grid; gap: 1.6vw; }
 .s-intro strong { font-weight: 450; color: var(--c-paper); }
-.s-intro .t-h4 { color: rgba(245, 242, 234, 0.82); }
+.s-intro .t-h4 { color: color-mix(in srgb, var(--c-paper) 82%, transparent); }
 .s-list { grid-column: 2 / 12; margin-top: 8vw; border-top: 1px solid var(--rule); }
 .s-item {
   position: relative; display: grid; grid-template-columns: 1fr 4fr 4fr 1fr; align-items: baseline;

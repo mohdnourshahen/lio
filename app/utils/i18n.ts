@@ -26,6 +26,11 @@ const en = {
     follow: 'Follow',
     switchLabel: 'العربية',
     switchLang: 'ar',
+    /** the edition switch: the label names the edition it switches to */
+    toLight: 'Light',
+    toDark: 'Dark',
+    toLightLabel: 'Switch to the light edition',
+    toDarkLabel: 'Switch to the dark edition',
     footer: {
       kicker: 'Let’s Talk',
       title: ['Have a project', 'in mind?'],
@@ -55,6 +60,10 @@ const ar: { chrome: Chrome } = {
     follow: 'تابعنا',
     switchLabel: 'English',
     switchLang: 'en',
+    toLight: 'فاتح',
+    toDark: 'داكن',
+    toLightLabel: 'التبديل إلى النسخة الفاتحة',
+    toDarkLabel: 'التبديل إلى النسخة الداكنة',
     footer: {
       kicker: 'لنتحدّث',
       title: ['مشروعك', 'يستحق لغته'],

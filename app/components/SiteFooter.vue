@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import { site } from '~/utils/site'
 import { chrome, langOf, switchPath } from '~/utils/i18n'
+import { toggleMode } from '~/utils/mode'
+import { appState } from '~/utils/state'
 
 /** Contact + footer — Exo Ape's closing "Our Story" block, carrying Lōn's contact section. */
 const year = 2026
@@ -33,6 +35,7 @@ const c = computed(() => chrome[langOf(route.path)])
         <ul>
           <li v-for="n in c.nav" :key="n.to"><NuxtLink :to="n.to" class="t-small u-link u-link--rev">{{ n.label }}</NuxtLink></li>
           <li><NuxtLink :to="switchPath(route.path)" :lang="c.switchLang" class="t-small u-link u-link--rev">{{ c.switchLabel }}</NuxtLink></li>
+          <li><button type="button" class="t-small u-link u-link--rev" :aria-label="appState.mode === 'light' ? c.toDarkLabel : c.toLightLabel" @click="toggleMode">{{ appState.mode === 'light' ? c.toDark : c.toLight }}</button></li>
         </ul>
       </nav>
       <div class="col col-3">
