@@ -6,8 +6,10 @@
 export type Lang = 'en' | 'ar'
 
 export const langOf = (path: string): Lang => (path === '/ar' || path.startsWith('/ar/') ? 'ar' : 'en')
-/** the same page in the other language, where one exists */
 export const homeOf = (lang: Lang) => (lang === 'ar' ? '/ar' : '/')
+/** the same page in the other language: every page exists in both (/, /work/*, /solutions/*) */
+export const switchPath = (path: string) =>
+  langOf(path) === 'ar' ? path.replace(/^\/ar/, '') || '/' : path === '/' ? '/ar' : `/ar${path}`
 
 const en = {
   chrome: {
@@ -23,7 +25,6 @@ const en = {
     close: 'Close',
     follow: 'Follow',
     switchLabel: 'العربية',
-    switchTo: '/ar',
     switchLang: 'ar',
     footer: {
       kicker: 'Let’s Talk',
@@ -43,7 +44,7 @@ const ar: { chrome: Chrome } = {
   chrome: {
     nav: [
       { label: 'الأعمال', to: '/ar#work' },
-      { label: 'الحلول', to: '/solutions/hospitality-branding', children: [{ label: 'الضيافة', to: '/solutions/hospitality-branding' }, { label: 'الحكومات', to: '/solutions/government-branding' }] },
+      { label: 'الحلول', to: '/ar/solutions/hospitality-branding', children: [{ label: 'الضيافة', to: '/ar/solutions/hospitality-branding' }, { label: 'الحكومات', to: '/ar/solutions/government-branding' }] },
       { label: 'الخدمات', to: '/ar#services' },
       { label: 'الاستوديو', to: '/ar#studio' },
       { label: 'تواصل', to: '/ar#contact' },
@@ -53,7 +54,6 @@ const ar: { chrome: Chrome } = {
     close: 'إغلاق',
     follow: 'تابعنا',
     switchLabel: 'English',
-    switchTo: '/',
     switchLang: 'en',
     footer: {
       kicker: 'لنتحدّث',
@@ -174,3 +174,38 @@ const termAr: Record<string, string> = {
 export const workTitle = (title: string, lang: Lang) => (lang === 'ar' ? titleAr[title] ?? title : title)
 export const workCategory = (cat: string, lang: Lang) =>
   lang === 'ar' ? cat.split(' · ').map(t => termAr[t] ?? t).join(' · ') : cat
+
+/* ---------- inner pages: Arabic text layered over the English content ----------
+   content/ar/<name>.json maps each English string of a page to its Arabic; common.json holds the
+   terms every page shares. Structure, images and order stay in the English source, so the two
+   editions can never drift; a string without an entry (a brand name, an address) stays as it is. */
+const arDicts = import.meta.glob<Record<string, string>>('../../content/ar/*.json', { eager: true, import: 'default' })
+const dict = (name: string) => ({ ...arDicts['../../content/ar/common.json'], ...arDicts[`../../content/ar/${name}.json`] })
+const KEEP = new Set(['id', 'slug', 'key', 'href', 'hex', 'image', 'hero', 'heroMobile', 'next', 'to', 'theme', 'surface', 'layout', 'type', 'color'])
+export function localize<T>(o: T, lang: Lang, name: string): T {
+  if (lang !== 'ar') return o
+  const d = dict(name)
+  const walk = (v: unknown, k?: string): unknown =>
+    typeof v === 'string' ? (k && KEEP.has(k) ? v : d[v] ?? v)
+      : Array.isArray(v) ? v.map(x => walk(x))
+        : v && typeof v === 'object' ? Object.fromEntries(Object.entries(v).map(([kk, x]) => [kk, walk(x, kk)]))
+          : v
+  return walk(o) as T
+}
+/** strings of a page that have no Arabic yet: mirrored by scripts/check_ar.py */
+export const arMissing = (o: unknown, name: string) => {
+  const d = dict(name), out: string[] = []
+  const walk = (v: unknown, k?: string) => {
+    if (typeof v === 'string') { if (!(k && KEEP.has(k)) && /[A-Za-z]{3}/.test(v) && !d[v]) out.push(v) }
+    else if (Array.isArray(v)) v.forEach(x => walk(x))
+    else if (v && typeof v === 'object') Object.entries(v).forEach(([kk, x]) => walk(x, kk))
+  }
+  walk(o)
+  return [...new Set(out)]
+}
+
+/* interface words of the case-study and solution pages */
+export const pageCopy = {
+  en: { work: 'Work', solutions: 'Solutions', overview: 'Project overview', disciplines: 'Disciplines', details: 'Details', palette: 'Colour palette', credits: 'Credits', next: 'Next project', nextCursor: 'Next', view: 'View', seeWork: 'See the work', solutionOverview: 'Overview', start: 'Start a project', allWork: 'All work' },
+  ar: { work: 'الأعمال', solutions: 'الحلول', overview: 'نظرة على المشروع', disciplines: 'التخصصات', details: 'التفاصيل', palette: 'لوحة الألوان', credits: 'فريق العمل', next: 'المشروع التالي', nextCursor: 'التالي', view: 'شاهد', seeWork: 'شاهد الأعمال', solutionOverview: 'نظرة عامة', start: 'ابدأ مشروعك', allWork: 'كل الأعمال' },
+}

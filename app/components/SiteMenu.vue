@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { EASE, gsap, isTouchDevice, prefersReducedMotion } from '~/utils/motion'
 import { HERO_IMAGE, site } from '~/utils/site'
-import { chrome, langOf } from '~/utils/i18n'
+import { chrome, langOf, switchPath } from '~/utils/i18n'
 import { appState } from '~/utils/state'
 
 /**
@@ -156,7 +156,7 @@ defineExpose({ open, close, visible })
                 <a :href="s.href" target="_blank" rel="noopener" class="social-line u-link u-link--rev">{{ s.name }}</a>
               </li>
               <li class="mask"><a :href="`mailto:${site.email}`" class="social-line u-link u-link--rev">{{ site.email }}</a></li>
-              <li class="mask"><NuxtLink :to="c.switchTo" :lang="c.switchLang" class="social-line u-link u-link--rev" @click="emit('close')">{{ c.switchLabel }}</NuxtLink></li>
+              <li class="mask"><NuxtLink :to="switchPath(route.path)" :lang="c.switchLang" class="social-line u-link u-link--rev" @click="emit('close')">{{ c.switchLabel }}</NuxtLink></li>
             </ul>
           </div>
         </div>

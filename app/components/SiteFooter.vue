@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { site } from '~/utils/site'
-import { chrome, langOf } from '~/utils/i18n'
+import { chrome, langOf, switchPath } from '~/utils/i18n'
 
 /** Contact + footer — Exo Ape's closing "Our Story" block, carrying Lōn's contact section. */
 const year = 2026
@@ -32,7 +32,7 @@ const c = computed(() => chrome[langOf(route.path)])
         <p class="t-small dim">{{ c.footer.navigate }}</p>
         <ul>
           <li v-for="n in c.nav" :key="n.to"><NuxtLink :to="n.to" class="t-small u-link u-link--rev">{{ n.label }}</NuxtLink></li>
-          <li><NuxtLink :to="c.switchTo" :lang="c.switchLang" class="t-small u-link u-link--rev">{{ c.switchLabel }}</NuxtLink></li>
+          <li><NuxtLink :to="switchPath(route.path)" :lang="c.switchLang" class="t-small u-link u-link--rev">{{ c.switchLabel }}</NuxtLink></li>
         </ul>
       </nav>
       <div class="col col-3">

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { chrome, langOf } from '~/utils/i18n'
+import { chrome, langOf, switchPath } from '~/utils/i18n'
 import { appState } from '~/utils/state'
 
 /**
@@ -26,7 +26,7 @@ const c = computed(() => chrome[langOf(route.path)])
         <li v-for="item in c.nav" :key="item.to">
           <NuxtLink :to="item.to" class="u-link u-link--rev" :tabindex="appState.scrolled || !isHome ? -1 : 0">{{ item.label }}</NuxtLink>
         </li>
-        <li><NuxtLink :to="c.switchTo" :lang="c.switchLang" class="u-link u-link--rev lang-switch" :tabindex="appState.scrolled || !isHome ? -1 : 0">{{ c.switchLabel }}</NuxtLink></li>
+        <li><NuxtLink :to="switchPath(route.path)" :lang="c.switchLang" class="u-link u-link--rev lang-switch" :tabindex="appState.scrolled || !isHome ? -1 : 0">{{ c.switchLabel }}</NuxtLink></li>
       </ul>
     </nav>
 

@@ -87,7 +87,7 @@ export default defineNuxtConfig({
     ...(offline ? { output: { dir: '.output-offline' } } : {}),
     prerender: {
       crawlLinks: true,
-      routes: ['/', '/ar', ...projects.map(p => `/work/${p.slug}`), ...solutions.map(s => `/solutions/${s.slug}`), '/sitemap.xml', '/robots.txt', '/llms.txt', '/llms-full.txt'],
+      routes: ['/', '/ar', ...projects.flatMap(p => [`/work/${p.slug}`, `/ar/work/${p.slug}`]), ...solutions.flatMap(s => [`/solutions/${s.slug}`, `/ar/solutions/${s.slug}`]), '/sitemap.xml', '/robots.txt', '/llms.txt', '/llms-full.txt'],
     },
   },
 

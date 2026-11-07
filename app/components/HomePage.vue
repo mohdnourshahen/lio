@@ -3,7 +3,7 @@ import { EASE, clamp, gsap, isMobileWidth, prefersReducedMotion } from '~/utils/
 import { assetUrl } from '~/utils/assets'
 import { onFrame } from '~/utils/scroll'
 import { HERO_SLIDES, clients, projects, selectedWork, services, site, stats } from '~/utils/site'
-import { type Lang, homeCopy, workCategory, workTitle } from '~/utils/i18n'
+import { type Lang, homeCopy, workCategory, workTitle, localize } from '~/utils/i18n'
 
 /** The homepage, in English at / and in Arabic at /ar: one layout, two languages. */
 const props = defineProps<{ lang: Lang }>()
@@ -50,7 +50,7 @@ useSeo({
     {
       '@type': 'ItemList',
       'name': 'Selected projects',
-      'itemListElement': projects.map((p, i) => ({ '@type': 'ListItem', 'position': i + 1, 'url': `${base}/work/${p.slug}`, 'name': p.title })),
+      'itemListElement': projects.map((p, i) => ({ '@type': 'ListItem', 'position': i + 1, 'url': `${base}${ar ? '/ar' : ''}/work/${p.slug}`, 'name': ar ? localize(p, 'ar', `work-${p.key}`).title : p.title })),
     },
     {
       '@type': 'OfferCatalog',
@@ -194,7 +194,7 @@ onBeforeUnmount(() => {
         <li v-for="(w, i) in selectedWork" :key="w.title" class="work-item" :class="i % 2 ? 'is-right' : 'is-left'">
           <component
             :is="w.slug ? NuxtLink : 'div'"
-            :to="w.slug ? `/work/${w.slug}` : undefined"
+            :to="w.slug ? `${ar ? '/ar' : ''}/work/${w.slug}` : undefined"
             class="work-link"
             :data-cursor="w.slug ? 'View' : undefined"
             :data-cover-host="w.slug ? '' : undefined"
