@@ -46,7 +46,7 @@ export default defineNuxtConfig({
       htmlAttrs: { lang: 'en' },
       charset: 'utf-8',
       viewport: 'width=device-width, initial-scale=1, viewport-fit=cover',
-      title: 'Lōn Visuals — Visual Strategy Studio',
+      title: 'Lōn Visuals | Visual Strategy Studio',
       meta: [
         { name: 'description', content: 'At Lōn Visuals, creativity meets strategy to shape how organizations communicate, evolve, and grow through design.' },
         { name: 'theme-color', content: '#12100a' },

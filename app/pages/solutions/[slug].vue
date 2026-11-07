@@ -154,7 +154,7 @@ useSeo({
           <ul class="s-cards">
             <li v-for="(w, i) in work" :key="w.slug" class="s-card" :class="`n-${i}`">
               <NuxtLink :to="`/work/${w.slug}`" class="s-card-link" data-cursor="View">
-                <MediaFrame :id="w.image" :alt="`${w.p.title} — ${w.p.category}`" :ratio="4 / 3" sizes="(max-width: 600px) 100vw, 42vw" :travel="6" :scale="[1.08, 1.08]" />
+                <MediaFrame :id="w.image" :alt="`${w.p.title} · ${w.p.category}`" :ratio="4 / 3" sizes="(max-width: 600px) 100vw, 42vw" :travel="6" :scale="[1.08, 1.08]" />
                 <span class="s-card-meta">
                   <span class="s-card-title t-h3">{{ w.p.title }}</span>
                   <span class="caps dim">{{ w.p.category }}</span>

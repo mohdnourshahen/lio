@@ -17,7 +17,7 @@ const c = computed(() => chrome[langOf(route.path)])
     class="site-header"
     :class="[ { 'is-scrolled': appState.scrolled || !isHome, 'menu-open': appState.menuOpen, 'on-paper': appState.headerTheme === 'paper' && !appState.menuOpen }]"
   >
-    <NuxtLink :to="langOf(route.path) === 'ar' ? '/ar' : '/'" class="logo" aria-label="Lōn Visuals — home" data-cursor-none>
+    <NuxtLink :to="langOf(route.path) === 'ar' ? '/ar' : '/'" class="logo" aria-label="Lōn Visuals, home" data-cursor-none>
       <LonLogo aria-hidden="true" />
     </NuxtLink>
 

@@ -33,9 +33,9 @@ const plainLede = p.lede.length > 158 ? `${p.lede.slice(0, p.lede.lastIndexOf(' 
 
 const base = useSiteUrl()
 const url = `${base}/work/${p.slug}`
-const heroAlt = `${p.title} — ${p.category}`
+const heroAlt = `${p.title} · ${p.category}`
 useSeo({
-  title: p.seoTitle ?? `${p.title} — ${p.category} | Lōn Visuals`,
+  title: p.seoTitle ?? `${p.title} · ${p.category} | Lōn Visuals`,
   description: plainLede,
   path: `/work/${p.slug}`,
   ogImage: `${p.slug}.jpg`,
@@ -48,7 +48,7 @@ useSeo({
       '@type': 'CreativeWork',
       '@id': `${url}#work`,
       'name': p.title,
-      'headline': `${p.title} — ${p.category}`,
+      'headline': `${p.title} · ${p.category}`,
       'description': p.lede,
       'url': url,
       'image': [`${base}/og/${p.slug}.jpg`, ...[...new Set([p.hero, ...p.blocks.flatMap(b => (b.type === 'media' ? b.images.map(i => i.id) : []))])].slice(0, 12).map(id => `${base}/media/${id}-${Math.max(...(media[id]?.widths ?? [960]))}.webp`)],
