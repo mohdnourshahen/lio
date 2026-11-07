@@ -210,7 +210,7 @@ const ratio = (id: string) => (media[id] ? media[id].w / media[id].h : 1.5)
             <ol class="b-items" :class="{ 'is-chips': b.items.some(it => it.color), 'is-words': b.items.every(it => !it.desc && !it.color) }">
               <li v-for="it in b.items" :key="it.name" class="b-item" :style="it.color ? { '--chip': it.color } : undefined">
                 <span v-if="it.num" class="b-num caps">{{ it.num }}</span>
-                <span v-if="it.ar" class="b-ar" lang="ar" dir="rtl">{{ it.ar }}</span>
+                <span v-if="it.ar && lang !== 'ar'" class="b-ar" lang="ar" dir="rtl">{{ it.ar }}</span>
                 <h3 class="b-name t-h3">{{ it.name }}</h3>
                 <p v-if="it.desc" class="b-desc t-small">{{ it.desc }}</p>
               </li>
