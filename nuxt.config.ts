@@ -36,6 +36,8 @@ export default defineNuxtConfig({
     '@fontsource/ibm-plex-sans-arabic/arabic-300.css',
     '@fontsource/ibm-plex-sans-arabic/arabic-400.css',
     '@fontsource/ibm-plex-sans-arabic/arabic-500.css',
+    // Thmanyah, bundled into the compiled site; the offline file edition falls back to Amiri and Plex
+    ...(offline ? [] : ['~/assets/css/thmanyah.css']),
     '~/assets/css/main.css',
   ],
 
