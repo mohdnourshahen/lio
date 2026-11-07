@@ -243,3 +243,6 @@ html[lang="ar"] .line-mask { padding-top: 0.22em; margin-top: -0.22em; padding-b
 html[lang="ar"] .t-h4, html[lang="ar"] .t-p, html[lang="ar"] .t-small { line-height: 1.85; }
 html[dir="rtl"] .site-header .menu-button { right: auto; left: 3.4722vw; }
 @media (max-width: 600px) { html[dir="rtl"] .site-header .menu-button { right: auto; left: 6.4vw; } }
+/* the menu in Arabic: taller lines, so a smaller size fits the six links under the header */
+html[lang="ar"] .site-menu .main-link { font-size: min(5.2vw, calc((var(--vh) * 95 - 10.4167vw) / 8.4)); line-height: 1.3; }
+@media (max-width: 600px) { html[lang="ar"] .site-menu .main-link { font-size: min(9.6vw, calc(var(--vh) * 4.6)); } }
