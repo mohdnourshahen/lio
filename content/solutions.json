@@ -3,13 +3,13 @@
   "key": "hospitality",
   "slug": "hospitality-branding",
   "sector": "Hospitality",
-  "seoTitle": "Hospitality Branding Agency | Hotel & Resort Brand Identity | Lōn Visuals",
-  "description": "Hospitality branding studio for hotels, resorts and F&B in Saudi Arabia, Jordan and the GCC: brand strategy, naming, bilingual identity and pre-opening launch.",
+  "seoTitle": "Hotel Branding & Brand Identity in Jordan | LŌN Visuals",
+  "description": "Hotel branding from Amman: a bilingual hotel brand identity, guidelines and launch materials for new openings, rebrands and repositioning in Jordan.",
   "kicker": "Solutions · Hotels, Resorts & F&B",
-  "title": "Hospitality Branding",
+  "title": "Brand Identity for Hotels and Hospitality Businesses",
   "hero": "f04c0008a2",
   "heroAlt": "Hotel lobby with arches and palms, from L'Azure Hospitality Group's brand identity by Lōn Visuals",
-  "lede": "Brands for hotels, resorts and restaurants that guests remember long after check-out. From positioning and naming to a bilingual identity carried from the arrival experience to the key card, for owners and operators across Saudi Arabia, Jordan and the GCC.",
+  "lede": "For hotel owners, general managers and marketing teams preparing a new opening, a rebrand or a repositioning. We design the hotel brand identity, the guidelines your team and suppliers work from, and the launch materials the property needs before its first guest, in Arabic and English, from our studio in Amman.",
   "facts": [
    [
     "Hospitality clients",
@@ -17,7 +17,7 @@
    ],
    [
     "Markets",
-    "Saudi Arabia, Jordan, the GCC and Morocco"
+    "Jordan, Saudi Arabia, the GCC and Morocco"
    ],
    [
     "Practice",
@@ -34,6 +34,24 @@
    "paras": [
     "The region is opening hotels at a pace it has never seen. Across the Red Sea coast, NEOM, Riyadh and Diriyah, new properties open beside the world's best-known flags, and every one of them is competing for the same guest's attention.",
     "A hospitality brand has to do more than look good. It has to tell a guest, in seconds, why this place and not the one next door; speak with equal confidence in Arabic and English; and hold together across hundreds of touchpoints, from the hoarding on the construction site to the amenity on the pillow, before the first guest arrives."
+   ]
+  },
+  "opening": {
+   "label": "Before Opening Day",
+   "title": "What we prepare before you open",
+   "items": [
+    [
+     "Identity system",
+     "Logo, bilingual wordmark, colour, typography and pattern, drawn for Arabic and English from the first sketch."
+    ],
+    [
+     "Brand guidelines",
+     "Clear standards your operators, fit-out teams and agencies can apply, so the brand arrives intact."
+    ],
+    [
+     "Launch materials",
+     "Hoardings, sales collateral, key cards, amenities, signage and launch content, timed to your opening date."
+    ]
    ]
   },
   "services": {
@@ -101,8 +119,15 @@
    ]
   },
   "touchpoints": {
-   "label": "In the Guest's Hands",
+   "label": "Case Study · L’Azure Hospitality",
    "title": "The brand lives in the details",
+   "paras": [
+    "L'Azure Hospitality is a premium hotel group on the Saudi Red Sea coast, with Royal L'Azure Resort and Sharma Resort. Lōn Visuals designed its full brand identity: the wave symbol and the marks for both resorts, the colour and type system and the brand guidelines, carried into room key cards, stationery, the welcome kit and the website design."
+   ],
+   "link": {
+    "slug": "lazure",
+    "label": "Read the L'Azure Hospitality case study"
+   },
    "images": [
     {
      "id": "b9912a1eee",
@@ -334,7 +359,8 @@
   "cta": {
    "kicker": "Opening soon?",
    "title": "Let's build a brand guests remember",
-   "subject": "Hospitality branding enquiry"
+   "subject": "Hotel branding project",
+   "button": "Discuss your hotel branding project"
   },
   "audience": "Hotel owners, operators and developers",
   "ogSub": "Hotels, resorts &amp; F&amp;B · Saudi Arabia, Jordan &amp; the GCC"

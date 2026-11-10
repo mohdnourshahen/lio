@@ -55,13 +55,17 @@ export interface Solution {
   brief: { label: string, title: string, paras: string[] }
   services: { label: string, title: string, items: Pair[] }
   work: { label: string, title: string, items: { slug: string, image: string, line: string }[] }
-  touchpoints: { label: string, title: string, images: MediaRef[], caption: string }
+  /** what the studio prepares before an opening: a short list for buyers on a deadline */
+  opening?: { label: string, title: string, items: Pair[] }
+  /** paras and link turn the touchpoints into a featured case study, with its own call to action */
+  touchpoints: { label: string, title: string, paras?: string[], link?: { slug: string, label: string }, images: MediaRef[], caption: string }
   portfolio?: { label: string, title: string, intro: string, groups: { name: string, desc: string, rows: MediaRef[][], caption: string }[] }
   sectors: { label: string, title: string, items: Pair[] }
   process: { label: string, title: string, items: Pair[] }
   why: { label: string, title: string, items: Pair[] }
   faq: { label: string, title: string, items: Pair[] }
-  cta: { kicker: string, title: string, subject: string }
+  /** button: the label of the contact buttons, when the page names its own */
+  cta: { kicker: string, title: string, subject: string, button?: string }
 }
 export const solutions = solutionsJson as unknown as Solution[]
 export const solutionBySlug = (slug: string) => solutions.find(s => s.slug === slug)
