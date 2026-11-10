@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { media, projectBySlug, site, solutionBySlug, type MediaRef } from '~/utils/site'
+import { media, projectBySlug, site, solutionBySlug, whatsapp, type MediaRef } from '~/utils/site'
 import { localize, pageCopy, type Lang } from '~/utils/i18n'
 
 const props = defineProps<{ lang: Lang }>()
@@ -20,6 +20,9 @@ const heroCta = s.cta.button ?? localize(`Start a ${source.sector.toLowerCase()}
 
 const work = s.work.items.map(w => ({ ...w, p: projectBySlug(w.slug)! })).filter(w => w.p).map(w => ({ ...w, p: localize(w.p, props.lang, `work-${w.p.key}`) }))
 const mail = `mailto:${site.email}?subject=${encodeURIComponent(s.cta.subject)}`
+/** a WhatsApp chat that opens on the page's own message, so the studio knows where it started */
+const chat = whatsapp(s.cta.whatsapp)
+const chrome = useChrome()
 const pad = (n: number) => String(n + 1).padStart(2, '0')
 
 /* Exo Ape's work grid: images never sit in a row. Each goes to whichever of two columns (wide left,
@@ -112,6 +115,7 @@ useSeo({
           <!-- not v-reveal: its line-split wrapper would swallow the flex gap between the two links -->
           <p class="s-hero-cta">
             <a :href="mail" class="btn" data-cursor="Write" data-cta="hero">{{ heroCta }}</a>
+            <a :href="chat" target="_blank" rel="noopener" class="btn btn-wa" data-cursor="Chat" data-cta="hero"><WaIcon />{{ chrome.whatsapp }}</a>
             <a href="#work" class="s-link caps">{{ ui.seeWork }} <span aria-hidden="true">↓</span></a>
           </p>
         </div>
@@ -204,7 +208,7 @@ useSeo({
             <MediaFrame :id="im.id" :alt="im.alt" sizes="(max-width: 600px) 100vw, 42vw" :travel="4" :scale="[1.045, 1.045]" />
           </div>
           <figcaption class="s-caption t-small">{{ s.touchpoints.caption }}</figcaption>
-          <p v-if="s.cta.button && s.touchpoints.link" class="s-touch-cta"><a :href="mail" class="btn" data-cursor="Write" data-cta="case_study">{{ s.cta.button }}</a></p>
+          <p v-if="s.cta.button && s.touchpoints.link" class="s-touch-cta"><a :href="mail" class="btn" data-cursor="Write" data-cta="case_study">{{ s.cta.button }}</a><a :href="chat" target="_blank" rel="noopener" class="btn btn-wa" data-cursor="Chat" data-cta="case_study"><WaIcon />{{ chrome.whatsappCta }}</a></p>
         </div>
       </figure>
 
@@ -296,6 +300,7 @@ useSeo({
           <h2 v-reveal class="s-cta-title t-h1"><Calli :text="s.cta.title" /></h2>
           <p class="s-cta-actions">
             <a :href="mail" class="btn" data-cursor="Write">{{ site.email }}</a>
+            <a :href="chat" target="_blank" rel="noopener" class="btn btn-wa" data-cursor="Chat" data-cta="closing"><WaIcon />{{ chrome.whatsappCta }}</a>
             <NuxtLink :to="`${pre || '/'}#work`" class="s-link caps">{{ ui.allWork }} <span aria-hidden="true">{{ lang === 'ar' ? '←' : '→' }}</span></NuxtLink>
           </p>
         </div>
@@ -387,7 +392,10 @@ useSeo({
 .s-touch-item.n-0 { grid-column: 2 / 7; margin-top: 13vw; }
 .s-touch-item.n-1 { grid-column: 7 / 12; }
 .s-case-link { color: var(--c-title); display: inline-flex; gap: 0.6em; }
-.s-touch-cta { grid-column: 2 / 12; margin-top: 4vw; }
+.s-touch-cta { grid-column: 2 / 12; margin-top: 4vw; display: flex; flex-wrap: wrap; gap: 1.2vw; }
+/* WhatsApp sits beside email as an equal, marked by its glyph instead of the arrow */
+.btn-wa::after { content: none; }
+.btn-wa { gap: 0.8em; }
 .s-caption { grid-column: 2 / 9; margin-top: 1.2vw; color: var(--fg-2); padding-left: 1.2em; position: relative; }
 .s-caption::before { content: ''; position: absolute; left: 0; top: 0.75em; width: 0.6em; height: 1px; background: var(--c-title); }
 
@@ -442,6 +450,7 @@ useSeo({
 }
 
 @media (max-width: 600px) {
+  .s-touch-cta { gap: 4vw; }
   .s-title.is-long { grid-column: 1 / -1; font-size: 10.4vw; }
   .s-touch-cta { grid-column: 1 / -1; margin-top: 10vw; }
   .crumbs, .s-kicker, .s-title, .s-hero-cta { grid-column: 1 / -1; }

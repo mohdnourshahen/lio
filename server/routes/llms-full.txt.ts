@@ -32,6 +32,7 @@ ${blocks}`
 
 Website: ${base}/
 Email: ${studio.email}
+WhatsApp: ${studio.phone} (${studio.whatsapp})
 Location: Amman, Jordan
 
 ## About
