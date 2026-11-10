@@ -360,7 +360,8 @@
    "kicker": "Opening soon?",
    "title": "Let's build a brand guests remember",
    "subject": "Hotel branding project",
-   "button": "Discuss your hotel branding project"
+   "button": "Discuss your hotel branding project",
+   "whatsapp": "Hello Lōn, I’d like to discuss a hotel branding project."
   },
   "audience": "Hotel owners, operators and developers",
   "ogSub": "Hotels, resorts &amp; F&amp;B · Saudi Arabia, Jordan &amp; the GCC"
@@ -598,7 +599,8 @@
   "cta": {
    "kicker": "Building a national brand?",
    "title": "Let's give your institution one clear voice",
-   "subject": "Government branding enquiry"
+   "subject": "Government branding enquiry",
+   "whatsapp": "Hello Lōn, I’d like to discuss a government branding project."
   }
  }
 ]

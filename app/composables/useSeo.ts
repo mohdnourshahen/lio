@@ -1,4 +1,4 @@
-import { site } from '~/utils/site'
+import { site, whatsapp } from '~/utils/site'
 
 interface SeoInput {
   title: string
@@ -30,6 +30,7 @@ export function organizationLd(base: string) {
     'logo': `${base}/logo.png`,
     'image': `${base}/og/home.jpg`,
     'email': site.email,
+    'telephone': site.phone,
     'description': 'Lōn Visuals is a strategic brand and visual communication studio in Amman, Jordan, helping organizations communicate with clarity and impact through brand strategy, visual identity, communication design and brand experience.',
     'slogan': 'We translate brands into visual language',
     'address': { '@type': 'PostalAddress', 'addressLocality': site.city, 'addressCountry': site.countryCode },
@@ -39,7 +40,7 @@ export function organizationLd(base: string) {
     'sameAs': site.socials.map(s => s.href),
     'founder': { '@id': `${base}/#founder` },
     'foundingLocation': { '@type': 'Place', 'name': 'Amman, Jordan' },
-    'contactPoint': { '@type': 'ContactPoint', 'contactType': 'new business', 'email': site.email, 'availableLanguage': ['English', 'Arabic'] },
+    'contactPoint': { '@type': 'ContactPoint', 'contactType': 'new business', 'email': site.email, 'telephone': site.phone, 'url': whatsapp(), 'availableLanguage': ['English', 'Arabic'] },
   }
 }
 

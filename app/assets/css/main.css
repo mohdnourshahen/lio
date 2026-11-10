@@ -268,5 +268,5 @@ html[lang="ar"] .t-h2 { font-size: calc(var(--fs-h2) * 0.76); line-height: 1.55;
 html[lang="ar"] .t-h3 { line-height: 1.5; }
 html[lang="ar"] .s-cta-title { font-size: calc(var(--fs-h1) * 0.62); line-height: 1.5; max-width: 16ch; }
 /* right-to-left: the solution buttons' arrow points the way the line reads */
-html[dir="rtl"] .sol .btn::after { content: '←'; }
+html[dir="rtl"] .sol .btn:not(.btn-wa)::after { content: "←"; }
 @media (hover: hover) { html[dir="rtl"] .sol .btn:hover::after { transform: translateX(-0.35em); } }

@@ -6,7 +6,7 @@ export default defineEventHandler((event) => {
 
 > ${studio.summary}
 
-We translate brands into visual language. Lōn Visuals works across brand strategy, visual identity, communication design and brand experience for government entities, hospitality, aviation, NGOs and private brands in Jordan, Saudi Arabia, Morocco and the wider MENA region. Contact: ${studio.email}.
+We translate brands into visual language. Lōn Visuals works across brand strategy, visual identity, communication design and brand experience for government entities, hospitality, aviation, NGOs and private brands in Jordan, Saudi Arabia, Morocco and the wider MENA region. Contact: ${studio.email}, or WhatsApp ${studio.phone} (${studio.whatsapp}).
 
 ## Studio
 

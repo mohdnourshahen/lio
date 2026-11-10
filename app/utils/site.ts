@@ -65,7 +65,7 @@ export interface Solution {
   why: { label: string, title: string, items: Pair[] }
   faq: { label: string, title: string, items: Pair[] }
   /** button: the label of the contact buttons, when the page names its own */
-  cta: { kicker: string, title: string, subject: string, button?: string }
+  cta: { kicker: string, title: string, subject: string, button?: string, whatsapp?: string }
 }
 export const solutions = solutionsJson as unknown as Solution[]
 export const solutionBySlug = (slug: string) => solutions.find(s => s.slug === slug)
@@ -75,6 +75,9 @@ export const site = {
   tagline: 'Visual Strategy Studio',
   description: 'At Lōn Visuals, creativity meets strategy to shape how organisations communicate, evolve and grow through design.',
   email: 'hello@lonvisuals.com',
+  /** the studio's official number, offered as WhatsApp first: chats over calls */
+  phone: '+962793307943',
+  phoneDisplay: '+962 79 330 7943',
   city: 'Amman',
   country: 'Jordan',
   countryCode: 'JO',
@@ -142,3 +145,6 @@ export const HERO_IMAGE = 'c5aa67204b'
 /** Homepage hero sequence, in the studio's order: Duomo di San Gennaro, An Iron Forge, Merian's Rome, the Blue Quran, zellige.
  *  The last three are busy: '|0.4' darkens them so the title reads */
 export const HERO_SLIDES = ['c5aa67204b', '3fea306359', '2fc713ce80|0.4', '6ff9f0f345|0.4', 'e3eaf56e13|0.45']
+
+/** a WhatsApp chat with the studio, opened on a message written for the page it starts from */
+export const whatsapp = (message?: string) => `https://wa.me/${site.phone.replace(/\D/g, '')}${message ? `?text=${encodeURIComponent(message)}` : ''}`

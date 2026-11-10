@@ -30,6 +30,10 @@ const en = {
     toLight: 'Light',
     toDark: 'Dark',
     toLightLabel: 'Switch to the light edition',
+    /** WhatsApp: the label, and the message a chat opens with */
+    whatsapp: 'WhatsApp',
+    whatsappCta: 'Message us on WhatsApp',
+    whatsappHello: 'Hello Lōn, I’d like to talk about a project.',
     toDarkLabel: 'Switch to the dark edition',
     footer: {
       kicker: 'Let’s Talk',
@@ -63,6 +67,9 @@ const ar: { chrome: Chrome } = {
     toLight: 'فاتح',
     toDark: 'داكن',
     toLightLabel: 'التبديل إلى النسخة الفاتحة',
+    whatsapp: 'واتساب',
+    whatsappCta: 'راسلنا على واتساب',
+    whatsappHello: 'مرحبًا لُون، أودّ الحديث عن مشروع.',
     toDarkLabel: 'التبديل إلى النسخة الداكنة',
     footer: {
       kicker: 'لنتحدّث',
