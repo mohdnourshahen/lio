@@ -176,7 +176,11 @@ const ratio = (id: string) => (media[id] ? media[id].w / media[id].h : 1.5)
               <p v-for="(para, j) in b.paras" :key="j" v-reveal class="t-p">{{ para }}</p>
             </div>
             <p v-if="b.links?.length" class="b-links">
-              <a v-for="l in b.links" :key="l.href" v-reveal :href="l.href" target="_blank" rel="noopener" class="u-link t-small">{{ l.label }} ↗</a>
+              <template v-for="l in b.links" :key="l.href">
+                <!-- a link inside the site (e.g. to the matching service page) stays in the page's language -->
+                <NuxtLink v-if="l.href.startsWith('/')" :to="`${pre}${l.href}`" class="u-link t-small b-link-in">{{ l.label }}&nbsp;{{ lang === 'ar' ? '←' : '→' }}</NuxtLink>
+                <a v-else v-reveal :href="l.href" target="_blank" rel="noopener" class="u-link t-small">{{ l.label }} ↗</a>
+              </template>
             </p>
             <ul v-if="b.tags.length" class="b-tags" :aria-label="ui.disciplines">
               <li v-for="t in b.tags" :key="t" class="t-sub">{{ t }}</li>
@@ -338,6 +342,7 @@ const ratio = (id: string) => (media[id] ? media[id].w / media[id].h : 1.5)
 .dim { color: var(--fg-2); }
 
 /* CREDITS */
+.b-link-in { white-space: nowrap; }
 .b-links { grid-column: 5 / 11; display: flex; flex-wrap: wrap; gap: 0.6vw 2.4vw; margin-top: 2.2vw; color: var(--c-title); }
 .b-credits { padding: 6vw 0 10vw; }
 /* the gaps between paper sections must not show the ink page underneath */

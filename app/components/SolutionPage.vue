@@ -16,7 +16,7 @@ const route = useRoute()
 const source = solutionBySlug(route.params.slug as string)
 if (!source) throw createError({ statusCode: 404, statusMessage: 'Not found', fatal: true })
 const s = localize(source, props.lang, `solution-${source.key}`)
-const heroCta = localize(`Start a ${source.sector.toLowerCase()} project`, props.lang, `solution-${source.key}`)
+const heroCta = s.cta.button ?? localize(`Start a ${source.sector.toLowerCase()} project`, props.lang, `solution-${source.key}`)
 
 const work = s.work.items.map(w => ({ ...w, p: projectBySlug(w.slug)! })).filter(w => w.p).map(w => ({ ...w, p: localize(w.p, props.lang, `work-${w.p.key}`) }))
 const mail = `mailto:${site.email}?subject=${encodeURIComponent(s.cta.subject)}`
@@ -106,12 +106,12 @@ useSeo({
             </ol>
           </nav>
           <p v-reveal="{ intro: true, delay: -0.1 }" class="s-kicker caps">{{ s.kicker }}</p>
-          <h1 id="sol-title" v-reveal="{ intro: true }" class="s-title t-h1">
+          <h1 id="sol-title" v-reveal="{ intro: true }" class="s-title t-h1" :class="{ 'is-long': s.title.length > 30 }">
             <span class="line-mask"><span data-line><Calli :text="s.title" /></span></span>
           </h1>
           <!-- not v-reveal: its line-split wrapper would swallow the flex gap between the two links -->
           <p class="s-hero-cta">
-            <a :href="mail" class="btn" data-cursor="Write">{{ heroCta }}</a>
+            <a :href="mail" class="btn" data-cursor="Write" data-cta="hero">{{ heroCta }}</a>
             <a href="#work" class="s-link caps">{{ ui.seeWork }} <span aria-hidden="true">↓</span></a>
           </p>
         </div>
@@ -138,6 +138,21 @@ useSeo({
           <div class="s-body">
             <p v-for="(para, i) in s.brief.paras" :key="i" v-reveal class="t-p">{{ para }}</p>
           </div>
+        </div>
+      </section>
+
+      <!-- BEFORE OPENING DAY: what a buyer on a deadline can have ready -->
+      <section v-if="s.opening" class="s-list theme-sand" data-theme="sand" :aria-label="s.opening.title">
+        <div class="container">
+          <p v-reveal class="label s-label">{{ s.opening.label }}</p>
+          <h2 v-reveal class="s-h2 t-h2">{{ s.opening.title }}</h2>
+          <ol class="s-items is-3">
+            <li v-for="([n, d], i) in s.opening.items" :key="n" class="s-item">
+              <span class="s-num caps">{{ pad(i) }}</span>
+              <h3 class="s-name t-h3">{{ n }}</h3>
+              <p class="s-desc t-small">{{ d }}</p>
+            </li>
+          </ol>
         </div>
       </section>
 
@@ -181,10 +196,15 @@ useSeo({
         <div class="container">
           <p v-reveal class="label s-label">{{ s.touchpoints.label }}</p>
           <h2 v-reveal class="s-h2 t-h2">{{ s.touchpoints.title }}</h2>
+          <div v-if="s.touchpoints.paras?.length" class="s-body">
+            <p v-for="(para, i) in s.touchpoints.paras" :key="i" v-reveal class="t-p">{{ para }}</p>
+            <p v-if="s.touchpoints.link"><NuxtLink :to="`${pre}/work/${s.touchpoints.link.slug}`" class="u-link t-small s-case-link">{{ s.touchpoints.link.label }} <span aria-hidden="true">{{ lang === 'ar' ? '←' : '→' }}</span></NuxtLink></p>
+          </div>
           <div v-for="(im, i) in s.touchpoints.images" :key="im.id" class="s-touch-item" :class="`n-${i}`">
             <MediaFrame :id="im.id" :alt="im.alt" sizes="(max-width: 600px) 100vw, 42vw" :travel="4" :scale="[1.045, 1.045]" />
           </div>
           <figcaption class="s-caption t-small">{{ s.touchpoints.caption }}</figcaption>
+          <p v-if="s.cta.button && s.touchpoints.link" class="s-touch-cta"><a :href="mail" class="btn" data-cursor="Write" data-cta="case_study">{{ s.cta.button }}</a></p>
         </div>
       </figure>
 
@@ -297,6 +317,8 @@ useSeo({
 .crumbs li + li::before { content: '/'; margin-right: 0.6em; opacity: 0.5; }
 .s-kicker { grid-column: 2 / -1; grid-row: 3; color: var(--c-title); margin-bottom: 1.2vw; }
 .s-title { grid-column: 2 / -1; grid-row: 4; }
+/* a descriptive title (e.g. Brand Identity for Hotels and Hospitality Businesses) sets smaller, in two or three lines */
+.s-title.is-long { grid-column: 2 / 11; font-size: 5.2vw; line-height: 1.08; }
 .s-hero-cta { grid-column: 2 / -1; grid-row: 5; margin-top: 2.8vw; display: flex; align-items: center; flex-wrap: wrap; gap: 1.4vw 3.2vw; }
 
 .s-hero-cta { opacity: 0; animation: s-cta-in 1s var(--ease-out) 1.1s forwards; }
@@ -364,6 +386,8 @@ useSeo({
 .s-touch-item { margin-top: 5vw; }
 .s-touch-item.n-0 { grid-column: 2 / 7; margin-top: 13vw; }
 .s-touch-item.n-1 { grid-column: 7 / 12; }
+.s-case-link { color: var(--c-title); display: inline-flex; gap: 0.6em; }
+.s-touch-cta { grid-column: 2 / 12; margin-top: 4vw; }
 .s-caption { grid-column: 2 / 9; margin-top: 1.2vw; color: var(--fg-2); padding-left: 1.2em; position: relative; }
 .s-caption::before { content: ''; position: absolute; left: 0; top: 0.75em; width: 0.6em; height: 1px; background: var(--c-title); }
 
@@ -418,6 +442,8 @@ useSeo({
 }
 
 @media (max-width: 600px) {
+  .s-title.is-long { grid-column: 1 / -1; font-size: 10.4vw; }
+  .s-touch-cta { grid-column: 1 / -1; margin-top: 10vw; }
   .crumbs, .s-kicker, .s-title, .s-hero-cta { grid-column: 1 / -1; }
   .s-hero-inner { padding: 22vw 0 8vw; }
   .s-kicker { margin-bottom: 3vw; }

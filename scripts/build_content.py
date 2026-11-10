@@ -483,6 +483,11 @@ def curate(P):
     if k == 'lazure':
         # the photography is by Roycelysian, as on Zeryab Estates
         P['credits'] = [{'role': 'Photography', 'name': 'Roycelysian', 'href': 'https://roycelysian.com'}]
+        # from the case to the service it proves
+        for b in P['blocks']:
+            if b.get('type') == 'text' and b.get('label') == 'Overview':
+                b['links'] = [{'label': 'Hotel branding for openings and repositioning', 'href': '/solutions/hospitality-branding'}]
+                break
     if k == 'rambourg':
         # the studio presents the client as "Rambourg Fondation"
         P = json.loads(json.dumps(P, ensure_ascii=False).replace('Fondation Rambourg', 'Rambourg Fondation').replace('Rambourg Foundation', 'Rambourg Fondation'))
