@@ -1,4 +1,5 @@
 import projectsJson from '../../content/projects.json'
+import hiddenJson from '../../content/hidden.json'
 import mediaJson from '../../public/media/media.json'
 import solutionsJson from '../../content/solutions.json'
 
@@ -44,7 +45,9 @@ export interface Project {
 export interface MediaInfo { w: number, h: number, widths: number[], color: string }
 
 export const media = mediaJson as Record<string, MediaInfo>
-export const projects = projectsJson as unknown as Project[]
+/** case studies off the site for now (content/hidden.json): no card, no page, no sitemap entry */
+export const hidden = new Set(hiddenJson.hidden)
+export const projects = (projectsJson as unknown as Project[]).filter(p => !hidden.has(p.slug))
 export const projectBySlug = (slug: string) => projects.find(p => p.slug === slug)
 
 /* sector landing pages under /solutions (content/solutions.json) */
@@ -119,7 +122,7 @@ export const services = [
  */
 /** `more`: further images of the same project, revealed one after another while the cover is hovered ('<id>|<focus>' sets its framing) */
 export interface WorkCard { title: string, category: string, image: string, slug: string | null, focus?: string, ratio?: 'image', more?: string[] }
-export const selectedWork: WorkCard[] = [
+export const selectedWork: WorkCard[] = ([
   { title: 'Zeryab Estates', category: 'Brand Identity · Real Estate', image: '618ce8170b', slug: 'zeryab-estates', more: ['92b5c6a3f8', '140e246667', 'cae8301bfd'] },
   { title: 'Masar Resort', category: 'Brand Identity · Hospitality', image: '0793b8d88b', slug: 'masar', more: ['7160f3fd32', '00936a2911', 'b135b8813b'] },
   { title: 'FNF 40 Years in Jordan', category: 'Anniversary Branding · Foundation', image: '6983caa024', slug: 'fnf-jordan-40-years', more: ['ab1c1a45fb|90% 50%', 'fe973c4def', '1cc1dc1ce8|62% 50%', '51e60788f6|62% 50%'] },
@@ -132,7 +135,7 @@ export const selectedWork: WorkCard[] = [
   { title: 'Sana Interiors', category: 'Brand Identity · Interior Design', image: '4e29c410bb', slug: 'sana-interiors', more: ['66a3bbd3ad', '58d0e9b72f', '4a1980355c', 'c04711e04a'] },
   { title: 'Rambourg Fondation', category: 'Brand Identity · Foundation', image: 'd4ea00b977', slug: 'rambourg', focus: '50% 50%', more: ['5bcb72c2f7', '0beaeaaa38', '4366bfe7e3', '149fdf4649'] },
   { title: 'National Cyber Security Center', category: 'Identity · Government', image: 'ee591a3a9d', slug: 'national-cyber-security-center', ratio: 'image', more: ['4ad2a723e0', '60db31f31a', 'e1505cf932'] },
-]
+] as WorkCard[]).filter(w => !w.slug || !hidden.has(w.slug))
 
 export const clients = [
   'Joramco', 'Friedrich Naumann Foundation Jordan', 'Rababa', 'National Cyber Security Center', 'NEOM',

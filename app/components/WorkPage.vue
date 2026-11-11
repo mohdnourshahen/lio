@@ -13,7 +13,7 @@ const route = useRoute()
 const project = projectBySlug(String(route.params.slug))
 if (!project) throw createError({ statusCode: 404, statusMessage: 'Project not found', fatal: true })
 const p = localize(project, props.lang, `work-${project.key}`)
-const nextSource = project.next ? projectBySlug(project.next) : projects[(projects.indexOf(project) + 1) % projects.length]
+const nextSource = (project.next && projectBySlug(project.next)) || projects[(projects.indexOf(project) + 1) % projects.length]
 const next = nextSource && localize(nextSource, props.lang, `work-${nextSource.key}`)
 
 /* Hero meta: Exo Ape's Client / Services / Industries / Date columns, from Lōn's own fields. */
