@@ -1,6 +1,7 @@
 import { resolve } from 'node:path'
 import process from 'node:process'
-import projects from './content/projects.json'
+import allProjects from './content/projects.json'
+import hiddenJson from './content/hidden.json'
 import solutions from './content/solutions.json'
 
 /**
@@ -9,6 +10,8 @@ import solutions from './content/solutions.json'
  * every asset inlined. The default build is the static site served by nginx on Fly.io.
  */
 const offline = process.env.LON_OFFLINE === '1'
+/** case studies off the site for now are not built at all */
+const projects = allProjects.filter(p => !hiddenJson.hidden.includes(p.slug))
 const GA_ID = 'G-N31DVNBJV4'
 
 export default defineNuxtConfig({

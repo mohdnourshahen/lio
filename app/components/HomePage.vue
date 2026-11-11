@@ -2,7 +2,7 @@
 import { EASE, clamp, gsap, isMobileWidth, prefersReducedMotion } from '~/utils/motion'
 import { assetUrl } from '~/utils/assets'
 import { onFrame } from '~/utils/scroll'
-import { HERO_SLIDES, clients, projects, selectedWork, services, site, stats } from '~/utils/site'
+import { HERO_SLIDES, clients, hidden, projects, selectedWork, services, site, stats } from '~/utils/site'
 import { type Lang, homeCopy, workCategory, workTitle, localize } from '~/utils/i18n'
 
 /** The homepage, in English at / and in Arabic at /ar: one layout, two languages. */
@@ -268,8 +268,8 @@ onBeforeUnmount(() => {
     <section id="studio" class="studio theme-dark" data-theme="dark" aria-labelledby="studio-title">
       <div class="container">
         <div class="st-collage" aria-hidden="true">
-          <!-- Zeryab Estates, Masar Resort, Sky Falcons — shown at their own proportions -->
-          <MediaFrame id="d3f1b2428a" alt="" class="st-a" sizes="(max-width: 600px) 48vw, 20vw" :travel="8" :scale="[1.08, 1.08]" />
+          <!-- Zeryab Estates (Sana Interiors while Zeryab is hidden), Masar Resort, Sky Falcons, at their own proportions -->
+          <MediaFrame :id="hidden.has('zeryab-estates') ? '307af80484' : 'd3f1b2428a'" alt="" class="st-a" sizes="(max-width: 600px) 48vw, 20vw" :travel="8" :scale="[1.08, 1.08]" />
           <MediaFrame id="bf6d84ba73" alt="" class="st-b" sizes="(max-width: 600px) 32vw, 16vw" :travel="12" :scale="[1.1, 1.1]" />
           <MediaFrame id="4160c1b692" alt="" class="st-c" sizes="(max-width: 600px) 32vw, 16vw" :travel="16" :scale="[1.12, 1.12]" />
         </div>

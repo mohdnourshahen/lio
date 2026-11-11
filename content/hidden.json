@@ -1,0 +1,6 @@
+{
+ "_about": "Case studies taken off the site for now, by slug. Their content stays in projects.json; removing a slug from this list brings the project back everywhere (homepage, solution pages, its page, sitemap). While Zeryab is hidden, the hospitality 'clients' fact omits it (content/solutions.json and its Arabic) and the homepage studio collage shows a Sana Interiors image (silver on navy, 307af80484) in place of its Zeryab one; restore both with it.",
+ "hidden": [
+  "zeryab-estates"
+ ]
+}

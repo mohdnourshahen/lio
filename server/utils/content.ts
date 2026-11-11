@@ -1,4 +1,5 @@
 import projectsJson from '../../content/projects.json'
+import hiddenJson from '../../content/hidden.json'
 import solutionsJson from '../../content/solutions.json'
 
 export interface ServerProject {
@@ -13,7 +14,7 @@ export interface ServerProject {
   blocks: { type: string, images?: { id: string, alt?: string }[], label?: string | null, title?: string | null, paras?: string[], tags?: string[], items?: { num?: string, name: string, desc?: string | null }[] }[]
 }
 
-export const projects = projectsJson as unknown as ServerProject[]
+export const projects = (projectsJson as unknown as ServerProject[]).filter(p => !hiddenJson.hidden.includes(p.slug))
 
 export function siteUrl(event: Parameters<typeof useRuntimeConfig>[0]) {
   return useRuntimeConfig(event).public.siteUrl.replace(/\/$/, '')
